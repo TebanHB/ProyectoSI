@@ -14,7 +14,11 @@ class CreateContratoTable extends Migration
     public function up()
     {
         Schema::create('contrato', function (Blueprint $table) {
-            $table->id();
+            $table->id("NRO_CONTRATO");
+            $table->date("FECHA_ADJUDICACION");
+            $table->float("MONTO");
+            $table->id("CI_CLIENTE");
+            $table->id("CODIGO_PAGO");
             $table->timestamps();
         });
     }

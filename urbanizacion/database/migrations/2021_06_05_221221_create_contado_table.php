@@ -14,7 +14,8 @@ class CreateContadoTable extends Migration
     public function up()
     {
         Schema::create('contado', function (Blueprint $table) {
-            $table->id();
+            $table->id("CODIGO");
+            $table->float("MONTO");
             $table->timestamps();
         });
     }
