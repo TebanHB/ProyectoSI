@@ -14,11 +14,11 @@ class CreateCuotaTable extends Migration
     public function up()
     {
         Schema::create('cuota', function (Blueprint $table) {
-            $table->id("Nro Cuota");
+            $table->id("Nro_Cuota");
             $table->float("Amortizacion");
-            $table->integer("Monto Cuota");
-            $table->integer("Cod Credito");
-            $table->integer("Nro Mora");
+            $table->integer("Monto_Cuota");
+            $table->integer("Cod_Credito");
+            $table->integer("Nro_Mora");
             $table->timestamps();
         });
     }
