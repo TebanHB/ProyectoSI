@@ -16,9 +16,9 @@ class CreatePersonaTable extends Migration
         Schema::create('persona', function (Blueprint $table) {
             $table->id("Ci");
             $table->string("Nombre");
-            $table->string("Id_Vendedor");
-            $table->string("Id_Cliente");
-            $table->string("Id_Administrador");
+            $table->integer("Id_Vendedor");
+            $table->integer("Id_Cliente");
+            $table->integer("Id_Administrador");
             $table->string("Tipo_Vendedor");
             $table->string("Tipo_Visita");
             $table->string("Tipo_Cliente");
