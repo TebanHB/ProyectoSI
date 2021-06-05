@@ -14,7 +14,8 @@ class CreateTelefonoPersonaTable extends Migration
     public function up()
     {
         Schema::create('telefono_persona', function (Blueprint $table) {
-            $table->id();
+            $table->id("CI");
+            $table->string("TELEFONO");
             $table->timestamps();
         });
     }
