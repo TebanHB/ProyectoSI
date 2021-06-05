@@ -14,9 +14,9 @@ class CreateReservaTable extends Migration
     public function up()
     {
         Schema::create('reserva', function (Blueprint $table) {
-            $table->id("Ci visita");
-            $table->integer("Nro Lote1");
-            $table->dateTime("Hora de Visita");
+            $table->id("Ci_visita");
+            $table->integer("Nro_Lote1");
+            $table->dateTime("Hora_de_Visita");
             $table->timestamps();
         });
     }
