@@ -14,7 +14,9 @@ class CreateBitacoraTable extends Migration
     public function up()
     {
         Schema::create('bitacora', function (Blueprint $table) {
-            $table->id();
+            $table->id("Nro_Bitacora");
+            $table->integer("Codigo_Admin")
+
             $table->timestamps();
         });
     }
