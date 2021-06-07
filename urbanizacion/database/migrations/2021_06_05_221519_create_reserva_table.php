@@ -13,10 +13,14 @@ class CreateReservaTable extends Migration
      */
     public function up()
     {
+
         Schema::create('reserva', function (Blueprint $table) {
-            $table->id("Ci_visita");
-            $table->integer("Nro_Lote1");
-            $table->dateTime("Hora_de_Visita");
+            $table->id();
+            $table->unsignedBigInteger("id_user");
+            $table->unsignedBigInteger("id_lote");
+            $table->foreign('id_user')->on('users')->references('id')->onDelete('cascade');
+            $table->foreign('id_lote')->on('terreno')->references('id')->onDelete('cascade');
+            $table->dateTime("hora_de_visita");
             $table->timestamps();
         });
     }

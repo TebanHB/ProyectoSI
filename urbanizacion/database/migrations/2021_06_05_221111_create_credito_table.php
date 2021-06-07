@@ -14,7 +14,7 @@ class CreateCreditoTable extends Migration
     public function up()
     {
         Schema::create('credito', function (Blueprint $table) {
-            $table->id("Codigo");
+            $table->id();
             $table->interger("Cuota_Inicial");
             $table->integer("Plazo");
             $table->integer("Interés_Anual");

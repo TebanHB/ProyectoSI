@@ -13,9 +13,12 @@ class CreateTelefonoPersonaTable extends Migration
      */
     public function up()
     {
+
         Schema::create('telefono_persona', function (Blueprint $table) {
-            $table->id("CI");
-            $table->string("TELEFONO");
+            $table->id();
+            $table->unsignedInteger("id_persona");
+            $table->foreign('id_persona')->on('users')->references('id')->onDelete('cascade');
+            $table->integer("telefono");
             $table->timestamps();
         });
     }

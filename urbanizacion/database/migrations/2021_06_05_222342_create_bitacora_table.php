@@ -13,9 +13,11 @@ class CreateBitacoraTable extends Migration
      */
     public function up()
     {
+        // // $table->foreign('user_id')->on('users')->references('id')->onDelete('cascade');
         Schema::create('bitacora', function (Blueprint $table) {
-            $table->id("Nro_Bitacora");
-            $table->integer("Codigo_Admin")
+            $table->id();
+            $table->unsignedBigInteger("id_user");
+            $table->foreign('id_user')->on('users')->references('id')->onDelete('cascade');
 
             $table->timestamps();
         });

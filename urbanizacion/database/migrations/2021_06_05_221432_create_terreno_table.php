@@ -14,7 +14,7 @@ class CreateTerrenoTable extends Migration
     public function up()
     {
         Schema::create('terreno', function (Blueprint $table) {
-            $table->id("NRO_LOTE");
+            $table->id();
             $table->float("SUPERFICIE_TERRENO");
             $table->float("PRECIO");
             $table->string("ESTADO_TERRENO");

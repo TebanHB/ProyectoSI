@@ -14,7 +14,7 @@ class CreateCorreoPersonaTable extends Migration
     public function up()
     {
         Schema::create('correo_persona', function (Blueprint $table) {
-            $table->id("CI");
+            $table->id();
             $table->string("CORREO");
             $table->timestamps();
         });

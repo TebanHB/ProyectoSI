@@ -21,6 +21,10 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->boolean("tipo_vendedor");
+            $table->boolean("tipo_visita");
+            $table->boolean("tipo_cliente");
+            $table->boolean("tipo_administrador");
         });
     }
 

@@ -14,7 +14,7 @@ class CreateMoraTable extends Migration
     public function up()
     {
         Schema::create('mora', function (Blueprint $table) {
-            $table->id("Nro_Mora");
+            $table->id();
             $table->integer("Multa");
             $table->integer("Retraso_Día");
             $table->timestamps();

@@ -14,10 +14,10 @@ class CreateNotaTable extends Migration
     public function up()
     {
         Schema::create('nota', function (Blueprint $table) {
-            $table->id("Nro_Nota");
+            $table->id();
             $table->string("descripcion");
-            $table->date("Fecha")
-            $table->integer("Nro_Bitacora1")    
+            $table->date("Fecha");
+            $table->integer("Nro_Bitacora1")    ;
             $table->timestamps();
 
         });
