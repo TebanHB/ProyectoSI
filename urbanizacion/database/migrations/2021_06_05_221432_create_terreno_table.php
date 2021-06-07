@@ -15,10 +15,10 @@ class CreateTerrenoTable extends Migration
     {
         Schema::create('terreno', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger("nro_contrato1");
-            $table->foreign('nro_contrato')->on('contrato')->references('id')->onDelete('cascade');
-            $table->unsignedBigInteger("nro_manzana");
-            $table->foreign('nro_manzana')->on('manzana')->references('id')->onDelete('cascade');
+            $table->unsignedBigInteger("id_contrato");
+            $table->foreign('id_contrato')->on('contrato')->references('id')->onDelete('cascade');
+            $table->unsignedBigInteger("id_manzana");
+            $table->foreign('id_manzana')->on('manzana')->references('id')->onDelete('cascade');
             $table->unsignedBigInteger("id_users");
             $table->foreign('id_users')->on('users')->references('id')->onDelete('cascade');
             $table->float("superficie_terreno");
