@@ -15,9 +15,9 @@ class CreateCompromisoTable extends Migration
     {
         Schema::create('compromiso', function (Blueprint $table) {
             $table->id();
-            $table->integer("Codigo");
-            $table->float("Monto_Reserva");
-            $table->date("Fecha_A_Pagar");
+            $table->integer("codigo");
+            $table->float("monto_reserva");
+            $table->date("fecha_a_pagar");
             $table->timestamps();
         });
     }

@@ -15,7 +15,7 @@ class CreateCorreoPersonaTable extends Migration
     {
         Schema::create('correo_persona', function (Blueprint $table) {
             $table->id();
-            $table->string("CORREO");
+            $table->string("correo");
             $table->timestamps();
         });
     }

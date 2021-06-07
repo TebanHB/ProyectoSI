@@ -15,14 +15,14 @@ class CreateCreditoTable extends Migration
     {
         Schema::create('credito', function (Blueprint $table) {
             $table->id();
-            $table->interger("Cuota_Inicial");
-            $table->integer("Plazo");
-            $table->integer("Interés_Anual");
-            $table->integer("Cuota_Mensual");
-            $table->date("Fecha_Ultima_Cuota");
-            $table->String("Estado");
-            $table->float("Saldo_Financiado");
-            $table->date("Fecha_Prog");
+            $table->interger("cuota_inicial");
+            $table->integer("plazo");
+            $table->integer("interes_anual");
+            $table->integer("cuota_mensual");
+            $table->date("fecha_ultima_cuota");
+            $table->String("estado");
+            $table->float("saldo_financiado");
+            $table->date("fecha_Prog");
             $table->timestamps();
         });
     }

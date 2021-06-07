@@ -15,9 +15,9 @@ class CreatePagoTable extends Migration
     {
         Schema::create('pago', function (Blueprint $table) {
             $table->id();
-            $table->integer("Codigo");
-            $table->integer("Monto_Total");
-            $table->string("Tipo");
+            $table->integer("codigo");
+            $table->integer("monto_total");
+            $table->string("tipo");
             $table->timestamps();
         });
     }

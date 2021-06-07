@@ -25,7 +25,6 @@ class CreateTerrenoTable extends Migration
             $table->float("precio");
             $table->string("estado_terreno");
             $table->string("ubicacion");
-
             $table->timestamps();
         });
     }
