@@ -13,9 +13,13 @@ class CreateOfreceTable extends Migration
      */
     public function up()
     {
+        // // $table->foreign('user_id')->on('users')->references('id')->onDelete('cascade');
         Schema::create('ofrece', function (Blueprint $table) {
             $table->id();
-            $table->integer("nro_lote2");
+            $table->unsignedBigInteger("id_user");
+            $table->unsignedBigInteger("id_lote");
+            $table->foreign('id_user')->on('users')->references('id')->onDelete('cascade');
+            $table->foreign('id_lote')->on('terreno')->references('id')->onDelete('cascade');
             $table->float("comision");
             $table->timestamps();
         });
