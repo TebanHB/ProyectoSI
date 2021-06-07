@@ -15,9 +15,9 @@ class CreateContadoTable extends Migration
     {
         Schema::create('contado', function (Blueprint $table) {
             $table->id();
-            $table->float("MONTO");
-            $table->float("DESCUENTO");
-            $table->dateTime("FECHA_DE_PAGO");
+            $table->float("monto");
+            $table->float("descuento");
+            $table->dateTime("fecha_de_pago");
             $table->timestamps();
         });
     }

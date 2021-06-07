@@ -15,8 +15,8 @@ class CreateManzanaTable extends Migration
     {
         Schema::create('manzana', function (Blueprint $table) {
             $table->id();
-            $table->float("SUPERFICIE_MANZANA");
-            $table->integer("CANTIDAD_DE_TERRENO");
+            $table->float("superficie_manzana");
+            $table->integer("cantidad_de_terreno");
             $table->timestamps();
         });
     }
