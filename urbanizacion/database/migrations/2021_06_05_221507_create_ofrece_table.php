@@ -15,8 +15,8 @@ class CreateOfreceTable extends Migration
     {
         Schema::create('ofrece', function (Blueprint $table) {
             $table->id();
-            $table->integer("Nro_Lote2");
-            $table->float("Comision");
+            $table->integer("nro_lote2");
+            $table->float("comision");
             $table->timestamps();
         });
     }
