@@ -15,6 +15,10 @@ class CreateCuotaTable extends Migration
     {
         Schema::create('cuota', function (Blueprint $table) {
             $table->id();
+            $table->unsignedInteger("id_credito");
+            $table->foreign('id_credito')->on('credito')->references('id')->onDelete('cascade');
+            $table->unsignedInteger("id_mora");
+            $table->foreign('id_mora')->on('mora')->references('id')->onDelete('cascade');
             $table->float("amortizacion");
             $table->integer("monto_cuota");
             $table->integer("cod_credito");
