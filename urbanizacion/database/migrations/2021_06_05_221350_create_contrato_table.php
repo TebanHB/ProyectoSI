@@ -17,11 +17,14 @@ class CreateContratoTable extends Migration
             $table->id();
             $table->date("fecha_adjudicacion");
             $table->float("monto");
-   
-            $table->timestamps();
+            $table->unsignedInteger("id_user");
+            $table->foreign('id_user')->on('users')->references('id')->onDelete('cascade');    
+            $table->unsignedInteger("codigo_pago");
+            $table->foreign('codigo_pago')->on('pago')->references('id')->onDelete('cascade');       
         });
     }
 
+    
     /**
      * Reverse the migrations.
      *
