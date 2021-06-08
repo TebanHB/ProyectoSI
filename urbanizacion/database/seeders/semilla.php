@@ -16,32 +16,24 @@ class semilla extends Seeder
         //
         DB::table('users')->insert([
             [
-                'name'=>'Chino',
-                'email'=>'chinoselacome@gmail.com',
-                'password'=>'selacome',
+                'name'=>'Carlos Castro Flores ',
+                'email'=>'carloscortezflores03@gmail.com',
+                'password'=>'carlos1234',
                 'tipo_vendedor'=>'1',
                 'tipo_visita'=>'1',
                 'tipo_administrador'=>'1',
                 'tipo_cliente'=>'1'
             ],
             [
-                'name'=>'Camila',
-                'email'=>'lagfa@gmail.com',
-                'password'=>'toxicaxd',
-                'tipo_vendedor'=>'1',
-                'tipo_visita'=>'1',
-                'tipo_administrador'=>'1',
-                'tipo_cliente'=>'1'
+                
             ],
             [
-                'name'=>'angelica',
-                'email'=>'nosequedecir@gmail.com',
-                'password'=>'hola123',
-                'tipo_vendedor'=>'1',
-                'tipo_visita'=>'1',
-                'tipo_administrador'=>'1',
-                'tipo_cliente'=>'1'
+                
             ]
         ]);
+        DB::table('pago')->insert([
+
+        ]};
+
     }
 }

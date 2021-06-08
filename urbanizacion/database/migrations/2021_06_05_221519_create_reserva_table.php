@@ -16,7 +16,7 @@ class CreateReservaTable extends Migration
 
         Schema::create('reserva', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger("id_user");
+            $table->unsignedBigInteger('id_user');
             $table->unsignedBigInteger("id_lote");
             $table->foreign('id_user')->on('users')->references('id')->onDelete('cascade');
             $table->foreign('id_lote')->on('terreno')->references('id')->onDelete('cascade');
