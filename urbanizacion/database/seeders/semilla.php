@@ -59,7 +59,7 @@ class semilla extends Seeder
             [
                 'name'=>'Camila Duran Arteaga ',
                 'carnet'=>'4915532',
-                'email'=>'camilitada@gmail.com',,
+                'email'=>'camilitada@gmail.com',
                 'password'=>'carlos1234',
 
                 'tipo_vendedor'=>'1',
@@ -78,6 +78,27 @@ class semilla extends Seeder
                 'tipo_administrador'=>'0',
                 'tipo_cliente'=>'0'  
             ],
+            [
+                'name'=>'Mariela Loayza Guzman',
+                'carnet'=>'4789255',
+                'email'=>'mariela123@gmail.com',
+                'password'=>'contra12',
+                'tipo_vendedor'=>'1',
+                'tipo_visita'=>'1',
+                'tipo_administrador'=>'1',
+                'tipo_cliente'=>'1'
+
+            ],
+            [
+                'name'=>'Fabio Fernandez',
+                'carnet'=>'4789255',
+                'email'=>'FFernandez@gmail.com',
+                'password'=>'fabiofer',
+                'tipo_vendedor'=>'1',
+                'tipo_visita'=>'1',
+                'tipo_administrador'=>'1',
+                'tipo_cliente'=>'1'
+            ]
         ]);
        
 
