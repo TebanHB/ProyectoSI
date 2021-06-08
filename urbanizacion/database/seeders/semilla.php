@@ -94,9 +94,9 @@ class semilla extends Seeder
                 'carnet'=>'4789255',
                 'email'=>'FFernandez@gmail.com',
                 'password'=>'fabiofer',
-                'tipo_vendedor'=>'1',
-                'tipo_visita'=>'1',
-                'tipo_administrador'=>'1',
+                'tipo_vendedor'=>'0',
+                'tipo_visita'=>'0',
+                'tipo_administrador'=>'0',
                 'tipo_cliente'=>'1'
             ]
         ]);
