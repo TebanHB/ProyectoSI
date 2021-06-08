@@ -98,6 +98,57 @@ class semilla extends Seeder
                 'tipo_visita'=>'0',
                 'tipo_administrador'=>'0',
                 'tipo_cliente'=>'1'
+            ],
+            [
+                'name'=>'Daniel Cortez Roca',
+                'carnet'=>'1894126',
+                'email'=>'danicroca12@gmail.com',
+                'password'=>'danicr12',
+                'tipo_vendedor'=>'0',
+                'tipo_visita'=>'0',
+                'tipo_administrador'=>'0',
+                'tipo_cliente'=>'1'
+            ],
+[
+                'name'=>'Milagros Rodriguez Cabello',
+                'carnet'=>'5798712',
+                'email'=>'milarodriguez56@gmail.com',
+                'password'=>'MilaRoCa56',
+                'tipo_vendedor'=>'1',
+                'tipo_visita'=>'0',
+                'tipo_administrador'=>'0',
+                'tipo_cliente'=>'0'
+            ],
+
+[
+                'name'=>'Marianela Coimbra Caballero',
+                'carnet'=>'8465684',
+                'email'=>'marianelacc@gmail.com',
+                'password'=>'mari1234',
+                'tipo_vendedor'=>'1',
+                'tipo_visita'=>'0',
+                'tipo_administrador'=>'0',
+                'tipo_cliente'=>'0'
+            ],
+[
+                'name'=>'Junior Figueroa Prado',
+                'carnet'=>'6867257',
+                'email'=>'jusfipra23@gmail.com',
+                'password'=>'jusFigueroa123',
+                'tipo_vendedor'=>'0',
+                'tipo_visita'=>'0',
+                'tipo_administrador'=>'0',
+                'tipo_cliente'=>'1'
+            ],
+[
+                'name'=>'Juan Carlos Lazo Zabala',
+                'carnet'=>'4687321',
+                'email'=>'juancarlos83@gmail.com',
+                'password'=>'juancalazo83',
+                'tipo_vendedor'=>'0',
+                'tipo_visita'=>'1',
+                'tipo_administrador'=>'0',
+                'tipo_cliente'=>'0'
             ]
         ]);
        
