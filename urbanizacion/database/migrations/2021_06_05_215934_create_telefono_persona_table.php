@@ -16,9 +16,9 @@ class CreateTelefonoPersonaTable extends Migration
 
         Schema::create('telefono_persona', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger("id_persona");
-            $table->foreign('id_persona')->on('users')->references('id')->onDelete('cascade');
-            $table->integer("telefono");
+            $table->unsignedBigInteger('id_user');
+            $table->foreign('id_user')->on('users')->references('id')->onDelete('cascade');
+            $table->integer('telefono');
             $table->timestamps();
         });
     }

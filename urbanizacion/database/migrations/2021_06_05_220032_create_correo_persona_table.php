@@ -15,8 +15,8 @@ class CreateCorreoPersonaTable extends Migration
     {
         Schema::create('correo_persona', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger("id_persona");
-            $table->foreign('id_persona')->on('users')->references('id')->onDelete('cascade');
+            $table->unsignedBigInteger('id_user');
+            $table->foreign('id_user')->on('users')->references('id')->onDelete('cascade');
             $table->string("correo");
             $table->timestamps();
         });
