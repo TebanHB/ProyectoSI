@@ -80,7 +80,7 @@ class semilla extends Seeder
             ],
             [
                 'name'=>'Mariela Loayza Guzman',
-                'carnet'=>'4789255',
+                'carnet'=>'4788255',
                 'email'=>'mariela123@gmail.com',
                 'password'=>'contra12',
                 'tipo_vendedor'=>'1',
