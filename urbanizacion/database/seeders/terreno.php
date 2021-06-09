@@ -155,13 +155,7 @@ class terreno extends Seeder
                 'superficie_terreno'=>'180',
                 'precio'=>'40000',
                 'estado_terreno'=>'libre'
-            ],
-            [
-                'id_manzana'=>'1',		
-                'superficie_terreno'=>'180',
-                'precio'=>'40000',
-                'estado_terreno'=>'libre'
-            ],
+            ]
             // Manzana 2
            //grandes 4
            [
