@@ -29,8 +29,6 @@ class semilla extends Seeder
                 'name'=>'Karla Mamani Flores ',
                 'carnet'=>'4915532',
                 'email'=>'karlitamf5@gmail.com',
-                'password'=>'carlos1234',
-
                 'tipo_vendedor'=>'1',
                 'tipo_visita'=>'0',
                 'tipo_administrador'=>'0',
@@ -60,8 +58,6 @@ class semilla extends Seeder
                 'name'=>'Camila Duran Arteaga ',
                 'carnet'=>'4915532',
                 'email'=>'camilitada@gmail.com',
-                'password'=>'carlos1234',
-
                 'tipo_vendedor'=>'1',
                 'tipo_visita'=>'0',
                 'tipo_administrador'=>'0',
@@ -71,8 +67,6 @@ class semilla extends Seeder
                 'name'=>'Kevin Garcia Yucra ',
                 'carnet'=>'5545532',
                 'email'=>'kevingarcia45@gmail.com',
-                'password'=>'carlos1234',
-
                 'tipo_vendedor'=>'0',
                 'tipo_visita'=>'1',
                 'tipo_administrador'=>'0',
@@ -113,7 +107,6 @@ class semilla extends Seeder
                 'name'=>'Milagros Rodriguez Cabello',
                 'carnet'=>'5798712',
                 'email'=>'milarodriguez56@gmail.com',
-                'password'=>'MilaRoCa56',
                 'tipo_vendedor'=>'1',
                 'tipo_visita'=>'0',
                 'tipo_administrador'=>'0',
@@ -140,7 +133,7 @@ class semilla extends Seeder
                 'tipo_administrador'=>'0',
                 'tipo_cliente'=>'1'
             ],
-[
+            [
                 'name'=>'Juan Carlos Lazo Zabala',
                 'carnet'=>'4687321',
                 'email'=>'juancarlos83@gmail.com',
@@ -149,9 +142,36 @@ class semilla extends Seeder
                 'tipo_visita'=>'1',
                 'tipo_administrador'=>'0',
                 'tipo_cliente'=>'0'
+            ],
+            [
+                'name'=>'Carolina Duran Reyes',
+                'carnet'=>'5687890',
+                'email'=>'carolinitatubebesota12@gmail.com',
+                'password'=>'Bebota701',
+                'tipo_vendedor'=>'0',
+                'tipo_visita'=>'0',
+                'tipo_administrador'=>'0',
+                'tipo_cliente'=>'1'
+            ],
+            [
+                'name'=>'Cristina Duran Reyes',
+                'carnet'=>'5588890',
+                'email'=>'cristinini1003@gmail.com',
+                'tipo_vendedor'=>'0',
+                'tipo_visita'=>'1',
+                'tipo_administrador'=>'0',
+                'tipo_cliente'=>'0'
             ]
         ]);
-       
+
+        DB::table('users')->insert([
+
+            [
+
+            ]
+
+
+        ]);
 
     }
 }
