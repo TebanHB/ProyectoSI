@@ -17,7 +17,7 @@ class CreateContadoTable extends Migration
             $table->id();
             $table->float("monto");
             $table->float("descuento");
-            $table->dateTime("fecha_de_pago");
+            $table->date("fecha_de_pago");
             $table->timestamps();
         });
     }
