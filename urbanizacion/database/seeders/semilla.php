@@ -301,7 +301,7 @@ class semilla extends Seeder
                 'cuotainicial'=>'5.400', //Total 30000 //18%
                 'plazo'=>'15',
                 'interes anual'=>'1.230',//5
-                'cuota mensual'=>'239,17', //Mensual 2186 //Mensual con Interes 
+                'cuota mensual'=>'239,17', //Mensual 136,67 //Mensual con Interes 239,17
                 'fecha_Prog'=>'1'  //1er de cada Mes
                 'fecha inicio'=>'01-03-2019',
                 'fecha ultima cuota'=>'01-03-2034',
