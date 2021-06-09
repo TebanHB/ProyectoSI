@@ -185,14 +185,14 @@ class terreno extends Seeder
             ],
             // Manzana 2
            //grandes 4
-        [
+            [
             'id_contrato'=>'5',    //terreno vendido
             'id_manzana'=>'2',              //27
             'id_users'=>'6',
             'superficie_terreno'=>'180',
             'precio'=>'45000',
             'estado_terreno'=>'ocupado'
-        ],
+            ],
         [
             'id_manzana'=>'2',//1
             'superficie_terreno'=>'180',            //28
@@ -502,17 +502,7 @@ class terreno extends Seeder
             'precio'=>'45000',
             'estado_terreno'=>'libre'
         
-        ],
-        //ocupados
-
-        
-        
-       
-       
-        
-       
-       
-        
+        ]
 
         ]);
         

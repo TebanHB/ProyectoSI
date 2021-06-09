@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
         $this->call(mora::class);
         $this->call(cuota::class);
         $this->call(terreno::class);
-        $this->call(ofrece::class);
+        $this->call(vende::class);
         $this->call(reserva::class);
         $this->call(bitacora::class);
         $this->call(notas::class);
