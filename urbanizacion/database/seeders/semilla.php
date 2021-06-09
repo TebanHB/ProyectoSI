@@ -161,15 +161,59 @@ class semilla extends Seeder
                 'tipo_visita'=>'1',
                 'tipo_administrador'=>'0',
                 'tipo_cliente'=>'0'
-            ]
+            ],
         ]);
 
-        DB::table('users')->insert([
+        DB::table('telefono_persona')->insert([
 
             [
-
-            ]
-
+              'id_users'='1',
+              'telefono'='33448957'
+            ],
+            [
+                'id_users'='1',
+                'telefono'='67852478'
+            ],
+            [
+                'id_users'='2',
+                'telefono'='74563218'
+            ],
+            [
+                'id_users'='3',
+                'telefono'='75895757'
+            ],
+            [
+                'id_users'='4',
+                'telefono'='3358785'
+            ],
+            [
+                'id_users'='4',
+                'telefono'='78168518'
+            ],
+            [
+                'id_users'='5',
+                'telefono'='73245218'
+            ],
+            [
+                'id_users'='6',
+                'telefono'='74789518'
+            ],
+            [
+                'id_users'='7',
+                'telefono'='66563471'
+            ],
+            [
+                'id_users'='8',
+                'telefono'='68726987'
+            ],
+            [
+                'id_users'='9',
+                'telefono'='6100800'
+            ],
+            [
+                'id_users'='9',
+                'telefono'='68587975'
+            ],
 
         ]);
 
