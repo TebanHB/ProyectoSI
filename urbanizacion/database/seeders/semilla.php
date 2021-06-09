@@ -289,7 +289,7 @@ class semilla extends Seeder
                 'monto_a_pagar'=>'20000',
                 'fecha_pago_garantia'=>'02-12-2017',
                 'fecha_a_pagar'=>'03-01-2018'
-            ],
+            ]
         ]);
         DB::table('credito')->insert([
             [
@@ -407,7 +407,7 @@ class semilla extends Seeder
                     'id_user'=>'8',
                     'codigo_pago'=>'3'
 
-                ],
+                ]
 
             ]);
             DB::table('mora')->insert([  // la mora es el 3% de la cuota mensual con interés
