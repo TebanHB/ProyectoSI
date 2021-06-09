@@ -284,7 +284,7 @@ class semilla extends Seeder
                 'fecha_pago_garantia'=>'01-01-2018',
                 'fecha_a_pagar'=>'03-04-2018'
             ],
-           [
+            [
                 'monto_pagado'=>'35000',
                 'monto_a_pagar'=>'20000',
                 'fecha_pago_garantia'=>'12-2-2017',
@@ -309,7 +309,7 @@ class semilla extends Seeder
                 'cuotainicial'=>'4500', //Total 25000 //18%
                 'plazo'=>'15',
                 'interes anual'=>'1.025', //Interes 5
-                'cuota mensual'=>'174,3067', //Mensual 88.89 //Mensual con Interes 174,3067
+                'cuota mensual'=>'174,31', //Mensual 88.89 //Mensual con Interes 174,3067
                 'fecha_Prog'=>'1',  //1er de cada Mes
                 'fecha inicio'=>'05-01-2020',
                 'fecha ultima cuota'=>'05-01-2035',
@@ -452,6 +452,48 @@ class semilla extends Seeder
 
                 ]
             ]);
+
+            DB::table('cuota')->insert([
+                [
+                    'id_credito'=>'1',
+                    'id_mora'=>'1'
+                    'amortizacion'=>'55'
+                    'monto_cuota'=>'255.13'
+
+                ],
+                [
+                    'id_credito'=>'1',
+                    'id_mora'=>'3'
+                    'amortizacion'=>'55'
+                    'monto_cuota'=>'255.13'
+
+                ],
+                [
+                    'id_credito'=>'2',
+                    'id_mora'=>'2'
+                    'amortizacion'=>'30'
+                    'monto_cuota'=>'174.31'
+
+                ],
+                [
+                    'id_credito'=>'3',
+                    'id_mora'=>'4'
+                    'amortizacion'=>'60'
+                    'monto_cuota'=>'239.17'
+
+                ],
+                [
+                    'id_credito'=>'3',
+                    'id_mora'=>'5'
+                    'amortizacion'=>'60'
+                    'monto_cuota'=>'239.17'
+
+                ],
+
+            ]);     
+            
+            
+
 
     }
 }
