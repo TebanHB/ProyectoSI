@@ -172,9 +172,9 @@ class user extends Seeder
                 'email'=>'prodante1998@gmail.com',
                 'password'=>Hash::make('prodantepvp4588'),
                 'tipo_vendedor'=>'0',
-                'tipo_visita'=>'0',
+                'tipo_visita'=>'1',
                 'tipo_administrador'=>'0',
-                'tipo_cliente'=>'1'
+                'tipo_cliente'=>'0'
             ]
 
         ]);

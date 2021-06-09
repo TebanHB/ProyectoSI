@@ -14,5 +14,10 @@ class bitacora extends Seeder
     public function run()
     {
         //
+        DB::table('bitacora')->insert([
+           [
+                'id_user'=>'1';
+           ] 
+        ]);
     }
 }
