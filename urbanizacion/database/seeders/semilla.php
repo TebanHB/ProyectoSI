@@ -284,7 +284,7 @@ class semilla extends Seeder
                 'fecha_pago_garantia'=>'01-01-2018',
                 'fecha_a_pagar'=>'03-04-2018'
             ],
-            [
+           [
                 'monto_pagado'=>'35000',
                 'monto_a_pagar'=>'20000',
                 'fecha_pago_garantia'=>'12-2-2017',
