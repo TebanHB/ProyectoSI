@@ -288,77 +288,77 @@ class terreno extends Seeder
             'id_manzana'=>'3',
             'superficie_terreno'=>'100',
             'precio'=>'35000',
-            'estado_terreno'=>'libre',
+            'estado_terreno'=>'libre'
             
         ],
         [
             'id_manzana'=>'3',
             'superficie_terreno'=>'100',
             'precio'=>'35000',
-            'estado_terreno'=>'libre',
+            'estado_terreno'=>'libre'
             
         ],
         [
             'id_manzana'=>'3',
             'superficie_terreno'=>'100',
             'precio'=>'35000',
-            'estado_terreno'=>'',
+            'estado_terreno'=>'libre'
         
         ],
         [
             'id_manzana'=>'3',
             'superficie_terreno'=>'100',
             'precio'=>'35000',
-            'estado_terreno'=>'libre',
+            'estado_terreno'=>'libre'
             
         ],
         [
             'id_manzana'=>'3',
             'superficie_terreno'=>'100',
             'precio'=>'35000',
-            'estado_terreno'=>'libre',
+            'estado_terreno'=>'libre'
             
         ],
         [
             'id_manzana'=>'3',
             'superficie_terreno'=>'100',
             'precio'=>'35000',
-            'estado_terreno'=>'',
+            'estado_terreno'=>'libre'
         
         ],
         [
             'id_manzana'=>'3',
             'superficie_terreno'=>'100',
             'precio'=>'35000',
-            'estado_terreno'=>'libre',
-            
-        ],
-        [
-            'id_manzana'=>'3',
-            'superficie_terreno'=>'100',
-            'precio'=>'35000',
-            'estado_terreno'=>'libre',
-            
-        ],
-        [
-            'id_manzana'=>'3',
-            'superficie_terreno'=>'100',
-            'precio'=>'35000',
-            'estado_terreno'=>'',
+            'estado_terreno'=>'libre'
         
         ],
         [
             'id_manzana'=>'3',
             'superficie_terreno'=>'100',
             'precio'=>'35000',
-            'estado_terreno'=>'libre',
+            'estado_terreno'=>'libre'
             
         ],
         [
             'id_manzana'=>'3',
             'superficie_terreno'=>'100',
             'precio'=>'35000',
-            'estado_terreno'=>'libre',
+            'estado_terreno'=>'libre'
+        
+        ],
+        [
+            'id_manzana'=>'3',
+            'superficie_terreno'=>'100',
+            'precio'=>'35000',
+            'estado_terreno'=>'libre'
+            
+        ],
+        [
+            'id_manzana'=>'3',
+            'superficie_terreno'=>'100',
+            'precio'=>'35000',
+            'estado_terreno'=>'libre'
             
         ],
         
@@ -367,56 +367,56 @@ class terreno extends Seeder
             'id_manzana'=>'3',
             'superficie_terreno'=>'150',
             'precio'=>'40000',
-            'estado_terreno'=>'libre',
+            'estado_terreno'=>'libre'
             
         ],
         [
             'id_manzana'=>'3',
             'superficie_terreno'=>'150',
             'precio'=>'40000',
-            'estado_terreno'=>'libre',
+            'estado_terreno'=>'libre'
             
         ],
         [
             'id_manzana'=>'3',
             'superficie_terreno'=>'150',
             'precio'=>'40000',
-            'estado_terreno'=>'',
+            'estado_terreno'=>'libre'
         
         ],
         [
             'id_manzana'=>'3',
             'superficie_terreno'=>'150',
             'precio'=>'40000',
-            'estado_terreno'=>'libre',
+            'estado_terreno'=>'libre'
             
         ],
         [
             'id_manzana'=>'3',
             'superficie_terreno'=>'150',
             'precio'=>'40000',
-            'estado_terreno'=>'libre',
+            'estado_terreno'=>'libre'
             
         ],
         [
             'id_manzana'=>'3',
             'superficie_terreno'=>'150',
             'precio'=>'40000',
-            'estado_terreno'=>'',
+            'estado_terreno'=>'libre'
         
         ],
         [
             'id_manzana'=>'3',
             'superficie_terreno'=>'150',
             'precio'=>'40000',
-            'estado_terreno'=>'libre',
+            'estado_terreno'=>'libre'
             
         ],
         [
             'id_manzana'=>'3',
             'superficie_terreno'=>'150',
             'precio'=>'40000',
-            'estado_terreno'=>'libre',
+            'estado_terreno'=>'libre'
             
         ],
         //Grandes
@@ -424,38 +424,38 @@ class terreno extends Seeder
             'id_manzana'=>'3',
             'superficie_terreno'=>'180',
             'precio'=>'45000',
-            'estado_terreno'=>'libre',
+            'estado_terreno'=>'libre'
         
         ],
         [
             'id_manzana'=>'3',
             'superficie_terreno'=>'180',
             'precio'=>'45000',
-            'estado_terreno'=>'libre',
+            'estado_terreno'=>'libre'
             
         ],
         [
             'id_manzana'=>'3',
             'superficie_terreno'=>'180',
             'precio'=>'45000',
-            'estado_terreno'=>'libre',
+            'estado_terreno'=>'libre'
             
         ],
         [
             'id_manzana'=>'3',
             'superficie_terreno'=>'180',
             'precio'=>'45000',
-            'estado_terreno'=>'libre',
+            'estado_terreno'=>'libre'
         
         ],
-        
+
         [
             'id_contrato'=>'1',
             'id_manzana'=>'1',
             'id_users'=>'2',
             'superficie_terreno'=>'150',
             'precio'=>'32000',
-            'estado_terreno'=>'ocupado',
+            'estado_terreno'=>'ocupado'
            
         ],
         [
@@ -480,7 +480,7 @@ class terreno extends Seeder
             'id_users'=>'5',
             'superficie_terreno'=>'180',
             'precio'=>'45000',
-            'estado_terreno'=>'ocupado',
+            'estado_terreno'=>'ocupado'
         ],
         [
             'id_contrato'=>'5',
@@ -488,7 +488,7 @@ class terreno extends Seeder
             'id_users'=>'6',
             'superficie_terreno'=>'180',
             'precio'=>'45000',
-            'estado_terreno'=>'ocupado',
+            'estado_terreno'=>'ocupado'
         ],
         [
             'id_contrato'=>'6',
@@ -496,7 +496,7 @@ class terreno extends Seeder
             'id_users'=>'7',
             'superficie_terreno'=>'180',
             'precio'=>'42750',
-            'estado_terreno'=>'ocupado',
+            'estado_terreno'=>'ocupado'
         ],
         [
             'id_contrato'=>'7',
@@ -504,7 +504,7 @@ class terreno extends Seeder
             'id_users'=>'8',
             'superficie_terreno'=>'150',
             'precio'=>'33725',
-            'estado_terreno'=>'ocupado',
+            'estado_terreno'=>'ocupado'
         ],
 
 
