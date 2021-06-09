@@ -32,6 +32,6 @@ class CreateOfreceTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ofrece');
+        Schema::dropIfExists('vende');
     }
 }
