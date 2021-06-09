@@ -258,8 +258,18 @@ class semilla extends Seeder
             ]
         ]);
 
-    
-    
-
+        DB::table('compromiso')->insert([
+            [
+                'monto_pagado'=>'25000',
+                'monto_a_pagar'=>'20000',
+                'fecha_a_pagar'=>'03-01-2018'
+            ],
+            [
+                'monto_pagado'=>'5000',
+                'monto_a_pagar'=>'40000',
+                'fecha_a_pagar'=>'03-01-2018'
+            ],
+        ]);  
+        
     }
 }
