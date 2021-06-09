@@ -21,8 +21,7 @@ class CreateCuotaTable extends Migration
             $table->foreign('id_mora')->on('mora')->references('id')->onDelete('cascade');
             $table->float("amortizacion");
             $table->integer("monto_cuota");
-            $table->integer("cod_credito");
-            $table->integer("nro_mora");
+        
             $table->timestamps();
         });
     }

@@ -25,7 +25,7 @@ class compromiso extends Seeder
             ],
             [
                 'monto_pagado'=>'35000',
-                'monto_a_pagar'=>'20000',
+                'monto_a_pagar'=>'10000',
                 'fecha_pago_garantia'=>'12-2-2017',
                 'fecha_a_pagar'=>'1-3-2018'
             ]

@@ -45,7 +45,7 @@ class contrato extends Seeder
             ],
             [
                 'fecha_adjudicacion'=>'02-12-2017',
-                'monto'=>'55000',
+                'monto'=>'45000',
                 'id_user'=>'6',
                 'codigo_pago'=>'2'
 

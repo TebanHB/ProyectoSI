@@ -17,6 +17,7 @@ class CreateManzanaTable extends Migration
             $table->id();
             $table->float("superficie_manzana");
             $table->integer("cantidad_de_terreno");
+            $table->string("ubicacion");
             $table->timestamps();
         });
     }
