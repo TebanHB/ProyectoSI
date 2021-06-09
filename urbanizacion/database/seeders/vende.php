@@ -17,17 +17,17 @@ class ofrece extends Seeder
         DB::table('vende')->insert([
             [
                 'id_user'=>'9'.
-                'id_lote'=>'',
+                'id_lote'=>'66',
                 'comision'=>''
             ],
             [
                 'id_user'=>'10'.
-                'id_lote'=>'',
+                'id_lote'=>'67',
                 'comision'=>''
             ],
             [
                 'id_user'=>'11'.
-                'id_lote'=>'',
+                'id_lote'=>'68',
                 'comision'=>''
             ],
             [
