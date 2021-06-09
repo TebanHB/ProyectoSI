@@ -269,7 +269,47 @@ class semilla extends Seeder
                 'monto_a_pagar'=>'40000',
                 'fecha_a_pagar'=>'03-01-2018'
             ],
-        ]);  
+        ]);
+        DB::table('credito')->insert([
+            [
+                'cuotainicial'=>'5.760', //Total 32000 //18%
+                'plazo'=>'15',
+                'interes anual'=>'1.312', // Interes 5
+                'cuota mensual'=>'255.13', //Mensual 145,83 //Mensual con Interes 255.13
+                'fecha_Prog'=>'1 de cada mes'  //1er de cada Mes
+                'fecha inicio'=>'01-02-2018',
+                'fecha ultima cuota'=>'01-02-2032',
+                'estado'=>'Activo',
+                'saldo_financiado'=>'26.240',
+                
+
+            ],  
+            [
+                'cuotainicial'=>'4500', //Total 25000 //18%
+                'plazo'=>'15',
+                'interes anual'=>'1.025', //Interes 5
+                'cuota mensual'=>'174,3067', //Mensual 88.89 //Mensual con Interes 174,3067
+                'fecha_Prog'=>'1'  //1er de cada Mes
+                'fecha inicio'=>'01-05-2020',
+                'fecha ultima cuota'=>'01-05-2035',
+                'estado'=>'Activo',
+                'saldo_financiado'=>'16.000',
+                
+
+            ],  
+            [
+                'cuotainicial'=>'5.400', //Total 30000 //18%
+                'plazo'=>'15',
+                'interes anual'=>'1.230',//5
+                'cuota mensual'=>'239,17', //Mensual 2186 //Mensual con Interes 
+                'fecha_Prog'=>'1'  //1er de cada Mes
+                'fecha inicio'=>'01-03-2019',
+                'fecha ultima cuota'=>'01-03-2034',
+                'estado'=>'Activo',
+                'saldo_financiado'=>'24.600',
+                
+
+            ],  
         
     }
 }
