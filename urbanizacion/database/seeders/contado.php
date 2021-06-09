@@ -19,12 +19,12 @@ class contado extends Seeder
             [
                 'monto'=>'42750',
                 'descuento'=>'2250',        //5%
-                'fecha_de_pago'=>'02-02-2021'
+                'fecha_de_pago'=>'2021-02-02'
             ],
             [
                 'monto'=>'33725',
                 'descuento'=>'1775',
-                'fecha_de_pago'=>'04-18-2021'
+                'fecha_de_pago'=>'2021-04-18'
             ]
         ]);
     }

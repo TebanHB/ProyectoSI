@@ -17,37 +17,37 @@ class notas extends Seeder
         DB::table('notas')->insert([
             [
                 'descripcion'=>'agrego contrato',
-                'fecha'=>'01-02-2018',
+                'fecha'=>'2018-02-01',
                 'id_bitacora'=>'1'
             ], 
             [
                 'descripcion'=>'agrego contrato',
-                'fecha'=>'01-05-2020',
+                'fecha'=>'2020-05-01',
                 'id_bitacora'=>'1'
             ],
             [
                 'descripcion'=>'agrego contrato',
-                'fecha'=>'01-03-2019',
+                'fecha'=>'2019-03-01',
                 'id_bitacora'=>'1'
             ],
             [
                 'descripcion'=>'agrego contrato',
-                'fecha'=>'01-01-2018',
+                'fecha'=>'2018-01-01',
                 'id_bitacora'=>'1'
             ],
             [
                 'descripcion'=>'agrego contrato',
-                'fecha'=>'02-12-2017',
+                'fecha'=>'2017-12-02',
                 'id_bitacora'=>'1'
             ],
             [
                 'descripcion'=>'agrego contrato',
-                'fecha'=>'02-02-2021',
+                'fecha'=>'2021-02-02',
                 'id_bitacora'=>'1'
             ],
             [
                 'descripcion'=>'agrego contrato',
-                'fecha'=>'18-04-2021',
+                'fecha'=>'2021-04-18',
                 'id_bitacora'=>'1'
             ]
     }
