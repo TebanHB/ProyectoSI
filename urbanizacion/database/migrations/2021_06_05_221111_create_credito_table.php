@@ -19,10 +19,11 @@ class CreateCreditoTable extends Migration
             $table->integer('plazo');
             $table->integer('interes_anual');
             $table->integer('cuota_mensual');
+            $table->string('fecha_Prog');
+            $table->date('fecha_inicio');
             $table->date('fecha_ultima_cuota');
             $table->string('estado');
             $table->float('saldo_financiado');
-            $table->date('fecha_Prog');
             $table->timestamps();
         });
     }
