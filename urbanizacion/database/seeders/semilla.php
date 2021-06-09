@@ -213,7 +213,44 @@ class semilla extends Seeder
             [
                 'id_users'='9',
                 'telefono'='68587975'
+
             ],
+            [
+                'id_users'='10',
+                'telefono'='72181418'
+
+            ],
+            [
+                'id_users'='11',
+                'telefono'='72172482'
+
+            ],
+            [
+                'id_users'='12',
+                'telefono'='6897111'
+
+            ],
+            [
+                'id_users'='13',
+                'telefono'='68471002'
+
+            ],
+            [
+                'id_users'='13',
+                'telefono'='66554487'
+
+            ],
+            [
+                'id_users'='14',
+                'telefono'='67894561'
+
+            ],
+            [
+                'id_users'='15',
+                'telefono'='78545225'
+
+            ],
+
 
         ]);
 
