@@ -18,7 +18,7 @@ class telefono extends Seeder
         DB::table('telefono_persona')->insert([
 
             [
-                'id_users'=>'1',
+                'id_users'=>'1',         //fijo
                 'telefono'=>'33448957'
             ],
             [
