@@ -245,7 +245,8 @@ class semilla extends Seeder
                 'id_users'=>'15',
                 'telefono'=>'78545225'
 
-            ],
+            ]
+            ]);
         DB::table('pago')->insert([
             [
                 'tipo'=>'credito'
