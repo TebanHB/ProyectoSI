@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class pago extends Seeder
 {
@@ -14,5 +15,16 @@ class pago extends Seeder
     public function run()
     {
         //
+        DB::table('pago')->insert([
+            [
+                'tipo'=>'credito'
+            ],
+            [
+                'tipo'=>'compromiso'
+            ],
+            [
+                'tipo'=>'contado'
+            ]
+        ]);
     }
 }
