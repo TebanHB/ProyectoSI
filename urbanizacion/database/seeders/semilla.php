@@ -301,7 +301,7 @@ class semilla extends Seeder
                 'fecha inicio'=>'01-02-2018',
                 'fecha ultima cuota'=>'01-02-2032',
                 'estado'=>'Activo',
-                'saldo_financiado'=>'26.240',
+                'saldo_financiado'=>'26.240'
 
 
             ],
@@ -314,7 +314,7 @@ class semilla extends Seeder
                 'fecha inicio'=>'01-05-2020',
                 'fecha ultima cuota'=>'01-05-2035',
                 'estado'=>'Activo',
-                'saldo_financiado'=>'16.000',
+                'saldo_financiado'=>'16.000'
 
 
             ],
@@ -327,7 +327,7 @@ class semilla extends Seeder
                 'fecha inicio'=>'01-03-2019',
                 'fecha ultima cuota'=>'01-03-2034',
                 'estado'=>'Activo',
-                'saldo_financiado'=>'24.600',
+                'saldo_financiado'=>'24.600'
 
 
             ]
