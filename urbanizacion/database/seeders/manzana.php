@@ -19,7 +19,7 @@ class manzana extends Seeder
             [
                 'superficie_manzana'=>'3640',	 //10*100/terreno chico, 8*150 terreno mediano, 8*180/terreno grande
                 'cantidad_de_terreno'=>'26',
-                'ubicacion'=>'note'
+                'ubicacion'=>'norte'
             ],
             [
                 'superficie_manzana'=>'2900',	 //8chico - 8 mediano - 5 grande
