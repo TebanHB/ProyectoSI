@@ -323,6 +323,35 @@ class semilla extends Seeder
                     'fecha_de_pago'=>'18-04-2021' 
                 ]
             ]);  
-    
+            DB::table('manzana')->insert([
+                [
+                    'superficie_manzana'=>'3640'	 //10*100/terreno chico, 8*150 terreno mediano, 8*180/terreno grande
+                    'cantidad_de_terreno'=>'26'
+                ],
+                [
+                    'superficie_manzana'=>'2900'	 //8chico - 8 mediano - 5 grande
+                    'cantidad_de_terreno'=>'21'
+                ],
+                [
+                    'superficie_manzana'=>'3300'	//12 chico- 8 mediano - 5 grandes
+                    'cantidad_de_terreno'=>'25'
+                ]
+            
+            ]);  
+            DB::table('contrato')->insert([
+                [ 
+                    'fecha_adjudicacion'=>
+                    'monto'=>
+                    'id_user'
+                    'codigo_pago'=>
+            
+                ]
+            [ 
+                    'fecha_adjudicacion'=>
+                    'monto'=>
+                    'id_user'
+                    'codigo_pago'=>
+                ]
+            ]);  
     }
 }
