@@ -18,16 +18,22 @@ class manzana extends Seeder
         DB::table('manzana')->insert([
             [
                 'superficie_manzana'=>'3640',	 //10*100/terreno chico, 8*150 terreno mediano, 8*180/terreno grande
-                'cantidad_de_terreno'=>'26'
+                'cantidad_de_terreno'=>'26',
+                'ubicacion'=>'note'
             ],
             [
                 'superficie_manzana'=>'2900',	 //8chico - 8 mediano - 5 grande
-                'cantidad_de_terreno'=>'21'
+                'cantidad_de_terreno'=>'21',
+                'ubicacion'=>'este'
+
             ],
             [
                 'superficie_manzana'=>'3300',	//12 chico- 8 mediano - 5 grandes
-                'cantidad_de_terreno'=>'25'
+                'cantidad_de_terreno'=>'25',
+                'ubicacion'=>'oeste'
+
             ]
+
         ]);
     }
 }
