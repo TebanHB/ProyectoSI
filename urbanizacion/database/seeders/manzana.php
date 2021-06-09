@@ -28,7 +28,6 @@ class manzana extends Seeder
                 'superficie_manzana'=>'3300',	//12 chico- 8 mediano - 5 grandes
                 'cantidad_de_terreno'=>'25'
             ]
-
         ]);
     }
 }

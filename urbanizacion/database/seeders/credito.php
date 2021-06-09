@@ -26,8 +26,6 @@ class credito extends Seeder
                 'fecha ultima cuota'=>'02-01-2032',
                 'estado'=>'Activo',
                 'saldo_financiado'=>'26.240'
-
-
             ],
             [
                 'cuotainicial'=>'4500', //Total 25000 //18%
@@ -39,8 +37,6 @@ class credito extends Seeder
                 'fecha ultima cuota'=>'05-01-2035',
                 'estado'=>'Activo',
                 'saldo_financiado'=>'16.000',
-
-
             ],
             [
                 'cuotainicial'=>'5.400', //Total 30000 //18%

@@ -28,7 +28,6 @@ class cuota extends Seeder
                 'id_mora'=>'3',
                 'amortizacion'=>'55',
                 'monto_cuota'=>'255.13'
-
             ],
             [
                 'id_credito'=>'2',
