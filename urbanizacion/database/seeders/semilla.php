@@ -26,13 +26,14 @@ class semilla extends Seeder
                 'tipo_cliente'=>'0'
             ],
             [
-                'name'=>'Karla Mamani Flores ',
-                'carnet'=>'4915532',
-                'email'=>'karlitamf5@gmail.com',
-                'tipo_vendedor'=>'1',
+                'name'=>'Carolina Duran Reyes',
+                'carnet'=>'5687890',
+                'email'=>'carolinitatubebesota12@gmail.com',
+                'password'=>'Bebota701',
+                'tipo_vendedor'=>'0',
                 'tipo_visita'=>'0',
                 'tipo_administrador'=>'0',
-                'tipo_cliente'=>'0'  
+                'tipo_cliente'=>'1'
             ],
             [
                 'name'=>'Juan Cabrera Castro ',
@@ -54,32 +55,15 @@ class semilla extends Seeder
                 'tipo_administrador'=>'0',
                 'tipo_cliente'=>'1'  
             ],
-            [
-                'name'=>'Camila Duran Arteaga ',
-                'carnet'=>'4915532',
-                'email'=>'camilitada@gmail.com',
-                'tipo_vendedor'=>'1',
-                'tipo_visita'=>'0',
-                'tipo_administrador'=>'0',
-                'tipo_cliente'=>'0'  
-            ],
-            [
-                'name'=>'Kevin Garcia Yucra ',
-                'carnet'=>'5545532',
-                'email'=>'kevingarcia45@gmail.com',
-                'tipo_vendedor'=>'0',
-                'tipo_visita'=>'1',
-                'tipo_administrador'=>'0',
-                'tipo_cliente'=>'0'  
-            ],
+    
             [
                 'name'=>'Mariela Loayza Guzman',
                 'carnet'=>'4788255',
                 'email'=>'mariela123@gmail.com',
                 'password'=>'contra12',
-                'tipo_vendedor'=>'1',
-                'tipo_visita'=>'1',
-                'tipo_administrador'=>'1',
+                'tipo_vendedor'=>'0',
+                'tipo_visita'=>'0',
+                'tipo_administrador'=>'0',
                 'tipo_cliente'=>'1'
 
             ],
@@ -103,7 +87,38 @@ class semilla extends Seeder
                 'tipo_administrador'=>'0',
                 'tipo_cliente'=>'1'
             ],
-[
+            [
+                'name'=>'Junior Figueroa Prado',
+                'carnet'=>'6867257',
+                'email'=>'jusfipra23@gmail.com',
+                'password'=>'jusFigueroa123',
+                'tipo_vendedor'=>'0',
+                'tipo_visita'=>'0',
+                'tipo_administrador'=>'0',
+                'tipo_cliente'=>'1'
+            ],
+        
+            [
+                'name'=>'Karla Mamani Flores ',
+                'carnet'=>'4915532',
+                'email'=>'karlitamf5@gmail.com',
+                'tipo_vendedor'=>'1',
+                'tipo_visita'=>'0',
+                'tipo_administrador'=>'0',
+                'tipo_cliente'=>'0'  
+            ],
+            [
+                'name'=>'Camila Duran Arteaga ',
+                'carnet'=>'4915532',
+                'email'=>'camilitada@gmail.com',
+                'tipo_vendedor'=>'1',
+                'tipo_visita'=>'0',
+                'tipo_administrador'=>'0',
+                'tipo_cliente'=>'0'  
+            ],
+
+    
+            [
                 'name'=>'Milagros Rodriguez Cabello',
                 'carnet'=>'5798712',
                 'email'=>'milarodriguez56@gmail.com',
@@ -113,7 +128,7 @@ class semilla extends Seeder
                 'tipo_cliente'=>'0'
             ],
 
-[
+            [
                 'name'=>'Marianela Coimbra Caballero',
                 'carnet'=>'8465684',
                 'email'=>'marianelacc@gmail.com',
@@ -122,16 +137,6 @@ class semilla extends Seeder
                 'tipo_visita'=>'0',
                 'tipo_administrador'=>'0',
                 'tipo_cliente'=>'0'
-            ],
-[
-                'name'=>'Junior Figueroa Prado',
-                'carnet'=>'6867257',
-                'email'=>'jusfipra23@gmail.com',
-                'password'=>'jusFigueroa123',
-                'tipo_vendedor'=>'0',
-                'tipo_visita'=>'0',
-                'tipo_administrador'=>'0',
-                'tipo_cliente'=>'1'
             ],
             [
                 'name'=>'Juan Carlos Lazo Zabala',
@@ -143,16 +148,7 @@ class semilla extends Seeder
                 'tipo_administrador'=>'0',
                 'tipo_cliente'=>'0'
             ],
-            [
-                'name'=>'Carolina Duran Reyes',
-                'carnet'=>'5687890',
-                'email'=>'carolinitatubebesota12@gmail.com',
-                'password'=>'Bebota701',
-                'tipo_vendedor'=>'0',
-                'tipo_visita'=>'0',
-                'tipo_administrador'=>'0',
-                'tipo_cliente'=>'1'
-            ],
+          
             [
                 'name'=>'Cristina Duran Reyes',
                 'carnet'=>'5588890',
@@ -250,9 +246,20 @@ class semilla extends Seeder
                 'telefono'='78545225'
 
             ],
-
-
+        DB::table('pago')->insert([
+            [
+                'tipo'=>'credito'
+            ],
+            [
+                'tipo'=>'compromiso'
+            ],
+            [
+                'tipo'=>'contado'
+            ]
         ]);
+
+    
+    
 
     }
 }
