@@ -322,6 +322,7 @@ class semilla extends Seeder
                     'descuento'=>'1775',
                     'fecha_de_pago'=>'18-04-2021' 
                 ]
+            ]);  
     
     }
 }
