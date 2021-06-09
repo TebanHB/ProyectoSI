@@ -14,7 +14,7 @@ class CreateOfreceTable extends Migration
     public function up()
     {
         // // $table->foreign('user_id')->on('users')->references('id')->onDelete('cascade');
-        Schema::create('ofrece', function (Blueprint $table) {
+        Schema::create('vende', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger("id_user");
             $table->unsignedBigInteger("id_lote");

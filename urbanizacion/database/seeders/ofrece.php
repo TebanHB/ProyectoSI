@@ -14,5 +14,27 @@ class ofrece extends Seeder
     public function run()
     {
         //
+        DB::table('vende')->insert([
+            [
+                'id_user'=>'9'.
+                'id_lote'=>'',
+                'comision'=>''
+            ],
+            [
+                'id_user'=>'10'.
+                'id_lote'=>'',
+                'comision'=>''
+            ],
+            [
+                'id_user'=>'11'.
+                'id_lote'=>'',
+                'comision'=>''
+            ],
+            [
+                'id_user'=>'12'.
+                'id_lote'=>'',
+                'comision'=>''
+            ],
+        ]);
     }
 }
