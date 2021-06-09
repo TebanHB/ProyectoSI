@@ -309,7 +309,19 @@ class semilla extends Seeder
                 'saldo_financiado'=>'24.600',
                 
 
-            ],  
-        
+            ]
+        ]); 
+            DB::table('contado')->insert([
+                [
+                    'monto'=>'45000',
+                    'descuento'=>'2250',
+                    'fecha_de_pago'=>'02-02-2021' 
+                ],
+                [
+                    'monto'=>'35500',
+                    'descuento'=>'1775',
+                    'fecha_de_pago'=>'18-04-2021' 
+                ]
+    
     }
 }
