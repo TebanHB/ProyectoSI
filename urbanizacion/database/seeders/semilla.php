@@ -19,7 +19,7 @@ class semilla extends Seeder
             [
                 'name'=>'Carlos Castro Flores ',
                 'carnet'=>'4717552',
-                'email'=>'carloscortezflores03@gmail.com',
+                'email'=>'carloscastroflores03@gmail.com',
                 'password'=>Hash::make('carlos1234'),
                 'tipo_vendedor'=>'0',
                 'tipo_visita'=>'0',
@@ -287,8 +287,8 @@ class semilla extends Seeder
             [
                 'monto_pagado'=>'35000',
                 'monto_a_pagar'=>'20000',
-                'fecha_pago_garantia'=>'02-12-2017',
-                'fecha_a_pagar'=>'03-01-2018'
+                'fecha_pago_garantia'=>'12-2-2017',
+                'fecha_a_pagar'=>'1-3-2018'
             ]
         ]);
         DB::table('credito')->insert([
@@ -298,8 +298,8 @@ class semilla extends Seeder
                 'interes anual'=>'1.312', // Interes 5
                 'cuota mensual'=>'255.13', //Mensual 145,83 //Mensual con Interes 255.13
                 'fecha_Prog'=>'1 de cada mes',  //1er de cada Mes
-                'fecha inicio'=>'01-02-2018',
-                'fecha ultima cuota'=>'01-02-2032',
+                'fecha inicio'=>'02-01-2018',
+                'fecha ultima cuota'=>'02-01-2032',
                 'estado'=>'Activo',
                 'saldo_financiado'=>'26.240'
 
@@ -311,10 +311,10 @@ class semilla extends Seeder
                 'interes anual'=>'1.025', //Interes 5
                 'cuota mensual'=>'174,3067', //Mensual 88.89 //Mensual con Interes 174,3067
                 'fecha_Prog'=>'1',  //1er de cada Mes
-                'fecha inicio'=>'01-05-2020',
-                'fecha ultima cuota'=>'01-05-2035',
+                'fecha inicio'=>'05-01-2020',
+                'fecha ultima cuota'=>'05-01-2035',
                 'estado'=>'Activo',
-                'saldo_financiado'=>'16.000'
+                'saldo_financiado'=>'16.000',
 
 
             ],
@@ -324,14 +324,29 @@ class semilla extends Seeder
                 'interes anual'=>'1.230',//5
                 'cuota mensual'=>'239,17', //Mensual 136,67 //Mensual con Interes 239,17
                 'fecha_Prog'=>'1',  //1er de cada Mes
-                'fecha inicio'=>'01-03-2019',
-                'fecha ultima cuota'=>'01-03-2034',
+                'fecha inicio'=>'03-01-2019',
+                'fecha ultima cuota'=>'03-01-2034',
                 'estado'=>'Activo',
-                'saldo_financiado'=>'24.600'
+                'saldo_financiado'=>'24.600',
 
 
             ]
         ]);
+        DB::table('compromiso')->insert([
+            [
+                'monto_pagado'=>'25000',
+                'monto_a_pagar'=>'20000',
+                'fecha_pago_garantia'=>'01-01-2018',
+                'fecha_a_pagar'=>'03-04-2018'
+            ],
+            [
+                'monto_pagado'=>'35000',
+                'monto_a_pagar'=>'20000',
+                'fecha_pago_garantia'=>'12-2-2017',
+                'fecha_a_pagar'=>'1-3-2018'
+            ]
+        ]);
+
             DB::table('contado')->insert([
                 [
                     'monto'=>'42750',
@@ -341,7 +356,7 @@ class semilla extends Seeder
                 [
                     'monto'=>'33725',
                     'descuento'=>'1775',
-                    'fecha_de_pago'=>'18-04-2021'
+                    'fecha_de_pago'=>'04-18-2021'
                 ]
             ]);
             DB::table('manzana')->insert([
