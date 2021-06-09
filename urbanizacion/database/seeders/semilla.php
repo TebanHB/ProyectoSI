@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 class semilla extends Seeder
 {
     /**
@@ -19,12 +20,14 @@ class semilla extends Seeder
                 'name'=>'Carlos Castro Flores ',
                 'carnet'=>'4717552',
                 'email'=>'carloscortezflores03@gmail.com',
-                'password'=>'carlos1234',
+                'password'=>Hash::make('carlos1234'),
                 'tipo_vendedor'=>'0',
                 'tipo_visita'=>'0',
                 'tipo_administrador'=>'1',
                 'tipo_cliente'=>'0'
-            ],
+            ]
+        ]);
+            /*
             [
                 'name'=>'Carolina Duran Reyes',
                 'carnet'=>'5687890',
@@ -91,7 +94,7 @@ class semilla extends Seeder
                 'name'=>'Junior Figueroa Prado',
                 'carnet'=>'6867257',
                 'email'=>'jusfipra23@gmail.com',
-                'password'=>'jusFigueroa123',
+                'password'=>hash::make('jusFigueroa123'),
                 'tipo_vendedor'=>'0',
                 'tipo_visita'=>'0',
                 'tipo_administrador'=>'0',
@@ -158,6 +161,7 @@ class semilla extends Seeder
                 'tipo_administrador'=>'0',
                 'tipo_cliente'=>'0'
             ],
+            
         ]);
 
         DB::table('telefono_persona')->insert([
@@ -419,6 +423,6 @@ class semilla extends Seeder
 
                 ]
             ]);  
-    
+            */   
     }
 }
