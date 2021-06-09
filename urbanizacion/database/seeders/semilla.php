@@ -262,11 +262,13 @@ class semilla extends Seeder
             [
                 'monto_pagado'=>'25000',
                 'monto_a_pagar'=>'20000',
-                'fecha_a_pagar'=>'03-01-2018'
+                'fecha_pago_garantia'=>'01-01-2018',
+                'fecha_a_pagar'=>'03-04-2018'
             ],
             [
-                'monto_pagado'=>'5000',
-                'monto_a_pagar'=>'40000',
+                'monto_pagado'=>'35000',
+                'monto_a_pagar'=>'20000',
+                'fecha_pago_garantia'=>'02-12-2017',
                 'fecha_a_pagar'=>'03-01-2018'
             ],
         ]);
@@ -313,12 +315,12 @@ class semilla extends Seeder
         ]); 
             DB::table('contado')->insert([
                 [
-                    'monto'=>'45000',
-                    'descuento'=>'2250',
+                    'monto'=>'42750',
+                    'descuento'=>'2250',            //5%
                     'fecha_de_pago'=>'02-02-2021' 
                 ],
                 [
-                    'monto'=>'35500',
+                    'monto'=>'33725',
                     'descuento'=>'1775',
                     'fecha_de_pago'=>'18-04-2021' 
                 ]
@@ -360,31 +362,31 @@ class semilla extends Seeder
             
                 ],
                 [ 
-                    'fecha_adjudicacion'=>''
-                    'monto'=>'30000'
-                    'id_user'=>'4'
-                    'codigo_pago'=>
+                    'fecha_adjudicacion'=>'01-01-2018'
+                    'monto'=>'45000'
+                    'id_user'=>'5'
+                    'codigo_pago'=>'2'
             
                 ],
                 [ 
-                    'fecha_adjudicacion'=>'01-03-2019'
-                    'monto'=>'30000'
-                    'id_user'=>'4'
-                    'codigo_pago'=>
+                    'fecha_adjudicacion'=>'02-12-2017'
+                    'monto'=>'55000'
+                    'id_user'=>'6'
+                    'codigo_pago'=>'2'
             
                 ],
                 [ 
-                    'fecha_adjudicacion'=>'01-03-2019'
-                    'monto'=>'30000'
-                    'id_user'=>'4'
-                    'codigo_pago'=>
+                    'fecha_adjudicacion'=>'02-02-2021'
+                    'monto'=>'42750'
+                    'id_user'=>'7'
+                    'codigo_pago'=>'3'
             
                 ],
                 [ 
-                    'fecha_adjudicacion'=>'01-03-2019'
-                    'monto'=>'30000'
-                    'id_user'=>'4'
-                    'codigo_pago'=>
+                    'fecha_adjudicacion'=>'18-04-2021'
+                    'monto'=>'33725'
+                    'id_user'=>'8'
+                    'codigo_pago'=>'3'
             
                 ],
 

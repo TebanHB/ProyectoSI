@@ -18,6 +18,7 @@ class CreateCompromisoTable extends Migration
             $table->integer('codigo');
             $table->float('monto_pagado');
             $table->float('monto_a_pagar');
+            $table->date('fecha_pago_garantia');
             $table->date('fecha_a_pagar');
             $table->timestamps();
         });
