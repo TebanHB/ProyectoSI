@@ -26,8 +26,8 @@ class semilla extends Seeder
                 'tipo_administrador'=>'1',
                 'tipo_cliente'=>'0'
             ],
-    
-            
+
+
             [
                 'name'=>'Carolina Duran Reyes',
                 'carnet'=>'5687890',
@@ -46,7 +46,7 @@ class semilla extends Seeder
                 'tipo_vendedor'=>'0',
                 'tipo_visita'=>'0',
                 'tipo_administrador'=>'0',
-                'tipo_cliente'=>'1'  
+                'tipo_cliente'=>'1'
             ],
             [
                 'name'=>'Jose Wurner Yucra ',
@@ -56,9 +56,9 @@ class semilla extends Seeder
                 'tipo_vendedor'=>'0',
                 'tipo_visita'=>'0',
                 'tipo_administrador'=>'0',
-                'tipo_cliente'=>'1'  
+                'tipo_cliente'=>'1'
             ],
-    
+
             [
                 'name'=>'Mariela Loayza Guzman',
                 'carnet'=>'4788255',
@@ -100,7 +100,7 @@ class semilla extends Seeder
                 'tipo_administrador'=>'0',
                 'tipo_cliente'=>'1'
             ],
-        
+
             [
                 'name'=>'Karla Mamani Flores ',
                 'carnet'=>'4915532',
@@ -109,7 +109,7 @@ class semilla extends Seeder
                 'tipo_vendedor'=>'1',
                 'tipo_visita'=>'0',
                 'tipo_administrador'=>'0',
-                'tipo_cliente'=>'0'  
+                'tipo_cliente'=>'0'
             ],
             [
                 'name'=>'Camila Duran Arteaga ',
@@ -119,10 +119,10 @@ class semilla extends Seeder
                 'tipo_vendedor'=>'1',
                 'tipo_visita'=>'0',
                 'tipo_administrador'=>'0',
-                'tipo_cliente'=>'0'  
+                'tipo_cliente'=>'0'
             ],
 
-    
+
             [
                 'name'=>'Milagros Rodriguez Cabello',
                 'carnet'=>'5798712',
@@ -154,7 +154,7 @@ class semilla extends Seeder
                 'tipo_administrador'=>'0',
                 'tipo_cliente'=>'0'
             ],
-          
+
             [
                 'name'=>'Cristina Duran Reyes',
                 'carnet'=>'5588890',
@@ -174,8 +174,8 @@ class semilla extends Seeder
                 'tipo_visita'=>'0',
                 'tipo_administrador'=>'0',
                 'tipo_cliente'=>'1'
-            ],
-            
+            ]
+
         ]);
 
         DB::table('telefono_persona')->insert([
@@ -302,9 +302,9 @@ class semilla extends Seeder
                 'fecha ultima cuota'=>'01-02-2032',
                 'estado'=>'Activo',
                 'saldo_financiado'=>'26.240',
-                
 
-            ],  
+
+            ],
             [
                 'cuotainicial'=>'4500', //Total 25000 //18%
                 'plazo'=>'15',
@@ -315,9 +315,9 @@ class semilla extends Seeder
                 'fecha ultima cuota'=>'01-05-2035',
                 'estado'=>'Activo',
                 'saldo_financiado'=>'16.000',
-                
 
-            ],  
+
+            ],
             [
                 'cuotainicial'=>'5.400', //Total 30000 //18%
                 'plazo'=>'15',
@@ -328,22 +328,22 @@ class semilla extends Seeder
                 'fecha ultima cuota'=>'01-03-2034',
                 'estado'=>'Activo',
                 'saldo_financiado'=>'24.600',
-                
+
 
             ]
-        ]); 
+        ]);
             DB::table('contado')->insert([
                 [
                     'monto'=>'42750',
                     'descuento'=>'2250',        //5%
-                    'fecha_de_pago'=>'02-02-2021' 
+                    'fecha_de_pago'=>'02-02-2021'
                 ],
                 [
                     'monto'=>'33725',
                     'descuento'=>'1775',
-                    'fecha_de_pago'=>'18-04-2021' 
+                    'fecha_de_pago'=>'18-04-2021'
                 ]
-            ]);  
+            ]);
             DB::table('manzana')->insert([
                 [
                     'superficie_manzana'=>'3640',	 //10*100/terreno chico, 8*150 terreno mediano, 8*180/terreno grande
@@ -357,86 +357,86 @@ class semilla extends Seeder
                     'superficie_manzana'=>'3300',	//12 chico- 8 mediano - 5 grandes
                     'cantidad_de_terreno'=>'25'
                 ]
-            
-            ]);  
+
+            ]);
             DB::table('contrato')->insert([
-                [ 
+                [
                     'fecha_adjudicacion'=>'01-02-2018',
                     'monto'=>'32000',
                     'id_user'=>'2',
                     'codigo_pago'=>'1'
-            
+
                 ],
-                [ 
+                [
                     'fecha_adjudicacion'=>'01-05-2020',
                     'monto'=>'25000',
                     'id_user'=>'3',
                     'codigo_pago'=>'1'
                 ],
-                [ 
+                [
                     'fecha_adjudicacion'=>'01-03-2019',
                     'monto'=>'30000',
                     'id_user'=>'4',
                     'codigo_pago'=>'1'
-            
+
                 ],
-                [ 
+                [
                     'fecha_adjudicacion'=>'01-01-2018',
                     'monto'=>'45000',
                     'id_user'=>'5',
                     'codigo_pago'=>'2'
-            
+
                 ],
-                [ 
+                [
                     'fecha_adjudicacion'=>'02-12-2017',
                     'monto'=>'55000',
                     'id_user'=>'6',
                     'codigo_pago'=>'2'
-            
+
                 ],
-                [ 
+                [
                     'fecha_adjudicacion'=>'02-02-2021',
                     'monto'=>'42750',
                     'id_user'=>'7',
                     'codigo_pago'=>'3'
-            
+
                 ],
-                [ 
+                [
                     'fecha_adjudicacion'=>'18-04-2021',
                     'monto'=>'33725',
                     'id_user'=>'8',
                     'codigo_pago'=>'3'
-            
+
                 ],
 
-            ]);  
+            ]);
             DB::table('mora')->insert([  // la mora es el 3% de la cuota mensual con interés
-                [ 
+                [
                     'multa'=>'15.31',//primero
                     'retraso_dia'=>'2'
-            
+
                 ],
-                [ 
-                    'multa'=>'26.15',//segundo 
+                [
+                    'multa'=>'26.15',//segundo
                     'retraso_dia'=>'5'
 
                 ],
-                [ 
+                [
                     'multa'=>'30.62',// primero
                     'retraso_dia'=>'4'
 
                 ],
-                [ 
+                [
                     'multa'=>'43.05',//tercero
                     'retraso_dia'=>'6'
 
                 ],
-                [ 
+                [
                     'multa'=>'21.53',//tercero
                     'retraso_dia'=>'3'
 
                 ]
-            ]);  
-         
+            ]);
+
     }
 }
