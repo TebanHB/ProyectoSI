@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class ofrece extends Seeder
+class vende extends Seeder
 {
     /**
      * Run the database seeds.
