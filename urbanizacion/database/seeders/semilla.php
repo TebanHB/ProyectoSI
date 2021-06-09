@@ -340,18 +340,54 @@ class semilla extends Seeder
             ]);  
             DB::table('contrato')->insert([
                 [ 
-                    'fecha_adjudicacion'=>
-                    'monto'=>
-                    'id_user'
+                    'fecha_adjudicacion'=>'01-02-2018'
+                    'monto'=>'32000'
+                    'id_user'=>'2'
+                    'codigo_pago'=>'1'
+            
+                ],
+                [ 
+                    'fecha_adjudicacion'=>'01-05-2020'
+                    'monto'=>'25000'
+                    'id_user'=>'3'
+                    'codigo_pago'=>'1'
+                ],
+                [ 
+                    'fecha_adjudicacion'=>'01-03-2019'
+                    'monto'=>'30000'
+                    'id_user'=>'4'
+                    'codigo_pago'=>'1'
+            
+                ],
+                [ 
+                    'fecha_adjudicacion'=>''
+                    'monto'=>'30000'
+                    'id_user'=>'4'
                     'codigo_pago'=>
             
-                ]
-            [ 
-                    'fecha_adjudicacion'=>
-                    'monto'=>
-                    'id_user'
+                ],
+                [ 
+                    'fecha_adjudicacion'=>'01-03-2019'
+                    'monto'=>'30000'
+                    'id_user'=>'4'
                     'codigo_pago'=>
-                ]
+            
+                ],
+                [ 
+                    'fecha_adjudicacion'=>'01-03-2019'
+                    'monto'=>'30000'
+                    'id_user'=>'4'
+                    'codigo_pago'=>
+            
+                ],
+                [ 
+                    'fecha_adjudicacion'=>'01-03-2019'
+                    'monto'=>'30000'
+                    'id_user'=>'4'
+                    'codigo_pago'=>
+            
+                ],
+
             ]);  
     }
 }
