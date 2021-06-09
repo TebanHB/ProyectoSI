@@ -18,17 +18,17 @@ class reserva extends Seeder
             [
                 'id_user'=>'13',
                 'id_lote'=>'5',
-                'horario_de_visita'=>'05-12-2018 15:00:00'
+                'horario_de_visita'=>'2018-12-05 15:00:00'
             ],
             [
                 'id_user'=>'14',
                 'id_lote'=>'38',
-                'horario_de_visita'=>'05-12-2018 14:30:00'
+                'horario_de_visita'=>'2018-12-05 14:30:00'
             ],
             [
                 'id_user'=>'15',
                 'id_lote'=>'57',
-                'horario_de_visita'=>'25-06-2021 10:30:00'
+                'horario_de_visita'=>'2021-06-25 10:30:00'
             ]
         ]);
     }
