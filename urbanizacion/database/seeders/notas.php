@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class notas extends Seeder
 {
@@ -14,7 +15,7 @@ class notas extends Seeder
     public function run()
     {
         //
-        DB::table('notas')->insert([
+        DB::table('nota')->insert([
             [
                 'descripcion'=>'agrego contrato',
                 'fecha'=>'2018-02-01',
@@ -50,5 +51,6 @@ class notas extends Seeder
                 'fecha'=>'2021-04-18',
                 'id_bitacora'=>'1'
             ]
+        ]);
     }
 }

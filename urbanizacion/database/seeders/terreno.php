@@ -47,7 +47,7 @@ class terreno extends Seeder
            
             [
                 'id_contrato'=>NULL,
-                 'id_users'=>NULL                          
+                 'id_users'=>NULL ,                         
                 'id_manzana'=>'1',		
                 'superficie_terreno'=>'100',    //4
                 'precio'=>'35000',
@@ -55,7 +55,7 @@ class terreno extends Seeder
             ],
             [
                 'id_contrato'=>NULL,
-                 'id_users'=>NULL  
+                 'id_users'=>NULL  ,
                 'id_manzana'=>'1',
                 'superficie_terreno'=>'100',    //5
                 'precio'=>'35000',
@@ -91,7 +91,7 @@ class terreno extends Seeder
                 'precio'=>'35000',
                 'estado_terreno'=>'libre',
                 'id_contrato'=>NULL,
-                 'id_users'=>NUL  
+                 'id_users'=>NULL  
             ],
         
             [
@@ -215,8 +215,9 @@ class terreno extends Seeder
                 'estado_terreno'=>'libre',
                 'id_contrato'=>NULL,
                  'id_users'=>NULL  
+            ],
             [
-                'id_manzana'=>'1',		
+                'id_manzana'=>'1',
                 'superficie_terreno'=>'180',     //25
                 'precio'=>'40000',
                 'estado_terreno'=>'libre',
@@ -264,6 +265,7 @@ class terreno extends Seeder
             'estado_terreno'=>'libre',
             'id_contrato'=>NULL,
             'id_users'=>NULL 
+        ],
         [
             'id_manzana'=>'2',//4
             'superficie_terreno'=>'180',            //31
@@ -289,7 +291,7 @@ class terreno extends Seeder
             'estado_terreno'=>'libre',
             'id_contrato'=>NULL,
             'id_users'=>NULL 
-
+        ],
         [
             'id_manzana'=>'2',//3                   //34
             'superficie_terreno'=>'150',
@@ -338,6 +340,7 @@ class terreno extends Seeder
             'estado_terreno'=>'libre',
                 'id_contrato'=>NULL,
                  'id_users'=>NULL 
+        ],
        //chicos 7
 
         [
