@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class bitacora extends Seeder
 {
@@ -18,7 +17,7 @@ class bitacora extends Seeder
         DB::table('bitacora')->insert([
            [
                 'id_user'=>'1'
-           ] 
+           ]
         ]);
     }
 }
