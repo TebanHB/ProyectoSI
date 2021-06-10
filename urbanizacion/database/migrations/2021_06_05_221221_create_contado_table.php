@@ -18,6 +18,8 @@ class CreateContadoTable extends Migration
             $table->float("monto");
             $table->float("descuento");
             $table->date("fecha_de_pago");
+            $table->unsignedBigInteger('pago_id');
+            $table->foreign('pago_id')->on('pago')->references('id')->onDelete('cascade');
             $table->timestamps();
         });
     }

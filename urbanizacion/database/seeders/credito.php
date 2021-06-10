@@ -25,7 +25,8 @@ class credito extends Seeder
                 'fecha_inicio'=>'2018-02-01',
                 'fecha_ultima_cuota'=>'2032-02-01',
                 'estado'=>'Activo',
-                'saldo_financiado'=>'26240'
+                'saldo_financiado'=>'26240',
+                'pago_id'=>'1'
             ] ,
             [
                 'cuota_inicial'=>'4500', //Total 25000 //18%
@@ -36,7 +37,8 @@ class credito extends Seeder
                 'fecha_inicio'=>'2020-05-01',
                 'fecha_ultima_cuota'=>'2035-05-01',
                 'estado'=>'Activo',
-                'saldo_financiado'=>'16000'
+                'saldo_financiado'=>'16000',
+                'pago_id'=>'1'
             ],
             [
                 'cuota_inicial'=>'5400', //Total 30000 //18%
@@ -47,7 +49,8 @@ class credito extends Seeder
                 'fecha_inicio'=>'2019-03-01',
                 'fecha_ultima_cuota'=>'2034-03-01',
                 'estado'=>'Activo',
-                'saldo_financiado'=>'24600'
+                'saldo_financiado'=>'24600',
+                'pago_id'=>'1'
             ]
         ]);
     }

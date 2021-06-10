@@ -19,6 +19,8 @@ class CreateCompromisoTable extends Migration
             $table->float('monto_a_pagar');
             $table->date('fecha_pago_garantia');
             $table->date('fecha_a_pagar');
+            $table->unsignedBigInteger('pago_id');
+            $table->foreign('pago_id')->on('pago')->references('id')->onDelete('cascade');
             $table->timestamps();
         });
     }
