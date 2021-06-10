@@ -22,6 +22,9 @@ class Credito extends Model
     ];
     use HasFactory;
     public function pago(){
-        return $this->
+        return $this->belongsTo(Pago::class,'pago_id');
+    }
+    public function cuota(){
+        return $this->hasMany(Cuota::class,'id_credito');
     }
 }

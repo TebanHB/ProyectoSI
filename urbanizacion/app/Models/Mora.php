@@ -7,5 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Mora extends Model
 {
+        
+    protected $table = 'mora';
+    protected $fillable =[
+        'multa',
+        'retraso_dia'
+    ];
     use HasFactory;
+    public function cuota(){
+        return $this->hasOne(Credito::class,'id_mora');
+    }
 }

@@ -45,6 +45,16 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
     public function contrato(){
-        return $this->hasMany(Contrato::class,'user_id');
+        return $this->hasMany(Contrato::class,'id_user');
+    }
+    public function telefono_persona(){
+        return $this->hasMany(Telefono_persona::class,'id_users');
+    }
+    public function terreno(){
+        return $this->hasMany(Terreno::class,'id_users');
+    }
+   
+    public function vende(){
+        return $this->hasMany(Vende::class,'id_user');
     }
 }

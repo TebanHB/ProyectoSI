@@ -15,13 +15,13 @@ class Contrato extends Model
     //Los datos ocutlos y/o protegidos
     //   protected $hidden = [];
     use HasFactory;
-    public function cliente(){
-        return $this->belongsTo(User::class,'user_id');
+    public function users(){
+        return $this->belongsTo(Users::class,'id_user');
     }
     public function pago(){
-        return $this->belongsTo(Pago::class,'pago_id');
+        return $this->belongsTo(Pago::class,'codigo_pago');
     }
     public function terreno(){
-        return $this->hasOne(Terreno::class,'contrato_id');
+        return $this->hasOne(Terreno::class,'id_contrato');
     }
 }
