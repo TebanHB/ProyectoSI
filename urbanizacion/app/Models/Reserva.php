@@ -9,8 +9,13 @@ class Reserva extends Model
 {
     protected $table = 'reserva';
     protected $fillable =[
-        'amortizacion',
-        'monto_cuota'
+        'horario_de_visita'
     ];
     use HasFactory;
+    public function terreno(){
+        return $this->belongsTo(Terreno::class,'id_lote');
+    }
+    public function users(){
+        return $this->belongsTo(Users::class,'id_user');
+    }
 }

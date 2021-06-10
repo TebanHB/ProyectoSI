@@ -57,4 +57,11 @@ class User extends Authenticatable
     public function vende(){
         return $this->hasMany(Vende::class,'id_user');
     }
+    public function bitacora(){
+        return $this->hasOne(Bitacora::class,'id_user');
+    }
+     
+    public function reserva(){
+        return $this->hasMany(Reserva::class,'id_user');
+    }
 }

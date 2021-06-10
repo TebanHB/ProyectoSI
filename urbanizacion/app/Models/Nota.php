@@ -9,8 +9,11 @@ class Nota extends Model
 {
     protected $table = 'nota';
     protected $fillable =[
-        'amortizacion',
-        'monto_cuota'
+        'descripcion',
+        'Fecha'
     ];
     use HasFactory;
+    public function bitacora(){
+        return $this->belongsTo(Bitacora::class,'id_bitacora');
+    }
 }

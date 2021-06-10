@@ -28,4 +28,7 @@ class Terreno extends Model
     public function vende(){
         return $this->hasOne(Vende::class,'id_lote');
     }
+    public function reserva(){
+        return $this->hasOne(Reserva::class,'id_lote');
+    }
 }
