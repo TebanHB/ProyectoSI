@@ -550,7 +550,108 @@ where users.id=contrato.id_user and contrato.codigo_pago=pago.id and
 		pago.id=credito.pago_id and credito.id=cuota.id_credito and
 		cuota.id_mora=mora.id
 group by users.carnet, users.name
-----mostrar cuantas cuotas pagaron todos los clientes 
+----12---mostrar los telefonos de todos los clientes
+select users.name,telefono
+from telefono_persona,users
+where users.id=telefono_persona.id_users and tipo_cliente=1 
+---13---cuantas cuotas pagadas tiene cada credito
+select  credito.id,users.name,count(cuota.id_credito)as cuotas_pagadas
+from credito,cuota,users,contrato,pago
+where credito.id=cuota.id_credito and users.id=contrato.id_user and contrato.codigo_pago=pago.id and pago.id=credito.pago_id 
+group by credito.id, users.name
 
 
+select credito.id,count(cuota.id_credito)
+from credito,cuota
+where credito.id=cuota.id_credito
+group by credito.id
 
+
+---cual fue el terrono mas caro vendido
+---cuanto es el ingreso total por los terrenos vendidos
+
+
+--13-Mostrar el cliente con el mayor retraso en dias 
+select users.name,max(retraso_dia)
+from users,contrato,pago,credito,cuota,mora
+where users.id=contrato.id_user and contrato.codigo_pago=pago.id and pago.id=credito.pago_id
+and credito.id=cuota.id_credito and cuota.id_mora=mora.id
+group by users.name
+
+--12-mostrar los terrenos vendidos a un precio mayor de 35000
+select terreno.id,contrato.monto
+from terreno,contrato
+where terreno.id_contrato=contrato.id and contrato.monto>35000
+
+
+ select users.name,vende.id_lote
+from users,vende
+where users.id=vende.id_user and vende.id_lote in (select terreno.id from terreno where estado_terreno='ocupado')
+----12--mostrar el valor y el estado de todos los terrenos
+
+select terreno.id,terreno.id_manzana,terreno.precio,terreno.estado_terreno
+from terreno
+
+create proc insertar_users_nuevo(
+@iduser integer,
+@name  varchar(255),
+@carnet varchar(255),
+@email varchar(255),
+@password varchar(255),
+@tipo_vendedor int,
+@tipo_visita int ,
+@tipo_cliente int,
+@tipo_administrador int, 
+@idtelefono int,
+@telefono int
+)
+as 
+begin 
+insert into users (id,name,carnet,email,password,tipo_vendedor,tipo_visita,tipo_cliente,tipo_administrador)
+values(@iduser,@name,@carnet,@email,@password,@tipo_vendedor,@tipo_visita,@tipo_cliente,@tipo_administrador)
+insert into telefono_persona(id,id_users,telefono)
+values (@idtelefono,@iduser,@telefono)
+end
+
+create proc insertar_contrato(
+ @id  integer,
+ @fecha_adjudicacion  date,
+ @monto  float ,
+ @id_user integer ,
+ @codigo_pago integer 
+)as 
+begin
+insert into contrato(id,fecha_adjudicacion,monto,id_user,codigo_pago)
+values (@id,@fecha_adjudicacion,@monto,@id_user,@codigo_pago)
+end
+
+create proc insertar_credito(
+@id  integer,
+@cuota_inicial  float,
+@plazo  integer ,
+@interes_anual  float,
+@cuota_mensual  float ,
+@fecha_prog  varchar(255),
+@fecha_inicio  date ,
+@fecha_ultima_cuota  date ,
+@estado  varchar (255) ,
+@saldo_financiado float,
+@pago_id  integer 
+)as
+begin 
+insert into credito(id,cuota_inicial,plazo,interes_anual,cuota_mensual,fecha_prog,fecha_inicio,fecha_ultima_cuota,estado,saldo_financiado,pago_id)
+values (@id,@cuota_inicial,@plazo,@interes_anual,@cuota_mensual,@fecha_prog,@fecha_inicio,@fecha_ultima_cuota,@estado,@saldo_financiado,@pago_id)
+end
+
+
+create proc insertar_cuota(
+@id  integer    ,
+ @id_credito  integer    ,
+ @id_mora  integer    ,
+ @amortizacion  float  ,
+ @monto_cuota  int 
+)as 
+begin
+insert into cuota(id,id_credito,id_mora,amortizacion,monto_cuota)
+values (@id,@id_credito,@id_mora,@amortizacion,@monto_cuota)
+end
