@@ -550,7 +550,7 @@ where users.id=contrato.id_user and contrato.codigo_pago=pago.id and
 		pago.id=credito.pago_id and credito.id=cuota.id_credito and
 		cuota.id_mora=mora.id
 group by users.carnet, users.name
-----mostrar cuantas cuotas pagaron todos los clientes 
-
-
-
+--12-mostrar los terrenos vendidos a un precio mayor de 35000
+select terreno.id,contrato.monto
+from terreno,contrato
+where terreno.id_contrato=contrato.id and contrato.monto>35000
