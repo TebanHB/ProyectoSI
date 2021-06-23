@@ -550,6 +550,7 @@ where users.id=contrato.id_user and contrato.codigo_pago=pago.id and
 		pago.id=credito.pago_id and credito.id=cuota.id_credito and
 		cuota.id_mora=mora.id
 group by users.carnet, users.name
+<<<<<<< HEAD
 ----12---mostrar los telefonos de todos los clientes
 select users.name,telefono
 from telefono_persona,users
@@ -578,10 +579,13 @@ where users.id=contrato.id_user and contrato.codigo_pago=pago.id and pago.id=cre
 and credito.id=cuota.id_credito and cuota.id_mora=mora.id
 group by users.name
 
+=======
+>>>>>>> 1e640cce88a696eae6ecc0b3a27107bd84905a56
 --12-mostrar los terrenos vendidos a un precio mayor de 35000
 select terreno.id,contrato.monto
 from terreno,contrato
 where terreno.id_contrato=contrato.id and contrato.monto>35000
+<<<<<<< HEAD
 
 
  select users.name,vende.id_lote
@@ -655,3 +659,5 @@ begin
 insert into cuota(id,id_credito,id_mora,amortizacion,monto_cuota)
 values (@id,@id_credito,@id_mora,@amortizacion,@monto_cuota)
 end
+=======
+>>>>>>> 1e640cce88a696eae6ecc0b3a27107bd84905a56

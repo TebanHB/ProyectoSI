@@ -16,7 +16,7 @@ class CreateCuotaTable extends Migration
         Schema::create('cuota', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger("id_credito");
-            $table->foreign('id_credito')->on('credito')->references('id')->onDelete('cascade');
+            $table->foreign('id_credito')->on('pago')->references('id')->onDelete('cascade');
             $table->unsignedBigInteger("id_mora");
             $table->foreign('id_mora')->on('mora')->references('id')->onDelete('cascade');
             $table->float("amortizacion");

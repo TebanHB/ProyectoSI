@@ -17,9 +17,6 @@ class DatabaseSeeder extends Seeder
         $this->call(user::class);
         $this->call(telefono::class);
         $this->call(pago::class);
-        $this->call(credito::class);
-        $this->call(compromiso::class);
-        $this->call(contado::class);
         $this->call(manzana::class);
         $this->call(contrato::class);
         $this->call(mora::class);
