@@ -11,11 +11,9 @@
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
-<<<<<<< HEAD
+
                         <div class="form-group row">
-=======
-                        <div class="form-group row ">
->>>>>>> 8462e99367eca9508d2ff9317846d0f1394a0afa
+
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
