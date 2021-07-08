@@ -570,10 +570,15 @@ from users,contrato,pago,cuota,mora
 where users.id=contrato.id_user and contrato.codigo_pago=pago.id and  
 		cuota.id_mora=mora.id        ---corregir
 group by users.carnet, users.name
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6ffdd68a5c84e8b2da3f4a34dfefc29a2ebb0533
 ----12---mostrar los telefonos de todos los clientes
 select users.name,telefono
 from telefono_persona,users
 where users.id=telefono_persona.id_users and tipo_cliente=1 
+<<<<<<< HEAD
 ---13---cuantas cuotas pagadas tiene cada cliente
 select distinct credito.id,users.name,count(cuota.id_credito)as cuotas_pagadas
 from credito,cuota,users,contrato,pago
@@ -596,6 +601,15 @@ group by users.id, users.name,credito.id
 
 
 ---NO SIRVEEEEEEEEEEEEEEEEEEE
+=======
+---13---cuantas cuotas pagadas tiene cada credito
+select  credito.id,users.name,count(cuota.id_credito)as cuotas_pagadas
+from credito,cuota,users,contrato,pago
+where credito.id=cuota.id_credito and users.id=contrato.id_user and contrato.codigo_pago=pago.id and pago.id=credito.pago_id 
+group by credito.id, users.name
+
+
+>>>>>>> 6ffdd68a5c84e8b2da3f4a34dfefc29a2ebb0533
 select credito.id,count(cuota.id_credito)
 from credito,cuota
 where credito.id=cuota.id_credito
@@ -613,6 +627,7 @@ where users.id=contrato.id_user and contrato.codigo_pago=pago.id and pago.id=cre
 and credito.id=cuota.id_credito and cuota.id_mora=mora.id
 group by users.name
 
+<<<<<<< HEAD
 ---mostrar los terrenos vendidos a un precio mayor de 35000
 select terreno.id AS TERRENO,contrato.monto
 from terreno,contrato
@@ -621,6 +636,21 @@ where terreno.id_contrato=contrato.id and contrato.monto>35000
 
  
 ------mostrar el valor y el estado de todos los terrenos
+=======
+=======
+>>>>>>> 1e640cce88a696eae6ecc0b3a27107bd84905a56
+--12-mostrar los terrenos vendidos a un precio mayor de 35000
+select terreno.id,contrato.monto
+from terreno,contrato
+where terreno.id_contrato=contrato.id and contrato.monto>35000
+<<<<<<< HEAD
+
+
+ select users.name,vende.id_lote
+from users,vende
+where users.id=vende.id_user and vende.id_lote in (select terreno.id from terreno where estado_terreno='ocupado')
+----12--mostrar el valor y el estado de todos los terrenos
+>>>>>>> 6ffdd68a5c84e8b2da3f4a34dfefc29a2ebb0533
 
 select terreno.id,terreno.id_manzana,terreno.precio,terreno.estado_terreno
 from terreno
@@ -688,5 +718,10 @@ begin
 insert into cuota(id,id_credito,id_mora,amortizacion,monto_cuota)
 values (@id,@id_credito,@id_mora,@amortizacion,@monto_cuota)
 end
+<<<<<<< HEAD
 
 CREATE trigger cambiar_estado_del_terreno after 
+=======
+=======
+>>>>>>> 1e640cce88a696eae6ecc0b3a27107bd84905a56
+>>>>>>> 6ffdd68a5c84e8b2da3f4a34dfefc29a2ebb0533

@@ -10,19 +10,31 @@ class Pago extends Model
     protected $table = 'pago';
 
     protected $fillable =[
-        'tipo'
+        'tipo',
+        'cuota_inicial',
+        'plazo',
+        'interes_anual',
+        'cuota_mensual',
+        'fecha_prog',
+        'fecha_inicio',
+        'fecha_ultima_cuota',
+        'estado',
+        'saldo_financiado'
+        'monto_pagado',
+        'monto_a_pagar',
+        'fecha_pago_garantia',
+        'fecha_a_pagar',
+        'monto',
+        'descuento',
+        'fecha_de_pago'
     ];
     use HasFactory;
     public function contrato(){
         return $this->hasOne(Contrato::class,'pago_id');
     }
-    public function credito(){
-        return $this->hasMany(Credito::class,'pago_id');
-    }
-    public function contado(){
-        return $this->hasMany(Contado::class,'pago_id');
-    }
-    public function compromiso(){
-        return $this->hasMany(Compromiso::class,'pago_id');
+  
+    public function cuota(){
+
+        return $this->hasmany('App\Models\Cuota');
     }
 }
