@@ -106,24 +106,47 @@ select *from telefono_persona
 CREATE TABLE  pago  (
    id  integer   NOT NULL,
    tipo  varchar(255) NOT NULL,
+  ---credito
+   cuota_inicial  float  ,
+   plazo  integer  ,
+   interes_anual  float  ,
+   cuota_mensual  float  ,
+   fecha_prog  varchar(255)    ,
+   fecha_inicio  date  ,
+   fecha_ultima_cuota  date  ,
+   estado  varchar (255)  ,
+   saldo_financiado float  ,
+   ---compromiso
+    monto_pagado  float  ,
+   monto_a_pagar  float  ,
+   fecha_pago_garantia  date  ,
+   fecha_a_pagar  date  ,
+--contado
+ monto  float  ,
+   descuento  float  ,
+   fecha_de_pago  date ,
    primary key (id) 
     
 )  
-
+select* from pago
 --
 -- Volcado de datos para la tabla  pago 
 --
 
-INSERT INTO  pago ( id ,  tipo ) VALUES
-(1, 'credito' ),
-(2, 'compromiso' ),
-(3, 'contado' );
+INSERT INTO  pago ( id ,  tipo,cuota_inicial,plazo ,interes_anual,cuota_mensual,fecha_prog,fecha_inicio,fecha_ultima_cuota,estado,saldo_financiado,monto_pagado,monto_a_pagar,fecha_pago_garantia,fecha_a_pagar,monto,descuento,fecha_de_pago) VALUES
+(1, 'credito',5760,15,1312,255.13,'1 de cada mes','2018-02-01', '2032-02-01', 'Activo', 26240.00,null,null,null,null,null,null,null),
+(2, 'credito',4500, 15, 1025, 174, '1 de cada mes', '2020-05-01', '2035-05-01', 'Activo', 16000.00,null,null,null,null,null,null,null),
+(3, 'credito',5400, 15, 1230, 239, '1 de cada mes', '2019-03-01', '2034-03-01', 'Activo', 24600.00,null,null,null,null,null,null,null ),
+(4,'compromiso',null,null,null,null,null,null,null,null,null,25000.00, 20000.00, '2018-01-01', '2018-04-03',null,null,null),
+(5,'compromiso',null,null,null,null,null,null,null,null,null,35000.00, 10000.00, '2017-02-12', '2018-03-01',null,null,null),
+(6,'contado',null,null,null,null,null,null,null,null,null,null,null,null,null,42750.00, 2250.00, '2021-02-02'),
+(7,'contado',null,null,null,null,null,null,null,null,null,null,null,null,null,33725.00, 1775.00, '2021-04-18');
 
 -- --------------------------------------------------------
 -- Estructura de tabla para la tabla  credito 
 --
 
-CREATE TABLE  credito  (
+/*CREATE TABLE  credito  (
    id  integer   NOT NULL,
    cuota_inicial  float NOT NULL,
    plazo  integer NOT NULL,
@@ -138,13 +161,13 @@ CREATE TABLE  credito  (
    primary key (id),
    foreign key (pago_id) references pago (id)
     
-)  
+)  */
 
 --
 -- Volcado de datos para la tabla  credito 
 --
 
-INSERT INTO  credito ( id ,  cuota_inicial ,  plazo ,  interes_anual ,  cuota_mensual ,  fecha_prog ,  fecha_inicio ,  fecha_ultima_cuota ,  estado ,  saldo_financiado ,  pago_id ) VALUES
+/*INSERT INTO  credito ( id ,  cuota_inicial ,  plazo ,  interes_anual ,  cuota_mensual ,  fecha_prog ,  fecha_inicio ,  fecha_ultima_cuota ,  estado ,  saldo_financiado ,  pago_id ) VALUES
 (1, 5760, 15, 1312, 255, '1 de cada mes', '2018-02-01', '2032-02-01', 'Activo', 26240.00, 1 ),
 (2, 4500, 15, 1025, 174, '1 de cada mes', '2020-05-01', '2035-05-01', 'Activo', 16000.00, 1 ),
 (3, 5400, 15, 1230, 239, '1 de cada mes', '2019-03-01', '2034-03-01', 'Activo', 24600.00, 1 );
@@ -196,7 +219,7 @@ CREATE TABLE  contado  (
 
 INSERT INTO  contado  ( id ,  monto ,  descuento ,  fecha_de_pago ,  pago_id ) VALUES
 (1, 42750.00, 2250.00, '2021-02-02', 3),
-(2, 33725.00, 1775.00, '2021-04-18', 3);
+(2, 33725.00, 1775.00, '2021-04-18', 3);*/
 
 -- --------------------------------------------------------
 -- Estructura de tabla para la tabla  manzana 
@@ -218,7 +241,7 @@ INSERT INTO  manzana  ( id ,  superficie_manzana ,  cantidad_de_terreno ,  ubica
 (1, 3640.00, 26, 'norte'),
 (2, 2900.00, 21, 'este'),
 (3, 3300.00, 25, 'oeste');
-
+select *from manzana
 -- --------------------------------------------------------
 CREATE TABLE  contrato  (
    id  integer   NOT NULL,
@@ -237,15 +260,14 @@ CREATE TABLE  contrato  (
 
 INSERT INTO  contrato ( id ,  fecha_adjudicacion ,  monto ,  id_user ,  codigo_pago ) VALUES
 (1, '2018-02-01', 32000.00, 2, 1),
-(2, '2020-05-01', 25000.00, 3, 1),
-(3, '2019-03-01', 30000.00, 4, 1),
-(4, '2018-01-01', 45000.00, 5, 2),
-(5, '2017-12-02', 45000.00, 6, 2),
-(6, '2021-02-02', 42750.00, 7, 3),
-(7, '2021-04-18', 33725.00, 8, 3);
-
+(2, '2020-05-01', 25000.00, 3, 2),
+(3, '2019-03-01', 30000.00, 4, 3),
+(4, '2018-01-01', 45000.00, 5, 4),
+(5, '2017-12-02', 45000.00, 6, 5),
+(6, '2021-02-02', 42750.00, 7, 6),
+(7, '2021-04-18', 33725.00, 8, 7);
 -- --------------------------------------------------------
---
+   
 --- Estructura de tabla para la tabla  mora 
 --
 
@@ -268,22 +290,23 @@ INSERT INTO  mora  ( id ,  multa ,  retraso_dia  ) VALUES
 -- Estructura de tabla para la tabla  cuota 
 CREATE TABLE  cuota  (
    id  integer   NOT NULL,
-   id_credito  integer   NOT NULL,
    id_mora  integer   NOT NULL,
    amortizacion  float NOT NULL,
    monto_cuota  int NOT NULL,
-   primary key (id),
-   foreign key (id_credito) references credito (id),
-   foreign key (id_mora) references mora(id)   
+   id_pago int not null
+   primary key (id,id_pago),
+   foreign key (id_mora) references mora(id)   ,
+   foreign key (id_pago) references pago(id)   
+   
 )  
 -- Volcado de datos para la tabla  cuota 
-INSERT INTO  cuota  ( id ,id_credito ,id_mora ,amortizacion,monto_cuota ) VALUES
-(1, 1, 1, 55.00, 255 ),
-(2, 1, 3, 55.00, 255 ),
-(3, 2, 2, 30.00, 174 ),
-(4, 3, 4, 60.00, 239),
-(5, 3, 5, 60.00, 239);
-
+INSERT INTO  cuota  ( id ,id_mora ,amortizacion,monto_cuota,id_pago ) VALUES
+(1,  1, 55.00, 255,1 ),
+(2,  3, 55.00, 255 ,1),
+(3,  2, 30.00, 174 ,2),
+(4,  4, 60.00, 239,3),
+(5,  5, 60.00, 239,3);
+select *from cuota
 -- --------------------------------------------------------
 
 -- Estructura de tabla para la tabla  terreno 
@@ -308,7 +331,6 @@ CREATE TABLE  terreno  (
 --
 -- Volcado de datos para la tabla  terreno 
 --
-
 INSERT INTO  terreno  ( id ,  id_contrato ,  id_manzana ,  id_users ,  superficie_terreno ,  precio ,  estado_terreno ) VALUES
 (1, 1, 1, 2, 150.00, 32000.00, 'ocupado'),
 (2, 7, 1, 8, 150.00, 33725.00, 'ocupado'),
@@ -519,11 +541,10 @@ select distinct  users.id, users.name,  users.carnet,pago.tipo
 from users,terreno,pago,contrato
 where users.id=contrato.id_user and contrato.codigo_pago=pago.id and pago.tipo='compromiso' and users.tipo_cliente=1
 
---7-- mostrar los terrenos vendidos de cada vendedor----
-
-select terreno.id,users.name
-from users,terreno,vende
-where users.id=vende.id_user and terreno.id=vende.id_lote and tipo_vendedor=1
+--7-- mostrar los terrenos vendidos de cada vendedor---
+select users.name,vende.id_lote as Terreno_vendido
+from users,vende
+where users.id=vende.id_user and vende.id_lote in (select terreno.id from terreno where estado_terreno='ocupado')
 
 --8-- mostrar la cantidad de terrenos vendidos de cada vendedor y cuanto gano en comision ----
 
@@ -543,18 +564,44 @@ where terreno.id_manzana=manzana.id and  terreno.estado_terreno='ocupado'
 group by manzana.id,manzana.ubicacion
 
 ---11--los clientes que tiene mora 
-
+select *from cuota
 select distinct users.carnet,users.name
-from users,contrato,pago,credito,cuota,mora
-where users.id=contrato.id_user and contrato.codigo_pago=pago.id and
-		pago.id=credito.pago_id and credito.id=cuota.id_credito and
-		cuota.id_mora=mora.id
+from users,contrato,pago,cuota,mora
+where users.id=contrato.id_user and contrato.codigo_pago=pago.id and  
+		cuota.id_mora=mora.id        ---corregir
 group by users.carnet, users.name
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6ffdd68a5c84e8b2da3f4a34dfefc29a2ebb0533
 ----12---mostrar los telefonos de todos los clientes
 select users.name,telefono
 from telefono_persona,users
 where users.id=telefono_persona.id_users and tipo_cliente=1 
+<<<<<<< HEAD
+---13---cuantas cuotas pagadas tiene cada cliente
+select distinct credito.id,users.name,count(cuota.id_credito)as cuotas_pagadas
+from credito,cuota,users,contrato,pago
+where credito.id=cuota.id_credito and users.id=contrato.id_user and contrato.codigo_pago=pago.id and pago.id=credito.pago_id and tipo_cliente=1
+group by credito.id, users.name
+----------------
+
+select distinct(users.id,users.name), credito.id,count(cuota.id_credito) ----------no sirve
+from users,contrato,pago, credito,cuota			
+where
+users.tipo_cliente= 1 and
+contrato.id_user = users.id and
+contrato.codigo_pago = pago.id and
+pago.id = credito.pago_id and
+cuota.id_credito = credito.id 
+and pago.id=cuota.id_pago
+group by users.id, users.name,credito.id
+
+----------------
+
+
+---NO SIRVEEEEEEEEEEEEEEEEEEE
+=======
 ---13---cuantas cuotas pagadas tiene cada credito
 select  credito.id,users.name,count(cuota.id_credito)as cuotas_pagadas
 from credito,cuota,users,contrato,pago
@@ -562,6 +609,7 @@ where credito.id=cuota.id_credito and users.id=contrato.id_user and contrato.cod
 group by credito.id, users.name
 
 
+>>>>>>> 6ffdd68a5c84e8b2da3f4a34dfefc29a2ebb0533
 select credito.id,count(cuota.id_credito)
 from credito,cuota
 where credito.id=cuota.id_credito
@@ -579,6 +627,16 @@ where users.id=contrato.id_user and contrato.codigo_pago=pago.id and pago.id=cre
 and credito.id=cuota.id_credito and cuota.id_mora=mora.id
 group by users.name
 
+<<<<<<< HEAD
+---mostrar los terrenos vendidos a un precio mayor de 35000
+select terreno.id AS TERRENO,contrato.monto
+from terreno,contrato
+where terreno.id_contrato=contrato.id and contrato.monto>35000
+
+
+ 
+------mostrar el valor y el estado de todos los terrenos
+=======
 =======
 >>>>>>> 1e640cce88a696eae6ecc0b3a27107bd84905a56
 --12-mostrar los terrenos vendidos a un precio mayor de 35000
@@ -592,6 +650,7 @@ where terreno.id_contrato=contrato.id and contrato.monto>35000
 from users,vende
 where users.id=vende.id_user and vende.id_lote in (select terreno.id from terreno where estado_terreno='ocupado')
 ----12--mostrar el valor y el estado de todos los terrenos
+>>>>>>> 6ffdd68a5c84e8b2da3f4a34dfefc29a2ebb0533
 
 select terreno.id,terreno.id_manzana,terreno.precio,terreno.estado_terreno
 from terreno
@@ -659,5 +718,10 @@ begin
 insert into cuota(id,id_credito,id_mora,amortizacion,monto_cuota)
 values (@id,@id_credito,@id_mora,@amortizacion,@monto_cuota)
 end
+<<<<<<< HEAD
+
+CREATE trigger cambiar_estado_del_terreno after 
+=======
 =======
 >>>>>>> 1e640cce88a696eae6ecc0b3a27107bd84905a56
+>>>>>>> 6ffdd68a5c84e8b2da3f4a34dfefc29a2ebb0533
