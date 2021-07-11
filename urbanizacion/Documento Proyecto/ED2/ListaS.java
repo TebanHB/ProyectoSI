@@ -82,7 +82,7 @@ public class ListaS {
         //c3 el nodo a eliminar esta de primero
         if(verde == null) {
             L = L.getEnlace();           
-        } else{
+        } else{0
             //c1 = c2 el nodo a eliminar esta al final        
             //c1 el nodo a eliminar esta al medio
             verde.setEnlace( rojo.getEnlace() );
