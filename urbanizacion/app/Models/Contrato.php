@@ -11,7 +11,7 @@ class Contrato extends Model
     // Protected Tabla = 'Nombre de la tabla';
     protected $table = 'contrato';
     //Los datos que se van a mostrar
-    protected $fillable =['fecha_adjudicacion','monto'];
+    protected $fillable =['fecha_adjudicacion','monto','id_user','codigo_pago'];
     //Los datos ocutlos y/o protegidos
     //   protected $hidden = [];
     use HasFactory;

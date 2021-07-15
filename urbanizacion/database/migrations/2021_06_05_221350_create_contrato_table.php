@@ -21,6 +21,7 @@ class CreateContratoTable extends Migration
             $table->foreign('id_user')->on('users')->references('id')->onDelete('cascade');
             $table->unsignedBigInteger("codigo_pago");
             $table->foreign('codigo_pago')->on('pago')->references('id')->onDelete('cascade');
+            $table->timestamps();
         });
     }
 
