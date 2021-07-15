@@ -19,7 +19,7 @@ class Pago extends Model
         'fecha_inicio',
         'fecha_ultima_cuota',
         'estado',
-        'saldo_financiado'
+        'saldo_financiado',
         'monto_pagado',
         'monto_a_pagar',
         'fecha_pago_garantia',

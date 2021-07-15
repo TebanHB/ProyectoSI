@@ -2,26 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pago;
+use App\Models\User;
 use Illuminate\Http\Request;
 
-class PagoController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() // es pa mostrar las instancias que tengamos de pago en este caso
+    public function index()
     {
-        $pagos = Pago::where('tipo','credito')->get();
-        return view('pagos.index', compact('pagos'));
-    }
-
-    public function mypayments() 
-    {
-        $pagos = Pago::all();
-        return view('pagos.index', compact('pagos'));
+       $users = User::where('tipo_cliente','1')->get();
+       return view('users.index', compact('users'));
     }
 
     /**
@@ -29,7 +23,7 @@ class PagoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id) // abre un formulario de creacion
     {
         //
     }
@@ -40,7 +34,7 @@ class PagoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request) // almacena los datos que son pasados por el form
     {
         //
     }
@@ -48,10 +42,10 @@ class PagoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Pago  $pago
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Pago $pago)
+    public function show($id)
     {
         //
     }
@@ -59,10 +53,10 @@ class PagoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Pago  $pago
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Pago $pago)
+    public function edit($id)
     {
         //
     }
@@ -71,10 +65,10 @@ class PagoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Pago  $pago
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Pago $pago)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -82,10 +76,10 @@ class PagoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Pago  $pago
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Pago $pago)
+    public function destroy($id)
     {
         //
     }
