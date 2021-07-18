@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Mora;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MoraController extends Controller
 {
@@ -14,7 +15,9 @@ class MoraController extends Controller
      */
     public function index()
     {
-        //
+        $moras= Mora::all();
+        //$contratos->load("users");
+        return view('mora.index', compact('moras'));
     }
 
     /**
@@ -24,7 +27,9 @@ class MoraController extends Controller
      */
     public function create()
     {
-        //
+        $user = User::findOrFail(Auth::user()->id);
+        $moras = Mora::all();
+        return view('mora.create',compact('user'), compact('moras'));
     }
 
     /**
@@ -35,7 +40,15 @@ class MoraController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $credentials =Request()->validate([
+            'multa'=>['required'],
+            'retraso_dia'=>['required'],
+        ]);
+        Mora::create([
+            'multa'=>request('multa'),
+            'retraso_dia'=>request('retraso_dia'),
+        ]);
+        return redirect()->route('mora.index');
     }
 
     /**

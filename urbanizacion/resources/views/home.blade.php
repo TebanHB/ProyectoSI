@@ -53,7 +53,7 @@
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-            
+
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{ route('clients.index') }}" data-toggle="collapse" data-target="#collapseTwo"
@@ -61,7 +61,7 @@
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Ver Usuarios</span>
                 </a>
-                
+
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
@@ -71,7 +71,7 @@
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Ver Contratos</span>
                 </a>
-               
+
             </li>
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
@@ -80,7 +80,7 @@
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Ver Terrenos</span>
                 </a>
-               
+
             </li>
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -97,7 +97,7 @@
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Crear Contratos</span>
                 </a>
-               
+
             </li>
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
@@ -106,21 +106,22 @@
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Agregar Nueva Cuota</span>
                 </a>
-               
+
             </li>
-            
-          
+
+
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
             <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline" href="{{ route('logout') }}" method=Post>
-                <button class="rounded-circle border-0"  id="sidebarToggle"></button>
-                
+            <div class="text-center d-none d-md-inline"  >
+                <button class="rounded-circle border-0" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" id="sidebarToggle"></button>
             </div>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                {{ csrf_field() }}
+            </form>
 
-           
 
         </ul>
         <!-- End of Sidebar -->
@@ -163,16 +164,16 @@
                                 <i class="fas fa-search fa-fw"></i>
                             </a>
                             <!-- Dropdown - Messages -->
-                            
+
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"> {{ Auth::user()->name }}</span>
-                               
+
                             </a>
                             <!-- Dropdown - User Information -->
-                            
+
                         </li>
 
                     </ul>
@@ -188,10 +189,10 @@
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
                     </div>
 
-                   
+
 
             </div>
-            
+
 
     </div>
     <!-- End of Page Wrapper -->
@@ -201,8 +202,8 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-   
-   
+
+
 
     <!-- Bootstrap core JavaScript-->
 
