@@ -33,9 +33,6 @@
                   <td>{{($contrato->monto == null)? "--": $contrato->monto}}</td>
                   {{-- <td>{{$contrato->users->name}}</td>                 --}}
                   <td>        
-                    {{-- <td>
-                        <a href="{{ route('contrato.create', $user->id)}}"><button type="button" class="btn btn-success">Crear contrato</button></a>
-                    </td> --}}
                </tr> 
             @endforeach
         </tbody>

@@ -31,7 +31,6 @@
                     <input type="text" id="carnet"> 
                     <label for="tel">Telefono: </label> 
                     <input type="text" id="tel"> 
-
                 </div>
             <br> <br>
 

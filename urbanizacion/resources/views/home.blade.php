@@ -4,6 +4,13 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            <div class="container">
+                @can('admin')
+                <h1>alegria sos ADMIN</h1>  
+                @endcan
+                {{-- todo ven esto --}}
+
+            </div>
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
