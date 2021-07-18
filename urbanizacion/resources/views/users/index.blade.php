@@ -36,6 +36,7 @@
                     <td>
                         {{-- <a href="{{ route('contrato.create', $user->id)}}"><button type="button" class="btn btn-success">Crear contrato</button></a> --}}
                         <a href="{{ route('contrato.create')}}"><button type="button" class="btn btn-success">Crear contrato</button></a>
+                        <a href="{{ route('contrato.create')}}"><button type="button" class="btn btn-success">Crear hola</button></a>
 
                     </td>
                </tr> 
