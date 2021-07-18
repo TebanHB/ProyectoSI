@@ -112,5 +112,6 @@
     </div>  
    
     <button class="botonGuardar">Guardar Contrato</button>
-  
+    <button class="botoncancelar">Cancelar</button>
+
 @endsection
