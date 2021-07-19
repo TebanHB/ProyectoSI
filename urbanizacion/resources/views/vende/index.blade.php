@@ -22,9 +22,9 @@
     </ul>
     <table class="table table-striped">
         <thead>
-              <th>id_user</th>
-              <th>id_lote</th>
-              <th>comision</th>
+              <th>ID user</th>
+              <th>ID lote</th>
+              <th>Comision</th>
              
             
         </thead>

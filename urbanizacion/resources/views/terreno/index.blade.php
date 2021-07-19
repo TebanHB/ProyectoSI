@@ -22,12 +22,12 @@
     </ul>
     <table class="table table-striped">
         <thead>
-              <th>id_contrato</th>
-              <th>id_manzana</th>
-              <th>id_users</th>
-              <th>superficie_terreno</th>
-              <th>precio</th>
-              <th>estado_terreno</th>
+              <th>ID contrato</th>
+              <th>ID manzana</th>
+              <th>ID users</th>
+              <th>Superficie del terreno</th>
+              <th>Precio</th>
+              <th>Estado del terreno</th>
             
         </thead>
         <tbody>
