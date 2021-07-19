@@ -34,9 +34,11 @@
                         @endforeach
                     </select>
                 </div>
-                <button class="botonGuardar">Guardar reserva</button>
-                <button class="botoncancelar">Cancelar</button>
-                <a href="{{route('laboratory.create', $plan->id)}}" class="btn btn-success">Guardar</a>
+                <button type="submit" class="btn btn-info ">
+                    {{ __('Registrar') }}
+                    <i class="fas fa-heartbeat"></i>
+                </button>
+
 
             </form>
         </div>

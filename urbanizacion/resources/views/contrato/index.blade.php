@@ -26,20 +26,20 @@
             <th>Codigo de Pago</th>
             <th>fecha_adjudicacion</th>
             <th>monto</th>
-            
+
             {{-- <th>user</th> --}}
       </thead>
       <tbody>
           @foreach ($contratos as $contrato)
              <tr>
-                 <td>{{($contrato->id_user == null)? "--": $contrato->id_user}}</td>
+                 <td>{{($contrato->id_user == null)? "--": $contrato->user->name}}</td>
                   <td>{{($contrato->codigo_pago == null)? "--": $contrato->codigo_pago}}</td>
                   <td>{{($contrato->fecha_adjudicacion == null)? "--": $contrato->fecha_adjudicacion}}</td>
                   <td>{{($contrato->monto == null)? "--": $contrato->monto}}</td>
-                  
+
                   {{-- <td>{{$contrato->users->name}}</td>                 --}}
-                  <td>        
-               </tr> 
+                  <td>
+               </tr>
             @endforeach
         </tbody>
     </table>

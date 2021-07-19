@@ -18,7 +18,7 @@ class ContratoController extends Controller
     public function index()
     {
         $contratos = Contrato::all();
-        //$contratos->load("users");
+        $contratos->load('user');
         return view('contrato.index', compact('contratos'));
     }
 
