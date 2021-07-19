@@ -26,6 +26,8 @@
             <th>Codigo de Pago</th>
             <th>Fecha de Adjudicacion</th>
             <th>monto</th>
+            <th>estado</th>
+            <th></th>
 
             {{-- <th>user</th> --}}
       </thead>
@@ -36,6 +38,8 @@
                   <td>{{($contrato->codigo_pago == null)? "--": $contrato->codigo_pago}}</td>
                   <td>{{($contrato->fecha_adjudicacion == null)? "--": $contrato->fecha_adjudicacion}}</td>
                   <td>{{($contrato->monto == null)? "--": $contrato->monto}}</td>
+                 <td>{{($contrato->estado == 1)? "completado": "pendiente"}}</td>
+                 <td><a href="#">Ver pago</a></td>
 
                   {{-- <td>{{$contrato->users->name}}</td>                 --}}
                   <td>

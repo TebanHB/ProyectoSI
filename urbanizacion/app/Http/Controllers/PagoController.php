@@ -14,7 +14,7 @@ class PagoController extends Controller
      */
     public function index() // es pa mostrar las instancias que tengamos de pago en este caso
     {
-        $pagos = Pago::where('tipo','credito')->get();
+        $pagos = Pago::all();
         return view('pagos.index', compact('pagos'));
     }
 

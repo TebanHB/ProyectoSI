@@ -34,9 +34,15 @@
 				<li>
 					<a href="{{route('contrato.index')}}">
 						<i class="fa fa-eye" aria-hidden="true"></i>
-						<span>Ver Contratos</span>
+						<span>Ver todos los Contratos</span>
 					</a>
 				</li>
+                <li>
+                    <a href="{{route('contrato.pendiente')}}">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                        <span>Ver Contratos pendientes</span>
+                    </a>
+                </li>
                 <hr class="sidebar-divider">
 				<li>
 					<a href="{{route('contrato.create')}}">
