@@ -20,16 +20,13 @@
         </ul>
         <table class="table table-striped">
             <thead>
-            <th>superficie manzana</th>
-            <th>cantidad de terreno</th>
-            <th>ubicación</th>
+            <th>ID user</th>
+            
             </thead>
             <tbody>
-            @foreach ($ofreces as $ofrece)
+            @foreach ($bitacoras as $bitacora)
                 <tr>
-                    <td>{{($ofrece->superficie_manzana == null)? "--": $ofrece->superficie_manzana}}</td>
-                    <td>{{($ofrece->cantidad_de_terreno == null)? "--": $ofrece->cantidad_de_terreno}}</td>
-                    <td>{{($ofrece->ubicacion == null)? "--": $ofrece->ubicacion}}</td>
+                    <td>{{($bitacora->id_user == null)? "--": $bitacora->id_user}}</td>
                     {{-- <td>
                         <a href="{{route('user.permissions',$user->id)}}"><button type="button" class="btn btn-warning">Roles</button></a>
                     </td> --}}

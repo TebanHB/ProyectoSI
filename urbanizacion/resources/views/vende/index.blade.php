@@ -17,22 +17,24 @@
 <div class="container">
     <br>
     <ul class="list-group list-group-flush">
-        <li class="list-group-item"><h2>Nota</h2></li>
+        <li class="list-group-item"><h2>Terrenos vendidos</h2></li>
         {{-- <li class="list-group-item"><a href= {{route('user.register') }} ><button type="button" class="btn btn-success btn-lg btn-block">Nuevo usuario</button></a></li> --}}
     </ul>
     <table class="table table-striped">
         <thead>
-              <th>Descripcion</th>
-              <th>Fecha</th>
-              <th>ID bitacora</th>
+              <th>ID user</th>
+              <th>ID lote</th>
+              <th>Comision</th>
+             
+            
         </thead>
         <tbody>
-            @foreach ($notas as $nota)
+            @foreach ($ventas as $vende)
                <tr>
-                    <td>{{($nota->descripcion == null)? "--": $nota->Fecha }}</td>
-                    <td>{{($nota->Fecha == null)? "--": $nota->Fecha}}</td>
-                    <td>{{($nota->id_bitacora == null)? "--": $nota->id_bitacora}}</td>
-    
+                    <td>{{($vende->id_user == null)? "--": $vende->id_user }}</td>
+                    <td>{{($vende->id_lote == null)? "--": $vende->id_lote}}</td>
+                    <td>{{($vende->comision == null)? "--": $vende->comision }}</td>
+            
                     {{-- <td>
                         <a href="{{route('user.permissions',$user->id)}}"><button type="button" class="btn btn-warning">Roles</button></a>
                     </td> --}}

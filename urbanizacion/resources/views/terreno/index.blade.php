@@ -17,21 +17,28 @@
 <div class="container">
     <br>
     <ul class="list-group list-group-flush">
-        <li class="list-group-item"><h2>Nota</h2></li>
+        <li class="list-group-item"><h2>Terrenos</h2></li>
         {{-- <li class="list-group-item"><a href= {{route('user.register') }} ><button type="button" class="btn btn-success btn-lg btn-block">Nuevo usuario</button></a></li> --}}
     </ul>
     <table class="table table-striped">
         <thead>
-              <th>Descripcion</th>
-              <th>Fecha</th>
-              <th>ID bitacora</th>
+              <th>ID contrato</th>
+              <th>ID manzana</th>
+              <th>ID users</th>
+              <th>Superficie del terreno</th>
+              <th>Precio</th>
+              <th>Estado del terreno</th>
+            
         </thead>
         <tbody>
-            @foreach ($notas as $nota)
+            @foreach ($terrenos as $terreno)
                <tr>
-                    <td>{{($nota->descripcion == null)? "--": $nota->Fecha }}</td>
-                    <td>{{($nota->Fecha == null)? "--": $nota->Fecha}}</td>
-                    <td>{{($nota->id_bitacora == null)? "--": $nota->id_bitacora}}</td>
+                    <td>{{($terreno->id_contrato == null)? "--": $terreno->id_contrato }}</td>
+                    <td>{{($terreno->id_manzana == null)? "--": $terreno->id_manzana}}</td>
+                    <td>{{($terreno->id_users == null)? "--": $terreno->id_users }}</td>
+                    <td>{{($terreno->superficie_terreno == null)? "--": $terreno->superficie_terreno}}</td>
+                    <td>{{($terreno->precio == null)? "--": $terreno->precio }}</td>
+                    <td>{{($terreno->estado_terreno == null)? "--": $terreno->estado_terreno}}</td>
     
                     {{-- <td>
                         <a href="{{route('user.permissions',$user->id)}}"><button type="button" class="btn btn-warning">Roles</button></a>

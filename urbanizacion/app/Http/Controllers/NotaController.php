@@ -14,7 +14,8 @@ class NotaController extends Controller
      */
     public function index()
     {
-        //
+        $notas=Nota::all();
+        return view('nota.index',compact('notas'));
     }
 
     /**
@@ -24,7 +25,7 @@ class NotaController extends Controller
      */
     public function create()
     {
-        //
+        return view('notas.create');
     }
 
     /**

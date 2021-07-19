@@ -25,7 +25,7 @@ class UserController extends Controller
      */
     public function create($id) // abre un formulario de creacion
     {
-        //
+        return view('user.create');
     }
 
     /**

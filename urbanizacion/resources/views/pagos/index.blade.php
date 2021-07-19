@@ -22,16 +22,16 @@
     </ul>
     <table class="table table-striped">
         <thead>
-              <th>tipo</th>
-              <th>cuota inicial</th>
-              <th>plazo</th>
-              <th>interes anual</th>
-              <th>cuota_mensual</th>
-              <th>fecha_prog</th>
-              <th>fecha_inicio</th>
-              <th>fecha_ultima_cuota</th>
-              <th>estado</th>
-              <th>saldo_financiado</th>
+              <th>Tipo</th>
+              <th>Cuota inicial</th>
+              <th>Plazo</th>
+              <th>Interes anual</th>
+              <th>Cuota Mensual</th>
+              <th>Fecha Programada</th>
+              <th>Fecha de inicio</th>
+              <th>Fecha de la ultima cuota</th>
+              <th>Estado</th>
+              <th>Saldo Financiado</th>
         </thead>
         <tbody>
             @foreach ($pagos as $pago)

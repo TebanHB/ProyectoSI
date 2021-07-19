@@ -15,7 +15,7 @@ class ReservaController extends Controller
     public function index()
     {
         $reservas=Reserva::all();
-        return view('reserva.index',compact($reservas));
+        return view('reserva.index',compact('reservas'));
     }
 
     /**
@@ -25,7 +25,7 @@ class ReservaController extends Controller
      */
     public function create()
     {
-        return view('reserva.register');
+        return view('reserva.create');
     }
 
     /**
