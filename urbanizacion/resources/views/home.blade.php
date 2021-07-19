@@ -68,7 +68,7 @@
 			</ul>
 		</nav>
 		<section class="section-1">
-			@yield('datos')
+			@yield('content')
 		</section>
 	</div>
 

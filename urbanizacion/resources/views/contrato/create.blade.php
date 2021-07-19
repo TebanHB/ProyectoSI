@@ -1,5 +1,5 @@
 @extends('home')
-@section('datos')
+@section('content')
     @if ($errors->count() > 0)
     <div class="alert alert-danger">
         <ul>
