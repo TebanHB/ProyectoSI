@@ -32,6 +32,14 @@
               <th>Fecha de la ultima cuota</th>
               <th>Estado</th>
               <th>Saldo Financiado</th>
+              <th>monto_pagado</th>
+              <th>monto_a_pagar</th>
+              <th>fecha_pago_garantia</th>
+              <th>fecha_a_pagar</th>
+              <th>monto</th>
+              <th>descuento</th>
+              <th>fecha_de_pago</th>
+
         </thead>
         <tbody>
             @foreach ($pagos as $pago)
@@ -46,6 +54,14 @@
                     <td>{{($pago->fecha_ultima_cuota == null)? "--": $pago->fecha_ultima_cuota}}</td>
                     <td>{{($pago->estado == null)? "--": $pago->estado}}</td>
                     <td>{{($pago->saldo_financiado == null)? "--": $pago->saldo_financiado}}</td>
+
+                    <td>{{($pago->monto_pagado == null)? "--": $pago->monto_pagado}}</td>
+                    <td>{{($pago->monto_a_pagar == null)? "--": $pago->monto_a_pagar}}</td>
+                    <td>{{($pago->fecha_pago_garantia == null)? "--": $pago->fecha_pago_garantia}}</td>
+                    <td>{{($pago->fecha_a_pagar == null)? "--": $pago->fecha_a_pagar}}</td>
+                    <td>{{($pago->monto == null)? "--": $pago->monto}}</td>
+                    <td>{{($pago->descuento == null)? "--": $pago->descuento}}</td>
+                    <td>{{($pago->fecha_de_pago == null)? "--": $pago->fecha_de_pago}}</td>
                     {{-- <td>
                         <a href="{{route('user.permissions',$user->id)}}"><button type="button" class="btn btn-warning">Roles</button></a>
                     </td> --}}
