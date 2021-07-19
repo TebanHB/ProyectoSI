@@ -15,7 +15,7 @@ class TerrenoController extends Controller
     public function index()
     {
         $terrenos=Terreno::all();
-        return view(terreno.index, compact('terrenos'));
+        return view('terreno.index', compact('terrenos'));
     }
 
     /**
