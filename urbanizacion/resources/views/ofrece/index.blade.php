@@ -25,11 +25,11 @@
             <th>ubicación</th>
             </thead>
             <tbody>
-            @foreach ($manzanas as $manzana)
+            @foreach ($ofreces as $ofrece)
                 <tr>
-                    <td>{{($manzana->superficie_manzana == null)? "--": $manzana->superficie_manzana}}</td>
-                    <td>{{($manzana->cantidad_de_terreno == null)? "--": $manzana->cantidad_de_terreno}}</td>
-                    <td>{{($manzana->ubicacion == null)? "--": $manzana->ubicacion}}</td>
+                    <td>{{($ofrece->superficie_manzana == null)? "--": $ofrece->superficie_manzana}}</td>
+                    <td>{{($ofrece->cantidad_de_terreno == null)? "--": $ofrece->cantidad_de_terreno}}</td>
+                    <td>{{($ofrece->ubicacion == null)? "--": $ofrece->ubicacion}}</td>
                     {{-- <td>
                         <a href="{{route('user.permissions',$user->id)}}"><button type="button" class="btn btn-warning">Roles</button></a>
                     </td> --}}
