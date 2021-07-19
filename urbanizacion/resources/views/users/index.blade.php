@@ -73,21 +73,31 @@
 		<section class="section-1">
 			<table class="table table-dark table-hover">
                 <thead>
-                      <th>Nombresillo</th>
-                      <th>carnet</th>
+                      <th>Nombre</th>
+                      <th>Carnet</th>
                       <th>email</th>
-                      <th>opciones</th>
+                      <th>Administrador</th>
+                      <th>Vendedor</th>
+                      <th>Cliente</th>
+                      <th>Visita</th>
+
                 </thead>
                 <tbody>
                     @foreach ($users as $user)
                        <tr>
                             <td>{{($user->name == null)? "--": $user->name}}</td>
                             <td>{{($user->carnet == null)? "--": $user->carnet}}</td>
-                            <td>{{($user->email == null)? "--": $user->email}}</td>                
+                            <td>{{($user->email == null)? "--": $user->email}}</td>  
+                            <td>{{($user->tipo_administrador == 1)? "Si": "NO"}}</td>
+                            <td>{{($user->tipo_vendedor == 1)? "Si":"NO"  }}  </td>
+                            <td>{{($user->tipo_cliente == 1)? "Si":"NO"}}</td>
+                            <td>{{($user->tipo_visita == 1)? "Si":"NO"}}</td>
+                           
+
+
                             <td>
                                 {{-- <a href="{{ route('contrato.create', $user->id)}}"><button type="button" class="btn btn-success">Crear contrato</button></a> --}}
-                                <a href="{{ route('contrato.create')}}"><button type="button" class="btn btn-success">Crear contrato</button></a>
-                                <a href="{{ route('contrato.create')}}"><button type="button" class="btn btn-success">Crear hola</button></a>
+                               
         
                             </td>
                        </tr> 

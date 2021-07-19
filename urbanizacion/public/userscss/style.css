@@ -42,7 +42,7 @@
 
 }
 .side-bar {
-	width: 350px;
+	width: 450px;
 	background:#383838;;
 	min-height: 100vh;
 	transition: 500ms width;
