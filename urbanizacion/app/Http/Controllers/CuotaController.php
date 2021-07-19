@@ -39,8 +39,8 @@ class CuotaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function cuotas($id){
-        $cuotas = Cuota::where('id_credito',$id);
-        return view('cuota.index',compact($cuotas));
+        $cuotas = Cuota::where('id_credito',$id)->get();
+        return view('cuota.index',compact('cuotas'));
     }
     public function store(Request $request)
     {
