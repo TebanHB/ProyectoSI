@@ -22,6 +22,8 @@
     </ul>
     <table class="table table-striped">
         <thead>
+            <th>ID credito</th>
+            <th>ID mora</th>
             <th>Amortizacion</th>
             <th>Monto_cuota</th>
             {{-- <th>user</th> --}}
@@ -29,8 +31,10 @@
       <tbody>
           @foreach ($cuotas as $cuota)
              <tr>
-                  <td>{{($cuota->Amortizacion == null)? "--": $cuota->Amortizacion}}</td>
-                  <td>{{($cuota->Monto_cuota == null)? "--": $cuota->Monto_cuota}}</td>
+                  <td>{{($cuota->id_credito == null)? "--": $cuota->id_credito}}</td>
+                  <td>{{($cuota->id_mora == null)? "--": $cuota->id_mora}}</td>
+                  <td>{{($cuota->amortizacion == null)? "--": $cuota->amortizacion}}</td>
+                  <td>{{($cuota->monto_cuota == null)? "--": $cuota->monto_cuota}}</td>
                   {{-- <td>{{$contrato->users->name}}</td>                 --}}
                   <td>        
                </tr> 
