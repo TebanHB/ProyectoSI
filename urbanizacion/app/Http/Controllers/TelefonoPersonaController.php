@@ -15,7 +15,7 @@ class TelefonoPersonaController extends Controller
     public function index()
     {
         $telefonos = TelefonoPersona::all();
-        return view('telefonoPersona.index');
+        return view('telefonoPersona.index',compact('telefonos'));
     }
 
     /**

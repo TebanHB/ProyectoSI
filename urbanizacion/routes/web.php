@@ -63,4 +63,5 @@ Route::get('telefono/index',[TelefonoPersonaController::class,'index'])->name('t
 Route::get('telefono/create',[TelefonoPersonaController::class,'create'])->name('telefonoPersona.create')->middleware('auth');
 Route::post('telefono/register',[TelefonoPersonaController::class,'store'])->name('telefonoPersona.store')->middleware('auth');
 
+
 //post solo se ocupa para cuando creamos CREATE o cuando actualizamos
