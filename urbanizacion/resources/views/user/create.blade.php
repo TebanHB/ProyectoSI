@@ -36,11 +36,14 @@
                             {{ __('Registrar') }}
                             <i class="fas fa-heartbeat"></i>
                         </button>
-                        <input type="radio" name="" id="">Cliente
-                    <input type="radio" name="" id="">Administrador 
-                     <input type="radio" name="" id="">Vendedor
+                <input type="radio" name="" id="">Cliente
+                <input type="radio" name="" id="">Administrador 
+                <input type="radio" name="" id="">Vendedor
+                <input type="radio" name="" id="">Visita
 
             <!--    <a href="{{}}" class="btn btn-success">guardar</a>  Este es boton para actualizar -->
+
+
             </form>
         </div>
     </div>
