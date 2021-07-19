@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('home')
 
 @section('content')
 {{-- esto es pa mostrar errores --}}
@@ -49,7 +49,7 @@
                     {{-- <td>
                         <a href="{{route('user.permissions',$user->id)}}"><button type="button" class="btn btn-warning">Roles</button></a>
                     </td> --}}
-               </tr> 
+               </tr>
             @endforeach
         </tbody>
     </table>

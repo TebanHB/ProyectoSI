@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('home')
 
 @section('content')
 {{-- esto es pa mostrar errores --}}
@@ -32,11 +32,11 @@
                     <td>{{($nota->descripcion == null)? "--": $nota->Fecha }}</td>
                     <td>{{($nota->Fecha == null)? "--": $nota->Fecha}}</td>
                     <td>{{($nota->id_bitacora == null)? "--": $nota->id_bitacora}}</td>
-    
+
                     {{-- <td>
                         <a href="{{route('user.permissions',$user->id)}}"><button type="button" class="btn btn-warning">Roles</button></a>
                     </td> --}}
-               </tr> 
+               </tr>
             @endforeach
         </tbody>
     </table>

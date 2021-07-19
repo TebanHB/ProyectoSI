@@ -37,7 +37,7 @@
                             <i class="fas fa-heartbeat"></i>
                         </button>
                 <input type="radio" name="" id="">Cliente
-                <input type="radio" name="" id="">Administrador 
+                <input type="radio" name="" id="">Administrador
                 <input type="radio" name="" id="">Vendedor
                 <input type="radio" name="" id="">Visita
 
