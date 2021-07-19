@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('home')
 @section('content')
     @if ($errors->count() > 0)
     <div class="alert alert-danger">
@@ -36,9 +36,16 @@
                             {{ __('Registrar') }}
                             <i class="fas fa-heartbeat"></i>
                         </button>
+<<<<<<< HEAD
                         <input type="radio" name="" id="">Cliente
                     <input type="radio" name="" id="">Administrador 
                      <input type="radio" name="" id="">Vendedor
+=======
+                <input type="radio" name="" id="">Cliente
+                <input type="radio" name="" id="">Administrador
+                <input type="radio" name="" id="">Vendedor
+                <input type="radio" name="" id="">Visita
+>>>>>>> d65c41d6d011977aaef9ca36267cbffeb0e15421
 
             <!--    <a href="{{}}" class="btn btn-success">guardar</a>  Este es boton para actualizar -->
             </form>

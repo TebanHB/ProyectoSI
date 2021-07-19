@@ -38,19 +38,19 @@
 				</li>
                 <hr class="sidebar-divider">
 				<li>
-					<a href="#">
+					<a href="{{route('contrato.create')}}">
 						<i class="fa fa-cog" aria-hidden="true"></i>
 						<span>Agregar Nuevo Contrato</span>
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="{{route('user.create')}}">
 						<i class="fa fa-cog" aria-hidden="true"></i>
 						<span>Agregar Nuevo Usuario</span>
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="{{route('cuota.create')}}">
 						<i class="fa fa-cog" aria-hidden="true"></i>
 						<span>Agregar Nueva Cuota</span>
 					</a>
@@ -67,7 +67,11 @@
 			</ul>
 		</nav>
 		<section class="section-1">
+<<<<<<< HEAD
 			<h1>Bieafasafaf</h1>
+=======
+			@yield('content')
+>>>>>>> d65c41d6d011977aaef9ca36267cbffeb0e15421
 		</section>
 	</div>
 

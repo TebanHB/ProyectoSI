@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('home')
 @section('content')
     {{-- esto es pa mostrar errores --}}
     @if ($errors->count() > 0)
@@ -21,7 +21,7 @@
         <table class="table table-striped">
             <thead>
             <th>ID user</th>
-            
+
             </thead>
             <tbody>
             @foreach ($bitacoras as $bitacora)

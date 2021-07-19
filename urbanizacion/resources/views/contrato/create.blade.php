@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @extends('layouts.app')
+=======
+@extends('home')
+>>>>>>> d65c41d6d011977aaef9ca36267cbffeb0e15421
 @section('content')
     @if ($errors->count() > 0)
     <div class="alert alert-danger">
