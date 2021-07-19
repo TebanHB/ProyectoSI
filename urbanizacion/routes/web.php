@@ -8,6 +8,10 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\CuotaController;
 use App\Http\Controllers\NotaController;
 use App\Http\Controllers\TelefonoPersonaController;
+use App\Http\Controllers\TerrenoController;
+use App\Http\Controllers\VendeController;
+use App\Http\Controllers\BitacoraController;
+use App\Http\Controllers\ReservaController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -63,5 +67,20 @@ Route::get('telefono/index',[TelefonoPersonaController::class,'index'])->name('t
 Route::get('telefono/create',[TelefonoPersonaController::class,'create'])->name('telefonoPersona.create')->middleware('auth');
 Route::post('telefono/register',[TelefonoPersonaController::class,'store'])->name('telefonoPersona.store')->middleware('auth');
 
+Route::get('terreno/index',[TerrenoController::class,'index'])->name('terreno.index')->middleware('auth');
+Route::get('terreno/create',[TerrenoController::class,'create'])->name('terreno.create')->middleware('auth');
+Route::post('terreno/register',[TerrenoController::class,'store'])->name('terreno.store')->middleware('auth');
+
+Route::get('vende/index',[VendeController::class,'index'])->name('vende.index')->middleware('auth');
+Route::get('vende/create',[VendeController::class,'create'])->name('vende.create')->middleware('auth');
+Route::post('vende/register',[VendeController::class,'store'])->name('vende.store')->middleware('auth');
+
+Route::get('bitacora/index',[BitacoraController::class,'index'])->name('bitacora.index')->middleware('auth');
+Route::get('bitacora/create',[BitacoraController::class,'create'])->name('bitacora.create')->middleware('auth');
+Route::post('bitacora/register',[BitacoraController::class,'store'])->name('bitacora.store')->middleware('auth');
+
+Route::get('reserva/index',[ReservaController::class,'index'])->name('reserva.index')->middleware('auth');
+Route::get('reserva/create',[ReservaController::class,'create'])->name('reserva.create')->middleware('auth');
+Route::post('reserva/register',[ReservaController::class,'store'])->name('reserva.store')->middleware('auth');
 
 //post solo se ocupa para cuando creamos CREATE o cuando actualizamos

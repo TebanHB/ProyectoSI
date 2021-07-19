@@ -25,19 +25,19 @@
               <th>ID user</th>
               <th>ID lote</th>
               <th>Horario de visita</th>
-            
+
         </thead>
         <tbody>
             @foreach ($reservas as $reserva)
                <tr>
-                    <td>{{($reserva->id_user == null)? "--": $noreservata->id_user }}</td>
+                    <td>{{($reserva->id_user == null)? "--": $reserva->id_user }}</td>
                     <td>{{($reserva->id_lote == null)? "--": $reserva->id_lote}}</td>
                     <td>{{($reserva->horario_de_visita == null)? "--": $reserva->horario_de_visita}}</td>
-    
+
                     {{-- <td>
                         <a href="{{route('user.permissions',$user->id)}}"><button type="button" class="btn btn-warning">Roles</button></a>
                     </td> --}}
-               </tr> 
+               </tr>
             @endforeach
         </tbody>
     </table>

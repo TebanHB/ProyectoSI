@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Credito;
 use Illuminate\Http\Request;
-
-class CreditoController extends Controller
+use App\Models\Vende;
+class VendeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +13,8 @@ class CreditoController extends Controller
      */
     public function index()
     {
-        //
+        $ventas = Vende::all();
+        return view('vende.index',compact('ventas'));
     }
 
     /**
@@ -41,10 +41,10 @@ class CreditoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Credito  $credito
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Credito $credito)
+    public function show($id)
     {
         //
     }
@@ -52,10 +52,10 @@ class CreditoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Credito  $credito
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Credito $credito)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +64,10 @@ class CreditoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Credito  $credito
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Credito $credito)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +75,10 @@ class CreditoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Credito  $credito
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Credito $credito)
+    public function destroy($id)
     {
         //
     }

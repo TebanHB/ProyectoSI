@@ -14,7 +14,8 @@ class CuotaController extends Controller
      */
     public function index()
     {
-        //
+        $cuotas = Cuota::all();
+        return view('cuota.index',compact('cuotas'));
     }
 
     /**
