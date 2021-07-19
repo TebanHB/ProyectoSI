@@ -24,7 +24,7 @@
         <thead>
             <th>Nombre</th>
             <th>Codigo de Pago</th>
-            <th>fecha_adjudicacion</th>
+            <th>Fecha de Adjudicacion</th>
             <th>monto</th>
 
             {{-- <th>user</th> --}}
