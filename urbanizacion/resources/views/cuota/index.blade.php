@@ -1,4 +1,4 @@
-@extends('home)
+@extends('home')
 
 @section('content')
 {{-- esto es pa mostrar errores --}}

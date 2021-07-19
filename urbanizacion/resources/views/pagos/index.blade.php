@@ -39,6 +39,7 @@
               <th>monto</th>
               <th>descuento</th>
               <th>fecha_de_pago</th>
+              <th></th>
 
         </thead>
         <tbody>
@@ -65,6 +66,7 @@
                     {{-- <td>
                         <a href="{{route('user.permissions',$user->id)}}"><button type="button" class="btn btn-warning">Roles</button></a>
                     </td> --}}
+                   <td><a href="{{'cuota.cuotas', $pago->id}}">Ver Cuotas</a></td>
                </tr>
             @endforeach
         </tbody>

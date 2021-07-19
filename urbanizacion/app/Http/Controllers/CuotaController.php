@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cuota;
-
+use App\Models\Pago;
 use Illuminate\Http\Request;
 
 class CuotaController extends Controller
@@ -25,9 +25,10 @@ class CuotaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function create()
     {
-       
+
         return view('cuota.create',compact('pagos'));
     }
 
@@ -37,6 +38,10 @@ class CuotaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    public function cuotas($id){
+        $cuotas = Cuota::where('id_credito',$id);
+        return view('cuota.index',compact($cuotas));
+    }
     public function store(Request $request)
     {
         //
