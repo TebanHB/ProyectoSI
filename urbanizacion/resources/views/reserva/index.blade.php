@@ -30,7 +30,7 @@
         <tbody>
             @foreach ($reservas as $reserva)
                <tr>
-                    <td>{{($reserva->id_user == null)? "--": $reserva->id_user }}</td>
+                    <td>{{($reserva->id_user == null)? "--": $reserva->user->name }}</td>
                     <td>{{($reserva->id_lote == null)? "--": $reserva->id_lote}}</td>
                     <td>{{($reserva->horario_de_visita == null)? "--": $reserva->horario_de_visita}}</td>
 
