@@ -40,8 +40,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('pagos/index',[PagoController::class, 'index'])->name('pago.index')->middleware('auth');
 Route::get('pagos/create',[PagoController::class,'create'])->name('pago.create')->middleware('auth');
-Route::get('users/index',[UserController::class, 'index'])->name('clients.index')->middleware('auth');
 
+Route::get('user/index',[UserController::class, 'index'])->name('user.index')->middleware('auth');
+Route::get('user/create',[UserController::class,'create'])->name('user.create')->middleware('auth');
+Route::post('user/store',[UserController::class, 'store'])->name('user.store')->middleware('auth');
 
 Route::get('/contrato/index',[ContratoController::class, 'index'])->name('contrato.index')->middleware('auth');
 Route::get('/contrato/create',[ContratoController::class, 'create'])->name('contrato.create');
@@ -83,5 +85,6 @@ Route::post('bitacora/register',[BitacoraController::class,'store'])->name('bita
 Route::get('reserva/index',[ReservaController::class,'index'])->name('reserva.index')->middleware('auth');
 Route::get('reserva/create',[ReservaController::class,'create'])->name('reserva.create')->middleware('auth');
 Route::post('reserva/register',[ReservaController::class,'store'])->name('reserva.store')->middleware('auth');
+
 
 //post solo se ocupa para cuando creamos CREATE o cuando actualizamos

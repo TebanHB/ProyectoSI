@@ -75,7 +75,7 @@
                                 <a class="nav-link" href="{{ route('pago.index') }}">Pagos </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('clients.index') }}">Clientes </a>
+                                <a class="nav-link" href="{{ route('user.index') }}">Clientes </a>
                             </li>
                         @endguest
                     </ul>

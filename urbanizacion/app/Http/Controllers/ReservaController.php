@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Reserva;
+use App\Models\User;
+use App\Models\Terreno;
 use Illuminate\Http\Request;
 
 class ReservaController extends Controller
@@ -15,6 +17,7 @@ class ReservaController extends Controller
     public function index()
     {
         $reservas=Reserva::all();
+        $reservas->load('user');
         return view('reserva.index',compact('reservas'));
     }
 
@@ -25,7 +28,9 @@ class ReservaController extends Controller
      */
     public function create()
     {
-        return view('reserva.create');
+        $users = User::where('tipo_visita','1')->get();
+        $terrenos =Terreno::where('estado_terreno','libre')->get();
+        return view('reserva.create',compact('users'),compact('terrenos'));
     }
 
     /**
