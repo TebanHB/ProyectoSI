@@ -25,7 +25,7 @@ class TelefonoPersonaController extends Controller
      */
     public function create()
     {
-        return view('telefonoPersona.register');
+        return view('telefonoPersona.create');
     }
 
     /**

@@ -26,7 +26,7 @@ class ManzanaController extends Controller
     public function create()
     {
 
-        return view(manzana.register);
+        return view('manzana.create');
     }
 
     /**

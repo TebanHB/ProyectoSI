@@ -18,7 +18,7 @@ class PagoController extends Controller
         return view('pagos.index', compact('pagos'));
     }
 
-    public function mypayments() 
+    public function mypayments()
     {
         $pagos = Pago::all();
         return view('pagos.index', compact('pagos'));
@@ -31,7 +31,7 @@ class PagoController extends Controller
      */
     public function create()
     {
-        //
+        return view('pago.create');
     }
 
     /**
