@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('home')
 
 @section('content')
 {{-- esto es pa mostrar errores --}}
@@ -30,11 +30,11 @@
                <tr>
                     <td>{{($mora->multa == null)? "--": $mora->multa }}</td>
                     <td>{{($mora->retraso_dia == null)? "--": $mora->retraso_dia}}</td>
-    
+
                     {{-- <td>
                         <a href="{{route('user.permissions',$user->id)}}"><button type="button" class="btn btn-warning">Roles</button></a>
                     </td> --}}
-               </tr> 
+               </tr>
             @endforeach
         </tbody>
     </table>

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('home')
 @section('content')
     {{-- esto es pa mostrar errores --}}
     @if ($errors->count() > 0)
