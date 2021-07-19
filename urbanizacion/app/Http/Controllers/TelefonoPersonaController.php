@@ -14,7 +14,8 @@ class TelefonoPersonaController extends Controller
      */
     public function index()
     {
-        //
+        $telefonos = TelefonoPersona::all();
+        return view('telefonoPersona.index');
     }
 
     /**
@@ -24,7 +25,7 @@ class TelefonoPersonaController extends Controller
      */
     public function create()
     {
-        //
+        return view('telefonoPersona.register');
     }
 
     /**
@@ -35,7 +36,13 @@ class TelefonoPersonaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $credentials =   Request()->validate([
+            'telefono' => ['required'],
+        ]);
+        TelefonoPersona::create([
+            'telefono'=>request('telefono'),
+            'id_users'=>request('id_users'),
+        ]);
     }
 
     /**
