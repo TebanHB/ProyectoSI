@@ -25,7 +25,7 @@
 			</div>
 			<ul>
 				<li>
-					<a href="{{ route('clients.index') }}">
+					<a href="{{ route('user.index') }}">
 						<i class="fa fa-eye" aria-hidden="true"></i>
 						<span>Ver Usuarios</span>
 					</a>
@@ -70,6 +70,6 @@
 			<h1>Bieafasafaf</h1>
 		</section>
 	</div>
-    
+
 </body>
 </html>
