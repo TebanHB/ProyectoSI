@@ -39,19 +39,19 @@
 				</li>
                 <hr class="sidebar-divider">
 				<li>
-					<a href="#">
+					<a href="{{route('contrato.create')}}">
 						<i class="fa fa-cog" aria-hidden="true"></i>
 						<span>Agregar Nuevo Contrato</span>
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="{{route('user.create')}}">
 						<i class="fa fa-cog" aria-hidden="true"></i>
 						<span>Agregar Nuevo Usuario</span>
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="{{route('cuota.create')}}">
 						<i class="fa fa-cog" aria-hidden="true"></i>
 						<span>Agregar Nueva Cuota</span>
 					</a>
