@@ -15,7 +15,7 @@ class UserController extends Controller
     public function index()
     {
        $users = User::where('tipo_cliente','1')->get();
-       return view('users.index', compact('users'));
+       return view('user.index', compact('users'));
     }
 
     /**
@@ -23,7 +23,7 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create($id) // abre un formulario de creacion
+    public function create() // abre un formulario de creacion
     {
         return view('user.create');
     }
@@ -36,7 +36,28 @@ class UserController extends Controller
      */
     public function store(Request $request) // almacena los datos que son pasados por el form
     {
-        //
+        $credentials =   Request()->validate([ //validar los datos
+            'name' => ['required'],
+            'carnet' => ['required'],
+            'email' => ['required'],
+            'password' => ['required'],
+            'tipo_vendedor'=>['required'],
+            'tipo_visita'=>['required'],
+            'tipo_cliente'=>['required'],
+            'tipo_administrador'=>['required'],
+        ]);
+        User::create([
+            'name'=>request('name'),
+            'carnet'=>request('carnet'),
+            'email'=>request('email'),
+            'password'=>request('password'),
+            'tipo_vendedor'=>request('tipo_vendedor'),
+            'tipo_visita'=>request('tipo_visita'),
+            'tipo_cliente'=>request('tipo_cliente'),
+            'tipo_administrador'=>request('tipo_administrador'),
+
+        ]);
+        return redirect()->route('user.index');
     }
 
     /**

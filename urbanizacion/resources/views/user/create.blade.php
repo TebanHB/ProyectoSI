@@ -9,14 +9,14 @@
         </ul>
     </div>
     @endif
-    <div class="container"> 
-        <h1>Crear nuevo usuario</h1> 
+    <div class="container">
+        <h1>Crear nuevo usuario</h1>
         <div class="card-body">
-            <form method="POST" action="{{ route('users.store') }}" enctype="multipart/form-data">
+            <form method="POST" action="{{ route('user.store') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="usuario">
                     <label for=name>Nombres: </label>
-                    <input type="text" id="name"> 
+                    <input type="text" id="name">
                     <br> <br>
                     <label for="apellido">Apellidos: </label>
                     <input type="text"id="apellido">
@@ -31,15 +31,19 @@
                     <input type="password ver"id="verif">
 
                     <br> <br>
-
-                    
                 </div>
-                
+                        <button type="submit" class="btn btn-info ">
+                            {{ __('Registrar') }}
+                            <i class="fas fa-heartbeat"></i>
+                        </button>
+
+            <!--    <a href="{{}}" class="btn btn-success">guardar</a>  Este es boton para actualizar -->
+
+
             </form>
         </div>
-    </div>  
+    </div>
 
-    <button class="Guardar">Guardar Contrato</button>
-    <button class="cancelar">Cancelar</button>
+
 
 @endsection
