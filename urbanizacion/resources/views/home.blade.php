@@ -8,7 +8,7 @@
 <body>
 	<input type="checkbox" id="checkbox">
 	<header class="header">
-		<h2 class="u-name">Urbanizacion
+       <h2 class="u-name"> <a href="{{route('home')}}">Urbanizacion</a></h2>
 			<label for="checkbox">
 				<i id="navbtn" class="fa fa-bars" aria-hidden="true"></i>
 			</label>
@@ -33,9 +33,15 @@
 				<li>
 					<a href="#">
 						<i class="fa fa-eye" aria-hidden="true"></i>
-						<span>Ver Contratos</span>
+						<span>Ver todos los Contratos</span>
 					</a>
 				</li>
+                <li>
+                    <a href="{{route('contrato.pendiente')}}">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                        <span>Ver Contratos pendientes</span>
+                    </a>
+                </li>
                 <hr class="sidebar-divider">
 				<li>
 					<a href="{{route('contrato.create')}}">

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('home')
 
 @section('content')
 {{-- esto es pa mostrar errores --}}
@@ -36,8 +36,8 @@
                   <td>{{($cuota->amortizacion == null)? "--": $cuota->amortizacion}}</td>
                   <td>{{($cuota->monto_cuota == null)? "--": $cuota->monto_cuota}}</td>
                   {{-- <td>{{$contrato->users->name}}</td>                 --}}
-                  <td>        
-               </tr> 
+                  <td>
+               </tr>
             @endforeach
         </tbody>
     </table>

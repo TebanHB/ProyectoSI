@@ -41,6 +41,11 @@
 	padding: 5px 0;
 
 }
+.rojo{
+    background-color: blue;
+    color:white;
+}
+
 .side-bar {
 	width: 350px;
 	background:#383838;;

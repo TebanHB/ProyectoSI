@@ -14,7 +14,7 @@
 
 <br>
 
-<div class="container">
+<div class="container rojo">
     <br>
     <ul class="list-group list-group-flush">
         <li class="list-group-item"><h2>Contratos</h2></li>
@@ -24,6 +24,13 @@
         <thead>
             <th>fecha_adjudicacion</th>
             <th>monto</th>
+
+            <th>Nombre</th>
+            <th>Codigo de Pago</th>
+            <th>Fecha de Adjudicacion</th>
+            <th>monto</th>
+            <th>estado</th>
+            <th></th>
             {{-- <th>user</th> --}}
       </thead>
       <tbody>
@@ -31,6 +38,10 @@
              <tr>
                   <td>{{($contrato->fecha_adjudicacion == null)? "--": $contrato->fecha_adjudicacion}}</td>
                   <td>{{($contrato->monto == null)? "--": $contrato->monto}}</td>
+
+                 <td>{{($contrato->estado == 1)? "completado": "pendiente"}}</td>
+
+
                   {{-- <td>{{$contrato->users->name}}</td>                 --}}
                   <td>        
                </tr> 
