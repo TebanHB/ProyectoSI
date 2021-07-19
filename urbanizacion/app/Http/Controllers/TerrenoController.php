@@ -25,7 +25,7 @@ class TerrenoController extends Controller
      */
     public function create()
     {
-
+        return view('terreno.register');
     }
 
     /**
@@ -36,7 +36,21 @@ class TerrenoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $credentials =   Request()->validate([
+            'superficie_terreno' => ['required'],
+            'precio' => ['required'],
+            'estado_terreno' => ['required'],
+        ]);
+        Terreno::create([
+            'superficie_terreno'=>request('superficie_terreno'),
+            'precio'=>request('precio'),
+            'estado_terreno'=>request('estado_terreno'),
+            'id_users'=>request('id_users'),
+            'id_manzana'=>request('id_manzana'),
+            'id_contrato'=>request('id_contrato'),
+        ]);
+        return redirect()->route('terreno.index');
+
     }
 
     /**
