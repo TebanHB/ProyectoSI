@@ -20,6 +20,18 @@
                 background-color red;
             }
         </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Caompatible" content="ie=edge">
+        <title>Materilize | Carrousel y Media</title>
+       
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Raleway:500,600&display=swap" rel="stylesheet">
+        
+        
+        
+        <!-- CSS Estilos -->
+        <link rel="stylesheet" href="welcomecss/welcome.css">
     </head>
     <body class="antialiased" >
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
@@ -39,8 +51,16 @@
 
          
     </body >
-    <h1>Proyecto de Sistemas de informacion</h1>
+    <head>
         
+    </head>
+    <body>
+        
+        
+       
+        <!-- JS Main -->
+        <script src="js/main.js"></script>
+    </body>
     
     </body>
 </html>
