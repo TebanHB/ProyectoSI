@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Dashboard</title>
+	<title>Home</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="homecss/css/style.css">
 </head>
@@ -18,53 +18,58 @@
 	<div class="body">
 		<nav class="side-bar">
 			<div class="user-p">
-				<img src="img/user.jpg">
-				<h4>Elias</h4>
+				@can('admin')
+                <h4>ADMIN</h4>
+                @endcan
+				<h4 >{{ Auth::user()->name }}</h4>
 			</div>
 			<ul>
 				<li>
-					<a href="#">
-						<i class="fa fa-desktop" aria-hidden="true"></i>
-						<span>Dashboard</span>
+					<a href="{{ route('clients.index') }}">
+						<i class="fa fa-eye" aria-hidden="true"></i>
+						<span>Ver Usuarios</span>
 					</a>
 				</li>
 				<li>
 					<a href="#">
-						<i class="fa fa-envelope-o" aria-hidden="true"></i>
-						<span>Message</span>
+						<i class="fa fa-eye" aria-hidden="true"></i>
+						<span>Ver Contratos</span>
 					</a>
 				</li>
+                <hr class="sidebar-divider">
 				<li>
 					<a href="#">
-						<i class="fa fa-comment-o" aria-hidden="true"></i>
-						<span>Comment</span>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<i class="fa fa-info-circle" aria-hidden="true"></i>
-						<span>About</span>
+						<i class="fa fa-cog" aria-hidden="true"></i>
+						<span>Agregar Nuevo Contrato</span>
 					</a>
 				</li>
 				<li>
 					<a href="#">
 						<i class="fa fa-cog" aria-hidden="true"></i>
-						<span>Setting</span>
+						<span>Agregar Nuevo Usuario</span>
 					</a>
 				</li>
 				<li>
 					<a href="#">
-						<i class="fa fa-power-off" aria-hidden="true"></i>
-						<span>Logout</span>
+						<i class="fa fa-cog" aria-hidden="true"></i>
+						<span>Agregar Nueva Cuota</span>
 					</a>
+				</li>
+				<li>
+					<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+						<i class="fa fa-power-off" aria-hidden="true"></i>
+						<span>Cerrar Sesión</span>
+					</a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
 				</li>
 			</ul>
 		</nav>
 		<section class="section-1">
-			<h1>WELCOME</h1>
-			<p>#CodingWithElias</p>
+			<h1>Bieafasafaf</h1>
 		</section>
 	</div>
-
+    
 </body>
 </html>

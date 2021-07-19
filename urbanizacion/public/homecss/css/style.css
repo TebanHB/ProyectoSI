@@ -9,7 +9,7 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 15px 30px;
-	background: #2B6802;
+	background: #23242b;
 	color: #fff;
 }
 .u-name {
@@ -43,7 +43,7 @@
 }
 .side-bar {
 	width: 250px;
-	background:#6DAF00;
+	background:#444555;;
 	min-height: 100vh;
 	transition: 500ms width;
 }
@@ -52,7 +52,7 @@
 }
 .section-1 {
 	width: 100%;
-	background: url("../img/bg.jpg");
+	background: url(../../logincss/img/casa.jpg);
 	background-size: cover;
 	background-position: center;
 	display: flex;

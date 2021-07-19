@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 <head>
     <link href="logincss/login.css" rel="stylesheet">
@@ -8,10 +7,6 @@
 
 <body>
     
-=======
-@extends('layouts.app')
-<head>
->>>>>>> 955b810c8cebcf69690eb7ddfaab47cd82588b04
 
 </head>
 @section('content')
