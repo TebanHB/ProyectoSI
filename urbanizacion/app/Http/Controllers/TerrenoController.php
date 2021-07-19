@@ -25,7 +25,7 @@ class TerrenoController extends Controller
      */
     public function create()
     {
-
+        return view('terreno.register');
     }
 
     /**
@@ -36,7 +36,7 @@ class TerrenoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
