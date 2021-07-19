@@ -25,7 +25,7 @@ class CuotaController extends Controller
      */
     public function create()
     {
-        //
+        return view('cuota.create');
     }
 
     /**
