@@ -41,8 +41,6 @@
                      <input type="radio" name="" id="">Vendedor
 
             <!--    <a href="{{}}" class="btn btn-success">guardar</a>  Este es boton para actualizar -->
-
-
             </form>
         </div>
     </div>
