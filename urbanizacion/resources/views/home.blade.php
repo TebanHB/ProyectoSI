@@ -31,7 +31,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="{{route('contrato.index')}}">
 						<i class="fa fa-eye" aria-hidden="true"></i>
 						<span>Ver Contratos</span>
 					</a>
