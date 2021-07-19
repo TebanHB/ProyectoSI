@@ -3,7 +3,8 @@
 <head>
 	<title>Home</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="homecss/css/style.css">
+    <link href="{{ asset('css/estilos1.css') }}" rel="stylesheet">
+    <link href="{{ asset('homecss/css/style.css') }}" rel="stylesheet">
 </head>
 <body>
 	<input type="checkbox" id="checkbox">
@@ -67,7 +68,7 @@
 			</ul>
 		</nav>
 		<section class="section-1">
-			<h1>Bieafasafaf</h1>
+			@yield('datos')
 		</section>
 	</div>
 
