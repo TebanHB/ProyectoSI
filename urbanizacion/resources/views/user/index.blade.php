@@ -29,7 +29,7 @@
 			</div>
 			<ul>
 				<li>
-					<a href="{{ route('clients.index') }}">
+					<a href="{{ route('user.index') }}">
 						<i class="fa fa-eye" aria-hidden="true"></i>
 						<span>Ver Usuarios</span>
 					</a>
@@ -87,24 +87,24 @@
                        <tr>
                             <td>{{($user->name == null)? "--": $user->name}}</td>
                             <td>{{($user->carnet == null)? "--": $user->carnet}}</td>
-                            <td>{{($user->email == null)? "--": $user->email}}</td>  
+                            <td>{{($user->email == null)? "--": $user->email}}</td>
                             <td>{{($user->tipo_administrador == 1)? "Si": "NO"}}</td>
                             <td>{{($user->tipo_vendedor == 1)? "Si":"NO"  }}  </td>
                             <td>{{($user->tipo_cliente == 1)? "Si":"NO"}}</td>
                             <td>{{($user->tipo_visita == 1)? "Si":"NO"}}</td>
-                           
+
 
 
                             <td>
                                 {{-- <a href="{{ route('contrato.create', $user->id)}}"><button type="button" class="btn btn-success">Crear contrato</button></a> --}}
-                               
-        
+
+
                             </td>
-                       </tr> 
+                       </tr>
                     @endforeach
                 </tbody>
             </table>
-        
+
 		</section>
 	</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

@@ -16,7 +16,7 @@ class UserController extends Controller
     {
 
        $users = User::all();
-       return view('users.index', compact('users'));
+       return view('user.index', compact('users'));
 
     /*   $users = User::where('tipo_cliente','1')->get();
        return view('user.index', compact('users')); */
