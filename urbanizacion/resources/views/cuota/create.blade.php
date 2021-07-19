@@ -15,16 +15,9 @@
             <form method="POST" action="{{ route('cuota.store') }}" enctype="multipart/form-data">
             @csrf
 
-            <select name="id_pago" id="select-room" class="form-control" onchange="habilitar()" >
-                <option value="nulo">Usuarios</option>
-                @foreach ($pagos as $pago)
-                    <option value="{{$pago->id}}">
-                        {{$pago->id}}
-                    </option>
-                @endforeach
-            </select>
 
-            <label for="monto">Monto:{{}} </label>
+
+            <label for="monto">Monto:{{$mensual}} </label>
 
             <label for="amortizacion">Amortizacion: </label>
             <input type="number" id="amortizacion">
