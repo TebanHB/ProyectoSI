@@ -14,13 +14,13 @@ class UserController extends Controller
      */
     public function index()
     {
-<<<<<<< HEAD
+
        $users = User::all();
        return view('users.index', compact('users'));
-=======
-       $users = User::where('tipo_cliente','1')->get();
-       return view('user.index', compact('users'));
->>>>>>> cc734cfd0229ba8ae40e33a200a655f01a0d5f60
+
+    /*   $users = User::where('tipo_cliente','1')->get();
+       return view('user.index', compact('users')); */
+
     }
 
     /**
