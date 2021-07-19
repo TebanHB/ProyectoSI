@@ -39,6 +39,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('pagos/index',[PagoController::class, 'index'])->name('pago.index')->middleware('auth');
+Route::get('pagos/create',[PagoController::class,'create'])->name('pago.create')->middleware('auth');
 Route::get('users/index',[UserController::class, 'index'])->name('clients.index')->middleware('auth');
 
 
