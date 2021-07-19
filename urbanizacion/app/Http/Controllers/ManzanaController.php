@@ -14,7 +14,8 @@ class ManzanaController extends Controller
      */
     public function index()
     {
-        //
+        $manzanas = Manzana::all();
+        return view('manzana.index',compact('manzanas'));
     }
 
     /**
@@ -24,7 +25,8 @@ class ManzanaController extends Controller
      */
     public function create()
     {
-        //
+
+        return view(manzana.register);
     }
 
     /**
@@ -35,7 +37,17 @@ class ManzanaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $credentials =Request()->validate([
+            'superficie_manzana'=>['required'],
+            'cantidad_de_terreno'=>['required'],
+            'ubicacion'=>['required'],
+        ]);
+        Manzana::create([
+            'superficie_manzana'=>request('superficie_manzana'),
+            'cantidad_de_terreno'=>request('cantidad_de_terreno'),
+            'ubicacion'=>request('ubicacion'),
+        ]);
+        return redirect()->route('manzana.index');
     }
 
     /**

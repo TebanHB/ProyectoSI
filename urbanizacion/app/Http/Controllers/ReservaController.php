@@ -14,7 +14,8 @@ class ReservaController extends Controller
      */
     public function index()
     {
-        //
+        $reservas=Reserva::all();
+        return view('reserva.index',compact($reservas));
     }
 
     /**
@@ -24,7 +25,7 @@ class ReservaController extends Controller
      */
     public function create()
     {
-        //
+        return view('reserva.register');
     }
 
     /**
@@ -35,7 +36,15 @@ class ReservaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $credentials =Request()->validate([
+            'horario_de_visita'=>['required'],
+        ]);
+        Reserva::create([
+            'id_user'=>request('id_user'),
+            'id_lote'=>request('id_lote'),
+            'horario_de_visita'=>request('hoario_de_visita'),
+        ]);
+        return redirect()->route('reserva.index');
     }
 
     /**

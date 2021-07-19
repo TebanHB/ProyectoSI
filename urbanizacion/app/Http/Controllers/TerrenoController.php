@@ -14,7 +14,8 @@ class TerrenoController extends Controller
      */
     public function index()
     {
-        //
+        $terrenos=Terreno::all();
+        return view(terreno.index, compact(terrenos));
     }
 
     /**
@@ -24,7 +25,7 @@ class TerrenoController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
