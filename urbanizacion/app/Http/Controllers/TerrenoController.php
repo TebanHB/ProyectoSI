@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Manzana;
 use App\Models\Terreno;
 use Illuminate\Http\Request;
 
@@ -26,6 +27,12 @@ class TerrenoController extends Controller
     public function create()
     {
         return view('terreno.create');
+    }
+    public function terrenoss($id)
+    {
+        $terrenos = Terreno::where('id_manzana',$id)->get(); //sacando el codigo del pago de un contrato en especifico
+        return view('terreno.index',compact('terrenos'));
+
     }
 
     /**

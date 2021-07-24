@@ -55,7 +55,7 @@
                     <td>{{($pago->fecha_ultima_cuota == null)? "--": $pago->fecha_ultima_cuota}}</td>
                     <td>{{($pago->estado == null)? "--": $pago->estado}}</td>
                     <td>{{($pago->saldo_financiado == null)? "--": $pago->saldo_financiado}}</td>
-
+                    
                     <td>{{($pago->monto_pagado == null)? "--": $pago->monto_pagado}}</td>
                     <td>{{($pago->monto_a_pagar == null)? "--": $pago->monto_a_pagar}}</td>
                     <td>{{($pago->fecha_pago_garantia == null)? "--": $pago->fecha_pago_garantia}}</td>

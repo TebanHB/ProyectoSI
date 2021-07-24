@@ -1,4 +1,4 @@
-@extends('home')
+@extends('layouts.app')
 @section('content')
     @if ($errors->count() > 0)
     <div class="alert alert-danger">
@@ -29,36 +29,22 @@
                     <br> <br>
                     <label for="verif">Verificar Contraseña: </label>
                     <input type="password ver"id="verif">
+
                     <br> <br>
                 </div>
-<<<<<<< HEAD
                         <button type="submit" class="btn btn-info ">
                             {{ __('Registrar') }}
                             <i class="fas fa-heartbeat"></i>
                         </button>
-<<<<<<< HEAD
                         <input type="radio" name="" id="">Cliente
                     <input type="radio" name="" id="">Administrador 
                      <input type="radio" name="" id="">Vendedor
-=======
-=======
-                        
->>>>>>> fc7e6201009d3f85dc26bcc3d793e11283529798
                 <input type="radio" name="" id="">Cliente
                 <input type="radio" name="" id="">Administrador
                 <input type="radio" name="" id="">Vendedor
                 <input type="radio" name="" id="">Visita
->>>>>>> d65c41d6d011977aaef9ca36267cbffeb0e15421
 
             <!--    <a href="{{}}" class="btn btn-success">guardar</a>  Este es boton para actualizar -->
-<<<<<<< HEAD
-=======
-            <button type="submit" class="btn btn-info ">
-                {{ __('Registrar') }}
-                <i class="fas fa-heartbeat"></i>
-            </button>
-
->>>>>>> fc7e6201009d3f85dc26bcc3d793e11283529798
             </form>
         </div>
     </div>
