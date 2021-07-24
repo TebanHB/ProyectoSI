@@ -41,6 +41,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('pagos/index',[PagoController::class, 'index'])->name('pago.index')->middleware('auth');
 Route::get('pagos/create',[PagoController::class,'create'])->name('pago.create')->middleware('auth');
 Route::post('pagos/store',[PagoController::class, 'store'])->name('pago.store')->middleware('auth');
+Route::get('pagos/payment/{id}',[PagoController::class, 'payment'])->name('pago.payment')->middleware('auth');
+
 
 Route::get('user/index',[UserController::class, 'index'])->name('user.index')->middleware('auth');
 Route::get('user/create',[UserController::class,'create'])->name('user.create')->middleware('auth');

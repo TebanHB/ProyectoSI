@@ -20,7 +20,7 @@
 
 <br>
 
-<div class="container rojo">
+<div class="container-rojo">
     <br>
     <ul class="list-group list-group-flush">
         <li class="list-group-item"><h2>Contratos</h2></li>
@@ -46,8 +46,7 @@
                   <td>{{($contrato->monto == null)? "--": $contrato->monto}}</td>
 
                  <td>{{($contrato->estado == 1)? "completado": "pendiente"}}</td>
-
-
+                <td><a href="{{route('pago.payment',$contrato->id)}}">Ver pago</a> </td>
                   {{-- <td>{{$contrato->users->name}}</td>                 --}}
                   <td>        
                </tr> 
@@ -56,4 +55,5 @@
     </table>
     {{-- <div class="table table-striped">{{$pagos->links()}}</div> --}}
 </div>
+
 @endsection
