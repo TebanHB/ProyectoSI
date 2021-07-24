@@ -14,7 +14,7 @@
 
 <br>
 
-<div class="container rojo">
+<div class="container-rojo">
     <br>
     <ul class="list-group list-group-flush">
         <li class="list-group-item"><h2>Contratos</h2></li>
