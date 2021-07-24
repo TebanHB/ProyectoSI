@@ -63,6 +63,12 @@
 					</a>
 				</li>
 				<li>
+					<a href="{{route('manzana.index')}}">
+						<i class="fa fa-cog" aria-hidden="true"></i>
+						<span>Ver manzanas</span>
+					</a>
+				</li>
+				<li>
 					<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
 						<i class="fa fa-power-off" aria-hidden="true"></i>
 						<span>Cerrar Sesión</span>
