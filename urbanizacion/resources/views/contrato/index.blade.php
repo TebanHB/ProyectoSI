@@ -39,7 +39,7 @@
                   <td>{{($contrato->fecha_adjudicacion == null)? "--": $contrato->fecha_adjudicacion}}</td>
                   <td>{{($contrato->monto == null)? "--": $contrato->monto}}</td>
                  <td>{{($contrato->estado == 1)? "completado": "pendiente"}}</td>
-
+                <td><a href="{{route('pago.payment',$contrato->id)}}">Ver pago</a> </td>
                   {{-- <td>{{$contrato->users->name}}</td>                 --}}
                   <td>
                </tr>
@@ -48,4 +48,5 @@
     </table>
     {{-- <div class="table table-striped">{{$pagos->links()}}</div> --}}
 </div>
+
 @endsection

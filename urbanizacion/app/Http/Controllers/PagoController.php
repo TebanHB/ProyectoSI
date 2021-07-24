@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contrato;
 use App\Models\Pago;
 use App\Models\Cuota;
 use Illuminate\Http\Request;
@@ -23,6 +24,13 @@ class PagoController extends Controller
     {
         $pagos = Pago::all();
         return view('pagos.index', compact('pagos'));
+    }
+    public function payment($id)
+    {
+        $codigo = Contrato::select("codigo_pago")->where("id",$id)->get(); //sacando el codigo del pago de un contrato en especifico
+        $pagos = Pago::findOrFail($codigo); 
+        return view('pagos.index',compact('pagos'));
+
     }
 
     /**
