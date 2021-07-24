@@ -46,11 +46,11 @@ Route::get('user/index',[UserController::class, 'index'])->name('user.index')->m
 Route::get('user/create',[UserController::class,'create'])->name('user.create')->middleware('auth');
 Route::post('user/store',[UserController::class, 'store'])->name('user.store')->middleware('auth');
 
-Route::get('/contrato/index',[ContratoController::class, 'index'])->name('contrato.index')->middleware('auth');
-Route::get('/contrato/create',[ContratoController::class, 'create'])->name('contrato.create')->middleware('auth');;
-Route::post('/contrato/store',[ContratoController::class, 'store'])->name('contrato.store')->middleware('auth');
-
-
+Route::get('contrato/index',[ContratoController::class, 'index'])->name('contrato.index')->middleware('auth');
+Route::get('contrato/create',[ContratoController::class, 'create'])->name('contrato.create')->middleware('auth');
+Route::post('contrato/store',[ContratoController::class, 'store'])->name('contrato.store')->middleware('auth');
+Route::get('contrato/pendiente',[ContratoController::class,'pendiente'])->name('contrato.pendiente')->middleware('auth');
+//Chino vas a borrar este comentario
 Route::get('manzana/index',[ManzanaController::class,'index'])->name('manzana.index')->middleware('auth');
 Route::get('manzana/create',[ManzanaController::class, 'create'])->name('manzana.create');
 Route::post('manzana/register',[ManzanaController::class,'store'])->name('manzana.sotre')->middleware('auth');

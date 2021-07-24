@@ -12,6 +12,7 @@
 	background: #000000;
 	color: #fff;
 }
+
 .u-name {
 	font-size: 20px;
 	padding-left: 17px;
@@ -106,15 +107,16 @@
 }
 #navbtn {
 	display: inline-block;
-	margin-left: 70px;
+	margin-left:70px ;
 	font-size: 20px;
 	transition: 500ms color;
+	
 }
 #checkbox {
 	display: none;
 }
 #checkbox:checked ~ .body .side-bar {
-	width: 60px;
+	width: 70px;
 }
 #checkbox:checked ~ .body .side-bar .user-p{
 	visibility: hidden;

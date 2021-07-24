@@ -1,8 +1,11 @@
-<<<<<<< HEAD
-@extends('layouts.app')
-=======
 @extends('home')
->>>>>>> d65c41d6d011977aaef9ca36267cbffeb0e15421
+<head>
+	<title>Usuarios</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href={{asset('homecss/css/style.css')}}>
+    <!-- JavaScript Bundle with Popper -->
+    <!-- CSS only -->
+</head>
 @section('content')
     @if ($errors->count() > 0)
     <div class="alert alert-danger">
