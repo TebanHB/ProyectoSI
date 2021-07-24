@@ -66,7 +66,7 @@
                     {{-- <td>
                         <a href="{{route('user.permissions',$user->id)}}"><button type="button" class="btn btn-warning">Roles</button></a>
                     </td> --}}
-                   <td><a href="{{'cuota.cuotas', $pago->id}}">Ver Cuotas</a></td>
+                   <td><a href="{{route('cuota.cuotas', $pago->id)}}">Ver Cuotas</a></td>
                </tr>
             @endforeach
         </tbody>

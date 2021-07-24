@@ -26,10 +26,11 @@ class CuotaController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function create()
+    public function create($id)
     {
-
-        return view('cuota.create',compact('pagos'));
+        $pago=Pago::where('id',$id)->get();
+        $mensual = $pago->cuota_mensual;
+        return view('cuota.create',compact($mensual));
     }
 
     /**

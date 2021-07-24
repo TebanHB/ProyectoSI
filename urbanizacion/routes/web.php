@@ -50,7 +50,7 @@ Route::get('contrato/index',[ContratoController::class, 'index'])->name('contrat
 Route::get('contrato/create',[ContratoController::class, 'create'])->name('contrato.create')->middleware('auth');
 Route::post('contrato/store',[ContratoController::class, 'store'])->name('contrato.store')->middleware('auth');
 Route::get('contrato/pendiente',[ContratoController::class,'pendiente'])->name('contrato.pendiente')->middleware('auth');
-
+//Chino vas a borrar este comentario
 Route::get('manzana/index',[ManzanaController::class,'index'])->name('manzana.index')->middleware('auth');
 Route::get('manzana/create',[ManzanaController::class, 'create'])->name('manzana.create');
 Route::post('manzana/register',[ManzanaController::class,'store'])->name('manzana.sotre')->middleware('auth');
@@ -62,7 +62,7 @@ Route::post('mora/register',[MoraController::class,'store'])->name('mora.store')
 Route::get('cuota/index',[CuotaController::class,'index'])->name('cuota.index')->middleware('auth');
 Route::get('cuota/create',[CuotaController::class,'create'])->name('cuota.create')->middleware('auth');
 Route::post('cuota/register',[CuotaController::class,'store'])->name('cuota.store')->middleware('auth');
-Route::get('cuota/{id}',[CuotaController::class,'cuotas'])->name('cuota.cuotas');
+Route::get('cuotas/{id}',[CuotaController::class,'cuotas'])->name('cuota.cuotas');
 
 Route::get('nota/index',[NotaController::class,'index'])->name('nota.index')->middleware('auth');
 Route::get('nota/create',[NotaController::class,'create'])->name('nota.create')->middleware('auth');

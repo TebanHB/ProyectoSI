@@ -9,7 +9,7 @@
 <body>
 	<input type="checkbox" id="checkbox">
 	<header class="header">
-		<h2 class="u-name">Urbanizacion
+       <h2 class="u-name"> <a href="{{route('home')}}">Urbanizacion</a></h2>
 			<label for="checkbox">
 				<i id="navbtn" class="fa fa-bars" aria-hidden="true"></i>
 			</label>
