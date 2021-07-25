@@ -28,26 +28,26 @@
     </ul>
     <table class="table table-striped">
         <thead>
-              <th>ID user</th>
+
               <th>Nombre</th>
               <th>ID lote</th>
               <th>Comision</th>
-             
-            
+
+
         </thead>
         <tbody>
             @foreach ($ventas as $vende)
                <tr>
-                    <td>{{($vende->id_user == null)? "--": $vende->id_user }}</td>
-                    <td>{{($vende->id_user == null)? "--": $vende->user->name }}</td>
+
                     
+                    <td>{{($vende->id_user == null)? "--": $vende->user->name }}</td>
                     <td>{{($vende->id_lote == null)? "--": $vende->id_lote}}</td>
                     <td>{{($vende->comision == null)? "--": $vende->comision }}</td>
-            
+
                     {{-- <td>
                         <a href="{{route('user.permissions',$user->id)}}"><button type="button" class="btn btn-warning">Roles</button></a>
                     </td> --}}
-               </tr> 
+               </tr>
             @endforeach
         </tbody>
     </table>

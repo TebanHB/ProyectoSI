@@ -18,7 +18,7 @@ class VendeController extends Controller
         $ventas = Vende::all();
         $ventas->load('user');
         return view('vende.index',compact('ventas'));
-        
+
     }
 
     /**
