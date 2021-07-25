@@ -28,13 +28,13 @@ class TerrenoController extends Controller
     {
         return view('terreno.create');
     }
-    public function terrenoss($id)
-    {
-        $terrenos = Terreno::where('id_manzana',$id)->get(); //sacando el codigo del pago de un contrato en especifico
-        return view('terreno.index',compact('terrenos'));
-
+   
+    public function terrenos($id){
+            $terrenos = Terreno::where('id_manzana',$id)->get();
+            return view('terreno.index',compact('terrenos'));
     }
-
+  
+   
     /**
      * Store a newly created resource in storage.
      *

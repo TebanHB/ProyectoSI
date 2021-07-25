@@ -64,9 +64,15 @@
 					</a>
 				</li>
 				<li>
-					<a href="{{route('cuota.create')}}">
+					<a href="{{route('manzana.index')}}">
 						<i class="fa fa-cog" aria-hidden="true"></i>
-						<span>Agregar Nueva Cuota</span>
+						<span>Ver Manzanas</span>
+					</a>
+				</li>
+				<li>
+					<a href="{{route('vende.index')}}">
+						<i class="fa fa-cog" aria-hidden="true"></i>
+						<span>Ver Ventas</span>
 					</a>
 				</li>
 				<li>

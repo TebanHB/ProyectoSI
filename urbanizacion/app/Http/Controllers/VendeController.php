@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Vende;
+use App\Models\User;
+
 class VendeController extends Controller
 {
     /**
@@ -14,7 +16,9 @@ class VendeController extends Controller
     public function index()
     {
         $ventas = Vende::all();
+        
         return view('vende.index',compact('ventas'));
+        
     }
 
     /**

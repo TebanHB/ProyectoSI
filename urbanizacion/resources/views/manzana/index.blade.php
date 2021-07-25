@@ -30,7 +30,7 @@
                     <td>{{($manzana->superficie_manzana == null)? "--": $manzana->superficie_manzana}}</td>
                     <td>{{($manzana->cantidad_de_terreno == null)? "--": $manzana->cantidad_de_terreno}}</td>
                     <td>{{($manzana->ubicacion == null)? "--": $manzana->ubicacion}}</td>
-                    <td><a href="{{route('terreno.terrenoss',$manzana->id)}}">Ver terrenos</a> </td>
+                    <td><a href="{{route('terreno.terrenos',$manzana->id)}}">Ver terrenos</a> </td>
                     {{-- <td>
                         <a href="{{route('user.permissions',$user->id)}}"><button type="button" class="btn btn-warning">Roles</button></a>
                     </td> --}}

@@ -23,6 +23,7 @@
     <table class="table table-striped">
         <thead>
               <th>ID user</th>
+            
               <th>ID lote</th>
               <th>Comision</th>
              
@@ -32,6 +33,7 @@
             @foreach ($ventas as $vende)
                <tr>
                     <td>{{($vende->id_user == null)? "--": $vende->id_user }}</td>
+                    
                     <td>{{($vende->id_lote == null)? "--": $vende->id_lote}}</td>
                     <td>{{($vende->comision == null)? "--": $vende->comision }}</td>
             
