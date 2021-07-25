@@ -129,6 +129,8 @@
                         <h5>Contado</h5>
                         <label for=monto>Monto: </label>
                         <input type="text" id="monto"> 
+                        <br>                        <br>
+
                         <label for=descuento>Descuento: </label>
                         <input type="text" id="descuento"> 
                         <br>                        <br>
