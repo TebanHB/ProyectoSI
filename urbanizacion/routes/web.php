@@ -77,7 +77,7 @@ Route::post('telefono/register',[TelefonoPersonaController::class,'store'])->nam
 Route::get('terreno/index',[TerrenoController::class,'index'])->name('terreno.index')->middleware('auth');
 Route::get('terreno/create',[TerrenoController::class,'create'])->name('terreno.create')->middleware('auth');
 Route::post('terreno/register',[TerrenoController::class,'store'])->name('terreno.store')->middleware('auth');
-Route::get('terreno/terrenos',[TerrenoController::class,'terrenos'])->name('terreno.terrenos')->middleware('auth');
+Route::get('terreno/{id}',[TerrenoController::class,'terrenos'])->name('terreno.terrenos')->middleware('auth');
 
 Route::get('vende/index',[VendeController::class,'index'])->name('vende.index')->middleware('auth');
 Route::get('vende/create',[VendeController::class,'create'])->name('vende.create')->middleware('auth');
