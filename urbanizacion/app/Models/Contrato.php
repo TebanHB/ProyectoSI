@@ -15,8 +15,8 @@ class Contrato extends Model
     //Los datos ocutlos y/o protegidos
     //   protected $hidden = [];
     use HasFactory;
-    public function users(){
-        return $this->belongsTo(Users::class,'id_user');
+    public function user(){
+        return $this->belongsTo(User::class,'id_user');
     }
     public function pago(){
         return $this->belongsTo(Pago::class,'codigo_pago');
