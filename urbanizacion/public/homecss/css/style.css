@@ -158,8 +158,8 @@ background-color: rgba(221, 221, 221, 0.513);
 	height: 100%;
 	position: relative;
 	color: white;
-	top: -10%;
-	left: 5%;
+	
+	background-color: yellow;
 }
 .containercontrato label{
 font-size: 20px;
@@ -190,9 +190,9 @@ font-size: 20px;
 #contratoform{
 	background-color: rgba(0, 0, 0, 0.787);
 	border: solid 3px #fff;
-	height: 90px;
+	height: 9%;
 	position: absolute;
-	width: 650px;
+	width:40%;
 	top: 10%;
 	padding: 5px;
 
@@ -203,8 +203,8 @@ font-size: 20px;
 	position: absolute;
 	background-color: rgba(0, 0, 0, 0.787);
 	border: solid 3px #fff;
-	height: 90px;
-	width: 650px;
+	height: 9%;
+	width: 40%;
 	top: 10%;
 	left: 45%;
 
@@ -212,9 +212,9 @@ font-size: 20px;
 #Datos_pago{
 	background-color: rgba(0, 0, 0, 0.787);
 	border: solid 3px #fff;
-	height: 550px;
+	height: 55%;
 	position: absolute	;
-	width: 1293px;
+	width: 129%;
 	top: 35%;
 	padding: 20px;
 
@@ -224,10 +224,10 @@ font-size: 20px;
 	background-color: rgba(0, 0, 0, 0.787);
 	border: solid 3px #fff;
 	position: relative;
-	height: 150px;
+	height: 15%;
 	position: absolute	;
-	width: 650px;
-	top: 20%;
+	width: 40%;
+	top: 18%;
 	padding: 20px;
 	left:45%;	
 }
@@ -235,10 +235,10 @@ font-size: 20px;
 	background-color: rgba(0, 0, 0, 0.787);
 	border: solid 3px #fff;
 	position: relative;
-	height: 150px;
+	height: 15%;
 	position: absolute	;
-	width: 650px;
-	top: 20%;
+	width:40%;
+	top: 18%;
 	padding: 20px;
 	left:5%;	
 }
@@ -246,8 +246,8 @@ font-size: 20px;
 	background-color: rgba(0, 0, 0, 0.787);
 	border: solid 3px #fff;
 	position: absolute;
-	height: 500px;
-	width: 630px;
+	height: 50%;
+	width: 63%;
 	top: 5%;
 	padding: 20px;
 	left:1%;	
@@ -258,8 +258,8 @@ font-size: 20px;
 	background-color: rgba(0, 0, 0, 0.787);
 	border: solid 3px #fff;
 	position: absolute;
-	height: 350px;
-	width: 630px;
+	height: 35%;
+	width: 63%;
 	top: 5%;
 	padding: 20px;
 	left:50%;	
@@ -269,8 +269,8 @@ font-size: 20px;
 	background-color: rgba(0, 0, 0, 0.787);
 	border: solid 3px #fff;
 	position: absolute;
-	height: 153px;
-	width: 630px;
+	height: 15.3%;
+	width: 63%;
 	top: 69%;
 	padding: 20px;
 	left:50%;	
