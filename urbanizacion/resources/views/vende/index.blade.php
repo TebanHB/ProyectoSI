@@ -1,6 +1,6 @@
 @extends('layouts.app')
 <head>
-	<title>Ventas</title>
+	<title>Terrenos Vendidos</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href={{asset('homecss/css/style.css')}}>
     <!-- JavaScript Bundle with Popper -->
@@ -20,15 +20,16 @@
 
 <br>
 
-<div class="containertable">
+<div class="container">
     <br>
     <ul class="list-group list-group-flush">
         <li class="list-group-item"><h2>Terrenos vendidos</h2></li>
         {{-- <li class="list-group-item"><a href= {{route('user.register') }} ><button type="button" class="btn btn-success btn-lg btn-block">Nuevo usuario</button></a></li> --}}
     </ul>
-    <table class="newtable">
+    <table class="table table-striped">
         <thead>
               <th>ID user</th>
+              <th>Nombre</th>
               <th>ID lote</th>
               <th>Comision</th>
              
@@ -38,6 +39,7 @@
             @foreach ($ventas as $vende)
                <tr>
                     <td>{{($vende->id_user == null)? "--": $vende->id_user }}</td>
+                    <td>{{($vende->id_user == null)? "--": $vende->user->name }}</td>
                     
                     <td>{{($vende->id_lote == null)? "--": $vende->id_lote}}</td>
                     <td>{{($vende->comision == null)? "--": $vende->comision }}</td>
