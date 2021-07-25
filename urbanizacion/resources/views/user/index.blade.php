@@ -8,7 +8,6 @@
 	<link rel="stylesheet" href={{asset('homecss/css/style.css')}}>
     <!-- JavaScript Bundle with Popper -->
     <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 @section('content')
     @if ($errors->count() > 0)
@@ -20,8 +19,13 @@
         </ul>
     </div>
     @endif
-    <div class="container"> 
-		<table class="table table-dark table-hover">
+    <div class="containertable"> 
+		<br>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><h2>Lista de Usuarios</h2></li>
+        {{-- <li class="list-group-item"><a href= {{route('user.register') }} ><button type="button" class="btn btn-success btn-lg btn-block">Nuevo usuario</button></a></li> --}}
+    </ul>
+		<table class="newtable">
 			<thead>
 				  <th>Nombre</th>
 				  <th>Carnet</th>
@@ -43,13 +47,6 @@
 						<td>{{($user->tipo_cliente == 1)? "Si":"NO"}}</td>
 						<td>{{($user->tipo_visita == 1)? "Si":"NO"}}</td>
 					   
-
-
-						<td>
-							{{-- <a href="{{ route('contrato.create', $user->id)}}"><button type="button" class="btn btn-success">Crear contrato</button></a> --}}
-						   
-	
-						</td>
 				   </tr> 
 				@endforeach
 			</tbody>

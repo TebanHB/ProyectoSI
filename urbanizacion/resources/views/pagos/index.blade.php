@@ -14,13 +14,13 @@
 
 <br>
 
-<div class="container">
+<div class="containertable">
     <br>
     <ul class="list-group list-group-flush">
         <li class="list-group-item"><h2>Tipos de pago</h2></li>
         {{-- <li class="list-group-item"><a href= {{route('user.register') }} ><button type="button" class="btn btn-success btn-lg btn-block">Nuevo usuario</button></a></li> --}}
     </ul>
-    <table class="table table-striped">
+    <table class="newtable">
         <thead>
               <th>Tipo</th>
               <th>Cuota inicial</th>
@@ -39,7 +39,6 @@
               <th>monto</th>
               <th>descuento</th>
               <th>fecha_de_pago</th>
-              <th></th>
 
         </thead>
         <tbody>
