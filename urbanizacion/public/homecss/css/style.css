@@ -154,12 +154,11 @@ background-color: rgba(221, 221, 221, 0.513);
 	}
 .containercontrato{
 
-	width: 100%;
-	height: 100%;
+	width: 90%;
+	height: 90%;
 	position: relative;
 	color: white;
-	top: -10%;
-	left: 5%;
+	
 }
 .containercontrato label{
 font-size: 20px;
@@ -190,9 +189,9 @@ font-size: 20px;
 #contratoform{
 	background-color: rgba(0, 0, 0, 0.787);
 	border: solid 3px #fff;
-	height: 90px;
+	height: 9%;
 	position: absolute;
-	width: 650px;
+	width:40%;
 	top: 10%;
 	padding: 5px;
 
@@ -203,8 +202,8 @@ font-size: 20px;
 	position: absolute;
 	background-color: rgba(0, 0, 0, 0.787);
 	border: solid 3px #fff;
-	height: 90px;
-	width: 650px;
+	height: 9%;
+	width: 45%;
 	top: 10%;
 	left: 45%;
 
@@ -212,10 +211,10 @@ font-size: 20px;
 #Datos_pago{
 	background-color: rgba(0, 0, 0, 0.787);
 	border: solid 3px #fff;
-	height: 550px;
+	height: 60%;
 	position: absolute	;
-	width: 1293px;
-	top: 35%;
+	width: 85%;
+	top: 33%;
 	padding: 20px;
 
 	left:5%;
@@ -224,10 +223,10 @@ font-size: 20px;
 	background-color: rgba(0, 0, 0, 0.787);
 	border: solid 3px #fff;
 	position: relative;
-	height: 150px;
+	height: 15%;
 	position: absolute	;
-	width: 650px;
-	top: 20%;
+	width: 45%;
+	top: 18%;
 	padding: 20px;
 	left:45%;	
 }
@@ -235,10 +234,10 @@ font-size: 20px;
 	background-color: rgba(0, 0, 0, 0.787);
 	border: solid 3px #fff;
 	position: relative;
-	height: 150px;
+	height: 15%;
 	position: absolute	;
-	width: 650px;
-	top: 20%;
+	width:40%;
+	top: 18%;
 	padding: 20px;
 	left:5%;	
 }
@@ -246,8 +245,8 @@ font-size: 20px;
 	background-color: rgba(0, 0, 0, 0.787);
 	border: solid 3px #fff;
 	position: absolute;
-	height: 500px;
-	width: 630px;
+	height: 90%;
+	width: 50%;
 	top: 5%;
 	padding: 20px;
 	left:1%;	
@@ -258,27 +257,27 @@ font-size: 20px;
 	background-color: rgba(0, 0, 0, 0.787);
 	border: solid 3px #fff;
 	position: absolute;
-	height: 350px;
-	width: 630px;
+	height: 55%;
+	width: 48%;
 	top: 5%;
 	padding: 20px;
-	left:50%;	
+	left:51%;	
 	
 }
 #contadocontrato{
 	background-color: rgba(0, 0, 0, 0.787);
 	border: solid 3px #fff;
 	position: absolute;
-	height: 153px;
-	width: 630px;
-	top: 69%;
+	height: 35%;
+	width: 48%;
+	top: 59%;
 	padding: 20px;
-	left:50%;	
+	left:51%;	
 }
 .botonescontrato{
 	position: absolute;
 	top	: 95%;
-	left: 48%;
+	left: 30%;
 	font-size: 40px;
 }
 #botonGuardar{

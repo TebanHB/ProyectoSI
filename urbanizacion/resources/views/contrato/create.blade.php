@@ -16,10 +16,11 @@
         </ul>
     </div>
     @endif
-    <h1 class="Titulo_Contrato">Crear contrato</h1> 
     <div class="containercontrato"> 
        
         <div class="card-body">
+            <h1 class="Titulo_Contrato">Crear contrato</h1> 
+
             <form method="POST" action="{{ route('contrato.store') }}" enctype="multipart/form-data">
                 @csrf
                 <div id="contratoform">
@@ -140,13 +141,14 @@
             </form>
             
         </div>
+        <div class="botonescontrato">
+            <button id="botonGuardar">Guardar Contrato</button>
+            <button id="botoncancelar">Cancelar</button>
+        </div>
         
     
     </div>  
-    <div class="botonescontrato">
-        <button id="botonGuardar">Guardar Contrato</button>
-        <button id="botoncancelar">Cancelar</button>
-    </div>
+   
     
 
 @endsection
