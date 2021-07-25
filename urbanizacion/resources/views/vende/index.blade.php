@@ -28,7 +28,7 @@
     </ul>
     <table class="newtable">
         <thead>
-              <th>ID user</th>
+              <th>Nombre</th>
               <th>ID lote</th>
               <th>Comision</th>
 
@@ -38,7 +38,6 @@
             @foreach ($ventas as $vende)
                <tr>
                     <td>{{($vende->id_user == null)? "--": $vende->user->name }}</td>
-
                     <td>{{($vende->id_lote == null)? "--": $vende->id_lote}}</td>
                     <td>{{($vende->comision == null)? "--": $vende->comision }}</td>
 
