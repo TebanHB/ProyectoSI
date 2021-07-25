@@ -36,6 +36,10 @@ class UserController extends Controller
      */
     public function store(Request $request) // almacena los datos que son pasados por el form
     {
+        $request->validate([
+            
+        ])
+
         $credentials =   Request()->validate([ //validar los datos
             'name' => ['required'],
             'carnet' => ['required'],

@@ -47,6 +47,9 @@ class ContratoController extends Controller
      */
     public function store(Request $request)
     {
+
+        
+
         $credentials =   Request()->validate([ //validar los datos
             'monto' => ['required'],
             'fecha_adjudicacion' => ['required'],

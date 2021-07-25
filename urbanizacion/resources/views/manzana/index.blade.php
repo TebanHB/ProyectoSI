@@ -12,17 +12,18 @@
     @endif
     <br>
 
-    <div class="container">
+    <div class="containertable">
         <br>
         <ul class="list-group list-group-flush">
             <li class="list-group-item"><h2>Manzanas</h2></li>
             {{-- <li class="list-group-item"><a href= {{route('user.register') }} ><button type="button" class="btn btn-success btn-lg btn-block">Nuevo usuario</button></a></li> --}}
         </ul>
-        <table class="table table-striped">
+        <table class="newtable">
             <thead>
             <th>superficie manzana</th>
             <th>cantidad de terreno</th>
             <th>ubicación</th>
+            <th></th>
             </thead>
             <tbody>
             @foreach ($manzanas as $manzana)
