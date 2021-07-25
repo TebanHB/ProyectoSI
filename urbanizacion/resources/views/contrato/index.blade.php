@@ -47,7 +47,7 @@
              
                 <td><a href="{{route('pago.payment',$contrato->id)}}">Ver pago</a> </td>
                   {{-- <td>{{$contrato->users->name}}</td>                 --}}
-                  <td>        
+                 
                </tr> 
             @endforeach
         </tbody>
