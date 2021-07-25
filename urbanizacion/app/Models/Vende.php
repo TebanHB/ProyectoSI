@@ -16,6 +16,6 @@ class Vende extends Model
         return $this->belongsTo(Terreno::class,'id_lote');
     }
     public function user(){
-        return $this->belongsTo(Users::class,'id_user');
+        return $this->belongsTo(User::class,'id_user');
     }
 }
