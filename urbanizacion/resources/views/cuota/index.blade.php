@@ -36,7 +36,8 @@
                   <td>{{($cuota->amortizacion == null)? "--": $cuota->amortizacion}}</td>
                   <td>{{($cuota->monto_cuota == null)? "--": $cuota->monto_cuota}}</td>
                   {{-- <td>{{$contrato->users->name}}</td>                 --}}
-               </tr>
+                
+                </tr>
             @endforeach
         </tbody>
     </table>
