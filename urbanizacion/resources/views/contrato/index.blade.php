@@ -17,7 +17,6 @@
     </ul>
 </div>
 @endif
-
 <br>
 
 <div class="container-rojo">
@@ -28,24 +27,24 @@
     </ul>
     <table class="table table-striped">
         <thead>
-            <th>fecha_adjudicacion</th>
-            <th>monto</th>
-
             <th>Nombre</th>
             <th>Codigo de Pago</th>
             <th>Fecha de Adjudicacion</th>
             <th>monto</th>
             <th>estado</th>
+
             <th></th>
             {{-- <th>user</th> --}}
       </thead>
       <tbody>
           @foreach ($contratos as $contrato)
              <tr>
-                  <td>{{($contrato->fecha_adjudicacion == null)? "--": $contrato->fecha_adjudicacion}}</td>
-                  <td>{{($contrato->monto == null)? "--": $contrato->monto}}</td>
-
-                 <td>{{($contrato->estado == 1)? "completado": "pendiente"}}</td>
+                <td>{{($contrato->id_user == null)? "--": $contrato->user->name}}</td>
+                <td>{{($contrato->codigo_pago == null)? "--": $contrato->codigo_pago}}</td>
+                <td>{{($contrato->fecha_adjudicacion == null)? "--": $contrato->fecha_adjudicacion}}</td>
+                <td>{{($contrato->monto == null)? "--": $contrato->monto}}</td>
+               <td>{{($contrato->estado == 1)? "completado": "pendiente"}}</td>
+             
                 <td><a href="{{route('pago.payment',$contrato->id)}}">Ver pago</a> </td>
                   {{-- <td>{{$contrato->users->name}}</td>                 --}}
                   <td>        
