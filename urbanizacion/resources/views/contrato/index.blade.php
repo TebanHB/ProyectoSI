@@ -20,13 +20,13 @@
 
 <br>
 
-<div class="container-rojo">
+<div class="containertable">
     <br>
     <ul class="list-group list-group-flush">
         <li class="list-group-item"><h2>Contratos</h2></li>
         {{-- <li class="list-group-item"><a href= {{route('user.register') }} ><button type="button" class="btn btn-success btn-lg btn-block">Nuevo usuario</button></a></li> --}}
     </ul>
-    <table class="table table-striped">
+    <table class="newtable">
         <thead>
             <th>fecha_adjudicacion</th>
             <th>monto</th>

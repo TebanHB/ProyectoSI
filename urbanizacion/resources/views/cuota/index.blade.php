@@ -14,13 +14,13 @@
 
 <br>
 
-<div class="container">
+<div class="containertable">
     <br>
     <ul class="list-group list-group-flush">
         <li class="list-group-item"><h2>Cuota</h2></li>
         {{-- <li class="list-group-item"><a href= {{route('user.register') }} ><button type="button" class="btn btn-success btn-lg btn-block">Nuevo usuario</button></a></li> --}}
     </ul>
-    <table class="table table-striped">
+    <table class="newtable">
         <thead>
             <th>ID credito</th>
             <th>ID mora</th>
@@ -36,7 +36,6 @@
                   <td>{{($cuota->amortizacion == null)? "--": $cuota->amortizacion}}</td>
                   <td>{{($cuota->monto_cuota == null)? "--": $cuota->monto_cuota}}</td>
                   {{-- <td>{{$contrato->users->name}}</td>                 --}}
-                  <td>
                </tr>
             @endforeach
         </tbody>
