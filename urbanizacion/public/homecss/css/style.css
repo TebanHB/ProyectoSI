@@ -292,3 +292,110 @@ font-size: 20px;
 	color: white;
 
 }
+.containercreateuser{
+	background-color: rgba(0, 0, 0, 0.513);
+	width: 40%;
+	height: 50%;
+	color: #fff;
+	top: 10%;
+	border-radius: 10%;
+	border: #fff solid 4px;
+
+	
+}
+.containercreateuser h1{
+	text-align: center;
+	color: #000000;
+	font-family:Times;
+	font-size: 60px;
+}
+.containercreateuser label{
+	font-size: 20px;
+	font-family:Times;
+
+
+}
+.usuarioformulariocreate{
+	background: rgba(0, 0, 0, 0.459);
+	text-align: left;
+	position: relative;
+	width: 68%;
+	height: 65%;
+	padding: 20px;
+	top: 5%;
+	font-family:Times;
+	border-radius: 5%;
+	left: 16%;
+	border: #fff solid 2px;
+
+}
+
+
+
+
+.containercreateuser input[type="text"],
+.containercreateuser input[type="email"],
+.containercreateuser input[type="password"],
+.containercreateuser input[type="password ver"]
+
+{
+	order: none;
+	border-bottom:2px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 30px;
+	color: #fff;
+	font-size: 16px;
+
+}
+.containercreateuser .checkbox label {
+	color:#ffffff;
+	padding:5px 15px 5px 51px;
+	display:inline-block;
+	position:relative;
+	font-size:1em;
+	border-radius:3px;
+	cursor:pointer;
+	-webkit-transition:all 0.15s ease;
+	-o-transition:all 0.15s ease;
+	transition:all 0.15s ease;
+	}
+	.containercreateuser input[type="checkbox"]{
+		display:none;
+		}
+	.containercreateuser .checkbox label:before {
+			content:"";
+			width:14px;
+			height:14px;
+			background:none;
+			border:2px solid #2e2d2d;
+			border-radius:50%;
+			display:inline-block;
+			position:absolute;
+			left:17px;
+			}
+	.containercreateuser .checkbox label:before{
+				border-radius:3px;
+				}
+	.containercreateuser input[type="checkbox"]:checked + label{
+			background:#000000;
+			color:#FFFFFF;
+			padding:5px 15px;
+			}
+	.containercreateuser input[type="checkbox"]:checked + label:before{
+			display:none;
+	}
+	.containercreateuser button{
+		font-size: 20px;
+		text-align: center;
+		left: 40%;
+		top: 110%;
+		background: black;
+		color: #fff;
+		position: relative;
+		width:120px;
+        height:50px;
+		text-align: center;
+		border-radius: 15%;
+		border: #fff solid 1px;
+	}

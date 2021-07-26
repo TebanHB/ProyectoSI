@@ -140,13 +140,14 @@
 
                     </div>
                 </div>  
+                <div class="botonescontrato">
+                    <button id="botonGuardar">Guardar Contrato</button>
+                    <button id="botoncancelar">Cancelar</button>
+                </div>
             </form>
             
         </div>
-        <div class="botonescontrato">
-            <button id="botonGuardar">Guardar Contrato</button>
-            <button id="botoncancelar">Cancelar</button>
-        </div>
+        
         
     
     </div>  
