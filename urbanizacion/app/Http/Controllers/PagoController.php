@@ -40,7 +40,7 @@ class PagoController extends Controller
      */
     public function create()
     {
-        return view('pago.create');
+        return view('pagos.create');
     }
 
     /**
@@ -51,7 +51,32 @@ class PagoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $credentials =   Request()->validate([ //validar los datos
+            'tipo' => ['required'],
+    
+        ]);
+        Pago::create([
+            
+            'tipo' => request('tipo'),
+            'cuota_inicial' => request('cuota_inicial'),
+            'plazo' =>request('plazo'),
+            'interes_anual' => request('interes_anual'),
+            'cuota_mensual'=>request('cuota_mensual'),
+            'fecha_Prog'=>request('fecha_Prog'),
+            'fecha_inicio'=>request('fecha_inicio'),
+            'fecha_ultima_cuota'=>request('fecha_ultima_cuota'),
+            'estado' => request('estado'),
+            'saldo_financiado' => request('saldo_financiado'),
+            'monto_pagado'  =>request('monto_pagado'),
+            'monto_a_pagar'  =>request('monto_a_pagar'),
+            'fecha_pago_garantia'=>request('fecha_pago_garantia'),
+            'fecha_a_pagar'=>request('fecha_a_pagar'),
+            'monto'=>request('monto'),
+            'descuento'=>request('descuento'),
+            'fecha_de_pago'=>request('fecha_de_pago'),
+
+        ]);
+        return redirect()->route('pago.index');
     }
 
     /**

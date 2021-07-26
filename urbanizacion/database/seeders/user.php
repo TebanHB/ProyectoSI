@@ -72,6 +72,17 @@ class user extends Seeder
 
             ],
             [
+                'name'=>'Esteban Hurtado Blumberg',
+                'carnet'=>'7833036',
+                'email'=>'e_s_t_e_b_a_n-hurtado@hotmail.com',
+                'password'=>Hash::make('1234'),
+                'tipo_vendedor'=>'1',
+                'tipo_visita'=>'1',
+                'tipo_administrador'=>'1',
+                'tipo_cliente'=>'1'
+
+            ],
+            [
                 'name'=>'Fabio Fernandez',
                 'carnet'=>'4789255',
                 'email'=>'FFernandez@gmail.com',
