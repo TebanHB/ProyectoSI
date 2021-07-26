@@ -92,7 +92,7 @@
                 </li>
                     @endif
                 <hr class="sidebar-divider">
-                    @if(Auth::user()->tipo_administrador==1 or Auth::user()->tipo_vendedor==1)
+                    @if(Auth::user()->tipo_administrador==1)
 				<li>
 					<a href="{{route('contrato.create')}}">
 						<i class="fa fa-cog" aria-hidden="true"></i>
