@@ -43,9 +43,7 @@ class UserController extends Controller
             'password' => ['required'],
             
         ]);
-        $request = [
-            ''
-        ]
+        
         User::create([
             'name'=>request('name'),
             'carnet'=>request('carnet'),
