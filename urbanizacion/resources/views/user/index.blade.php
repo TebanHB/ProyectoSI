@@ -1,7 +1,4 @@
-<!DOCTYPE html>
 @extends('layouts.app')
-
-<html>
 <head>
 	<title>Usuarios</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -50,7 +47,7 @@
 
 						<a href="#" class="btn btn-info btn-sm ">editar</a>
 						<a href="#" class="btn btn-info btn-sm ">borrar</a>
-						<a href="#" class="btn btn-info btn-sm ">ver telefono</a>
+						<a href="{{route('telefonoPersona.telefonos',$user->id)}}" class="btn btn-info btn-sm ">ver telefono</a>
 					
 					   </td>
 				   </tr> 
@@ -62,5 +59,3 @@
 
 
 @endsection
-
-</html>

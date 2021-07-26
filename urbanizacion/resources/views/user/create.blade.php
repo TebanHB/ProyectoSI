@@ -22,6 +22,7 @@
         <div class="card-body">
             <form method="POST" action="{{ route('user.store') }}" enctype="multipart/form-data">
                 @csrf
+
                 <div class="usuario">
                     <label for=name>Nombre Completo: </label>
                     <input type="text" name="name" id="name">
@@ -40,9 +41,9 @@
 
                     <br> <br>
                 </div>
-                        
+
                         <div id="tipousuario">
-                            <h5>Tipo de usuario: </h5> 
+                            <h5>Tipo de usuario: </h5>
                             <input type="radio" name="tipo_cliente" id="cliente">
                             <label for = "tipo_cliente">Cliente</label>
                             <input type="radio" name="tipo_vendedor" id="vendedor">

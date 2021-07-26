@@ -141,23 +141,12 @@
 
                     </div>
                 </div>  
-<<<<<<< HEAD
-                <div class="botonescontrato">
-                    <button id="botonGuardar">Guardar Contrato</button>
-                    <button id="botoncancelar">Cancelar</button>
-                </div>
-            </form>
-            
-        </div>
-        
-=======
                 <button type="submit" class="botonescontrato ">
                      {{ __('Guardar') }}
                 </button>
             </form>
             
         </div>
->>>>>>> 4990427df8ea85ebc0cec26d9621dff83fc1f722
         
    
     </div> 

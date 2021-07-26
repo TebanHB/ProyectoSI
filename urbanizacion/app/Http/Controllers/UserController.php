@@ -41,18 +41,31 @@ class UserController extends Controller
             'carnet' => ['required'],
             'email' => ['required'],
             'password' => ['required'],
-            
+
         ]);
         
+        $tipo_vendedor = $request['tipo_vendedor'];
+        $tipo_visita = $request['tipo_visita'];
+        $tipo_cliente = $request['tipo_cliente'];
+        $tipo_administrador = $request['tipo_administrador'];
+        if($tipo_vendedor==null)
+            $tipo_vendedor=0;
+        if($tipo_visita==null)
+            $tipo_visita=0;
+        if($tipo_cliente==null)
+            $tipo_cliente=0;
+        if($tipo_administrador==null)
+            $tipo_administrador=0;
+
         User::create([
             'name'=>request('name'),
             'carnet'=>request('carnet'),
             'email'=>request('email'),
             'password'=>request('password'),
-            'tipo_vendedor'=>request('tipo_vendedor'),
-            'tipo_visita'=>request('tipo_visita'),
-            'tipo_cliente'=>request('tipo_cliente'),
-            'tipo_administrador'=>request('tipo_administrador'),
+            'tipo_vendedor'=>$tipo_vendedor,
+            'tipo_visita'=>$tipo_visita,
+            'tipo_cliente'=>$tipo_cliente,
+            'tipo_administrador'=>$tipo_administrador,
 
         ]);
         return redirect()->route('user.index');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\TelefonoPersona;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class TelefonoPersonaController extends Controller
@@ -27,7 +28,10 @@ class TelefonoPersonaController extends Controller
     {
         return view('telefonoPersona.create');
     }
-
+    public function telefonos($id){
+        $telefonos = TelefonoPersona::where('id_users',$id)->get();
+        return view('telefonoPersona.index',compact('telefonos'));
+    }
     /**
      * Store a newly created resource in storage.
      *
