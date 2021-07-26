@@ -43,25 +43,33 @@ class UserController extends Controller
             'password' => ['required'],
 
         ]);
-        
+
         $tipo_vendedor = $request['tipo_vendedor'];
         $tipo_visita = $request['tipo_visita'];
         $tipo_cliente = $request['tipo_cliente'];
         $tipo_administrador = $request['tipo_administrador'];
         if($tipo_vendedor==null)
             $tipo_vendedor=0;
+        else
+            $tipo_vendedor=1;
         if($tipo_visita==null)
             $tipo_visita=0;
+        else
+            $tipo_visita=1;
         if($tipo_cliente==null)
             $tipo_cliente=0;
+        else
+            $tipo_cliente=1;
         if($tipo_administrador==null)
             $tipo_administrador=0;
+        else
+            $tipo_administrador=1;
 
         User::create([
             'name'=>request('name'),
             'carnet'=>request('carnet'),
             'email'=>request('email'),
-            'password'=>request('password'),
+            'password'=> bcrypt(request('password')),
             'tipo_vendedor'=>$tipo_vendedor,
             'tipo_visita'=>$tipo_visita,
             'tipo_cliente'=>$tipo_cliente,
@@ -69,6 +77,9 @@ class UserController extends Controller
 
         ]);
         return redirect()->route('user.index');
+    }
+    public function prueba(Request $request){
+        return $request;
     }
 
     /**

@@ -33,10 +33,11 @@ class ContratoController extends Controller
      */
     public function create()
     {
-        $user = User::findOrFail(Auth::user()->id);
+        $users = User::all();
         $pagos = Pago::all();
+
         //dd($user);
-        return view('contrato.create', compact('user'), compact('pagos'));
+        return view('contrato.create', compact('users'), compact('pagos'));
     }
 
     /**

@@ -16,26 +16,23 @@
         </ul>
     </div>
     @endif
-    <div class="containercontrato"> 
-       
+    <div class="containercontrato">
+
         <div class="card-body">
-            <h1 class="Titulo_Contrato">Crear contrato</h1> 
+            <h1 class="Titulo_Contrato">Crear contrato</h1>
 
             <form method="POST" action="{{ route('contrato.store') }}" enctype="multipart/form-data">
                 @csrf
                 <div id="contratoform">
-                    <label for=nro_abj>Nro de Adjudicacion: </label>
-                    <input type="text" name="nro_abj" id="nro_abj"> 
-                    
                     <label for="fecha">Fecha: </label>
                     <input type="date"name="fecha" id="fecha">
                     <br>
-                    <label for="cot">Cotizacion: </label>
-                    <input type="text" name="cot" id="cot">
-             
+                    <label for="cot">Tipo de cambio: </label>
+                    <label for="cot">7 </label>
+
                 </div>
                   <div id="Metodo_de_pago">
-                    <h5>Forma de pago: </h5> 
+                    <h5>Forma de pago: </h5>
                     <input type="radio" name="compromiso" id="compromiso1">
                     <label for = "compromiso1">compromiso</label>
                     <input type="radio" name="contado" id="contado1">
@@ -44,60 +41,76 @@
                      <label for = "credito1">credito</label>
                 </div>
                 <div id="Datos_cliente">
-                    <label for=nomb>Nombre y Apellido: </label>
-                    <input type="text" id="nomb"> 
-                    <br>
-                    <label for="carnet">Carnet: </label> 
-                    <input type="text" name="carnet" id="carnet"> 
-                    <label for="tel">Telefono: </label> 
-                    <input type="text" id="tel"> 
+
+                    <select name="id_lote" id="select-room" class="form-control" onchange="habilitar()" >
+                        <option value="nulo">Usuarios</option>
+
+                        @foreach ($users as $user)
+
+                            <option value="{{$user->id}}">
+
+                               <spam>{{$user->name}}</spam>
+
+                            </option>
+
+                        @endforeach
+
+                    </select>
+
+
+
+
+
+
+
+
                 </div>
 
                 <div id="Datos_terreno">
                     <label for=nro_terreno>Nro del Terreno : </label>
                     <input type="text" id="nro_terreno">
                     <br>
-                    <label for="manzana">Manzana: </label> 
-                    <input type="text" id="manzana">  
+                    <label for="manzana">Manzana: </label>
+                    <input type="text" id="manzana">
                     <label for="precio">Precio: </label>
-                    <input type="text" id="precio"> 
+                    <input type="text" id="precio">
                     <label for=Superficie>Superficie : </label>
-                    <input type="text" id="Superficie"> 
+                    <input type="text" id="Superficie">
 
                 </div>
 
-                
+
 
                 <div id="Datos_pago">
                     <div id="pago_credito">
                         <h5>Credito</h5>
                         <label for=cuota_inicial>Cuota Inicial: </label>
-                        <input type="text" id="cuota_inicial"> 
+                        <input type="text" id="cuota_inicial">
                         <br>                        <br>
 
 
                         <label for=Plazo>Plazo: </label>
-                        <input type="text" id="Plazo"> 
+                        <input type="text" id="Plazo">
                         <br>                        <br>
 
 
                         <label for=Interes_anual>Interes Anual : </label>
-                        <input type="text" id="Interes_anual"> 
+                        <input type="text" id="Interes_anual">
                         <br>                        <br>
                         <label for=cuota_mensual>Cuota Mensual: </label>
-                        <input type="text" id="cuota_mensual"> 
+                        <input type="text" id="cuota_mensual">
                         <br>                        <br>
 
 
                         <label for=Fecha_programada>Fecha Programada: </label>
-                        <input type="text" id="Fecha_programada"> 
+                        <input type="text" id="Fecha_programada">
                         <br>        <br>
 
 
                         <label for=Fecha_inicio>Fecha Inicio: </label>
-                        <input type="date" id="cuota_inicial"> 
+                        <input type="date" id="cuota_inicial">
                         <br>                        <br>
-                    
+
 
                         <label for=Fecha_ult>Fecha Ultima Cuota: </label>
                         <input type="date" id="Fecha_ult">
@@ -106,12 +119,12 @@
 
                         <label for=saldo_fin>Saldo Financiado: </label>
                         <input type="date" id="saldo_fin">
-                    </div>   
+                    </div>
                     <div id="compromiso">
                         <h5>Compromiso</h5>
 
                         <label for=monto_pag>Monto Pagado: </label>
-                        <input type="text" id="monto_pag"> 
+                        <input type="text" id="monto_pag">
                         <br>                        <br>
 
                         <label for=monto_pagar>Monto a Pagar: </label>
@@ -129,26 +142,26 @@
                     <div id="contadocontrato">
                         <h5>Contado</h5>
                         <label for=monto>Monto: </label>
-                        <input type="text" id="monto"> 
+                        <input type="text" id="monto">
                         <br>                        <br>
 
                         <label for=descuento>Descuento: </label>
-                        <input type="text" id="descuento"> 
+                        <input type="text" id="descuento">
                         <br>                        <br>
 
                         <label for=fecha>Fecha de Pago: </label>
-                        <input type="date" id="fecha"> 
+                        <input type="date" id="fecha">
 
                     </div>
-                </div>  
+                </div>
                 <button type="submit" class="botonescontrato ">
                      {{ __('Guardar') }}
                 </button>
             </form>
-            
+
         </div>
-        
-   
-    </div> 
+
+
+    </div>
 
 @endsection

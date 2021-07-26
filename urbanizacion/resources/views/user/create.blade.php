@@ -27,7 +27,7 @@
                     <label for=name>Nombre Completo: </label>
                     <input type="text" name="name" id="name">
                     <br> <br>
-                    <label for="carnet">Carnet: </label>
+                    <label for=carnet>Carnet: </label>
                     <input type="text" name="carnet" id="carnet">
                     <br> <br>
                     <label for="email">Correo Electronico: </label>
@@ -55,6 +55,9 @@
                             {{ __('Registrar') }}
                             <i class="fas fa-heartbeat"></i>
                         </button>
+                <button type="reset" class="btn btn-info " >
+                    Borrar
+                </button>
 
             <!--    <a href="{{}}" class="btn btn-success">guardar</a>  Este es boton para actualizar -->
             </form>
