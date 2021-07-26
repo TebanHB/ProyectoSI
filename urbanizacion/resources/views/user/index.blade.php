@@ -34,7 +34,7 @@
 				  <th>Vendedor</th>
 				  <th>Cliente</th>
 				  <th>Visita</th>
-
+				<th>Opciones</th>
 			</thead>
 			<tbody>
 				@foreach ($users as $user)
@@ -46,7 +46,14 @@
 						<td>{{($user->tipo_vendedor == 1)? "Si":"NO"  }}  </td>
 						<td>{{($user->tipo_cliente == 1)? "Si":"NO"}}</td>
 						<td>{{($user->tipo_visita == 1)? "Si":"NO"}}</td>
-					   
+					   <td>
+
+						<a href="#" class="btn btn-info btn-sm ">editar</a>
+						<a href="#" class="btn btn-info btn-sm ">borrar</a>
+						<a href="#" class="btn btn-info btn-sm ">ver telefono</a>
+					
+
+					   </td>
 				   </tr> 
 				@endforeach
 			</tbody>

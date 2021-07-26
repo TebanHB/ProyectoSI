@@ -41,11 +41,11 @@ class UserController extends Controller
             'carnet' => ['required'],
             'email' => ['required'],
             'password' => ['required'],
-            'tipo_vendedor'=>['required'],
-            'tipo_visita'=>['required'],
-            'tipo_cliente'=>['required'],
-            'tipo_administrador'=>['required'],
+            
         ]);
+        $request = [
+            ''
+        ]
         User::create([
             'name'=>request('name'),
             'carnet'=>request('carnet'),

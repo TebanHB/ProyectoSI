@@ -35,11 +35,11 @@
                 </div>
                   <div id="Metodo_de_pago">
                     <h5>Forma de pago: </h5> 
-                    <input type="radio" name="pago" id="compromiso1">
+                    <input type="radio" name="compromiso" id="compromiso1">
                     <label for = "compromiso1">compromiso</label>
-                    <input type="radio" name="pago" id="contado1">
+                    <input type="radio" name="contado" id="contado1">
                     <label for = "contado1">contado</label>
-                     <input type="radio" name="pago" id="credito1">
+                     <input type="radio" name="credito" id="credito1">
                      <label for = "credito1">credito</label>
                 </div>
                 <div id="Datos_cliente">
@@ -140,17 +140,14 @@
 
                     </div>
                 </div>  
+                <button type="submit" class="botonescontrato ">
+                     {{ __('Guardar') }}
+                </button>
             </form>
             
         </div>
-        <div class="botonescontrato">
-            <button id="botonGuardar">Guardar Contrato</button>
-            <button id="botoncancelar">Cancelar</button>
-        </div>
         
-    
-    </div>  
    
-    
+    </div> 
 
 @endsection
