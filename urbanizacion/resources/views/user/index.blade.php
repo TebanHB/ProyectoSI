@@ -52,7 +52,6 @@
 						<a href="#" class="btn btn-info btn-sm ">borrar</a>
 						<a href="#" class="btn btn-info btn-sm ">ver telefono</a>
 					
-
 					   </td>
 				   </tr> 
 				@endforeach

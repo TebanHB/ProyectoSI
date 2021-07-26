@@ -25,12 +25,13 @@
                 @csrf
                 <div id="contratoform">
                     <label for=nro_abj>Nro de Adjudicacion: </label>
-                    <input type="text" id="nro_abj"> 
+                    <input type="text" name="nro_abj" id="nro_abj"> 
+                    
                     <label for="fecha">Fecha: </label>
-                    <input type="date"id="fecha">
+                    <input type="date"name="fecha" id="fecha">
                     <br>
                     <label for="cot">Cotizacion: </label>
-                    <input type="text"id="cot">
+                    <input type="text" name="cot" id="cot">
              
                 </div>
                   <div id="Metodo_de_pago">
@@ -47,7 +48,7 @@
                     <input type="text" id="nomb"> 
                     <br>
                     <label for="carnet">Carnet: </label> 
-                    <input type="text" id="carnet"> 
+                    <input type="text" name="carnet" id="carnet"> 
                     <label for="tel">Telefono: </label> 
                     <input type="text" id="tel"> 
                 </div>
