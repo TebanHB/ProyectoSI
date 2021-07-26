@@ -28,7 +28,7 @@
                     <input type="password"id="contra">
                     <br> <br>
                     <label for="verif">Verificar Contraseña: </label>
-                    <input type="password ver"id="verif">
+                    <input type="password"id="verif">
 
                     <br> <br>
                 </div>

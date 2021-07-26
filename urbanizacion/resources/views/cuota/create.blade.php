@@ -17,7 +17,7 @@
 
 
 
-            <label for="monto">Monto:{{$mensual}} </label>
+            <label for="monto_cuota">Monto:{{$mensual}} </label>
 
             <label for="amortizacion">Amortizacion: </label>
             <input type="number" id="amortizacion">
