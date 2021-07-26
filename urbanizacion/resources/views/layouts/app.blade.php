@@ -53,6 +53,8 @@
 				</li>
                 @endif
 
+             
+
                     @if(Auth::user()->tipo_vendedor==1)
                         <li>
                             <a href="#">
@@ -110,7 +112,7 @@
 					</a>
 				</li>
                     @endif
-                    @if(Auth::user()->tipo_administrador==1 or Auth::user()->tipo_vendedor==1)
+                    @if(Auth::user()->tipo_administrador==1)
 				<li>
 					<a href="{{route('user.create')}}">
 						<i class="fa fa-cog" aria-hidden="true"></i>
@@ -118,7 +120,7 @@
 					</a>
 				</li>
                     @endif
-                    @if(Auth::user()->tipo_administrador==1 or Auth::user()->tipo_vendedor==1)
+                    @if(Auth::user()->tipo_administrador==1)
                         <li>
                             <a href="#">
                                 <i class="fa fa-cog" aria-hidden="true"></i>
@@ -126,6 +128,16 @@
                             </a>
                         </li>
                     @endif
+
+                    @if(Auth::user()->tipo_vendedor==1)
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-cog" aria-hidden="true"></i>
+                                <span>Ver visitas programadas</span>
+                            </a>
+                        </li>
+                    @endif
+
                     @if(Auth::user()->tipo_cliente==1 or Auth::user()->tipo_visita==1)
                         <li>
                             <a href="#">
@@ -135,12 +147,13 @@
                         </li>
                     @endif
 				<li>
+                    
 					<a href="{{route('manzana.index')}}">
 						<i class="fa fa-cog" aria-hidden="true"></i>
 						<span>Ver Manzanas</span>
 					</a>
 				</li>
-                    @if(Auth::user()->tipo_administrador==1)
+                    @if(Auth::user()->tipo_administrador==1 or Auth::user()->tipo_vendedor==1)
 				<li>
 					<a href="{{route('vende.index')}}">
 						<i class="fa fa-cog" aria-hidden="true"></i>

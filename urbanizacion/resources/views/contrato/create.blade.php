@@ -25,21 +25,22 @@
                 @csrf
                 <div id="contratoform">
                     <label for=nro_abj>Nro de Adjudicacion: </label>
-                    <input type="text" id="nro_abj"> 
+                    <input type="text" name="nro_abj" id="nro_abj"> 
+                    
                     <label for="fecha">Fecha: </label>
-                    <input type="date"id="fecha">
+                    <input type="date"name="fecha" id="fecha">
                     <br>
                     <label for="cot">Cotizacion: </label>
-                    <input type="text"id="cot">
+                    <input type="text" name="cot" id="cot">
              
                 </div>
                   <div id="Metodo_de_pago">
                     <h5>Forma de pago: </h5> 
-                    <input type="radio" name="pago" id="compromiso1">
+                    <input type="radio" name="compromiso" id="compromiso1">
                     <label for = "compromiso1">compromiso</label>
-                    <input type="radio" name="pago" id="contado1">
+                    <input type="radio" name="contado" id="contado1">
                     <label for = "contado1">contado</label>
-                     <input type="radio" name="pago" id="credito1">
+                     <input type="radio" name="credito" id="credito1">
                      <label for = "credito1">credito</label>
                 </div>
                 <div id="Datos_cliente">
@@ -47,7 +48,7 @@
                     <input type="text" id="nomb"> 
                     <br>
                     <label for="carnet">Carnet: </label> 
-                    <input type="text" id="carnet"> 
+                    <input type="text" name="carnet" id="carnet"> 
                     <label for="tel">Telefono: </label> 
                     <input type="text" id="tel"> 
                 </div>
@@ -140,6 +141,7 @@
 
                     </div>
                 </div>  
+<<<<<<< HEAD
                 <div class="botonescontrato">
                     <button id="botonGuardar">Guardar Contrato</button>
                     <button id="botoncancelar">Cancelar</button>
@@ -148,10 +150,16 @@
             
         </div>
         
+=======
+                <button type="submit" class="botonescontrato ">
+                     {{ __('Guardar') }}
+                </button>
+            </form>
+            
+        </div>
+>>>>>>> 4990427df8ea85ebc0cec26d9621dff83fc1f722
         
-    
-    </div>  
    
-    
+    </div> 
 
 @endsection
