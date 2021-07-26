@@ -28,7 +28,7 @@
                     <input type="password"id="contra">
                     <br> <br>
                     <label for="verif">Verificar Contraseña: </label>
-                    <input type="password ver"id="verif">
+                    <input type="password"id="verif">
 
                     <br> <br>
                 </div>
@@ -36,13 +36,17 @@
                             {{ __('Registrar') }}
                             <i class="fas fa-heartbeat"></i>
                         </button>
-                        <input type="radio" name="" id="">Cliente
-                    <input type="radio" name="" id="">Administrador 
-                     <input type="radio" name="" id="">Vendedor
-                <input type="radio" name="" id="">Cliente
-                <input type="radio" name="" id="">Administrador
-                <input type="radio" name="" id="">Vendedor
-                <input type="radio" name="" id="">Visita
+                        
+                        <div id="tipousuario">
+                            <h5>Tipo de usuario: </h5> 
+                            <input type="radio" name="usuario" id="cliente">
+                            <label for = "cliente">Cliente</label>
+                            <input type="radio" name="usuario" id="vendedor">
+                            <label for = "vendedor">Vendedor</label>
+                             <input type="radio" name="usuario" id="administrador">
+                             <label for = "administrador">Administrador</label>
+                        </div>
+                
 
             <!--    <a href="{{}}" class="btn btn-success">guardar</a>  Este es boton para actualizar -->
             </form>
