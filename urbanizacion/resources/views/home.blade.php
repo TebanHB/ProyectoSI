@@ -10,8 +10,6 @@
     <!-- CSS only -->
 </head>
 @section('content')
-<h1>Holaaaaa</h1>
-
 
 @endsection
 
