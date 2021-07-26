@@ -59,34 +59,41 @@
                     <label for="saldo_financiado">Saldo Financiado: </label>
                     <input type="number"id="saldo_financiado">
                     <br> <br>
-                    <br> <br>
+                    
                     <label for="monto_pagado">Monto Pagado: </label>
                     <input type="number"id="monto_pagado">
                     <br> <br>
                     <label for="monto_a_pagar">Monto a Pagar: </label>
                     <input type="number"id="monto_a_pagar">
-                    <br> <br>
+                    
                     <br> <br>
                     <label for="fecha_pago_garantia">Monto Pagado: </label>
                     <input type="date"id="fecha_pago_garantia">
                     <br> <br>
                     <label for="fecha_a_pagar">Saldo Financiado: </label>
                     <input type="date"id="fecha_a_pagar">
-                    <br> <br>
-                    <br> <br>
-                    <label for="monto">Monto: </label>
-                    <input type="date"id="monto">
-                    <br> <br>
-                    <br> <br>
-                    <label for="monto">Monto: </label>
-                    <input type="date"id="monto">
-                    <br> <br>
                     
+                    <br> <br>
+                    <label for="monto">Monto: </label>
+                    <input type="number"id="monto">
+                   
+                    <br> <br>
+                    <label for="descuento">Descuento: </label>
+                    <input type="number"id="descuento">
+                    
+                    <br> <br>
+                    <label for="descuento">Descuento: </label>
+                    <input type="number"id="descuento">
+                    <br> <br>
                     
 
                     <br> <br>
                     <label for="interes_anual">Interes Anual: </label>
                     <input type="text"id="interes_anual">
+                    <br> <br>
+                    <br> <br>
+                    <label for="fecha_de_pago">Fecha de pago: </label>
+                    <input type="date"id="fecha_de_pago">
                     <br> <br>
 
 

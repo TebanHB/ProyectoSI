@@ -43,6 +43,16 @@
 					</a>
 				</li>
                 @endif
+
+                @if(Auth::user()->tipo_administrador==1)
+				<li>
+					<a href="{{ route('pago.create') }}">
+						<i class="fa fa-eye" aria-hidden="true"></i>
+						<span>Agregar nuevo pago</span>
+					</a>
+				</li>
+                @endif
+
                     @if(Auth::user()->tipo_vendedor==1)
                         <li>
                             <a href="#">
