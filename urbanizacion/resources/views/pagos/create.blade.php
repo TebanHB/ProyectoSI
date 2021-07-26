@@ -10,9 +10,9 @@
     </div>
     @endif
     <div class="container">
-        <h1>Crear nuevo usuario</h1>
+        <h1>Nuevo Pago</h1>
         <div class="card-body">
-            <form method="POST" action="{{ route('user.store') }}" enctype="multipart/form-data">
+            <form method="POST" action="{{ route('pago.store') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="usuario">
                 </div>
@@ -102,6 +102,8 @@
 
             <!--    <a href="{{}}" class="btn btn-success">guardar</a>  Este es boton para actualizar -->
             </form>
+            <button id="botonGuardar">Guardar Contrato</button>
+            <button id="botoncancelar">Cancelar</button>
         </div>
     </div>
 

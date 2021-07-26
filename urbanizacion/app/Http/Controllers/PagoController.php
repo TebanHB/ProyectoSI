@@ -40,7 +40,7 @@ class PagoController extends Controller
      */
     public function create()
     {
-        return view('pago.create');
+        return view('pagos.create');
     }
 
     /**
