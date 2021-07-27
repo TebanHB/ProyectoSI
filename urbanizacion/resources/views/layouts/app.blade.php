@@ -4,6 +4,7 @@
 	<title>Home</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="homecss/css/style.css">
+    <link rel="stylesheet" href={{asset('homecss/css/style.css')}}>
 </head>
 <body>
 
@@ -53,7 +54,7 @@
 				</li>
                 @endif
 
-             
+
 
                     @if(Auth::user()->tipo_vendedor==1)
                         <li>
@@ -147,7 +148,7 @@
                         </li>
                     @endif
 				<li>
-                    
+
 					<a href="{{route('manzana.index')}}">
 						<i class="fa fa-cog" aria-hidden="true"></i>
 						<span>Ver Manzanas</span>
