@@ -57,7 +57,6 @@ class TerrenoController extends Controller
             'id_contrato'=>request('id_contrato'),
         ]);
         return redirect()->route('terreno.index');
-
     }
 
     /**

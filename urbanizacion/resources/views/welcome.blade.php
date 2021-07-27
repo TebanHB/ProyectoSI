@@ -4,15 +4,19 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Proyecto</title>
-        
+        <title>Urbanizacion ChiquiUrban</title>
+        <link rel="shortcut icon" href="img/LOGOCHIQUIURBAN.png">
         <!-- Fonts -->
+        
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         
         <!-- Styles -->
         <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}}
+           
         </style>
+            <link rel="stylesheet" href="css/normalize.css"> 
+            <link rel="stylesheet" href="homecss/css/welcome.css">
+            <script src="https://kit.fontawesome.com/93086c386c.js" crossorigin="anonymous"></script>
 
         <style>
             body {
@@ -31,30 +35,212 @@
         
         
         <!-- CSS Estilos -->
-        <link rel="stylesheet" href="welcomecss/welcome.css">
+       
     </head>
     <body class="antialiased" >
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Inicio de Sesion</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Registrarse</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
+            
+            
          
     </body >
     <head>
         
     </head>
     <body>
+        <header>
+            <div class="container">
+                <a href="wecolme.blade.php">
+                    <img src="img/LOGOCHIQUIURBAN.png" width="150">
+                </a>
+                <nav>
+                   
+                    <a href="#inicio"> Inicio </a>
+                    <a href="#nosotros"> Nosotros </a>
+                    <a href="#servicios"> Servicios </a>
+                    <a href="#galeria"> Galeria </a>
+                    <a href="#contactanos"> Contactanos </a> <br>
+                    @if (Route::has('login'))
+                    <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                        @auth
+                            <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
+                        @else
+                            <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Inicio de Sesion</a><br>
+    
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Registrarse</a><br>
+                            @endif
+                        @endauth
+                    </div>
+                @endif
+                </nav>
+        </header>
+        <main>
+                <section id="inicio">
+                    <img src="img/manzanas.jpg">
+                    <div class="bloque-inicio">
+                        <h1>Bienvenidos a Urbanizacion ChiquiUrban</h1>
+                        <a href="#nosotros" class="boton boton-verde">Ver mas</a>
+                    </div>
+                </section>
+
+                <section id="nosotros">
+                    <div class="container">
+                        Una Urbanizacion que se encarga de vender terrenos pequeños, medianos y grandes
+                    </div>
+                </section>
+                <section id="servicios">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="columna columna-33">
+                                <div class="bloque-servicio">
+                                    <div class="bloque-img-servicio">
+                                        <img src="img/terreno.jpg" >
+                                    </div>
+                                    <div class="bloque-contenido-servicio">
+                                        <h3>Servicio 1</h3>
+                                        <p>Venta de terrenos</p>
+                                        <a href="#" class="boton">Ver mas</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="columna columna-33">
+                                <div class="bloque-servicio">
+                                    <div class="bloque-img-servicio">
+                                        <img src="img/ubicacion.jpg" >
+                                    </div>
+                                    <div class="bloque-contenido-servicio">
+                                        <h3>Servicio 2</h3>
+                                        <p>Ubicacion</p>
+                                        <a href="#" class="boton">Ver mas</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+
+                        </div>
+                    </div>
+                </section>
+
+                <section id="galeria">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="columna columna-33">
+                                <div class="cuadrado-perfecto">
+                                    <img src="img/terreno.jpg">
+                                    <h4>Imagen1</h4>
+                                </div>
+                            </div>
+
+                            <div class="columna columna-33">
+                                <div class="cuadrado-perfecto">
+                                    <img src="img/urbanizacion.jpg">
+                                    <h4>Imagen2</h4>
+                                </div>
+                            </div>
+
+                            <div class="columna columna-33">
+                                <div class="cuadrado-perfecto">
+                                    <img src="img/ubicacion.jpg">
+                                    <h4>Imagen3</h4>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <section id="contactanos">
+                    <div class="container">
+                        <div class="row">
+                            <div class="columna columna-50">
+                                <form action="" method="POST">
+
+                                    <div class="form-block">
+                                        <input type="text" name="nombre" class="form-control">
+                                    </div>
+
+                                    <div class="form-block">
+                                        <input type="email" name="email" class="form-control">
+                                    </div>
+
+                                    <div class="form-block">
+                                        <textarea name="mensaje"></textarea>
+                                    </div>
+                                    <div class="form-block">
+                                        <input type="submit" value="Enviar">
+                                    </div>
+                                    
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                    <iframe width="520" height="400" frameborder="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20La%20Paz+(santa%20cruz%20de%20la%20sierra)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> 
+                </section>
+         </main>
+         <footer>
+             <div class="container">
+                <div class="row">
+                    <div class="columna columna-25">
+                        <img src="img/LOGOCHIQUIURBAN.jpg" class="logo-footer">
+                        
+                    </div>
+
+                    <div class="columna columna-25">
+                        <h3>
+                           Temas relacionados
+                        </h3>
+                        <ul> 
+                            <li><a href="#">Tema 1</a></li>
+                            <li><a href="#">Tema 2</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="columna columna-25">
+                        <h3>
+                            Datos de contacto
+                        </h3>
+                        <ul> 
+                            <li>camilareyes562@gmail.com</li>
+                            <li>+59171010463</li>
+                            <li>Radial 27 <br>Santa Cruz de la Sierra -Bolivia </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="columna columna-25">
+                        <h3>
+                            Redes Sociales
+                        </h3>
+                        <ul> 
+                            <li>
+                                <a href="#">    
+                                    <i>
+                                    </i>     
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">    
+                                    <i>
+                                    </i>     
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+             </div>
+             <div class="barra-footer">
+                &copy; Derechos Reservados - 2020
+             </div>
+         </footer>
+
+            </div>
+        </header>
         
         
        

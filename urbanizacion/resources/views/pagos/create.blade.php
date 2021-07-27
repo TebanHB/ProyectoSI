@@ -28,10 +28,10 @@
                 </div>
                     
                     <label for="cuota_inicial">Cuota Inicial: </label>
-                    <input type="number"id="cuota_inicial">
+                    <input type="number"name="cuota_inicial"id="cuota_inicial">
                     <br> <br>
                     <label for="plazo">Plazo: </label>
-                    <input type="text"id="plazo">
+                    <input type="text"name="plazo"id="plazo">
                     <br> <br>
                     <label for="interes_anual">Interes Anual: </label>
                     <input type="text"id="interes_anual">
