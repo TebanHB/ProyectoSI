@@ -50,7 +50,7 @@
         <header>
             <div class="container">
                 <a href="wecolme.blade.php">
-                    <img src="img/LOGOCHIQUIURBAN.png" width="150">
+                    <img src="img/LOGOCHIQUIURBAN.png" width="150" >
                 </a>
                 <nav>
                    

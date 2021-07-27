@@ -88,6 +88,9 @@
 a{
 	text-decoration: none;
 	color:green;
+	margin: 0 15px;
+	align-items: center;
+	;
 }
 .side-bar ul li:hover {
 	background: #127b8e;
@@ -142,6 +145,13 @@ a{
 }
 .newtable th,td{
 padding: 20px;
+
+}
+.newtable td a{
+	margin: 5px 5px;
+	background-color: rgba(255, 255, 255, 0.747);
+	display: inline-block;
+
 
 }
 .newtable thead{
