@@ -100,7 +100,7 @@
                                     <div class="bloque-contenido-servicio">
                                         <h3>Servicio 1</h3>
                                         <p>Venta de terrenos</p>
-                                        <a href="#" class="boton">Ver mas</a>
+                                        <a href="{{ route('terreno.index') }}" class="boton">Ver mas</a>
                                     </div>
                                 </div>
                             </div>
@@ -141,12 +141,7 @@
                                 </div>
                             </div>
 
-                            <div class="columna columna-33">
-                                <div class="cuadrado-perfecto">
-                                    <img src="img/ubicacion.jpg">
-                                    <h4>Imagen3</h4>
-                                </div>
-                            </div>
+                           
 
                         </div>
                     </div>
@@ -159,14 +154,17 @@
                                 <form action="" method="POST">
 
                                     <div class="form-block">
+                                        <label for = "name">Nombre: </label>
                                         <input type="text" name="nombre" class="form-control">
                                     </div>
 
                                     <div class="form-block">
+                                        <label for = "email">Email: </label>
                                         <input type="email" name="email" class="form-control">
                                     </div>
 
                                     <div class="form-block">
+                                        <label for = "mensaje">Mensaje: </label>
                                         <textarea name="mensaje"></textarea>
                                     </div>
                                     <div class="form-block">

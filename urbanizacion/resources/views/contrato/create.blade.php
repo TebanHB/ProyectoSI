@@ -58,12 +58,6 @@
                     </select>
 
 
-
-
-
-
-
-
                 </div>
 
                 <div id="Datos_terreno">
