@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Mora;
+use App\Models\User;
+use App\Models\Cuota;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -32,6 +34,10 @@ class MoraController extends Controller
         return view('mora.create',compact('user'), compact('moras'));
     }
 
+    public function moras($id){
+        $moras= Cuota::where('id_mora',$id)->get();
+        return view('mora.index',compact('moras'));
+    }
     /**
      * Store a newly created resource in storage.
      *
