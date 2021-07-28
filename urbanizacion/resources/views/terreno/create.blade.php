@@ -26,7 +26,10 @@
     <input type="checkbox" name="estado_terreno">
     
    
-    <button id="botonGuardar">Guardar</button><br>
+   
+    <button type="submit" class="botonescontrato ">
+        Guardar
+    </button>
 </form>
 </div>
 @endsection

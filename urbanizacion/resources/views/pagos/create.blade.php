@@ -102,7 +102,7 @@
 
             <!--    <a href="{{}}" class="btn btn-success">guardar</a>  Este es boton para actualizar -->
             </form>
-            <button id="botonGuardar">Guardar Contrato</button>
+            <button id="botonGuardar">Guardar</button>
             <button id="botoncancelar">Cancelar</button>
         </div>
     </div>

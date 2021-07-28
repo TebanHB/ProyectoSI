@@ -48,6 +48,7 @@
 						<a href="#" class="btn btn-info btn-sm ">editar</a>
 						<a href="#" class="btn btn-info btn-sm ">borrar</a>
 						<a href="{{route('telefonoPersona.telefonos',$user->id)}}" class="btn btn-info btn-sm ">ver telefono</a>
+						<a href="{{route('telefonoPersona.create',$user->id)}}" class="btn btn-info btn-sm ">Agregar nuevo telefono</a>
 					
 					   </td>
 				   </tr> 

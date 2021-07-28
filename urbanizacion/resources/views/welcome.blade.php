@@ -67,7 +67,7 @@
                             <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Inicio de Sesion</a><br>
     
                             @if (Route::has('register'))
-                                <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Registrarse</a><br>
+                                <a href="{{ route('register')}}" class="ml-4 text-sm text-gray-700 underline">Registrarse</a><br>
                             @endif
                         @endauth
                     </div>
@@ -102,7 +102,7 @@
                                     <div class="bloque-contenido-servicio">
                                         <h3>Servicio 1</h3>
                                         <p>Venta de terrenos</p>
-                                        <a href="{{ route('terreno.index') }}" class="boton-blanco">Ver mas</a>
+                                        <a href="{{ route('terreno.index') }}" class="boton boton-blanco">Ver mas</a>
                                     </div>
                                 </div>
                             </div>
@@ -115,7 +115,7 @@
                                     <div class="bloque-contenido-servicio">
                                         <h3>Servicio 2</h3>
                                         <p>Ubicacion</p>
-                                        <a href="#" class="boton-blanco">Ver mas</a>
+                                        <a href="#" class="boton boton-blanco">Ver mas</a>
                                     </div>
                                 </div>
                             </div>

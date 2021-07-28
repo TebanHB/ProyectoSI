@@ -15,6 +15,6 @@ class Mora extends Model
     ];
     use HasFactory;
     public function cuota(){
-        return $this->hasOne(Credito::class,'id_mora');
+        return $this->hasOne(Cuota::class,'id_mora');
     }
 }

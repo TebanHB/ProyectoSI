@@ -81,6 +81,7 @@ header .container
     font-size: 20px;
     font-weight: bold;
 }
+
 .seccion{
     padding-top: 60px;
     padding-bottom: 60px;
@@ -106,9 +107,20 @@ header .container
 #servicios .bloque-servicio .bloque-contenido-servicio{
     padding: 15px; /*todos los lados tendran esa cantidad*/
 }
+
 #servicios .bloque-servicio .bloque-contenido-servicio h3{
     margin-top: 0;
     font-size: 35px;
+}
+
+.boton.boton-blanco
+{
+  
+    background-color:white;
+    font-size: 30px;
+    color: green;
+    font-weight: bold;
+    border: 1px solid green;
 }
 
 .row {

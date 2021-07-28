@@ -20,14 +20,10 @@
     <br><br>
     <label for="retraso_dia">Retraso de días: </label>
     <input type="number" id="retraso_dia">
-<<<<<<< HEAD
-    <button id="botonGuardar">Guardar</button>
-=======
     <br><br> <br>
     <button type="submit" class="botonesmora ">
         {{ __('Guardar') }}
    </button>
->>>>>>> 42363fcfcff2341b1e5474eac11ec79bb63e8453
 </form>
 
 </div>

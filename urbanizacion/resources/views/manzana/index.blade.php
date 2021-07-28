@@ -23,7 +23,7 @@
             <th>superficie manzana</th>
             <th>cantidad de terreno</th>
             <th>ubicación</th>
-            <th></th>
+            <th>Opciones</th>
             </thead>
             <tbody>
             @foreach ($manzanas as $manzana)

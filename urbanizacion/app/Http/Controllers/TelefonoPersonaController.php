@@ -42,6 +42,7 @@ class TelefonoPersonaController extends Controller
     {
         $credentials =   Request()->validate([
             'telefono' => ['required'],
+            'id_users'=> ['required'],
         ]);
         TelefonoPersona::create([
             'telefono'=>request('telefono'),
