@@ -24,6 +24,7 @@
         <thead>
               <th>ID user</th>
               <th>Telefonos</th>
+              <th>Opciones</th>
             
         </thead>
         <tbody>
@@ -31,8 +32,13 @@
                <tr>
                     <td>{{($telefono->id_users == null)? "--": $telefono->id_users }}</td>
                     <td>{{($telefono->telefono == null)? "--": $telefono->telefono}}</td>
-                   
-    
+
+                    <td>
+                        
+                        <a type="submit" class="btn btn-info " href="{{route('telefonoPersona.create')}}">
+                            {{ __('Nuevo Telefono') }}
+                        </a>  
+                </td>
                     {{-- <td>
                         <a href="{{route('user.permissions',$user->id)}}"><button type="button" class="btn btn-warning">Roles</button></a>
                     </td> --}}
