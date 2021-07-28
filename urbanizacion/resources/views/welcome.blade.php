@@ -117,9 +117,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            
-
                         </div>
                     </div>
                 </section>
@@ -140,9 +137,6 @@
                                     <h4>Imagen2</h4>
                                 </div>
                             </div>
-
-                           
-
                         </div>
                     </div>
                 </section>
@@ -152,7 +146,6 @@
                         <div class="row">
                             <div class="columna columna-50">
                                 <form action="" method="POST">
-
                                     <div class="form-block">
                                         <label for = "name">Nombre: </label>
                                         <input type="text" name="nombre" class="form-control">
@@ -173,7 +166,6 @@
                                     
                                 </form>
                             </div>
-
                         </div>
                     </div>
                     <iframe width="520" height="400" frameborder="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20La%20Paz+(santa%20cruz%20de%20la%20sierra)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> 
@@ -184,9 +176,7 @@
                 <div class="row">
                     <div class="columna columna-25">
                         <img src="img/LOGOCHIQUIURBAN.jpg" class="logo-footer">
-                        
                     </div>
-
                     <div class="columna columna-25">
                         <h3>
                            Temas relacionados

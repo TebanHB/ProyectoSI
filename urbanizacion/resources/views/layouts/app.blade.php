@@ -53,6 +53,14 @@
 					</a>
 				</li>
                 @endif
+                @if(Auth::user()->tipo_administrador==1)
+				<li>
+					<a href="{{ route('manzana.create') }}">
+						<i class="fa fa-eye" aria-hidden="true"></i>
+						<span>Agregar nueva manzana</span>
+					</a>
+				</li>
+                @endif
 
 
 
