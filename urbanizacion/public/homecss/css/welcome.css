@@ -12,7 +12,7 @@ a{
 
 }
 
-header .container a
+header .container nav a
 {
     color:green;
     text-decoration: none;
@@ -90,23 +90,43 @@ header .container
 }
 #servicios img{
     width: 300px;
-    
-   
-}
-
-#servicios .container .row .columna.columna-33{
-    position: relative;
-   top: 20%;
-   left: 10%;
-   width: 400px;
-   text-align: center;
-   margin-left: -200px; 
-   display: inline-block;
-   margin: 0 auto 0 auto;
-   padding-right: 15px;
-   padding-left: 15px;
 
 }
+#servicios .bloque-servicio{
+    border: 1px solid grey;
+}
+
+#servicios .bloque-servicio .bloque-img-servicio{
+
+}
+#servicios .bloque-servicio .bloque-img-servicio img{
+    width: 100%;
+}
+
+#servicios .bloque-servicio .bloque-contenido-servicio{
+    padding: 15px; /*todos los lados tendran esa cantidad*/
+}
+#servicios .bloque-servicio .bloque-contenido-servicio h3{
+    margin-top: 0;
+    font-size: 35px;
+}
+
+.row {
+   display: flex;
+   flex-wrap: wrap; /*si una de las columnas no llega a entrar dentro del wor, se ira abajo*/
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.columna{
+    padding-right: 15px;
+    padding-left: 15px;
+
+}
+.columna-33{
+    width: 50%; /*son 2 imagenes 100/2*/
+}
+
+
 #nosotros{
     background-color: green;
     background-size: cover;
@@ -117,4 +137,6 @@ header .container
     color: white;
     text-align: center;
     font-size: 30px;
+    /*margin: 0; */
 }
+
