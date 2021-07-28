@@ -186,6 +186,16 @@ class user extends Seeder
                 'tipo_visita'=>'1',
                 'tipo_administrador'=>'0',
                 'tipo_cliente'=>'0'
+            ],
+            [
+                'name'=>'Jose Gonzales Montaño',
+                'carnet'=>'5687890',
+                'email'=>'josereinaldogonzales@gmail.com',
+                'password'=>Hash::make('zeinaldo123'),
+                'tipo_vendedor'=>'0',
+                'tipo_visita'=>'0',
+                'tipo_administrador'=>'1',
+                'tipo_cliente'=>'0'
             ]
 
         ]);
