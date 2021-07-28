@@ -55,7 +55,8 @@ Route::post('contrato/store',[ContratoController::class, 'store'])->name('contra
 Route::get('contrato/pendiente',[ContratoController::class,'pendiente'])->name('contrato.pendiente')->middleware('auth');
 
 Route::get('manzana/index',[ManzanaController::class,'index'])->name('manzana.index')->middleware('auth');
-Route::get('manzana/create',[ManzanaController::class, 'create'])->name('manzana.create');
+Route::get('manzana/create',[ManzanaController::class, 'create'])->name('manzana.create')->middleware('auth');
+Route::post('manzana/store',[ContratoController::class, 'store'])->name('manzana.store')->middleware('auth');
 Route::post('manzana/register',[ManzanaController::class,'store'])->name('manzana.sotre')->middleware('auth');
 
 Route::get('mora/index',[MoraController::class,'index'])->name('mora.index')->middleware('auth');
