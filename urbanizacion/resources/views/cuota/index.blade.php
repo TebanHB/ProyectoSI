@@ -37,7 +37,8 @@
                   <td>{{($cuota->amortizacion == null)? "--": $cuota->amortizacion}}</td>
                   <td>{{($cuota->monto_cuota == null)? "--": $cuota->monto_cuota}}</td>
                   {{-- <td>{{$contrato->users->name}}</td>                 --}}
-                  <td><a href="{{route('mora.moras', $cuota->id)}}">Ver Mora</a></td>
+                  <td><a href="{{route('cuota.moras', $cuota->id)}}">Ver Mora</a></td>
+                  <td>   <a href="{{route('mora.create', $cuota->id)}}">Crear Mora</a></td>
                 </tr>
             @endforeach
         </tbody>

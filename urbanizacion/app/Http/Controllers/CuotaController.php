@@ -43,6 +43,10 @@ class CuotaController extends Controller
         $cuotas = Cuota::where('id_credito',$id)->get();
         return view('cuota.index',compact('cuotas'));
     }
+    public function moras($id){
+        $moras = Cuota::where('id_mora',$id)->get();
+        return view('mora.index',compact('moras'));
+    }
     public function store(Request $request)
     {
         //
