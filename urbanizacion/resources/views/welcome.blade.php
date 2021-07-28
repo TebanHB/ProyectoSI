@@ -83,12 +83,14 @@
                     </div>
                 </section>
 
-                <section id="nosotros">
+                <section id="nosotros" class="seccion">
                     <div class="container">
-                        Una Urbanizacion que se encarga de vender terrenos pequeños, medianos y grandes
+                        <p> Una Urbanizacion que se encarga de
+                         vender terrenos pequeños, 
+                         medianos y grandes</p>
                     </div>
                 </section>
-                <section id="servicios">
+                <section id="servicios" class="seccion">
                     <div class="container">
                         <div class="row">
 

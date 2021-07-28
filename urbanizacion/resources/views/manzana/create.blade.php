@@ -21,9 +21,7 @@
     <label for="ubicacion">Ubicacion: </label>
     <input type="text" name="ubicacion">
    
-    <button type="submit" class="botonescontrato ">
-        Guardar
-    </button>
+    <button id="botonGuardar">Guardar</button>
 </form>
 </div>
 @endsection

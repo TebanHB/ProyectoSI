@@ -42,7 +42,7 @@
                 </div>
                 <div id="Datos_cliente">
 
-                    <select name="id_lote" id="select-room" class="form-control" onchange="habilitar()" >
+                    <select name="id_users" id="select-room" class="form-control" onchange="habilitar()" >
                         <option value="nulo">Usuarios</option>
 
                         @foreach ($users as $user)

@@ -17,7 +17,7 @@
     <input type="number" id="multa">
     <label for="retraso_dia">Retraso de días: </label>
     <input type="number" id="retraso_dia">
-
+    <button id="botonGuardar">Guardar</button>
 </form>
 </div>
 @endsection

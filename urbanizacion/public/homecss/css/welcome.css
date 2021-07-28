@@ -81,6 +81,10 @@ header .container
     font-size: 20px;
     font-weight: bold;
 }
+.seccion{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
 #servicios{
     position: relative;
 }
@@ -103,4 +107,14 @@ header .container
    padding-left: 15px;
 
 }
-
+#nosotros{
+    background-color: green;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+#nosotros p{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
