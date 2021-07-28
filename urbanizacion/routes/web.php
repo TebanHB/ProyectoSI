@@ -60,12 +60,15 @@ Route::post('manzana/register',[ManzanaController::class,'store'])->name('manzan
 
 Route::get('mora/index',[MoraController::class,'index'])->name('mora.index')->middleware('auth');
 Route::get('mora/create',[MoraController::class, 'create'])->name('mora.create')->middleware('auth');
-Route::post('mora/register',[MoraController::class,'store'])->name('mora.store')->middleware('auth');
+Route::post('mora/store',[MoraController::class,'store'])->name('mora.store')->middleware('auth');
+
 
 Route::get('cuota/index',[CuotaController::class,'index'])->name('cuota.index')->middleware('auth');
 Route::get('cuota/create',[CuotaController::class,'create'])->name('cuota.create')->middleware('auth');
 Route::post('cuota/register',[CuotaController::class,'store'])->name('cuota.store')->middleware('auth');
 Route::get('cuotas/{id}',[CuotaController::class,'cuotas'])->name('cuota.cuotas');
+Route::get('moras/{id}',[CuotaController::class,'moras'])->name('cuota.moras');
+
 
 Route::get('nota/index',[NotaController::class,'index'])->name('nota.index')->middleware('auth');
 Route::get('nota/create',[NotaController::class,'create'])->name('nota.create')->middleware('auth');
