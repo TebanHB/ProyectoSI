@@ -29,8 +29,8 @@ class PagoController extends Controller
     {
         $codigo = Contrato::select("codigo_pago")->where("id",$id)->get(); //sacando el codigo del pago de un contrato en especifico
         $pagos = Pago::findOrFail($codigo); 
+       
         return view('pagos.index',compact('pagos'));
-
     }
 
     /**

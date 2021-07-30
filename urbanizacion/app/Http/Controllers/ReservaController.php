@@ -47,7 +47,7 @@ class ReservaController extends Controller
         Reserva::create([
             'id_user'=>request('id_user'),
             'id_lote'=>request('id_lote'),
-            'horario_de_visita'=>request('hoario_de_visita'),
+            'horario_de_visita'=>request('horario_de_visita'),
         ]);
         return redirect()->route('reserva.index');
     }

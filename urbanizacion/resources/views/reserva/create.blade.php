@@ -18,8 +18,7 @@
                     <select name="id_lote" id="select-room" class="form-control" onchange="habilitar()" >
                         <option value="nulo">Terrenos</option>
                         @foreach ($terrenos as $terreno)
-                            <option value="{{$terreno->id}}">
-                                Codigo Terreno: {{$terreno->id}}    Codigo Manzana: {{$terreno->id_manzana}}
+                            <option value="{{$terreno->id}}">Codigo Terreno: {{$terreno->id}}    Codigo Manzana: {{$terreno->id_manzana}}
                             </option>
                         @endforeach
                     </select>
@@ -34,9 +33,10 @@
                         @endforeach
                     </select>
                 </div>
-                <button class="botonGuardar">Guardar reserva</button>
-                <button class="botoncancelar">Cancelar</button>
-                <a href="{{route('laboratory.create', $plan->id)}}" class="btn btn-success">Guardar</a>
+                <button type="submit" class="botonescontrato ">
+                    Guardar
+                </button>
+               
 
             </form>
         </div>

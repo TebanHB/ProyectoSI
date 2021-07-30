@@ -32,8 +32,6 @@
             <!--    <h4>ADMIN</h4> -->
                 @endcan
 				<h4 >{{ Auth::user()->name }}</h4>
-
-
 			</div>
 			<ul>
                 @if(Auth::user()->tipo_administrador==1)
@@ -134,6 +132,14 @@
                             <a href="#">
                                 <i class="fa fa-cog" aria-hidden="true"></i>
                                 <span>Agregar nueva visita</span>
+                            </a>
+                        </li>
+                    @endif
+                    @if(Auth::user()->tipo_administrador==1)
+                        <li>
+                            <a href="{{route('reserva.index')}}">
+                                <i class="fa fa-cog" aria-hidden="true"></i>
+                                <span>ver reservas</span>
                             </a>
                         </li>
                     @endif

@@ -21,7 +21,7 @@
 
             <label for="amortizacion">Amortizacion: </label>
             <input type="number" id="amortizacion">
-
+            <button type="submit" class="boton ">
             </form>
         </div>
     </div>
