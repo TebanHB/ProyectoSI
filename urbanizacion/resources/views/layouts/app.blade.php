@@ -110,6 +110,7 @@
                     </a>
                 </li>
                     @endif
+                    
                 <hr class="sidebar-divider">
                     @if(Auth::user()->tipo_administrador==1)
 				<li>

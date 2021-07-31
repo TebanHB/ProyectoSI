@@ -45,7 +45,7 @@
                 <td>{{($contrato->monto == null)? "--": $contrato->monto}}</td>
                <td>{{($contrato->estado == 1)? "completado": "pendiente"}}</td>
              
-                <td><a href="{{route('pago.payment',$contrato->id)}}">Ver pago</a> </td>
+                <td><a href="{{route('pago.payment',$contrato->id)}}">Ver kardex</a> </td>
                   {{-- <td>{{$contrato->users->name}}</td>                 --}}
                  
                </tr> 
