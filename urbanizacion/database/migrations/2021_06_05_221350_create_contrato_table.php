@@ -17,9 +17,9 @@ class CreateContratoTable extends Migration
             $table->id();
             $table->date("fecha_adjudicacion");
             $table->float("monto");
-            $table->unsignedBigInteger("id_user");
+            $table->unsignedBigInteger("id_user")->nullable();
             $table->foreign('id_user')->on('users')->references('id')->onDelete('cascade');
-            $table->unsignedBigInteger("codigo_pago");
+            $table->unsignedBigInteger("codigo_pago")->nullable();
             $table->foreign('codigo_pago')->on('pago')->references('id')->onDelete('cascade');
             $table->boolean('estado'); //1 completado y 0 pendiente
             $table->timestamps();

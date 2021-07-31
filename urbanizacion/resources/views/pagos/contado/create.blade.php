@@ -17,9 +17,7 @@
                 <div class="usuario">
                 </div>
                     </div>
-            
-    
-                  
+                    <input type="hidden" name="formadepago_id" value="contado">
                     <label for="monto">Monto: </label>
                     <input type="number"id="monto">
                    

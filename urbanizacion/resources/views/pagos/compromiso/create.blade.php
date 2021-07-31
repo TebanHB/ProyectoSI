@@ -17,7 +17,7 @@
                 <div class="usuario">
                 </div>
                     </div>
-                   
+                    <input type="hidden" name="formadepago_id" value="compromiso">
                     <label for="monto_pagado">Monto Pagado: </label>
                     <input type="number"id="monto_pagado">
                     <br> <br>

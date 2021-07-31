@@ -94,13 +94,10 @@ class PagoController extends Controller
      */
     public function store(Request $request)
     {
-        $credentials =   Request()->validate([ //validar los datos
-            'tipo' => ['required'],
-    
-        ]);
+      
         Pago::create([
             
-            'tipo' => request('tipo'),
+            'tipo' => request('formadepago_id'),
             'cuota_inicial' => request('cuota_inicial'),
             'plazo' =>request('plazo'),
             'interes_anual' => request('interes_anual'),

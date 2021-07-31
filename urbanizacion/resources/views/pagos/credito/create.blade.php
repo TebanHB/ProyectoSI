@@ -17,7 +17,7 @@
                 <div class="usuario">
                 </div>
                     </div>
-                    
+                    <input type="hidden" name="formadepago_id" value="credito">
                     <label for="cuota_inicial">Cuota Inicial: </label>
                     <input type="number"name="cuota_inicial"id="cuota_inicial">
                     <br> <br>
@@ -25,30 +25,30 @@
                     <input type="text"name="plazo"id="plazo">
                     <br> <br>
                     <label for="interes_anual">Interes Anual: </label>
-                    <input type="text"id="interes_anual">
+                    <input type="text"name = "interes_anual" id="interes_anual">
                     <br> <br>
                     <label for="cuota_mensual">Cuota Mensual: </label>
-                    <input type="number"id="cuota_mensual">
+                    <input type="number" name = "cuota_mensual "id="cuota_mensual">
                     <br> <br>
                     <label for="fecha_Prog">Fecha Programada: </label>
-                    <input type="date"id="fecha_Prog">
+                    <input type="text" name= "fecha_Prog" id="fecha_Prog">
                     <br> <br>
                     <label for="fecha_inicio">Fecha Inicio: </label>
-                    <input type="date"id="fecha_inicio">
+                    <input type="date" name = "fecha_inicio" id="fecha_inicio">
                     <br> <br>
                     <label for="fecha_ultima_cuota">Fecha ultima cuota: </label>
-                    <input type="date"id="fecha_ultima_cuota">
+                    <input type="date" name= "fecha_ultima_cuota" id="fecha_ultima_cuota">
                     <br> <br>
                     
                     <h5>Estado: </h5> 
-                    <input type="radio" name="estado" id="activo">
+                    <input type="radio" name="estado" id="activo" value = "Activo">
                     <label for = "activo">Activo</label>
-                    <input type="radio" name="estado" id="finalizado">
+                    <input type="radio" name="estado" id="finalizado" value = "Finalizado">
                     <label for = "finalizado">Finalizado</label>
 
                     <br> <br>
                     <label for="saldo_financiado">Saldo Financiado: </label>
-                    <input type="number"id="saldo_financiado">
+                    <input type="number" name= "saldo_financiado" id="saldo_financiado">
                     <br> <br>
                     
                     
@@ -56,10 +56,13 @@
 
                 </div>
                        
-
-            <!--    <a href="{{}}" class="btn btn-success">guardar</a>  Este es boton para actualizar -->
+                <button type="submit" class="botonescontrato ">
+                    {{ __('Guardar') }}
+               </button>
+        
             </form>
-            <button id="botonGuardar">Guardar</button>
+            
+
             <button id="botoncancelar">Cancelar</button>
         </div>
     </div>
