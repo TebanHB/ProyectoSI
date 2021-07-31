@@ -45,7 +45,15 @@
                 <td>{{($contrato->monto == null)? "--": $contrato->monto}}</td>
                <td>{{($contrato->estado == 1)? "completado": "pendiente"}}</td>
              
-                <td><a href="{{route('pago.payment',$contrato->id)}}">Ver pago</a> </td>
+               @if ($contrato->pago->tipo =='credito')
+               <td><a href="{{route('pago.creditopayment',$contrato->id)}}">Ver pago cred</a> </td>
+               @endif
+               @if ($contrato->pago->tipo =='compromiso')
+               <td><a href="{{route('pago.compromisopayment',$contrato->id)}}">Ver pago com</a> </td>
+               @endif
+               @if ($contrato->pago->tipo =='contado')
+               <td><a href="{{route('pago.contadopayment',$contrato->id)}}">Ver pago con</a> </td>
+               @endif
                   {{-- <td>{{$contrato->users->name}}</td>                 --}}
                  
                </tr> 

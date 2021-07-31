@@ -41,7 +41,15 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('pagos/index',[PagoController::class, 'index'])->name('pago.index')->middleware(['auth', 'admin']);
 Route::get('pagos/create',[PagoController::class,'create'])->name('pago.create')->middleware('auth');
 Route::post('pagos/store',[PagoController::class, 'store'])->name('pago.store')->middleware('auth');
-Route::get('pagos/payment/{id}',[PagoController::class, 'payment'])->name('pago.payment')->middleware('auth');
+Route::get('pagos/creditopayment/{id}',[PagoController::class, 'creditopayment'])->name('pago.creditopayment')->middleware('auth');
+Route::get('pagos/compromisopayment/{id}',[PagoController::class, 'compromisopayment'])->name('pago.compromisopayment')->middleware('auth');
+Route::get('pagos/contadopayment/{id}',[PagoController::class, 'contadopayment'])->name('pago.contadopayment')->middleware('auth');
+Route::get('pagos/credito/index',[PagoController::class, 'creditoindex'])->name('pago.credito.index')->middleware('auth');
+Route::get('pagos/contado/index',[PagoController::class, 'contadoindex'])->name('pago.contado.index')->middleware('auth');
+Route::get('pagos/compromiso/index',[PagoController::class, 'compromisoindex'])->name('pago.compromiso.index')->middleware('auth');
+Route::get('pagos/credito/create',[PagoController::class,'creditocreate'])->name('pago.credito.create')->middleware('auth');
+Route::get('pagos/contado/create',[PagoController::class,'contadocreate'])->name('pago.contado.create')->middleware('auth');
+Route::get('pagos/compromiso/create',[PagoController::class,'compromisocreate'])->name('pago.compromiso.create')->middleware('auth');
 
 
 Route::get('user/index',[UserController::class, 'index'])->name('user.index')->middleware('auth');

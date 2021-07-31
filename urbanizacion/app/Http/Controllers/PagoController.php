@@ -20,17 +20,48 @@ class PagoController extends Controller
         return view('pagos.index', compact('pagos'));
     }
 
+    public function creditoindex() // es pa mostrar las instancias que tengamos de pago en este caso
+    { 
+        $pagos = Pago::all();
+        return view('pagos.credito.index', compact('pagos'));
+    }
+
+    public function contadoindex() // es pa mostrar las instancias que tengamos de pago en este caso
+    {
+        $pagos = Pago::all();
+        return view('pagos.contado.index', compact('pagos'));
+    }
+    public function compromisoindex() // es pa mostrar las instancias que tengamos de pago en este caso
+    {
+        $pagos = Pago::all();
+        return view('pagos.compromiso.index', compact('pagos'));
+    }
     public function mypayments()
     {
         $pagos = Pago::all();
         return view('pagos.index', compact('pagos'));
     }
-    public function payment($id)
+    public function creditopayment($id)
     {
         $codigo = Contrato::select("codigo_pago")->where("id",$id)->get(); //sacando el codigo del pago de un contrato en especifico
         $pagos = Pago::findOrFail($codigo); 
-       
-        return view('pagos.index',compact('pagos'));
+      
+               return view('pagos.credito.index',compact('pagos'));
+    }
+    public function compromisopayment($id)
+    {
+        $codigo = Contrato::select("codigo_pago")->where("id",$id)->get(); //sacando el codigo del pago de un contrato en especifico
+        $pagos = Pago::findOrFail($codigo); 
+      
+               return view('pagos.compromiso.index',compact('pagos'));
+    }
+
+    public function contadopayment($id)
+    {
+        $codigo = Contrato::select("codigo_pago")->where("id",$id)->get(); //sacando el codigo del pago de un contrato en especifico
+        $pagos = Pago::findOrFail($codigo); 
+      
+               return view('pagos.contado.index',compact('pagos'));
     }
 
     /**
@@ -42,7 +73,19 @@ class PagoController extends Controller
     {
         return view('pagos.create');
     }
+    public function creditocreate()
+    {
+        return view('pagos.credito.create');
+    }
+    public function contadocreate()
+    {
+        return view('pagos.contado.create');
+    }
 
+    public function compromisocreate()
+    {
+        return view('pagos.compromiso.create');
+    }
     /**
      * Store a newly created resource in storage.
      *
