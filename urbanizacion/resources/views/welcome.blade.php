@@ -66,7 +66,7 @@
                         @else
                             <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Inicio de Sesion</a><br>
     
-                            @if (Route::has('register'))
+                         @if (Route::has('register'))
                                 <a href="{{ route('register')}}" class="ml-4 text-sm text-gray-700 underline">Registrarse</a><br>
                             @endif
                         @endauth
@@ -110,7 +110,7 @@
                             <div class="columna columna-33">
                                 <div class="bloque-servicio">
                                     <div class="bloque-img-servicio cuadrado-perfecto">
-                                        <img src="img/ubicacion.jpg" >
+                                        <img src="img/terreno2.jpg" >
                                     </div>
                                     <div class="bloque-contenido-servicio">
                                         <h3>Servicio 2</h3>
@@ -122,45 +122,68 @@
                         </div>
                     </div>
                 </section>
-
+               
                 <section id="galeria">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="columna columna-33">
-                                <div class="cuadrado-perfecto">
-                                    <img src="img/terreno.jpg">
-                                    <h4>Imagen1</h4>
-                                </div>
-                            </div>
-
-                            <div class="columna columna-33">
-                                <div class="cuadrado-perfecto">
-                                    <img src="img/urbanizacion.jpg">
-                                    <h4>Imagen2</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="#image1"> 
+                        <img src="img/terreno.jpg" alt="">
+                    </a>
+                    <a href="#image2"> 
+                        <img src="img/urbanizacion.jpg" alt="">
+                    </a>
+                    <a href="#image3"> 
+                        <img src="img/terreno2.jpg" alt="">
+                    </a>
+                    <a href="#image4"> 
+                        <img src="img/terreno3.jpg" alt="">
+                    </a>
                 </section>
+                <article class="light-box" id="image1">
+                    <a href="#image4" class="next"> <i class="fas fa-arrow-left"></i> </a>
+                        <img src="img/terreno.jpg" alt="">
+                    <a href="#image2" class="next"> <i class="fas fa-arrow-right"></i></a>
+                    <a href="#" class="close">X</a>
+                </article>
 
-                <section id="contactanos">
-                    <div class="container">
+                <article class="light-box" id="image2">
+                    <a href="#image1" class="next"> <i class="fas fa-arrow-left"></i> </a>
+                        <img src="img/urbanizacion.jpg" alt="">
+                    <a href="#image3" class="next"> <i class="fas fa-arrow-right"></i></a>
+                    <a href="#" class="close">X</a>
+                </article>
+
+                <article class="light-box" id="image3">
+                    <a href="#image2" class="next"> <i class="fas fa-arrow-left"></i> </a>
+                        <img src="img/terreno2.jpg" alt="">
+                    <a href="#image4" class="next"> <i class="fas fa-arrow-right"></i></a>
+                    <a href="#" class="close">X</a>
+                </article>
+
+                <article class="light-box" id="image4">
+                    <a href="#image3" class="next"> <i class="fas fa-arrow-left"></i> </a>
+                        <img src="img/terreno3.jpg" alt="">
+                    <a href="#image1" class="next"> <i class="fas fa-arrow-right"></i></a>
+                    <a href="#" class="close">X</a>
+                </article>
+
+
+                <section id="contactanos" class="seccion">
+                    <iframe width="520" height="388" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=388&amp;hl=en&amp;q=%20santa%20cruz%20+(urbanizacion)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>                    <div class="container">
                         <div class="row">
-                            <div class="columna columna-50">
+                            <div class="columna columna-50 empujar-50">
                                 <form action="" method="POST">
                                     <div class="form-block">
                                         <label for = "name">Nombre: </label>
-                                        <input type="text" name="nombre" class="form-control">
+                                        <input type="text" name="nombre"  placeholder=Nombre class="form-control placeholder=Nombre">
                                     </div>
 
                                     <div class="form-block">
                                         <label for = "email">Email: </label>
-                                        <input type="email" name="email" class="form-control">
+                                        <input type="email" name="email"  placeholder=Email class="form-control">
                                     </div>
 
                                     <div class="form-block">
                                         <label for = "mensaje">Mensaje: </label>
-                                        <textarea name="mensaje"></textarea>
+                                        <textarea name="mensaje" placeholder=Mensaje></textarea>
                                     </div>
                                     <div class="form-block">
                                         <input type="submit" value="Enviar">
@@ -170,7 +193,7 @@
                             </div>
                         </div>
                     </div>
-                    <iframe width="520" height="400" frameborder="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20La%20Paz+(santa%20cruz%20de%20la%20sierra)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> 
+                    
                 </section>
          </main>
          <footer>

@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+
 }
 
 body{
@@ -39,15 +40,17 @@ header .container
 }
 
 
-
-
 .container{
     width: 1140px;
     margin: 0 auto 0 auto;
     padding-right: 15px;
     padding-left: 15px;
-
+    position: relative;
 }
+
+
+
+
 #inicio{
     position: relative;
 
@@ -100,8 +103,14 @@ header .container
 #servicios .bloque-servicio .bloque-img-servicio{
 
 }
+
 #servicios .bloque-servicio .bloque-img-servicio img{
     width: 100%;
+}
+
+#servicios .bloque-servicio .bloque-img-servicio.cuadrado-perfecto{
+    padding-bottom: 56.25%;
+
 }
 
 #servicios .bloque-servicio .bloque-contenido-servicio{
@@ -154,6 +163,16 @@ header .container
 .columna-33{
     width: 50%; /*son 2 imagenes 100/2*/
 }
+.columna-50{
+    width: 50%;
+}
+.empujar-50{
+    margin-left: 50%;
+
+}
+.empujar-0{
+    margin-left: 0;
+}
 
 
 #nosotros{
@@ -168,4 +187,139 @@ header .container
     font-size: 30px;
     /*margin: 0; */
 }
+#galeria{
+ display: grid;
+ grid-template-columns: repeat(auto-fit,minmax(350px, 1fr));
+ width: 95%;
+ margin: auto;
+ grid-gap: 10px;
+ padding: 40px 0;
+ overflow: hidden;
+
+}
+
+
+#galeria img{
+    width: 100%;
+    vertical-align: top;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+#galeria >a{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.98);
+}
+
+#galeria a:hover img{
+    filter: blur(2px);
+    transform: rotate(10deg) scale(1.3);
+
+}
+.light-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.596);
+    transition: transform .3s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+
+}
+.light-box img{
+    width: 37vw;
+    max-height: 50vh;
+}
+.light-box:target{
+    transform: scale(1);
+
+}
+.close{
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background: black ;
+    color: white;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+.next{
+    display: block;
+    background:rgba(0, 128, 0, 0.712);
+    color: white;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    text-align: center;
+}
+
+#contactanos{
+    position: relative;
+}
+
+#contactanos iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(1);
+
+}
+#contactanos form{
+    padding: 30px;
+    width: 50%;
+    left: 50%;
+    background-color: rgba(0, 128, 0, 0.199);
+}
+
+#contactanos form .form-block{
+    width: 100%;
+    margin-bottom:15px ;
+}
+#contactanos form .form-block .form-control{
+    display: block;
+    height: 20px;
+    font-size: 16px;
+    border: 1px solid grey;
+    width: 100%;
+}
+
+/*#galeria h4{
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    color: white;
+    font-size: 18px;
+    width: 100%;
+}
+#galeria img
+{
+ filter: grayscale(0);
+}
+#galeria .cuadrado-perfecto:hover img
+{
+ filter: grayscale(1);
+}
+
+#galeria .cuadrado-perfecto:hover h4
+{
+ display: none;
+}
+*/
 
