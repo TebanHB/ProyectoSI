@@ -51,7 +51,7 @@ class ContratoController extends Controller
         $credentials =   Request()->validate([ //validar los datos
             'monto' => ['required'],
             'fecha_adjudicacion' => ['required'],
-            'codigo_pago' => ['required'],
+           
         ]);
         Contrato::create([
             'monto' => request('monto'),

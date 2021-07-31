@@ -24,21 +24,24 @@
             <form method="POST" action="{{ route('contrato.store') }}" enctype="multipart/form-data">
                 @csrf
                 <div id="contratoform">
-                    <label for="fecha">Fecha: </label>
-                    <input type="date"name="fecha" id="fecha">
+                    <label for="fecha_adjudicacion">Fecha: </label>
+                    <input type="date"name="fecha_adjudicacion" id="fecha_adjudicacion">
                     <br>
                     <label for="cot">Tipo de cambio: </label>
                     <label for="cot">7 </label>
+                    <label for="monto">monto: </label>
+                    <input type="text"name="monto" id="monto">
 
                 </div>
                   <div id="Metodo_de_pago">
                     <h5>Forma de pago: </h5>
-                    <input type="radio" name="compromiso" id="compromiso1">
-                    <label for = "compromiso1">compromiso</label>
-                    <input type="radio" name="contado" id="contado1">
-                    <label for = "contado1">contado</label>
-                     <input type="radio" name="credito" id="credito1">
-                     <label for = "credito1">credito</label>
+                    <input type="radio" name="codigo_pago" id="codigo_pago">
+                    <label for = "codigo_pago">compromiso</label>
+                    <input type="radio" name="contado" id="codigo_pago">
+                    <label for = "codigo_pago">contado</label>
+
+                     <input type="radio" name="codigo_pago" id="codigo_pago">
+                     <label for = "codigo_pago">credito</label>
                 </div>
                 <div id="Datos_cliente">
 
@@ -138,7 +141,6 @@
                         <label for=monto>Monto: </label>
                         <input type="text" id="monto">
                         <br>                        <br>
-
                         <label for=descuento>Descuento: </label>
                         <input type="text" id="descuento">
                         <br>                        <br>

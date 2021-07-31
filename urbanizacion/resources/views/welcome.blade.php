@@ -96,7 +96,7 @@
 
                             <div class="columna columna-33">
                                 <div class="bloque-servicio">
-                                    <div class="bloque-img-servicio">
+                                    <div class="bloque-img-servicio cuadrado-perfecto">
                                         <img src="img/terreno.jpg" >
                                     </div>
                                     <div class="bloque-contenido-servicio">
@@ -109,7 +109,7 @@
 
                             <div class="columna columna-33">
                                 <div class="bloque-servicio">
-                                    <div class="bloque-img-servicio">
+                                    <div class="bloque-img-servicio cuadrado-perfecto">
                                         <img src="img/ubicacion.jpg" >
                                     </div>
                                     <div class="bloque-contenido-servicio">
