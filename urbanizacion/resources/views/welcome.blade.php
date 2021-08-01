@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>Urbanizacion ChiquiUrban</title>
         <link rel="shortcut icon" href="img/LOGOCHIQUIURBAN.png">
@@ -168,48 +168,39 @@
 
                 <section id="contactanos" class="seccion">
                     <iframe width="520" height="388" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=388&amp;hl=en&amp;q=%20santa%20cruz%20+(urbanizacion)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>                    <div class="container">
+                        <div class="container-fluid">
                         <div class="row">
-                            <div class="columna columna-50 empujar-50">
+                            <div class="columna columna-33 empujar-66">
                                 <form action="" method="POST">
                                     <div class="form-block">
-                                        <label for = "name">Nombre: </label>
-                                        <input type="text" name="nombre"  placeholder=Nombre class="form-control placeholder=Nombre">
+                                        <label for = "nombre">Nombre: </label>
+                                        <input type="text" name="nombre"  placeholder=Nombre class="form-control">
+                                    </div>
+                                    <div class="form-block">
+                                        <label for = "email">email: </label>
+                                        <input type="text" name="email"  placeholder=Email class="form-control">
+                                    </div>
+                                    <div class="form-block">
+                                        <label for = "mensaje">mensaje: </label>
+                                        <input type="text" name="mensaje"  placeholder=Mensaje class="form-control">
                                     </div>
 
-                                    <div class="form-block">
-                                        <label for = "email">Email: </label>
-                                        <input type="email" name="email"  placeholder=Email class="form-control">
-                                    </div>
-
-                                    <div class="form-block">
-                                        <label for = "mensaje">Mensaje: </label>
-                                        <textarea name="mensaje" placeholder=Mensaje></textarea>
-                                    </div>
-                                    <div class="form-block">
-                                        <input type="submit" value="Enviar">
+                                    <div class="form-block bloque-ultimo">
+                                        <input type="submit" class="boton boton-negro" value="Enviar">
                                     </div>
                                     
                                 </form>
                             </div>
                         </div>
                     </div>
-                    
+                   
                 </section>
          </main>
-         <footer>
+         <footer >
              <div class="container">
                 <div class="row">
                     <div class="columna columna-25">
-                        <img src="img/LOGOCHIQUIURBAN.jpg" class="logo-footer">
-                    </div>
-                    <div class="columna columna-25">
-                        <h3>
-                           Temas relacionados
-                        </h3>
-                        <ul> 
-                            <li><a href="#">Tema 1</a></li>
-                            <li><a href="#">Tema 2</a></li>
-                        </ul>
+                        <img src="img/logo2.png" class="logo-footer">
                     </div>
 
                     <div class="columna columna-25">
@@ -228,17 +219,20 @@
                         <h3>
                             Redes Sociales
                         </h3>
-                        <ul> 
+                        <ul class="redes"> 
                             <li>
-                                <a href="#">    
-                                    <i>
-                                    </i>     
+                                <a href="https://www.facebook.com/">    
+                                    <i class="fab fa-facebook-f"></i>   
                                 </a>
                             </li>
                             <li>
-                                <a href="#">    
-                                    <i>
-                                    </i>     
+                                <a href="https://twitter.com/">   
+                                    <i class="fab fa-twitter"></i>   
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://instagram.com/">   
+                                    <i class="fab fa-instagram"></i> 
                                 </a>
                             </li>
                         </ul>
@@ -248,7 +242,7 @@
                 </div>
              </div>
              <div class="barra-footer">
-                &copy; Derechos Reservados - 2020
+                &copy; Proyecto sistemas de informacion - 2021
              </div>
          </footer>
 
