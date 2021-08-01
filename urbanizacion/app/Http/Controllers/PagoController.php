@@ -98,7 +98,7 @@ class PagoController extends Controller
     public function store(Request $request )
     {
       
-         Pago::create([
+         $pago = Pago::create([
             
             'tipo' => request('formadepago_id'),
             'cuota_inicial' => request('cuota_inicial'),
@@ -120,7 +120,7 @@ class PagoController extends Controller
 
         ]);
         //refirigimos a donde nos de la gana
-        return redirect()->route('contrato.create');
+        return redirect()->route('contrato.create', $pago->id);
     }
 
     /**

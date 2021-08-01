@@ -113,7 +113,7 @@
                 <hr class="sidebar-divider">
                     @if(Auth::user()->tipo_administrador==1)
 				<li>
-					<a href="{{route('contrato.create')}}">
+					<a href="{{route('pago.create')}}">
 						<i class="fa fa-cog" aria-hidden="true"></i>
 						<span>Agregar Nuevo Contrato</span>
 					</a>

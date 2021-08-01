@@ -31,13 +31,13 @@ class ContratoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
         $users = User::all();
-        $pagos = Pago::all();
+        $pago = Pago::findOrFail($id);
 
         //dd($user);
-        return view('contrato.create', compact('users'), compact('pagos'));
+        return view('contrato.create', compact('users'), compact('pago'));
     }
 
     /**
@@ -58,7 +58,7 @@ class ContratoController extends Controller
             'monto' => request('monto'),
             'fecha_adjudicacion' => request('fecha_adjudicacion'),
             'estado' => request('estado'),
-            'codigo_pago' => request('cod_pago'),
+            'codigo_pago' => request('pago_id'),
             'id_user' => request('id_users'),
         ]);
         return redirect()->route('contrato.index');
