@@ -25,6 +25,8 @@ class User extends Authenticatable
         'tipo_visita',
         'tipo_cliente',
         'tipo_administrador',
+        'url_foto',
+        'estado',
     ];
 
     /**

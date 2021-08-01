@@ -56,6 +56,7 @@ Route::get('user/index',[UserController::class, 'index'])->name('user.index')->m
 Route::get('user/create',[UserController::class,'create'])->name('user.create')->middleware('auth');
 Route::post('user/store',[UserController::class, 'store'])->name('user.store')->middleware('auth');
 Route::post('user/prueba',[UserController::class, 'prueba'])->name('user.prueba')->middleware('auth');
+Route::get('user/personal/{id}',[UserController::class,'personal'])->name('user.personal')->middleware('auth');
 
 Route::get('contrato/index',[ContratoController::class, 'index'])->name('contrato.index')->middleware('auth');
 Route::get('contrato/create',[ContratoController::class, 'create'])->name('contrato.create')->middleware('auth');
