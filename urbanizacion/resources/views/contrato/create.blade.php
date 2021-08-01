@@ -33,13 +33,25 @@
                     <input type="text"name="monto" id="monto">
 
                 </div>
-                  <div id="Metodo_de_pago">
-                    <h5>Forma de pago: </h5>
-                    <input type ='button' class="btn btn-link"  value = 'Credito' onclick="location.href = '{{ route('pago.credito.create') }}'"/>
-                    <input type ='button' class="btn btn-link"  value = 'Compromiso' onclick="location.href = '{{ route('pago.compromiso.create') }}'"/>
-                    <input type ='button' class="btn btn-link"  value = 'Contado' onclick="location.href = '{{ route('pago.contado.create') }}'"/>
-                    
+                <div id="Datos_cliente">
+
+                    <select name="cod_pago" id="select-room" class="form-control" onchange="habilitar()" >
+                        <option value="nulo">Pago</option>
+
+                        @foreach ($pagos as $pago)
+                         
+                            <option value="{{$pago->id}}">
+
+                               <spam>{{$pago->id}}</spam>
+
+                            </option>
+
+                        @endforeach
+                    </select>
+
+
                 </div>
+
                 <div id="Datos_cliente">
 
                     <select name="id_users" id="select-room" class="form-control" onchange="habilitar()" >
@@ -54,24 +66,16 @@
                             </option>
 
                         @endforeach
-
                     </select>
 
 
                 </div>
 
-                <div id="Datos_terreno">
-                    <label for=nro_terreno>Nro del Terreno : </label>
-                    <input type="text" id="nro_terreno">
-                    <br>
-                    <label for="manzana">Manzana: </label>
-                    <input type="text" id="manzana">
-                    <label for="precio">Precio: </label>
-                    <input type="text" id="precio">
-                    <label for=Superficie>Superficie : </label>
-                    <input type="text" id="Superficie">
-
-                </div>
+                <h5>Estado: </h5> 
+                <input type="radio" name="estado" id="activo" value = "0">
+                <label for = "activo">Pendiente</label>
+                <input type="radio" name="estado" id="finalizado" value = "1">
+                <label for = "finalizado">Finalizado</label>
 
 
 

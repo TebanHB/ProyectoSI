@@ -19,25 +19,26 @@
                     </div>
                     <input type="hidden" name="formadepago_id" value="compromiso">
                     <label for="monto_pagado">Monto Pagado: </label>
-                    <input type="number"id="monto_pagado">
+                    <input type="number" name = "monto_pagado" id="monto_pagado">
                     <br> <br>
                     <label for="monto_a_pagar">Monto a Pagar: </label>
-                    <input type="number"id="monto_a_pagar">
+                    <input type="number"name = "monto_a_pagar" id="monto_a_pagar">
                     
                     <br> <br>
-                    <label for="fecha_pago_garantia">Monto Pagado: </label>
-                    <input type="date"id="fecha_pago_garantia">
+                    <label for="fecha_pago_garantia">Fecha Pago Garantia: </label>
+                    <input type="date" name = "fecha_pago_garantia" id="fecha_pago_garantia">
                     <br> <br>
-                    <label for="fecha_a_pagar">Saldo Financiado: </label>
-                    <input type="date"id="fecha_a_pagar">
+                    <label for="fecha_a_pagar">Fecha a Pagar: </label>
+                    <input type="date" name = "fecha_a_pagar" id="fecha_a_pagar">
                     
                    
 
 
                 </div>
-                       
+                <button type="submit" class="botonescontrato ">
+                    {{ __('Guardar') }}
+               </button>   
 
-            <!--    <a href="{{}}" class="btn btn-success">guardar</a>  Este es boton para actualizar -->
             </form>
             <button id="botonGuardar">Guardar</button>
             <button id="botoncancelar">Cancelar</button>
