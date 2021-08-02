@@ -76,7 +76,7 @@
         </header>
         <main>
                 <section id="inicio">
-                    <img src="img/manzanas.jpg">
+                    <img src="img/terreno6.png">
                     <div class="bloque-inicio">
                         <h1>Bienvenidos a Urbanizacion ChiquiUrban</h1>
                         <a href="#nosotros" class="boton boton-verde">Ver mas</a>
@@ -97,7 +97,7 @@
                             <div class="columna columna-33">
                                 <div class="bloque-servicio">
                                     <div class="bloque-img-servicio cuadrado-perfecto">
-                                        <img src="img/terreno.jpg" >
+                                        <img src="img/terreno8.jpg" >
                                     </div>
                                     <div class="bloque-contenido-servicio">
                                         <h3>Servicio 1</h3>
@@ -137,11 +137,14 @@
                         <img src="img/terreno3.jpg" alt="">
                     </a>
                     <a href="#image5"> 
-                        <img src="img/terreno4.MOV" alt="">
+                        <img src="img/terreno8.jpg" alt="">
+                    </a>
+                    <a href="#image6"> 
+                        <img src="img/terreno6.png" alt="">
                     </a>
                 </section>
                 <article class="light-box" id="image1">
-                    <a href="#image5" class="next"> <i class="fas fa-arrow-left"></i> </a>
+                    <a href="#image6" class="next"> <i class="fas fa-arrow-left"></i> </a>
                         <img src="img/terreno.jpg" alt="">
                     <a href="#image2" class="next"> <i class="fas fa-arrow-right"></i></a>
                     <a href="#" class="close">X</a>
@@ -168,10 +171,16 @@
                     <a href="#" class="close">X</a>
                 </article>
                 <article class="light-box" id="image5">
-                    <a href="#image5" class="next"> <i class="fas fa-arrow-left"></i> </a>
-                        <img src="img/terreno4.jpg" alt="">
-                    <a href="#image1" class="next"> <i class="fas fa-arrow-right"></i></a>
+                    <a href="#image4" class="next"> <i class="fas fa-arrow-left"></i> </a>
+                        <img src="img/terreno8.jpg" alt="">
+                    <a href="#image6" class="next"> <i class="fas fa-arrow-right"></i></a>
                     <a href="#" class="close">X</a>
+                </article>
+                <article class="light-box" id="image6">
+                    <a href="#image5" class="next"> <i class="fas fa-arrow-left"></i> </a>
+                        <img src="img/terreno6.png" alt="">
+                    <a href="#image1" class="next"> <i class="fas fa-arrow-right"></i></a>
+                    <a href="#galeria" class="close">X</a>
                 </article>
 
 

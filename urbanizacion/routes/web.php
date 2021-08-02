@@ -98,6 +98,7 @@ Route::get('terreno/{id}',[TerrenoController::class,'terrenos'])->name('terreno.
 Route::get('vende/index',[VendeController::class,'index'])->name('vende.index')->middleware('auth');
 Route::get('vende/create',[VendeController::class,'create'])->name('vende.create')->middleware('auth');
 Route::post('vende/register',[VendeController::class,'store'])->name('vende.store')->middleware('auth');
+Route::get('vende/{id}',[VendeController::class,'ventas'])->name('vende.ventas')->middleware('auth');
 
 Route::get('bitacora/index',[BitacoraController::class,'index'])->name('bitacora.index')->middleware('auth');
 Route::get('bitacora/create',[BitacoraController::class,'create'])->name('bitacora.create')->middleware('auth');
