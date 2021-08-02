@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contrato;
+use App\Models\Terreno;
 use App\Models\Pago;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -35,9 +36,9 @@ class ContratoController extends Controller
     {
         $users = User::all();
         $pago = Pago::findOrFail($id);
-
+        $terrenos =Terreno::where('estado_terreno','libre')->get();
         //dd($user);
-        return view('contrato.create', compact('users'), compact('pago'));
+        return view('contrato.create', compact('users'), compact('pago'), compact('terrenos'));
     }
 
     /**
@@ -53,7 +54,7 @@ class ContratoController extends Controller
             'fecha_adjudicacion' => ['required'],
             'estado' => ['required'],
         ]);
-        Contrato::create([
+        $contrato =Contrato::create([
             
             'monto' => request('monto'),
             'fecha_adjudicacion' => request('fecha_adjudicacion'),
@@ -61,7 +62,8 @@ class ContratoController extends Controller
             'codigo_pago' => request('pago_id'),
             'id_user' => request('id_users'),
         ]);
-        return redirect()->route('contrato.index');
+    
+        return redirect()->route('manzana.index');
     }
 
     /**

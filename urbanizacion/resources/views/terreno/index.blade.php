@@ -39,7 +39,10 @@
                     <td>{{($terreno->superficie_terreno == null)? "--": $terreno->superficie_terreno}}</td>
                     <td>{{($terreno->precio == null)? "--": $terreno->precio }}</td>
                     <td>{{($terreno->estado_terreno == null)? "--": $terreno->estado_terreno}}</td>
-    
+
+                    @if($terreno->estado_terreno == 'libre')
+                    <td><a href="{{route('terreno.edit',$terreno->id)}}">Comprar Terreno</a> </td>
+                    @endif
                     {{-- <td>
                         <a href="{{route('user.permissions',$user->id)}}"><button type="button" class="btn btn-warning">Roles</button></a>
                     </td> --}}

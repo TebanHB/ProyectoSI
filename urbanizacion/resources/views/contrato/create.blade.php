@@ -51,7 +51,6 @@
                         @endforeach
                     </select>
 
-
                 </div>
 
                 <h5>Estado: </h5> 
