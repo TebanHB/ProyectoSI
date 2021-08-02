@@ -62,6 +62,7 @@ Route::get('contrato/index',[ContratoController::class, 'index'])->name('contrat
 Route::get('contrato/create/{id}',[ContratoController::class, 'create'])->name('contrato.create')->middleware('auth');
 Route::post('contrato/store',[ContratoController::class, 'store'])->name('contrato.store')->middleware('auth');
 Route::get('contrato/pendiente',[ContratoController::class,'pendiente'])->name('contrato.pendiente')->middleware('auth');
+Route::get('contrato/completado',[ContratoController::class,'completado'])->name('contrato.completado')->middleware('auth');
 
 Route::get('manzana/index',[ManzanaController::class,'index'])->name('manzana.index')->middleware('auth');
 Route::get('manzana/create',[ManzanaController::class, 'create'])->name('manzana.create')->middleware('auth');
@@ -99,6 +100,7 @@ Route::post('terreno/update/{id}',[TerrenoController::class,'update'])->name('te
 Route::get('vende/index',[VendeController::class,'index'])->name('vende.index')->middleware('auth');
 Route::get('vende/create',[VendeController::class,'create'])->name('vende.create')->middleware('auth');
 Route::post('vende/register',[VendeController::class,'store'])->name('vende.store')->middleware('auth');
+Route::get('vende/{id}',[VendeController::class,'ventas'])->name('vende.ventas')->middleware('auth');
 
 Route::get('bitacora/index',[BitacoraController::class,'index'])->name('bitacora.index')->middleware('auth');
 Route::get('bitacora/create',[BitacoraController::class,'create'])->name('bitacora.create')->middleware('auth');

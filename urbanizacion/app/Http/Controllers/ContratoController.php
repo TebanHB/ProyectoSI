@@ -27,6 +27,11 @@ class ContratoController extends Controller
         $contratos->load('user');
         return view('contrato.index',compact('contratos'));
     }
+    public function completado(){
+        $contratos = Contrato::where('estado',1)->get();
+        $contratos->load('user');
+        return view('contrato.index',compact('contratos'));
+    }
     /**
      * Show the form for creating a new resource.
      *

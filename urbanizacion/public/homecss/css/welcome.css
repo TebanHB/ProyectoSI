@@ -42,7 +42,7 @@ header .container
 
 
 .container{
-    width: 1140px;
+    width: 85%;
     margin: 0 auto 0 auto;
     padding-right: 15px;
     padding-left: 15px;
@@ -69,14 +69,14 @@ header .container
    position: absolute;
    top: 40%;
    left: 50%;
-   width: 400px;
+   width: 800px;
    text-align: center;
-   margin-left: -200px; 
+   margin-left: -350px; 
 }
 #inicio .bloque-inicio h1{
     background: rgba(255, 255, 255, 0.226);
-    color:white;
-    font-size: 40px;
+    color:rgb(109, 43, 43);
+    font-size: 60px;
 }
 .boton{
     text-align: center;
@@ -87,7 +87,7 @@ header .container
 .boton.boton-verde
 {
     color: white;
-    background-color:teal;
+    background-color:rgb(0, 134, 29);
     font-size: 20px;
     font-weight: bold;
 }
@@ -384,7 +384,6 @@ footer ul li{
  footer .redes{
      font-size: 30px;
      display: flex;
-    
  }
  footer .redes a{
     margin: 0 7.5px;

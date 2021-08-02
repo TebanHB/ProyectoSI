@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Vende;
+use App\Models\Terreno;
 use App\Models\User;
 
 class VendeController extends Controller
@@ -30,7 +31,12 @@ class VendeController extends Controller
     {
         return view('vende.create');
     }
-
+   /* public function ventas($id){
+        $ventas = User::where('id_user',$id)->get();
+        $terrenos= Terreno::where('id_users',$id)->get();
+        return view('vende.index',compact('ventas'),compact('terrenos'));
+    }*/
+    
     /**
      * Store a newly created resource in storage.
      *

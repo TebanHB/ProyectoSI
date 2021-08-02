@@ -58,16 +58,16 @@
                     <a href="#nosotros"> Nosotros </a>
                     <a href="#servicios"> Servicios </a>
                     <a href="#galeria"> Galeria </a>
-                    <a href="#contactanos"> Contactanos </a> <br>
+                    <a href="#contactanos"> Contactanos </a> 
                     @if (Route::has('login'))
-                    <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+               
                         @auth
                             <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
                         @else
-                            <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Inicio de Sesion</a><br>
+                            <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Inicio de Sesion</a>
     
                          @if (Route::has('register'))
-                                <a href="{{ route('register')}}" class="ml-4 text-sm text-gray-700 underline">Registrarse</a><br>
+                                <a href="{{ route('register')}}" class="ml-4 text-sm text-gray-700 underline">Agendar Reserva</a>
                             @endif
                         @endauth
                     </div>
@@ -76,7 +76,7 @@
         </header>
         <main>
                 <section id="inicio">
-                    <img src="img/manzanas.jpg">
+                    <img src="img/terreno6.png">
                     <div class="bloque-inicio">
                         <h1>Bienvenidos a Urbanizacion ChiquiUrban</h1>
                         <a href="#nosotros" class="boton boton-verde">Ver mas</a>
@@ -97,7 +97,7 @@
                             <div class="columna columna-33">
                                 <div class="bloque-servicio">
                                     <div class="bloque-img-servicio cuadrado-perfecto">
-                                        <img src="img/terreno.jpg" >
+                                        <img src="img/terreno8.jpg" >
                                     </div>
                                     <div class="bloque-contenido-servicio">
                                         <h3>Servicio 1</h3>
@@ -136,9 +136,15 @@
                     <a href="#image4"> 
                         <img src="img/terreno3.jpg" alt="">
                     </a>
+                    <a href="#image5"> 
+                        <img src="img/terreno8.jpg" alt="">
+                    </a>
+                    <a href="#image6"> 
+                        <img src="img/terreno6.png" alt="">
+                    </a>
                 </section>
                 <article class="light-box" id="image1">
-                    <a href="#image4" class="next"> <i class="fas fa-arrow-left"></i> </a>
+                    <a href="#image6" class="next"> <i class="fas fa-arrow-left"></i> </a>
                         <img src="img/terreno.jpg" alt="">
                     <a href="#image2" class="next"> <i class="fas fa-arrow-right"></i></a>
                     <a href="#" class="close">X</a>
@@ -161,9 +167,22 @@
                 <article class="light-box" id="image4">
                     <a href="#image3" class="next"> <i class="fas fa-arrow-left"></i> </a>
                         <img src="img/terreno3.jpg" alt="">
-                    <a href="#image1" class="next"> <i class="fas fa-arrow-right"></i></a>
+                    <a href="#image5" class="next"> <i class="fas fa-arrow-right"></i></a>
                     <a href="#" class="close">X</a>
                 </article>
+                <article class="light-box" id="image5">
+                    <a href="#image4" class="next"> <i class="fas fa-arrow-left"></i> </a>
+                        <img src="img/terreno8.jpg" alt="">
+                    <a href="#image6" class="next"> <i class="fas fa-arrow-right"></i></a>
+                    <a href="#" class="close">X</a>
+                </article>
+                <article class="light-box" id="image6">
+                    <a href="#image5" class="next"> <i class="fas fa-arrow-left"></i> </a>
+                        <img src="img/terreno6.png" alt="">
+                    <a href="#image1" class="next"> <i class="fas fa-arrow-right"></i></a>
+                    <a href="#galeria" class="close">X</a>
+                </article>
+
 
 
                 <section id="contactanos" class="seccion">
