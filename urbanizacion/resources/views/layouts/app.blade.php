@@ -34,6 +34,7 @@
 				<h4 >{{ Auth::user()->name }}</h4>
 			</div>
 			<ul>
+                
                 @if(Auth::user()->tipo_administrador==1)
 
                     <li>
