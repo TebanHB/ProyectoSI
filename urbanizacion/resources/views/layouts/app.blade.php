@@ -34,12 +34,95 @@
 				<h4 >{{ Auth::user()->name }}</h4>
 			</div>
 			<ul>
+                
                 @if(Auth::user()->tipo_administrador==1)
 				<li>
-					<a href="{{ route('user.index') }}">
+                    <a href="#">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                        <span> Ver Perfil</span>
+                    </a>
+                </li>
+
+                <li>
+					<a href="#">
 						<i class="fa fa-eye" aria-hidden="true"></i>
-						<span>Gestionar usuarios</span>
+						<span> Gestionar Usuarios</span>
+                        <ul class="submenu">
+                            <li>
+                                <a href="{{ route('user.create') }}">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                    <span>Agregar Nuevo usuario</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('user.index') }}">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                    <span>Ver Administradores</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                    <span>Ver Clientes  </span>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                    <span>Ver Vendedores </span>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                    <span>Ver Visitas </span>
+                                </a>
+                            </li>
+
+                        </ul>
 					</a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+						<span> Gestionar Contrato</span>
+                        <ul class="submenu">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                    <span> Ver Contratos</span>
+                                    <ul class="submenu2">
+                                        <li>
+                                            <a href="{{route('contrato.pendiente')}}">
+                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                                <span>Pendientes</span>
+                                            </a>
+                                         </li>
+                                         <li>
+                                            <a href="#">
+                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                                <span>Completados</span>
+                                            </a>
+                                         </li>
+                                    </ul>
+                                   
+                            <li>
+                                <a href="{{ route('contrato.create') }}">
+                                    <i class="fa fa-cog" aria-hidden="true"></i>
+                                    <span> Agregar Contrato</span>
+                                </a>
+                                
+                            </li>
+                            <li>
+                                <a href="{{route('contrato.pendiente')}}">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                    <span>Pendientes</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </a>
 				</li>
                 @endif
 
@@ -62,14 +145,14 @@
 
 
 
-                    @if(Auth::user()->tipo_vendedor==1)
+                @if(Auth::user()->tipo_vendedor==1)
                         <li>
                             <a href="#">
                                 <i class="fa fa-eye" aria-hidden="true"></i>
                                 <span>Ver mis ventas</span>
                             </a>
                         </li>
-                    @endif
+                @endif
                 @if(Auth::user()->tipo_cliente==1 or Auth::user()->tipo_visita==1)
                     <li>
                         <a href="#">
@@ -94,21 +177,9 @@
                         </a>
                     </li>
                 @endif
-                @if(Auth::user()->tipo_administrador==1)
-				<li>
-					<a href="{{route('contrato.index')}}">
-						<i class="fa fa-eye" aria-hidden="true"></i>
-						<span>Ver todos los contratos</span>
-					</a>
-				</li>
-                    @endif
-                    @if(Auth::user()->tipo_administrador==1)
-                <li>
-                    <a href="{{route('contrato.pendiente')}}">
-                        <i class="fa fa-eye" aria-hidden="true"></i>
-                        <span>Ver Contratos pendientes</span>
-                    </a>
-                </li>
+                
+                 @if(Auth::user()->tipo_administrador==1)
+                
                     @endif
                 <hr class="sidebar-divider">
                     @if(Auth::user()->tipo_administrador==1)

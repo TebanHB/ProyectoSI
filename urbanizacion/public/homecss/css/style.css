@@ -82,6 +82,7 @@
 	padding-left: 20px;
 	transition: 500ms background;
 	white-space: nowrap;
+	list-style: none;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
@@ -105,6 +106,28 @@ a{
 	display: inline-block;
 	padding-right: 10px;
 	font-size: 23px;
+}
+
+.submenu{
+	display:none;
+	list-style: none;
+}
+.submenu li{
+	list-style: none;
+	margin-bottom: 5px;
+} 
+.submenu2{
+	display:none;
+	list-style: none;
+}
+.submenu2 li{
+	list-style: none;
+
+	margin-bottom: 5px;
+} 
+.side-bar ul li:hover > ul {
+
+display: block;
 }
 #navbtn {
 	display: inline-block;
