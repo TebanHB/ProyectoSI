@@ -28,7 +28,7 @@
 		<nav class="side-bar">
 			<div class="user-p">
                 <h4>{{Auth::user()->rango()}}</h4>
-				@can('admin')
+				    @can('admin')
             <!--    <h4>ADMIN</h4> -->
                 @endcan
 				<h4 >{{ Auth::user()->name }}</h4>
@@ -42,7 +42,6 @@
 					</a>
 				</li>
                 @endif
-
                 @if(Auth::user()->tipo_administrador==1)
 				<li>
 					<a href="{{ route('pago.create') }}">
@@ -107,6 +106,12 @@
                     <a href="{{route('contrato.pendiente')}}">
                         <i class="fa fa-eye" aria-hidden="true"></i>
                         <span>Ver Contratos pendientes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('contrato.completado')}}">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                        <span>Ver Contratos completado</span>
                     </a>
                 </li>
                     @endif
