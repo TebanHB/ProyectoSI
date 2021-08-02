@@ -92,7 +92,7 @@ class UserController extends Controller
     {
         //
     }
-    
+
 
     /**
      * Show the form for editing the specified resource.
@@ -102,7 +102,14 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $users = User::where('id',$id)->get();
+        $tipo="Editar";
+        return view('user.personal',compact('users'),compact('tipo'));
+    }
+    public function personal($id){
+        $users = User::where('id',$id)->get();
+        $tipo="Ver";
+        return view('user.personal',compact('users'),compact('tipo'));
     }
 
     /**
@@ -115,6 +122,10 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $user=User::findOrFail($id);
+        $datos=$request->only('name','carnet','email','url_foto','estado');
+        $user->update($datos);
+        return redirect()->route('home');
     }
 
     /**

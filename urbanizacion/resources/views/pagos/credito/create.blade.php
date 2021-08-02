@@ -55,7 +55,7 @@
 
 
                 </div>
-                       
+              
                 <button type="submit" class="botonescontrato ">
                     {{ __('Guardar') }}
                </button>

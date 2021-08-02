@@ -26,6 +26,8 @@ class CreateUsersTable extends Migration
             $table->boolean("tipo_visita");
             $table->boolean("tipo_cliente");
             $table->boolean("tipo_administrador");
+            $table->text('url_foto')->nullable();
+            $table->boolean('estado');// 1 activo 0 desactivado
         });
     }
 

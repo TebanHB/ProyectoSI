@@ -10,14 +10,15 @@ body{
 
 a{
     display: inline-block;
-
+    text-decoration: none;
 }
 
 header .container nav a
 {
     color:green;
     text-decoration: none;
-    margin: 0 15px;
+    font-size: 20px;
+    margin: 0 20px;
 }
 
 header{
@@ -41,13 +42,18 @@ header .container
 
 
 .container{
-    width: 1140px;
+    width: 85%;
     margin: 0 auto 0 auto;
     padding-right: 15px;
     padding-left: 15px;
     position: relative;
 }
-
+.container-fluid{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    position: relative;
+}
 
 
 
@@ -63,24 +69,26 @@ header .container
    position: absolute;
    top: 40%;
    left: 50%;
-   width: 400px;
-   text-align: center;
-   margin-left: -200px; 
+   width: 800px;
+ text-align: center;
+
+   margin-left: -350px; 
 }
 #inicio .bloque-inicio h1{
     background: rgba(255, 255, 255, 0.226);
     color:white;
-    font-size: 40px;
+    font-size: 60px;
 }
 .boton{
     text-align: center;
     text-decoration: none;
     padding: 15px 20px;
+    border: none;
 }
 .boton.boton-verde
 {
     color: white;
-    background-color:teal;
+    background-color:rgb(0, 134, 29);
     font-size: 20px;
     font-weight: bold;
 }
@@ -166,8 +174,19 @@ header .container
 .columna-50{
     width: 50%;
 }
+.columna-41{
+    width: 41.66%;
+}
 .empujar-50{
     margin-left: 50%;
+
+}
+.empujar-58{
+    margin-left: 58.3%;
+
+}
+.empujar-66{
+    margin-left: 66.66%;
 
 }
 .empujar-0{
@@ -296,7 +315,88 @@ header .container
     font-size: 16px;
     border: 1px solid grey;
     width: 100%;
+    padding: 5px 10px;
+
 }
+#contactanos form .form-block textarea{
+    display: block;
+    height: 100px;
+    font-size: 16px;
+    border: 1px solid grey;
+    width: 100%;
+    padding: 5px 10px;
+}
+#contactanos form .form-block.bloque-ultimo{
+    margin-bottom: 0;
+
+}
+.boton.boton-negro
+{
+    color: white;
+    background-color:black;
+    font-size: 15px;
+    font-weight: bold;
+}
+.boton.boton-negro:hover
+{
+   
+    background-color:white;
+    color: black;
+  
+}
+footer{
+    background:rgb(1, 90, 1);
+    color: white;
+    padding-top: 60px;
+}
+footer .barra-footer{
+    background-color:rgba(128, 128, 128, 0.384);
+    text-align: center;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+.columna-25{
+    width: 25%;
+}
+footer ul{
+   padding-left: 0;
+   list-style: none;
+}
+footer .logo-footer{
+   width: 100%;
+ }
+ footer ul{
+   padding-left: 0;
+   list-style: none;
+   margin: 0;
+}
+footer ul li{
+  margin-bottom: 5px;
+ }
+footer a{
+    color: white;
+}
+footer ul li{
+    margin-bottom:10px ;
+ }
+ footer .redes{
+     font-size: 30px;
+     display: flex;
+    
+ }
+ footer .redes a{
+    margin: 0 7.5px;
+}
+
+
+
+
+
+
+
 
 /*#galeria h4{
     padding-right: 15px;

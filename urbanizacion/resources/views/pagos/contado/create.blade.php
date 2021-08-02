@@ -19,25 +19,26 @@
                     </div>
                     <input type="hidden" name="formadepago_id" value="contado">
                     <label for="monto">Monto: </label>
-                    <input type="number"id="monto">
+                    <input type="number" name = 'monto' id="monto">
                    
                     <br> <br>
                     <label for="descuento">Descuento: </label>
-                    <input type="number"id="descuento">
+                    <input type="number"name = "descuento" id="descuento">
            
                 
                     <br> <br>
                     <label for="fecha_de_pago">Fecha de pago: </label>
-                    <input type="date"id="fecha_de_pago">
+                    <input type="date"name = "fecha_de_pago" id="fecha_de_pago">
                     <br> <br>
 
 
                 </div>
-                       
+                <button type="submit" class="botonescontrato ">
+                    {{ __('Guardar') }}
+               </button>
 
-            <!--    <a href="{{}}" class="btn btn-success">guardar</a>  Este es boton para actualizar -->
             </form>
-            <button id="botonGuardar">Guardar</button>
+
             <button id="botoncancelar">Cancelar</button>
         </div>
     </div>

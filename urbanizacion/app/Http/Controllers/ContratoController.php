@@ -26,6 +26,11 @@ class ContratoController extends Controller
         $contratos->load('user');
         return view('contrato.index',compact('contratos'));
     }
+    public function completado(){
+        $contratos = Contrato::where('estado',1)->get();
+        $contratos->load('user');
+        return view('contrato.index',compact('contratos'));
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -51,13 +56,15 @@ class ContratoController extends Controller
         $credentials =   Request()->validate([ //validar los datos
             'monto' => ['required'],
             'fecha_adjudicacion' => ['required'],
-           
+            'estado' => ['required'],
         ]);
         Contrato::create([
+            
             'monto' => request('monto'),
             'fecha_adjudicacion' => request('fecha_adjudicacion'),
-            'codigo_pago' => request('codigo_pago'),
-            'id_user' => request('id_user'),
+            'estado' => request('estado'),
+            'codigo_pago' => request('cod_pago'),
+            'id_user' => request('id_users'),
         ]);
         return redirect()->route('contrato.index');
     }

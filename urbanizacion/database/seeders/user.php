@@ -25,7 +25,9 @@ class user extends Seeder
                 'tipo_vendedor'=>'0',
                 'tipo_visita'=>'0',
                 'tipo_administrador'=>'1',
-                'tipo_cliente'=>'0'
+                'tipo_cliente'=>'0',
+                'url_foto'=>null,
+                'estado'=>1
             ],
 
 
@@ -37,7 +39,9 @@ class user extends Seeder
                 'tipo_vendedor'=>'0',
                 'tipo_visita'=>'0',
                 'tipo_administrador'=>'0',
-                'tipo_cliente'=>'1'
+                'tipo_cliente'=>'1',
+                'url_foto'=>null,
+                'estado'=>1
             ],
             [
                 'name'=>'Juan Cabrera Castro ',
@@ -47,7 +51,9 @@ class user extends Seeder
                 'tipo_vendedor'=>'0',
                 'tipo_visita'=>'0',
                 'tipo_administrador'=>'0',
-                'tipo_cliente'=>'1'
+                'tipo_cliente'=>'1',
+                'url_foto'=>null,
+                'estado'=>1
             ],
             [
                 'name'=>'Jose Wurner Yucra ',
@@ -57,7 +63,9 @@ class user extends Seeder
                 'tipo_vendedor'=>'0',
                 'tipo_visita'=>'0',
                 'tipo_administrador'=>'0',
-                'tipo_cliente'=>'1'
+                'tipo_cliente'=>'1',
+                'url_foto'=>null,
+                'estado'=>1
             ],
 
             [
@@ -68,7 +76,9 @@ class user extends Seeder
                 'tipo_vendedor'=>'0',
                 'tipo_visita'=>'0',
                 'tipo_administrador'=>'0',
-                'tipo_cliente'=>'1'
+                'tipo_cliente'=>'1',
+                'url_foto'=>null,
+                'estado'=>1
 
             ],
             [
@@ -79,7 +89,9 @@ class user extends Seeder
                 'tipo_vendedor'=>'1',
                 'tipo_visita'=>'1',
                 'tipo_administrador'=>'1',
-                'tipo_cliente'=>'1'
+                'tipo_cliente'=>'1',
+                'url_foto'=>null,
+                'estado'=>1
 
             ],
             [
@@ -90,7 +102,9 @@ class user extends Seeder
                 'tipo_vendedor'=>'0',
                 'tipo_visita'=>'0',
                 'tipo_administrador'=>'0',
-                'tipo_cliente'=>'1'
+                'tipo_cliente'=>'1',
+                'url_foto'=>null,
+                'estado'=>1
             ],
             [
                 'name'=>'Daniel Cortez Roca',
@@ -100,7 +114,9 @@ class user extends Seeder
                 'tipo_vendedor'=>'0',
                 'tipo_visita'=>'0',
                 'tipo_administrador'=>'0',
-                'tipo_cliente'=>'1'
+                'tipo_cliente'=>'1',
+                'url_foto'=>null,
+                'estado'=>1
             ],
             [
                 'name'=>'Junior Figueroa Prado',
@@ -110,7 +126,9 @@ class user extends Seeder
                 'tipo_vendedor'=>'0',
                 'tipo_visita'=>'0',
                 'tipo_administrador'=>'0',
-                'tipo_cliente'=>'1'
+                'tipo_cliente'=>'1',
+                'url_foto'=>null,
+                'estado'=>1
             ],
 
             [
@@ -121,7 +139,9 @@ class user extends Seeder
                 'tipo_vendedor'=>'1',
                 'tipo_visita'=>'0',
                 'tipo_administrador'=>'0',
-                'tipo_cliente'=>'0'
+                'tipo_cliente'=>'0',
+                'url_foto'=>null,
+                'estado'=>1
             ],
             [
                 'name'=>'Camila Duran Arteaga ',
@@ -131,7 +151,9 @@ class user extends Seeder
                 'tipo_vendedor'=>'1',
                 'tipo_visita'=>'0',
                 'tipo_administrador'=>'0',
-                'tipo_cliente'=>'0'
+                'tipo_cliente'=>'0',
+                'url_foto'=>null,
+                'estado'=>1
             ],
 
 
@@ -143,7 +165,9 @@ class user extends Seeder
                 'tipo_vendedor'=>'1',
                 'tipo_visita'=>'0',
                 'tipo_administrador'=>'0',
-                'tipo_cliente'=>'0'
+                'tipo_cliente'=>'0',
+                'url_foto'=>null,
+                'estado'=>1
             ],
 
             [
@@ -154,7 +178,9 @@ class user extends Seeder
                 'tipo_vendedor'=>'1',
                 'tipo_visita'=>'0',
                 'tipo_administrador'=>'0',
-                'tipo_cliente'=>'0'
+                'tipo_cliente'=>'0',
+                'url_foto'=>null,
+                'estado'=>1
             ],
             [
                 'name'=>'Juan Carlos Lazo Zabala',
@@ -164,7 +190,9 @@ class user extends Seeder
                 'tipo_vendedor'=>'0',
                 'tipo_visita'=>'1',
                 'tipo_administrador'=>'0',
-                'tipo_cliente'=>'0'
+                'tipo_cliente'=>'0',
+                'url_foto'=>null,
+                'estado'=>1
             ],
 
             [
@@ -175,7 +203,9 @@ class user extends Seeder
                 'tipo_vendedor'=>'0',
                 'tipo_visita'=>'1',
                 'tipo_administrador'=>'0',
-                'tipo_cliente'=>'0'
+                'tipo_cliente'=>'0',
+                'url_foto'=>null,
+                'estado'=>1
             ],
             [
                 'name'=>'Dantte Montaner Reyes',
@@ -185,7 +215,9 @@ class user extends Seeder
                 'tipo_vendedor'=>'0',
                 'tipo_visita'=>'1',
                 'tipo_administrador'=>'0',
-                'tipo_cliente'=>'0'
+                'tipo_cliente'=>'0',
+                'url_foto'=>null,
+                'estado'=>1
             ],
             [
                 'name'=>'Jose Gonzales Montaño',
@@ -195,7 +227,9 @@ class user extends Seeder
                 'tipo_vendedor'=>'0',
                 'tipo_visita'=>'0',
                 'tipo_administrador'=>'1',
-                'tipo_cliente'=>'0'
+                'tipo_cliente'=>'0',
+                'url_foto'=>null,
+                'estado'=>1
             ]
 
         ]);

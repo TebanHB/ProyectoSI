@@ -28,7 +28,7 @@
 		<nav class="side-bar">
 			<div class="user-p">
                 <h4>{{Auth::user()->rango()}}</h4>
-				@can('admin')
+				    @can('admin')
             <!--    <h4>ADMIN</h4> -->
                 @endcan
 				<h4 >{{ Auth::user()->name }}</h4>
@@ -125,7 +125,6 @@
                     </a>
 				</li>
                 @endif
-
                 @if(Auth::user()->tipo_administrador==1)
 				<li>
 					<a href="{{ route('pago.create') }}">

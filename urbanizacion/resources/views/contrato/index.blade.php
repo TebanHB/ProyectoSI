@@ -44,16 +44,21 @@
                 <td>{{($contrato->fecha_adjudicacion == null)? "--": $contrato->fecha_adjudicacion}}</td>
                 <td>{{($contrato->monto == null)? "--": $contrato->monto}}</td>
                <td>{{($contrato->estado == 1)? "completado": "pendiente"}}</td>
-             
+               <td>{{($contrato->estado == 0)? "pendiente": "completado"}}</td>
+             @if($contrato->codigo_pago != null)
                @if ($contrato->pago->tipo =='credito')
-               <td><a href="{{route('pago.creditopayment',$contrato->id)}}">Ver pago cred</a> </td>
+               <td><a href="{{route('pago.creditopayment',$contrato->id)}}">Ver pago</a> </td>
                @endif
                @if ($contrato->pago->tipo =='compromiso')
-               <td><a href="{{route('pago.compromisopayment',$contrato->id)}}">Ver pago com</a> </td>
+               <td><a href="{{route('pago.compromisopayment',$contrato->id)}}">Ver pago</a> </td>
                @endif
                @if ($contrato->pago->tipo =='contado')
-               <td><a href="{{route('pago.contadopayment',$contrato->id)}}">Ver pago con</a> </td>
+               <td><a href="{{route('pago.contadopayment',$contrato->id)}}">Ver pago</a> </td>
                @endif
+              @endif 
+              @if($contrato->codigo_pago == null)
+              <td><a href="{{route('pago.create',$contrato->id)}}">Agregar Pago</a> </td>
+              @endif 
                   {{-- <td>{{$contrato->users->name}}</td>                 --}}
                  
                </tr> 

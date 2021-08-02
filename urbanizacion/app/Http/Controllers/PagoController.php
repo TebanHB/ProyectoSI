@@ -71,14 +71,17 @@ class PagoController extends Controller
      */
     public function create()
     {
-        return view('pagos.create');
+    
+        return view('pagos.create'); // esto nos manda al formulario de creacion de pago
     }
     public function creditocreate()
     {
+    
         return view('pagos.credito.create');
     }
     public function contadocreate()
     {
+    
         return view('pagos.contado.create');
     }
 
@@ -92,17 +95,17 @@ class PagoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request )
+    { 
       
-        Pago::create([
+         Pago::create([
             
             'tipo' => request('formadepago_id'),
             'cuota_inicial' => request('cuota_inicial'),
             'plazo' =>request('plazo'),
             'interes_anual' => request('interes_anual'),
             'cuota_mensual'=>request('cuota_mensual'),
-            'fecha_Prog'=>request('fecha_Prog'),
+            'fecha_prog'=>request('fecha_prog'),
             'fecha_inicio'=>request('fecha_inicio'),
             'fecha_ultima_cuota'=>request('fecha_ultima_cuota'),
             'estado' => request('estado'),
@@ -116,7 +119,8 @@ class PagoController extends Controller
             'fecha_de_pago'=>request('fecha_de_pago'),
 
         ]);
-        return redirect()->route('pago.index');
+        //refirigimos a donde nos de la gana
+        return redirect()->route('contrato.create');
     }
 
     /**
