@@ -47,6 +47,7 @@ class CuotaController extends Controller
         return view('mora.index',compact('moras'));
     }
     public function store(Request $request)
+    
     {
         $credentials =   Request()->validate([ //validar los datos
             'id_credito' => ['required'],
