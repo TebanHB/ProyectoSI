@@ -31,6 +31,7 @@ class UserController extends Controller
      */
     public function create() // abre un formulario de creacion
     {
+        
         return view('user.create');
     }
 
@@ -83,6 +84,7 @@ class UserController extends Controller
             'estado'=>1,
         ]);
         BitacoraController::store($user->id);
+        NotaController::store(Auth::user()->id,'El administrador creo un nuevo usuario');
         //NotaController::store($user->id,'El usuario fue creado correctamente');
      //   NotaUsuario::crear($user,'Usuario creado');
 
@@ -115,10 +117,12 @@ class UserController extends Controller
         $users = User::where('id',$id)->get();
         $tipo="Editar";
         return view('user.personal',compact('users'),compact('tipo'));
+       
     }
     public function personal($id){
         $users = User::where('id',$id)->get();
         $tipo="Ver";
+       
         return view('user.personal',compact('users'),compact('tipo'));
     }
 
@@ -155,7 +159,7 @@ class UserController extends Controller
         $user=User::findOrFail($id);
         $datos=$request->only('name','carnet','email','url_foto','estado');
         $user->update($datos);
-
+        NotaController::store(Auth::user()->id,'Los datos del usuario fueron editados correctamente');
         return redirect()->route('home');
     }
 
