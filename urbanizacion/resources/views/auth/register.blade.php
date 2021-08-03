@@ -63,10 +63,23 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __(' telefono') }}</label>
+                            <label for="telefono" class="col-md-4 col-form-label text-md-right">{{ __(' telefono') }}</label>
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                <input id="telefono" type="text" class="form-control" name="telefono" >
                             </div>
+                            <div class="form-group row">
+                                <label for="carnet" class="col-md-4 col-form-label text-md-right">{{ __(' Carnet') }}</label>
+                                <div class="col-md-6">
+                                    <input id="carnet" type="text" class="form-control" name="carnet" >
+                                </div>
+                            <div class="form-group row">
+                                <label for="tipo" class="col-md-4 col-form-label text-md-right">{{ __('Tipo Visita') }}</label>
+                                <div class="col-md-6">
+                                    <input type="hidden" name="tipo_vendedor" value="0">
+                                    <input type="hidden" name="tipo_administrador" value="0">
+                                    <input type="hidden" name="tipo_cliente" value="0">
+                                    <input type="hidden" name="tipo_visita" value="1">
+                                </div>
                         <div class="form-group row mb-0">
                             
                                 <button type="submit" class="btn btn-primary">

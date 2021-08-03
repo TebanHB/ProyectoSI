@@ -23,15 +23,8 @@
                         @endforeach
                     </select>
                     <label for="horario_de_visita">Fecha</label>
-                    <input id="horario_de_visita" type="datetime-local">
-                    <select name="id_user" id="select-room" class="form-control" onchange="habilitar()" >
-                        <option value="nulo">Usuarios</option>
-                        @foreach ($users as $user)
-                            <option value="{{$user->id}}">
-                                {{$user->name}}
-                            </option>
-                        @endforeach
-                    </select>
+                    <input id="horario_de_visita" name = "horario_de_visita" type="datetime-local">
+                    <input type="hidden" name="id_user" value="{{$user->id}}">
                 </div>
                 <button type="submit" class="botonescontrato ">
                     Guardar
