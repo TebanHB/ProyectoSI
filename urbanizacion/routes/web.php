@@ -57,11 +57,6 @@ Route::get('user/create',[UserController::class,'create'])->name('user.create')-
 Route::post('user/store',[UserController::class, 'store'])->name('user.store')->middleware('auth');
 Route::post('user/prueba',[UserController::class, 'prueba'])->name('user.prueba')->middleware('auth');
 Route::get('user/personal/{id}',[UserController::class,'personal'])->name('user.personal')->middleware('auth');
-Route::get('user/Administradores',[UserController::class,'Administradores'])->name('user.Administradores')->middleware('auth');
-Route::get('user/Clientes',[UserController::class,'Clientes'])->name('user.Clientes')->middleware('auth');
-Route::get('user/Vendedores',[UserController::class,'Vendedores'])->name('user.Vendedores')->middleware('auth');
-Route::get('user/Visitas',[UserController::class,'Visitas'])->name('user.Visitas')->middleware('auth');
-
 
 Route::get('contrato/index',[ContratoController::class, 'index'])->name('contrato.index')->middleware('auth');
 Route::get('contrato/create/{id}',[ContratoController::class, 'create'])->name('contrato.create')->middleware('auth');
@@ -90,10 +85,10 @@ Route::get('nota/index',[NotaController::class,'index'])->name('nota.index')->mi
 Route::get('nota/create',[NotaController::class,'create'])->name('nota.create')->middleware('auth');
 Route::post('nota/register',[NotaController::class,'store'])->name('nota.store')->middleware('auth');
 
-Route::get('telefonoPersona/index',[TelefonoPersonaController::class,'index'])->name('telefonoPersona.index')->middleware('auth');
-Route::get('telefonoPersona/create/{id}',[TelefonoPersonaController::class,'create'])->name('telefonoPersona.create')->middleware('auth');
-Route::post('telefonoPersona/store',[TelefonoPersonaController::class,'store'])->name('telefonoPersona.store')->middleware('auth');
-Route::get('telefonoPersona/{id}',[TelefonoPersonaController::class,'telefonos'])->name('telefonoPersona.telefonos')->middleware('auth');
+Route::get('telefono/index',[TelefonoPersonaController::class,'index'])->name('telefonoPersona.index')->middleware('auth');
+Route::get('telefono/create',[TelefonoPersonaController::class,'create'])->name('telefonoPersona.create')->middleware('auth');
+Route::post('telefono/register',[TelefonoPersonaController::class,'store'])->name('telefonoPersona.store')->middleware('auth');
+Route::get('telefono/{id}',[TelefonoPersonaController::class,'telefonos'])->name('telefonoPersona.telefonos')->middleware('auth');
 
 Route::get('terreno/index',[TerrenoController::class,'index'])->name('terreno.index')->middleware('auth');
 Route::get('terreno/create',[TerrenoController::class,'create'])->name('terreno.create')->middleware('auth');
@@ -112,7 +107,7 @@ Route::get('bitacora/create',[BitacoraController::class,'create'])->name('bitaco
 Route::post('bitacora/register',[BitacoraController::class,'store'])->name('bitacora.store')->middleware('auth');
 
 Route::get('reserva/index',[ReservaController::class,'index'])->name('reserva.index')->middleware('auth');
-Route::get('reserva/create/{id}',[ReservaController::class,'create'])->name('reserva.create')->middleware('auth');
-Route::post('reserva/store',[ReservaController::class,'store'])->name('reserva.store')->middleware('auth');
+Route::get('reserva/create',[ReservaController::class,'create'])->name('reserva.create')->middleware('auth');
+Route::post('reserva/register',[ReservaController::class,'store'])->name('reserva.store')->middleware('auth');
 
 //post solo se ocupa para cuando creamos store o cuando actualizamos lalala 

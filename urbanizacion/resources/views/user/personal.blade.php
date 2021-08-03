@@ -35,7 +35,8 @@
     @endforeach
     @endif
     @if($tipo="Editar")
-        <form action="">
+        <form  method="post" action="{{route('pago.creditopayment',$user->id}}" enctype="multipart/form-data">
+            @csrf
         @foreach($users as $user)
             <div class="container">
                 <div class="foto">
@@ -43,7 +44,10 @@
                         <img src="{{asset()}}" alt=""> //revsisar
                     @else
                         <img src="https://i.pinimg.com/736x/ea/82/b7/ea82b7a94ffa5a4667c27708f7b653a4.jpg" alt="">
-                        <input name="url_foto" type="file">
+                        <div class="input-group mb-3">
+                            <input type="file" class="form-control" id="inputGroupFile02">
+                            <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                        </div>
                         @endif
 
                 </div>
