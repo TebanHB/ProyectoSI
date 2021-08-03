@@ -105,7 +105,6 @@
                                     <div class="bloque-contenido-servicio">
                                         <h3>Servicio 1</h3>
                                         <p>Venta de terrenos</p>
-                                        <a href="{{ route('terreno.index') }}" class="boton boton-blanco">Ver mas</a>
                                     </div>
                                 </div>
                             </div>
@@ -117,8 +116,7 @@
                                     </div>
                                     <div class="bloque-contenido-servicio">
                                         <h3>Servicio 2</h3>
-                                        <p>Ubicacion</p>
-                                        <a href="#" class="boton boton-blanco">Ver mas</a>
+                                        <p>Servicios Basicos</p>
                                     </div>
                                 </div>
                             </div>
