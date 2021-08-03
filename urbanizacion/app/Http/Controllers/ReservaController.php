@@ -26,11 +26,11 @@ class ReservaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        $users = User::where('tipo_visita','1')->get();
+        $user = User::findOrFail($id);
         $terrenos =Terreno::where('estado_terreno','libre')->get();
-        return view('reserva.create',compact('users'),compact('terrenos'));
+        return view('reserva.create',compact('user'),compact('terrenos'));
     }
 
     /**

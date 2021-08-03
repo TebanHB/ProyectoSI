@@ -9,7 +9,9 @@ class Reserva extends Model
 {
     protected $table = 'reserva';
     protected $fillable =[
-        'horario_de_visita'
+        'horario_de_visita',
+        'id_user',
+        'id_lote'
     ];
     use HasFactory;
     public function terreno(){

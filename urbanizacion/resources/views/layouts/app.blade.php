@@ -206,9 +206,15 @@
 
                 @if(Auth::user()->tipo_visita==1)
                         <li>
-                            <a href="#">
+                            <a href="{{route('reserva.index')}}">
                                 <i class="fa fa-eye" aria-hidden="true"></i>
                                 <span>Ver mis visitas programadas</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('reserva.create', Auth::user()->id)}}">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                <span>Agendar Visita</span>
                             </a>
                         </li>
                         <hr class="sidebar-divider">

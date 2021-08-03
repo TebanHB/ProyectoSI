@@ -40,7 +40,7 @@
                     </td> --}}
                </tr>
             @endforeach
-            <input type ='button' class="btn btn-warning"  value = 'Agregar nueva reserva' onclick="location.href = '{{ route('reserva.create') }}'"/>
+            <input type ='button' class="btn btn-warning"  value = 'Agregar nueva reserva' onclick="location.href = '{{ route('reserva.create', $reserva->id_user) }}'"/>
         </tbody>
     </table>
     {{-- <div class="table table-striped">{{$pagos->links()}}</div> --}}

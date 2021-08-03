@@ -15,7 +15,7 @@ class Pago extends Model
         'plazo',
         'interes_anual',
         'cuota_mensual',
-        'fecha_prog',
+        'fecha_Prog',
         'fecha_inicio',
         'fecha_ultima_cuota',
         'estado',
