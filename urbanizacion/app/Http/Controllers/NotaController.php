@@ -41,13 +41,13 @@ class NotaController extends Controller
     {
         $bitacoras=Bitacora::where('id_user',$id)->get();
       //  redirect()->action($bitacoras);
-     //   foreach ($bitacoras as $bitacora){
+        foreach ($bitacoras as $bitacora){
             Nota::create([
                 'descripcion'=>$texto,
                 'Fecha'=>'2018-02-01',
-                'id_bitacora'=>$bitacoras[0]->id,
+                'id_bitacora'=>$bitacora->id,
             ]);
-        //}
+        }
 
     }
 
