@@ -24,11 +24,6 @@
 		</h2>
 		<i class="fa fa-user" aria-hidden="true"></i>
         
-        <div class="form-1-2">
-            <label for="caja_busqueda">Buscar:</label>
-            <input type="text" name="caja_busqueda" id="caja_busqueda">
-
-    </div>
 	</header>
 
 
@@ -49,11 +44,6 @@
 			</div>
 
 			<ul>
-<<<<<<< HEAD
-               
-=======
-
->>>>>>> a6a3fb39844a1d44cba8a1d36e198bb781c817a7
                 @if(Auth::user()->tipo_administrador==1)
                 
                     <li>
