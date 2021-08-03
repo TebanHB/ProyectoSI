@@ -10,18 +10,20 @@
         </div>
     @endif
     <div class="container">
-        <h1>Agendar reserva</h1>
+        <h1>Agregar cuota</h1>
         <div class="card-body">
             <form method="POST" action="{{ route('cuota.store') }}" enctype="multipart/form-data">
             @csrf
 
-
-
-            <label for="monto_cuota">Monto:{{$mensual}} </label>
-
+            <input type="hidden" name="id_credito" value="{{$credito->id}}">
+       
+            <label for="monto_cuota">Monto: </label>
+            <input type="number" name='monto_cuota' id="monto_cuota">
             <label for="amortizacion">Amortizacion: </label>
-            <input type="number" id="amortizacion">
-            <button type="submit" class="boton ">
+            <input type="number" name='amortizacion' id="amortizacion">
+            <button type="submit" class="botonescontrato ">
+                {{ __('Guardar') }}
+           </button>
             </form>
         </div>
     </div>
