@@ -14,9 +14,13 @@
 			<span>Urbanizacion</span>
 
 		</a>
+            @auth
+
+
 			<label for="checkbox">
 				<i id="navbtn" class="fa fa-bars" aria-hidden="true"></i>
 			</label>
+            @endauth
 		</h2>
 		<i class="fa fa-user" aria-hidden="true"></i>
 	</header>
@@ -26,7 +30,9 @@
 
 	<div class="body">
 		<nav class="side-bar">
-            @if(Auth::user()!=null)
+            @Auth
+
+
 			<div class="user-p">
                 <h4>{{Auth::user()->rango()}}</h4>
 				    @can('admin')
@@ -271,7 +277,8 @@
 					</a>
 				</li>
                     @endif
-                    @endif
+
+                    @endauth
 
 				<li>
 					<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
