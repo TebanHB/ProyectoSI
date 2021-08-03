@@ -16,7 +16,7 @@ class BitacoraController extends Controller
     public function index($id)
     {
 
-        $bitacoras = Bitacora::where('id_user',$id)->get;
+        $bitacoras = Bitacora::where('id_user',$id)->get();
         foreach ($bitacoras as $bitacora){
             $notas = Nota::where('id_bitacora',$bitacora->id)->get() ;
         }

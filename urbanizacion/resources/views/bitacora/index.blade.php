@@ -18,14 +18,16 @@
             <li class="list-group-item"><h2>Lista de Usuarios</h2></li>
             {{-- <li class="list-group-item"><a href= {{route('user.register') }} ><button type="button" class="btn btn-success btn-lg btn-block">Nuevo usuario</button></a></li> --}}
         </ul>
-        <spam>Nombre: {{}}</spam>
+        <spam>Nombre: </spam>
         <table class="newtable">
             <thead>
-            <th>Nombre</th>
+
+            <th>Descripcion</th>
             </thead>
             <tbody>
-            @foreach ($users as $user)
+            @foreach ($notas as $nota)
                 <tr>
+                    <td>{{($nota->descripcion == null)? "--": $nota->descripcion}}</td>
 
                 </tr>
             @endforeach

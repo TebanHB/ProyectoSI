@@ -112,7 +112,7 @@ Route::get('vende/create/{id}',[VendeController::class,'create'])->name('vende.c
 Route::post('vende/register',[VendeController::class,'store'])->name('vende.store')->middleware('auth');
 Route::get('vende/{id}',[VendeController::class,'ventas'])->name('vende.ventas')->middleware('auth');
 
-Route::get('bitacora/index',[BitacoraController::class,'index'])->name('bitacora.index')->middleware('auth');
+Route::get('bitacora/index/{id}',[BitacoraController::class,'index'])->name('bitacora.index')->middleware('auth');
 Route::get('bitacora/create',[BitacoraController::class,'create'])->name('bitacora.create')->middleware('auth');
 Route::post('bitacora/register',[BitacoraController::class,'store'])->name('bitacora.store')->middleware('auth');
 
