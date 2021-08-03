@@ -152,6 +152,40 @@
                     </li>
                     <hr class="sidebar-divider">
                 @endif
+                @if(Auth::user()->tipo_administrador==1)
+				<li>
+					<a href="{{route('contrato.index')}}">
+						<i class="fa fa-eye" aria-hidden="true"></i>
+						<span>Ver todos los contratos</span>
+					</a>
+				</li>
+                    @endif
+                    @if(Auth::user()->tipo_administrador==1)
+                <li>
+                    <a href="{{route('contrato.pendiente')}}">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                        <span>Ver Contratos pendientes</span>
+                    </a>
+                </li>
+                    @endif
+                <hr class="sidebar-divider">
+                    @if(Auth::user()->tipo_administrador==1)
+				<li>
+					<a href="{{route('pago.create')}}">
+						<i class="fa fa-cog" aria-hidden="true"></i>
+						<span>Agregar Nuevo Contrato</span>
+					</a>
+				</li>
+                    @endif
+                    @if(Auth::user()->tipo_administrador==1)
+				<li>
+					<a href="{{route('user.create')}}">
+						<i class="fa fa-cog" aria-hidden="true"></i>
+						<span>Agregar Nuevo Usuario</span>
+					</a>
+				</li>
+                    @endif
+                    @if(Auth::user()->tipo_administrador==1)
                 <!--    <h4>CLIENTES</h4> -->
 
                     @if(Auth::user()->tipo_cliente==1)

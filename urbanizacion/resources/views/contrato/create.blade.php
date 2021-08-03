@@ -24,6 +24,7 @@
             <form method="POST" action="{{ route('contrato.store') }}" enctype="multipart/form-data">
                 @csrf
                 <div id="contratoform">
+                    <input type="hidden" name="pago_id" value="{{$pago->id}}">
                     <label for="fecha_adjudicacion">Fecha: </label>
                     <input type="date"name="fecha_adjudicacion" id="fecha_adjudicacion">
                     <br>
@@ -31,24 +32,6 @@
                     <label for="cot">7 </label>
                     <label for="monto">monto: </label>
                     <input type="text"name="monto" id="monto">
-
-                </div>
-                <div id="Datos_cliente">
-
-                    <select name="cod_pago" id="select-room" class="form-control" onchange="habilitar()" >
-                        <option value="nulo">Pago</option>
-
-                        @foreach ($pagos as $pago)
-                         
-                            <option value="{{$pago->id}}">
-
-                               <spam>{{$pago->id}}</spam>
-
-                            </option>
-
-                        @endforeach
-                    </select>
-
 
                 </div>
 
@@ -67,7 +50,6 @@
 
                         @endforeach
                     </select>
-
 
                 </div>
 

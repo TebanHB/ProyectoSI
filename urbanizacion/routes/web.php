@@ -64,7 +64,7 @@ Route::get('user/Visitas',[UserController::class,'Visitas'])->name('user.Visitas
 
 
 Route::get('contrato/index',[ContratoController::class, 'index'])->name('contrato.index')->middleware('auth');
-Route::get('contrato/create',[ContratoController::class, 'create'])->name('contrato.create')->middleware('auth');
+Route::get('contrato/create/{id}',[ContratoController::class, 'create'])->name('contrato.create')->middleware('auth');
 Route::post('contrato/store',[ContratoController::class, 'store'])->name('contrato.store')->middleware('auth');
 Route::get('contrato/pendiente',[ContratoController::class,'pendiente'])->name('contrato.pendiente')->middleware('auth');
 Route::get('contrato/completado',[ContratoController::class,'completado'])->name('contrato.completado')->middleware('auth');
@@ -99,6 +99,8 @@ Route::get('terreno/index',[TerrenoController::class,'index'])->name('terreno.in
 Route::get('terreno/create',[TerrenoController::class,'create'])->name('terreno.create')->middleware('auth');
 Route::post('terreno/register',[TerrenoController::class,'store'])->name('terreno.store')->middleware('auth');
 Route::get('terreno/{id}',[TerrenoController::class,'terrenos'])->name('terreno.terrenos')->middleware('auth');
+Route::get('terreno/edit/{id}',[TerrenoController::class,'edit'])->name('terreno.edit')->middleware('auth');
+Route::post('terreno/update/{id}',[TerrenoController::class,'update'])->name('terreno.update')->middleware('auth');
 
 Route::get('vende/index',[VendeController::class,'index'])->name('vende.index')->middleware('auth');
 Route::get('vende/create',[VendeController::class,'create'])->name('vende.create')->middleware('auth');
