@@ -28,7 +28,7 @@
                     <input type="text"name = "interes_anual" id="interes_anual">
                     <br> <br>
                     <label for="cuota_mensual">Cuota Mensual: </label>
-                    <input type="number" name = "cuota_mensual "id="cuota_mensual">
+                    <input type="number" name = "cuota_mensual" id="cuota_mensual">
                     <br> <br>
                     <label for="fecha_Prog">Fecha Programada: </label>
                     <input type="text" name= "fecha_Prog" id="fecha_Prog">

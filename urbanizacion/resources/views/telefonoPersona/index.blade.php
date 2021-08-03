@@ -35,7 +35,7 @@
 
                     <td>
                         
-                        <a type="submit" class="btn btn-info " href="{{route('telefonoPersona.create')}}">
+                        <a type="submit" class="btn btn-info " href="{{route('telefonoPersona.create',$telefono->id_users)}}">
                             {{ __('Nuevo Telefono') }}
                         </a>  
                 </td>

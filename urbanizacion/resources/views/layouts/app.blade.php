@@ -178,7 +178,7 @@
 					</a>
 				</li>
                     @endif
-                    @if(Auth::user()->tipo_administrador==1)
+                   
                 <!--    <h4>CLIENTES</h4> -->
 
                     @if(Auth::user()->tipo_cliente==1)

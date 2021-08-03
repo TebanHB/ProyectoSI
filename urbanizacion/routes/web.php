@@ -85,10 +85,10 @@ Route::get('nota/index',[NotaController::class,'index'])->name('nota.index')->mi
 Route::get('nota/create',[NotaController::class,'create'])->name('nota.create')->middleware('auth');
 Route::post('nota/register',[NotaController::class,'store'])->name('nota.store')->middleware('auth');
 
-Route::get('telefono/index',[TelefonoPersonaController::class,'index'])->name('telefonoPersona.index')->middleware('auth');
-Route::get('telefono/create',[TelefonoPersonaController::class,'create'])->name('telefonoPersona.create')->middleware('auth');
-Route::post('telefono/register',[TelefonoPersonaController::class,'store'])->name('telefonoPersona.store')->middleware('auth');
-Route::get('telefono/{id}',[TelefonoPersonaController::class,'telefonos'])->name('telefonoPersona.telefonos')->middleware('auth');
+Route::get('telefonoPersona/index',[TelefonoPersonaController::class,'index'])->name('telefonoPersona.index')->middleware('auth');
+Route::get('telefonoPersona/create/{id}',[TelefonoPersonaController::class,'create'])->name('telefonoPersona.create')->middleware('auth');
+Route::post('telefonoPersona/store',[TelefonoPersonaController::class,'store'])->name('telefonoPersona.store')->middleware('auth');
+Route::get('telefonoPersona/{id}',[TelefonoPersonaController::class,'telefonos'])->name('telefonoPersona.telefonos')->middleware('auth');
 
 Route::get('terreno/index',[TerrenoController::class,'index'])->name('terreno.index')->middleware('auth');
 Route::get('terreno/create',[TerrenoController::class,'create'])->name('terreno.create')->middleware('auth');

@@ -24,10 +24,12 @@ class TelefonoPersonaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        return view('telefonoPersona.create');
+        $user= User::findOrFail($id);
+        return view('telefonoPersona.create', compact('user'));
     }
+
     public function telefonos($id){
         $telefonos = TelefonoPersona::where('id_users',$id)->get();
         return view('telefonoPersona.index',compact('telefonos'));
@@ -42,12 +44,13 @@ class TelefonoPersonaController extends Controller
     {
         $credentials =   Request()->validate([
             'telefono' => ['required'],
-            'id_users'=> ['required'],
+        
         ]);
         TelefonoPersona::create([
             'telefono'=>request('telefono'),
-            'id_users'=>request('id_users'),
+            'id_users'=>request('id_user'),
         ]);
+        return redirect()->route('telefonoPersona.index');
     }
 
     /**
