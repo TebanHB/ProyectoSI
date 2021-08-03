@@ -16,7 +16,7 @@
         </ul>
     </div>
     @endif
-    <div class="containertable"> 
+    <div class="containertable">
 		<br>
     <ul class="list-group list-group-flush">
         <li class="list-group-item"><h2>Lista de Usuarios</h2></li>
@@ -38,25 +38,26 @@
 				   <tr>
 						<td>{{($user->name == null)? "--": $user->name}}</td>
 						<td>{{($user->carnet == null)? "--": $user->carnet}}</td>
-						<td>{{($user->email == null)? "--": $user->email}}</td>  
+						<td>{{($user->email == null)? "--": $user->email}}</td>
 						<td>{{($user->tipo_administrador == 1)? "Si": "NO"}}</td>
 						<td>{{($user->tipo_vendedor == 1)? "Si":"NO"  }}  </td>
 						<td>{{($user->tipo_cliente == 1)? "Si":"NO"}}</td>
 						<td>{{($user->tipo_visita == 1)? "Si":"NO"}}</td>
 					   <td>
-						<a href="#" class="btn btn-info btn-sm ">editar</a>
+                           <a href="{{route('user.personal',$user->id)}}" class="btn btn-info btn-sm ">más informacion</a>
+						<a href="{{route('user.edit',$user->id)}}" class="btn btn-info btn-sm ">editar</a>
 						<a href="#" class="btn btn-info btn-sm ">borrar</a>
-					
+
 						<a href="{{route('telefonoPersona.telefonos',$user->id)}}" class="btn btn-info btn-sm ">ver telefono</a>
 						<a href="{{route('telefonoPersona.create',$user->id)}}" class="btn btn-info btn-sm ">Agregar nuevo telefono</a>
-					
+
 					   </td>
-				   </tr> 
+				   </tr>
 				@endforeach
 			</tbody>
 		</table>
-    </div>  
-   
+    </div>
+
 
 
 @endsection
