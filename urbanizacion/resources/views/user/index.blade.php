@@ -46,7 +46,7 @@
 					   <td>
                            <a href="{{route('user.personal',$user->id)}}" class="btn btn-info btn-sm ">más informacion</a>
 						<a href="{{route('user.edit',$user->id)}}" class="btn btn-info btn-sm ">editar</a>
-						<a href="#" class="btn btn-info btn-sm ">borrar</a>
+
 
 						<a href="{{route('telefonoPersona.telefonos',$user->id)}}" class="btn btn-info btn-sm ">ver telefono</a>
 						<a href="{{route('telefonoPersona.create',$user->id)}}" class="btn btn-info btn-sm ">Agregar nuevo telefono</a>
