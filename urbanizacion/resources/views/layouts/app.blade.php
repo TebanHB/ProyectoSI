@@ -19,10 +19,17 @@
 			</label>
 		</h2>
 		<i class="fa fa-user" aria-hidden="true"></i>
+        
+        <div class="form-1-2">
+            <label for="caja_busqueda">Buscar:</label>
+            <input type="text" name="caja_busqueda" id="caja_busqueda">
+
+    </div>
 	</header>
 
 
-
+   
+    
 
 	<div class="body">
 		<nav class="side-bar">
@@ -34,11 +41,11 @@
 				<h4 >{{ Auth::user()->name }}</h4>
 			</div>
 			<ul>
-                
+               
                 @if(Auth::user()->tipo_administrador==1)
-
+                
                     <li>
-                        <a href="{{ route('user.index') }}">
+                        <a href="">
                             <i class="fa fa-eye" aria-hidden="true"></i>
                             <span>Gestionar usuarios</span>
                         </a>
@@ -51,13 +58,13 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="{{route('user.Administradores')}}">
                             <i class="fa fa-eye" aria-hidden="true"></i>
                             <span>Ver admnistradores</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="{{route('user.Vendedores')}}">
                             <i class="fa fa-eye" aria-hidden="true"></i>
                             <span>Ver vendedores</span>
                         </a>
@@ -65,14 +72,14 @@
 
 
                     <li>
-                        <a href="#">
+                        <a href="{{route('user.Clientes')}}">
                             <i class="fa fa-eye" aria-hidden="true"></i>
                             <span>Ver clientes</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="#">
+                        <a href="{{route('user.Visitas')}}">
                             <i class="fa fa-eye" aria-hidden="true"></i>
                             <span>Ver visitas</span>
                         </a>
@@ -226,12 +233,14 @@
                         {{ csrf_field() }}
                     </form>
 				</li>
-			</ul>
+			</ul> 
+            
 		</nav>
 		<section class="section-1">
 			@yield('content')
 		</section>
 	</div>
-
+    <script>  src="js/jquery.min.js"  </script>
+    <script>src="js/buscador.js"</script>
 </body>
 </html>

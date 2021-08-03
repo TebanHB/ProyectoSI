@@ -112,6 +112,26 @@ class UserController extends Controller
         return view('user.personal',compact('users'),compact('tipo'));
     }
 
+
+
+    public function Administradores(){
+        $users = User::where("tipo_administrador",1)->get();
+        return view('user.index',compact('users'));
+    }
+    public function Clientes(){
+        $users = User::where("tipo_cliente",1)->get();
+        return view('user.index',compact('users'));
+    }
+    public function Vendedores(){
+        $users = User::where("tipo_vendedor",1)->get();
+        return view('user.index',compact('users'));
+    }
+    public function Visitas(){
+        $users = User::where("tipo_visita",1)->get();
+        return view('user.index',compact('users'));
+    }
+
+
     /**
      * Update the specified resource in storage.
      *

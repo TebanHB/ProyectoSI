@@ -16,6 +16,7 @@ class TelefonoPersonaController extends Controller
     public function index()
     {
         $telefonos = TelefonoPersona::all();
+
         return view('telefonoPersona.index',compact('telefonos'));
     }
 
@@ -30,6 +31,7 @@ class TelefonoPersonaController extends Controller
     }
     public function telefonos($id){
         $telefonos = TelefonoPersona::where('id_users',$id)->get();
+        $telefonos->load('user');
         return view('telefonoPersona.index',compact('telefonos'));
     }
     /**
