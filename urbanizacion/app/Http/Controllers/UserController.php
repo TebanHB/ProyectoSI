@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use Illuminate\Http\Request;
+use App\http\Controllers\Bitacora;
 
+use App\http\Controllers\Nota\NotaUsuario;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\http\Controllers\NotaController;
 class UserController extends Controller
 {
     /**
@@ -15,6 +19,8 @@ class UserController extends Controller
     public function index()
     {
        $users = User::all();
+       //NotaUsuario::crear(Auth::user(),'Entro a ver los usuarios');
+     //-> esta funcion  NotaController::store(Auth::user()->id,'Texto');
        return view('user.index', compact('users'));
     }
 
@@ -43,7 +49,6 @@ class UserController extends Controller
             'password' => ['required'],
 
         ]);
-
         $tipo_vendedor = $request['tipo_vendedor'];
         $tipo_visita = $request['tipo_visita'];
         $tipo_cliente = $request['tipo_cliente'];
@@ -65,7 +70,7 @@ class UserController extends Controller
         else
             $tipo_administrador=1;
 
-        User::create([
+       $user= User::create([
             'name'=>request('name'),
             'carnet'=>request('carnet'),
             'email'=>request('email'),
@@ -74,8 +79,13 @@ class UserController extends Controller
             'tipo_visita'=>$tipo_visita,
             'tipo_cliente'=>$tipo_cliente,
             'tipo_administrador'=>$tipo_administrador,
-
+            'url_foto'=>null,
+            'estado'=>1,
         ]);
+        BitacoraController::store($user->id);
+        //NotaController::store($user->id,'El usuario fue creado correctamente');
+     //   NotaUsuario::crear($user,'Usuario creado');
+
         return redirect()->route('user.index');
     }
     public function prueba(Request $request){
@@ -145,6 +155,7 @@ class UserController extends Controller
         $user=User::findOrFail($id);
         $datos=$request->only('name','carnet','email','url_foto','estado');
         $user->update($datos);
+
         return redirect()->route('home');
     }
 

@@ -35,7 +35,7 @@
     @endforeach
     @endif
     @if($tipo="Editar")
-        <form  method="post" action="{{route('pago.creditopayment',$user->id}}" enctype="multipart/form-data">
+        <form  method="post" action="{{route('user.update',$users[0]->id)}}" enctype="multipart/form-data">
             @csrf
         @foreach($users as $user)
             <div class="container">

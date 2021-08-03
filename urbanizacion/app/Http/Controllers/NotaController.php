@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Nota;
+use App\Models\User;
+use App\Models\Bitacora;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class NotaController extends Controller
@@ -34,9 +37,18 @@ class NotaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public static function store($id, $texto)
     {
-        //
+        $bitacoras=Bitacora::where('id_user',$id)->get();
+      //  redirect()->action($bitacoras);
+     //   foreach ($bitacoras as $bitacora){
+            Nota::create([
+                'descripcion'=>$texto,
+                'Fecha'=>'2018-02-01',
+                'id_bitacora'=>$bitacoras[0]->id,
+            ]);
+        //}
+
     }
 
     /**

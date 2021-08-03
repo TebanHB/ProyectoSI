@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Bitacora;
+use App\Models\Nota;
 use Illuminate\Http\Request;
 
 class BitacoraController extends Controller
@@ -12,10 +13,15 @@ class BitacoraController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        $bitacoras = Bitacora::all();
-        return view('bitacora.index',compact('bitacoras'));
+
+        $bitacoras = Bitacora::where('id_user',$id)->get;
+        foreach ($bitacoras as $bitacora){
+            $notas = Nota::where('id_bitacora',$bitacora->id)->get() ;
+        }
+
+        return view('bitacora.index',compact('bitacoras'),compact('notas'));
     }
 
     /**
@@ -23,9 +29,9 @@ class BitacoraController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
+
     }
 
     /**
@@ -34,9 +40,12 @@ class BitacoraController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public static function store($id)
     {
-        //
+        $bitacora = Bitacora::create([
+           'id_user'=>$id
+        ]);
+
     }
 
     /**

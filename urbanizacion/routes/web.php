@@ -64,6 +64,8 @@ Route::get('user/Clientes',[UserController::class,'Clientes'])->name('user.Clien
 Route::get('user/Vendedores',[UserController::class,'Vendedores'])->name('user.Vendedores')->middleware('auth');
 Route::get('user/Visitas',[UserController::class,'Visitas'])->name('user.Visitas')->middleware('auth');
 
+Route::get('user/edit/{id}',[UserController::class,'edit'])->name('user.edit')->middleware('auth');
+Route::post('user/update/{id}',[UserController::class,'update'])->name('user.update')->middleware('auth');
 
 Route::get('contrato/index',[ContratoController::class, 'index'])->name('contrato.index')->middleware('auth');
 Route::get('contrato/create/{id}',[ContratoController::class, 'create'])->name('contrato.create')->middleware('auth');
@@ -117,4 +119,4 @@ Route::get('reserva/index',[ReservaController::class,'index'])->name('reserva.in
 Route::get('reserva/create/{id}',[ReservaController::class,'create'])->name('reserva.create')->middleware('auth');
 Route::post('reserva/register',[ReservaController::class,'store'])->name('reserva.store')->middleware('auth');
 
-//post solo se ocupa para cuando creamos store o cuando actualizamos lalala 
+//post solo se ocupa para cuando creamos store o cuando actualizamos lalala

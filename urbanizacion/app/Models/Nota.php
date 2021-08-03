@@ -10,7 +10,8 @@ class Nota extends Model
     protected $table = 'nota';
     protected $fillable =[
         'descripcion',
-        'Fecha'
+        'Fecha',
+        'id_bitacora',
     ];
     use HasFactory;
     public function bitacora(){

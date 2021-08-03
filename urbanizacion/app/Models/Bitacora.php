@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Bitacora extends Model
 {
     protected $table = 'bitacora';
-    protected $fillable =[];
+    protected $fillable =['id_user'];
     use HasFactory;
     public function nota(){
         return $this->hasMany(Nota::class,'id_bitacora');
