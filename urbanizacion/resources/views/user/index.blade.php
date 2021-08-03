@@ -44,8 +44,7 @@
 						<td>{{($user->tipo_cliente == 1)? "Si":"NO"}}</td>
 						<td>{{($user->tipo_visita == 1)? "Si":"NO"}}</td>
 					   <td>
-
-						<a href="#" class="btn btn-info btn-sm ">editar</a>
+						<a href="{{route('user.edit',$user->id)}}" class="btn btn-info btn-sm ">editar</a>
 						<a href="#" class="btn btn-info btn-sm ">borrar</a>
 					
 						<a href="{{route('telefonoPersona.telefonos',$user->id)}}" class="btn btn-info btn-sm ">ver telefono</a>

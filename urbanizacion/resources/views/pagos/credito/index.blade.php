@@ -49,12 +49,13 @@
                     <td>{{($pago->fecha_ultima_cuota == null)? "--": $pago->fecha_ultima_cuota}}</td>
                     <td>{{($pago->estado == null)? "--": $pago->estado}}</td>
                     <td>{{($pago->saldo_financiado == null)? "--": $pago->saldo_financiado}}</td>
-                   
+                  
                     {{-- <td>
                         <a href="{{route('user.permissions',$user->id)}}"><button type="button" class="btn btn-warning">Roles</button></a>
                     </td> --}}
                     
                    <td><a href="{{route('cuota.cuotas', $pago->id)}}">Ver Cuotas</a></td>
+                   <td><a href="{{route('user.kardexindex', $pago->id)}}">Ver kardex</a></td>
                 @endif
                </tr>
             @endforeach

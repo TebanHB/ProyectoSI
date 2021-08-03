@@ -114,6 +114,24 @@
                     </li>
 
                     <hr class="sidebar-divider">
+                    <li>
+                        <a href="{{route('pago.credito.index')}}">
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                            <span>Ver contratos pagados a credito</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{route('pago.contado.index')}}">
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                            <span>Ver contratos pagados a contado</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{route('pago.compromiso.index')}}">
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                            <span>Ver contratos pagados a compromiso</span>
+                        </a>
+                    </li>
 
                     <li>
 

@@ -55,6 +55,8 @@ Route::get('pagos/compromiso/create',[PagoController::class,'compromisocreate'])
 Route::get('user/index',[UserController::class, 'index'])->name('user.index')->middleware('auth');
 Route::get('user/create',[UserController::class,'create'])->name('user.create')->middleware('auth');
 Route::post('user/store',[UserController::class, 'store'])->name('user.store')->middleware('auth');
+Route::get('user/kardexindex',[UserController::class,'kardexindex'])->name('user.kardexindex')->middleware('auth');
+
 Route::post('user/prueba',[UserController::class, 'prueba'])->name('user.prueba')->middleware('auth');
 Route::get('user/personal/{id}',[UserController::class,'personal'])->name('user.personal')->middleware('auth');
 Route::get('user/Administradores',[UserController::class,'Administradores'])->name('user.Administradores')->middleware('auth');
