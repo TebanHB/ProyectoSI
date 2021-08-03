@@ -60,12 +60,7 @@
                     <a href="#servicios"> Servicios </a>
                     <a href="#galeria"> Galeria </a>
                     <a href="#contactanos"> Contactanos </a> 
-                    @guest
-                    @if (Route::has('register'))
-                    <a href="{{ route('register')}}" class="ml-4 text-sm text-gray-700 underline">Agendar Reserva</a>
-                @endif
-                        
-                    @endguest
+                    
                     @if (Route::has('login'))
                
                         @auth
@@ -73,13 +68,16 @@
                         @else
                             <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Inicio de Sesion</a>
     
+                         @if (Route::has('register'))
+                                <a href="{{ route('register')}}" class="ml-4 text-sm text-gray-700 underline">Agendar Reserva</a>
+                            @endif
                         @endauth
                     </div>
                 @endif
                 </nav>
         </header>
         <main>
-            <script src="js/buscador.js"></script>
+           
                 <section id="inicio">
                     <img src="img/terreno6.png">
                     <div class="bloque-inicio">
