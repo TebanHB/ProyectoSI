@@ -6,7 +6,7 @@ use App\Models\Mora;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use App\http\Controllers\NotaController;
 class MoraController extends Controller
 {
     /**
@@ -49,6 +49,7 @@ class MoraController extends Controller
             'multa'=>request('multa'),
             'retraso_dia'=>request('retraso_dia'),
         ]);
+        NotaController::store(Auth::pago()->id,'Se agrego una nueva mora');
         return redirect()->route('mora.index');
     }
 

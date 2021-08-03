@@ -6,7 +6,8 @@ use App\Models\Contrato;
 use App\Models\Pago;
 use App\Models\Cuota;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
+use App\http\Controllers\NotaController;
 class PagoController extends Controller
 {
     /**
@@ -120,6 +121,7 @@ class PagoController extends Controller
 
         ]);
         //refirigimos a donde nos de la gana
+        NotaController::store(Auth::pago()->id,'Se realizo un nuevo pago');
         return redirect()->route('contrato.create', $pago->id);
     }
 

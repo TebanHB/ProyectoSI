@@ -8,6 +8,7 @@ use App\Models\Pago;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\http\Controllers\NotaController;
 
 class ContratoController extends Controller
 {
@@ -67,7 +68,7 @@ class ContratoController extends Controller
             'codigo_pago' => request('pago_id'),
             'id_user' => request('id_users'),
         ]);
-    
+        NotaController::store(Auth::contrato()->id,'El administrador creo un Contrato');
         return redirect()->route('manzana.index');
     }
 

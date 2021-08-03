@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\TelefonoPersona;
 use App\Models\User;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
+use App\http\Controllers\NotaController;
 class TelefonoPersonaController extends Controller
 {
     /**
@@ -52,7 +53,7 @@ class TelefonoPersonaController extends Controller
             'telefono'=>request('telefono'),
             'id_users'=>request('id_user'),
         ]);
-       
+        NotaController::store(Auth::telefonoPersona()->id,'Se agrego un nuevo telefono');
         return redirect()->route('telefonoPersona.index');
     }
 
