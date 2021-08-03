@@ -105,7 +105,7 @@ class PagoController extends Controller
             'plazo' =>request('plazo'),
             'interes_anual' => request('interes_anual'),
             'cuota_mensual'=>request('cuota_mensual'),
-            'fecha_prog'=>request('fecha_prog'),
+            'fecha_Prog'=>request('fecha_Prog'),
             'fecha_inicio'=>request('fecha_inicio'),
             'fecha_ultima_cuota'=>request('fecha_ultima_cuota'),
             'estado' => request('estado'),

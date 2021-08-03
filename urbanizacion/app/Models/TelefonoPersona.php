@@ -9,7 +9,8 @@ class TelefonoPersona extends Model
 {
     protected $table = 'telefono_persona';
     protected $fillable =[
-        'telefono'
+        'telefono',
+        'id_users'
     ];
     use HasFactory;
     public function users(){

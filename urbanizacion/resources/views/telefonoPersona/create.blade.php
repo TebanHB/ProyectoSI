@@ -23,8 +23,8 @@
             <form method="POST" action="{{ route('telefonoPersona.store') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="usuarioformulariocreate">
-                    <label for = "id_users">USER</label>
-                    <input type="text" name="id_users" id="id_users">   
+                    
+                   <input type="hidden" name="id_user" value="{{$user->id}}">
                     <label for = "telefono">Numero Telefonico</label>
                     <input type="text" name="telefono" id="telefono">          
                     <button type="submit" class="btn btn-info ">

@@ -59,7 +59,7 @@ class TerrenoController extends Controller
             'id_manzana'=>request('id_manzana'),
             'id_contrato'=>request('id_contrato'),
         ]);
-        return redirect()->route('terreno.index');
+        return redirect()->route('terreno.terrenos');
     }
 
     /**
