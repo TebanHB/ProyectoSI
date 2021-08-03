@@ -25,12 +25,10 @@ class CuotaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
     public function create($id)
     {
-        $pago=Pago::where('id',$id)->get();
-        $mensual = $pago->cuota_mensual;
-        return view('cuota.create',compact($mensual));
+        $credito= Pago::findOrFail($id);
+        return view('cuota.create', compact('credito'));
     }
 
     /**
@@ -49,9 +47,22 @@ class CuotaController extends Controller
     }
     public function store(Request $request)
     {
-        //
-    }
+        $credentials =   Request()->validate([ //validar los datos
+            'id_credito' => ['required'],
+         
+            'amortizacion' => ['required'],
+            'monto_cuota' => ['required'],
+        ]);
 
+        Cuota::create([
+            'id_credito'=>request('id_credito'),
+            'id_mora'=>request('id_mora'),
+            'amortizacion'=>request('amortizacion'),
+            'monto_cuota'=> bcrypt(request('monto_cuota')),
+
+        ]);
+        return redirect()->route('cuota.index');
+    }
     /**
      * Display the specified resource.
      *

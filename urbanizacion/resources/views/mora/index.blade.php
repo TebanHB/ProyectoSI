@@ -28,7 +28,7 @@
         <tbody>
             @foreach ($moras as $mora)
                <tr>
-                    <td>{{($mora->multa == null)? "--": $mora->multa }}</td>
+                    <td>{{$mora->multa}}</td>
                     <td>{{($mora->retraso_dia == null)? "--": $mora->retraso_dia}}</td>
 
                     {{-- <td>

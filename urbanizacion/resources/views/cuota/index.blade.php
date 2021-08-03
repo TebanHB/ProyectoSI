@@ -39,7 +39,9 @@
                   {{-- <td>{{$contrato->users->name}}</td>                 --}}
                   <td><a href="{{route('cuota.moras', $cuota->id)}}">Ver Mora</a></td>
                   <td>   <a href="{{route('mora.create', $cuota->id)}}">Crear Mora</a></td>
+
                 </tr>
+                <td>   <a href="{{route('cuota.create', $cuota->id_credito)}}">Agregar cuota</a></td>
             @endforeach
         </tbody>
     </table>

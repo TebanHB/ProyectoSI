@@ -11,7 +11,7 @@ class Cuota extends Model
     protected $fillable=['id_credito','id_mora','amortizacion','monto_cuota'];
     use HasFactory;
     public function credito(){
-        return $this->belongsTo('App\Models\Pago');
+        return $this->belongsTo(Pago::class,'id_credito');
 
     }
 

@@ -17,7 +17,7 @@ class CreateCuotaTable extends Migration
             $table->id();
             $table->unsignedBigInteger("id_credito");
             $table->foreign('id_credito')->on('pago')->references('id')->onDelete('cascade');
-            $table->unsignedBigInteger("id_mora");
+            $table->unsignedBigInteger("id_mora")->nullable();;
             $table->foreign('id_mora')->on('mora')->references('id')->onDelete('cascade');
             $table->float("amortizacion");
             $table->integer("monto_cuota");
