@@ -39,29 +39,30 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('pagos/index',[PagoController::class, 'index'])->name('pago.index')->middleware(['auth', 'admin']);
-Route::get('pagos/create',[PagoController::class,'create'])->name('pago.create')->middleware('auth');
-Route::post('pagos/store',[PagoController::class, 'store'])->name('pago.store')->middleware('auth');
+Route::get('pagos/create',[PagoController::class,'create'])->name('pago.create')->middleware(['auth', 'admin']);
+Route::post('pagos/store',[PagoController::class, 'store'])->name('pago.store')->middleware(['auth', 'admin']);
 Route::get('pagos/creditopayment/{id}',[PagoController::class, 'creditopayment'])->name('pago.creditopayment')->middleware('auth');
-Route::get('pagos/compromisopayment/{id}',[PagoController::class, 'compromisopayment'])->name('pago.compromisopayment')->middleware('auth');
-Route::get('pagos/contadopayment/{id}',[PagoController::class, 'contadopayment'])->name('pago.contadopayment')->middleware('auth');
-Route::get('pagos/credito/index',[PagoController::class, 'creditoindex'])->name('pago.credito.index')->middleware('auth');
-Route::get('pagos/contado/index',[PagoController::class, 'contadoindex'])->name('pago.contado.index')->middleware('auth');
-Route::get('pagos/compromiso/index',[PagoController::class, 'compromisoindex'])->name('pago.compromiso.index')->middleware('auth');
-Route::get('pagos/credito/create',[PagoController::class,'creditocreate'])->name('pago.credito.create')->middleware('auth');
-Route::get('pagos/contado/create',[PagoController::class,'contadocreate'])->name('pago.contado.create')->middleware('auth');
-Route::get('pagos/compromiso/create',[PagoController::class,'compromisocreate'])->name('pago.compromiso.create')->middleware('auth');
+Route::get('pagos/compromisopayment/{id}',[PagoController::class, 'compromisopayment'])->name('pago.compromisopayment')->middleware(['auth', 'admin']);
+Route::get('pagos/contadopayment/{id}',[PagoController::class, 'contadopayment'])->name('pago.contadopayment')->middleware(['auth', 'admin']);
+Route::get('pagos/credito/index',[PagoController::class, 'creditoindex'])->name('pago.credito.index')->middleware(['auth', 'admin']);
+Route::get('pagos/contado/index',[PagoController::class, 'contadoindex'])->name('pago.contado.index')->middleware(['auth', 'admin']);
+Route::get('pagos/compromiso/index',[PagoController::class, 'compromisoindex'])->name('pago.compromiso.index')->middleware(['auth', 'admin']);
+Route::get('pagos/credito/create',[PagoController::class,'creditocreate'])->name('pago.credito.create')->middleware(['auth', 'admin']);
+Route::get('pagos/contado/create',[PagoController::class,'contadocreate'])->name('pago.contado.create')->middleware(['auth', 'admin']);
+Route::get('pagos/compromiso/create',[PagoController::class,'compromisocreate'])->name('pago.compromiso.create')->middleware(['auth', 'admin']);
 
 
-Route::get('user/index',[UserController::class, 'index'])->name('user.index')->middleware('auth');
-Route::get('user/create',[UserController::class,'create'])->name('user.create')->middleware('auth');
-Route::post('user/store',[UserController::class, 'store'])->name('user.store')->middleware('auth');
+Route::get('user/index',[UserController::class, 'index'])->name('user.index')->middleware(['auth', 'admin']);
+Route::get('user/create',[UserController::class,'create'])->name('user.create')->middleware(['auth', 'admin']);
+Route::post('user/store',[UserController::class, 'store'])->name('user.store')->middleware(['auth', 'admin']);
 Route::get('user/kardexindex',[UserController::class,'kardexindex'])->name('user.kardexindex')->middleware('auth');
+
 
 Route::post('user/prueba',[UserController::class, 'prueba'])->name('user.prueba')->middleware('auth');
 Route::get('user/personal/{id}',[UserController::class,'personal'])->name('user.personal')->middleware('auth');
-Route::get('user/Administradores',[UserController::class,'Administradores'])->name('user.Administradores')->middleware('auth');
+Route::get('user/Administradores',[UserController::class,'Administradores'])->name('user.Administradores')->middleware(['auth', 'admin']);
 Route::get('user/Clientes',[UserController::class,'Clientes'])->name('user.Clientes')->middleware('auth');
-Route::get('user/Vendedores',[UserController::class,'Vendedores'])->name('user.Vendedores')->middleware('auth');
+Route::get('user/Vendedores',[UserController::class,'Vendedores'])->name('user.Vendedores')->middleware(['auth', 'admin']);
 Route::get('user/Visitas',[UserController::class,'Visitas'])->name('user.Visitas')->middleware('auth');
 
 Route::get('user/edit/{id}',[UserController::class,'edit'])->name('user.edit')->middleware('auth');
