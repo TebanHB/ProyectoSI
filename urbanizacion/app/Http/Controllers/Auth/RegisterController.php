@@ -77,6 +77,8 @@ class RegisterController extends Controller
             'tipo_cliente' => $data['tipo_cliente'],
             'tipo_visita' => $data['tipo_visita'],
             'carnet' => $data['carnet'],
+            'url_foto'=>null,
+            'estado'=>1,
         ]);
     }
 }

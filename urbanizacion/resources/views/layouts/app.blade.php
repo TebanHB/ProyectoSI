@@ -23,12 +23,12 @@
             @endauth
 		</h2>
 		<i class="fa fa-user" aria-hidden="true"></i>
-        
+
 	</header>
 
 
-   
-    
+
+
 
 	<div class="body">
 		<nav class="side-bar">
@@ -45,9 +45,9 @@
 
 			<ul>
                 @if(Auth::user()->tipo_administrador==1)
-                
+
                     <li>
-                        <a href="">
+                        <a href="{{route('user.index')}}">
                             <i class="fa fa-eye" aria-hidden="true"></i>
                             <span>Gestionar usuarios</span>
                         </a>
@@ -165,7 +165,7 @@
 
                     <hr class="sidebar-divider">
                 @endif
-                   
+
 
                 <!--    <h4>CLIENTES</h4> -->
 
@@ -248,8 +248,8 @@
                         {{ csrf_field() }}
                     </form>
 				</li>
-			</ul> 
-            
+			</ul>
+
 		</nav>
 		<section class="section-1">
 			@yield('content')
