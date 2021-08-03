@@ -63,22 +63,9 @@
                             </div>
                         </div>
                         <div class="form-group row">
-<<<<<<< HEAD
-                            <label for="carnet" class="col-md-4 col-form-label text-md-right">{{ __('Carnet') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="carnet" type="text" class="form-control" name="carnet" required autocomplete="carnet">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="telefono" class="col-md-4 col-form-label text-md-right">{{ __(' telefono') }}</label>
-                            <div class="col-md-6">
-                                <input id="telefono" type="tel" class="form-control" name="telefono" required autocomplete="new-tel">
-=======
                             <label for="telefono" class="col-md-4 col-form-label text-md-right">{{ __(' telefono') }}</label>
                             <div class="col-md-6">
                                 <input id="telefono" type="text" class="form-control" name="telefono" >
->>>>>>> 9c8aa54de9f52bea5d5d1c9302832f86d7a89b01
                             </div>
                             <div class="form-group row">
                                 <label for="carnet" class="col-md-4 col-form-label text-md-right">{{ __(' Carnet') }}</label>
