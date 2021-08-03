@@ -145,49 +145,10 @@
                         </a>
                     </li>
 
-
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-cog" aria-hidden="true"></i>
-                            <span>Agregar nueva visita</span>
-                        </a>
-                    </li>
                     <hr class="sidebar-divider">
                 @endif
-                @if(Auth::user()->tipo_administrador==1)
-				<li>
-					<a href="{{route('contrato.index')}}">
-						<i class="fa fa-eye" aria-hidden="true"></i>
-						<span>Ver todos los contratos</span>
-					</a>
-				</li>
-                    @endif
-                    @if(Auth::user()->tipo_administrador==1)
-                <li>
-                    <a href="{{route('contrato.pendiente')}}">
-                        <i class="fa fa-eye" aria-hidden="true"></i>
-                        <span>Ver Contratos pendientes</span>
-                    </a>
-                </li>
-                    @endif
-                <hr class="sidebar-divider">
-                    @if(Auth::user()->tipo_administrador==1)
-				<li>
-					<a href="{{route('pago.create')}}">
-						<i class="fa fa-cog" aria-hidden="true"></i>
-						<span>Agregar Nuevo Contrato</span>
-					</a>
-				</li>
-                    @endif
-                    @if(Auth::user()->tipo_administrador==1)
-				<li>
-					<a href="{{route('user.create')}}">
-						<i class="fa fa-cog" aria-hidden="true"></i>
-						<span>Agregar Nuevo Usuario</span>
-					</a>
-				</li>
-                    @endif
                    
+
                 <!--    <h4>CLIENTES</h4> -->
 
                     @if(Auth::user()->tipo_cliente==1)
@@ -227,7 +188,7 @@
                     <li>
                         <a href="{{route('vende.index')}}">
                             <i class="fa fa-cog" aria-hidden="true"></i>
-                            <span>Ver Ventas</span>
+                            <span>Ver mis Ventas</span>
                         </a>
                     </li>
                     <hr class="sidebar-divider">
@@ -246,40 +207,13 @@
                 @if(Auth::user()->tipo_visita==1)
                         <li>
                             <a href="#">
-                                <i class="fa fa-cog" aria-hidden="true"></i>
-                                <span>Agendar nueva visita</span>
-                            </a>
-                        </li>
-
-                        <hr class="sidebar-divider">
-                        <li>
-                            <a href="#">
                                 <i class="fa fa-eye" aria-hidden="true"></i>
                                 <span>Ver mis visitas programadas</span>
                             </a>
                         </li>
                         <hr class="sidebar-divider">
                 @endif
-
-
-                    @endif
-				<li>
-
-					<a href="{{route('manzana.index')}}">
-						<i class="fa fa-cog" aria-hidden="true"></i>
-						<span>Ver Manzanas</span>
-					</a>
-				</li>
-                    @if(Auth::user()->tipo_administrador==1 or Auth::user()->tipo_vendedor==1)
-				<li>
-					<a href="{{route('vende.index')}}">
-						<i class="fa fa-cog" aria-hidden="true"></i>
-						<span>Ver Ventas</span>
-					</a>
-				</li>
-                    @endif
-
-                    @endauth
+        @endauth
 
 				<li>
 					<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
