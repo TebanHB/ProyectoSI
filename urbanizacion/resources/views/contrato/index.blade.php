@@ -44,7 +44,7 @@
                 <td>{{($contrato->fecha_adjudicacion == null)? "--": $contrato->fecha_adjudicacion}}</td>
                 <td>{{($contrato->monto == null)? "--": $contrato->monto}}</td>
                <td>{{($contrato->estado == 1)? "completado": "pendiente"}}</td>
-               <td>{{($contrato->estado == 0)? "pendiente": "completado"}}</td>
+             
              @if($contrato->codigo_pago != null)
                @if ($contrato->pago->tipo =='credito')
                <td><a href="{{route('pago.creditopayment',$contrato->id)}}">Ver pago</a> </td>

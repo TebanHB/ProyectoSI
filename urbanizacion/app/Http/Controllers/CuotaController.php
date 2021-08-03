@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cuota;
+use App\Models\Mora;
 use App\Models\Pago;
 use Illuminate\Http\Request;
 
@@ -44,7 +45,7 @@ class CuotaController extends Controller
         return view('cuota.index',compact('cuotas'));
     }
     public function moras($id){
-        $moras = Cuota::where('id_mora',$id)->get();
+        $moras = Mora::where('id',$id)->get();
         return view('mora.index',compact('moras'));
     }
     public function store(Request $request)

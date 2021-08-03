@@ -27,9 +27,11 @@ class VendeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        return view('vende.create');
+        $user = User::findOrFail($id);
+        $terrenos = Terreno::all();
+        return view('vende.create', compact('user'),compact('terrenos'));
     }
    /* public function ventas($id){
         $ventas = User::where('id_user',$id)->get();
@@ -45,7 +47,13 @@ class VendeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $credentials =   Request()->validate([ //validar los datos
+            'id_user' => ['required'],
+            'id_lote' => ['required'],
+            'comision' => ['required'],
+            'password' => ['required'],
+
+        ]);
     }
 
     /**

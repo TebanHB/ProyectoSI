@@ -16,10 +16,10 @@
     @csrf
 
     <label for="multa">Multa: </label>
-    <input type="number" id="multa">
+    <input type="number" name = "multa" id="multa">
     <br><br>
     <label for="retraso_dia">Retraso de días: </label>
-    <input type="number" id="retraso_dia">
+    <input type="number" name= "retraso_dia" id="retraso_dia">
     <br><br> <br>
     <button type="submit" class="botonesmora ">
         {{ __('Guardar') }}

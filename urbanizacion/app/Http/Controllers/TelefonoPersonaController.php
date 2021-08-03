@@ -33,7 +33,7 @@ class TelefonoPersonaController extends Controller
 
     public function telefonos($id){
         $telefonos = TelefonoPersona::where('id_users',$id)->get();
-        $telefonos->load('user');
+       
         return view('telefonoPersona.index',compact('telefonos'));
     }
     /**
@@ -48,10 +48,11 @@ class TelefonoPersonaController extends Controller
             'telefono' => ['required'],
         
         ]);
-        TelefonoPersona::create([
+       TelefonoPersona::create([
             'telefono'=>request('telefono'),
             'id_users'=>request('id_user'),
         ]);
+       
         return redirect()->route('telefonoPersona.index');
     }
 

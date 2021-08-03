@@ -92,10 +92,10 @@ Route::get('nota/index',[NotaController::class,'index'])->name('nota.index')->mi
 Route::get('nota/create',[NotaController::class,'create'])->name('nota.create')->middleware('auth');
 Route::post('nota/register',[NotaController::class,'store'])->name('nota.store')->middleware('auth');
 
-Route::get('telefono/index',[TelefonoPersonaController::class,'index'])->name('telefonoPersona.index')->middleware('auth');
-Route::get('telefono/create',[TelefonoPersonaController::class,'create'])->name('telefonoPersona.create')->middleware('auth');
-Route::post('telefono/register',[TelefonoPersonaController::class,'store'])->name('telefonoPersona.store')->middleware('auth');
-Route::get('telefono/{id}',[TelefonoPersonaController::class,'telefonos'])->name('telefonoPersona.telefonos')->middleware('auth');
+Route::get('telefonoPersona/index',[TelefonoPersonaController::class,'index'])->name('telefonoPersona.index')->middleware('auth');
+Route::get('telefonoPersona/create/{id}',[TelefonoPersonaController::class,'create'])->name('telefonoPersona.create')->middleware('auth');
+Route::post('telefonoPersona/store',[TelefonoPersonaController::class,'store'])->name('telefonoPersona.store')->middleware('auth');
+Route::get('telefonoPersona/{id}',[TelefonoPersonaController::class,'telefonos'])->name('telefonoPersona.telefonos')->middleware('auth');
 
 Route::get('terreno/index',[TerrenoController::class,'index'])->name('terreno.index')->middleware('auth');
 Route::get('terreno/create',[TerrenoController::class,'create'])->name('terreno.create')->middleware('auth');
@@ -105,7 +105,7 @@ Route::get('terreno/edit/{id}',[TerrenoController::class,'edit'])->name('terreno
 Route::post('terreno/update/{id}',[TerrenoController::class,'update'])->name('terreno.update')->middleware('auth');
 
 Route::get('vende/index',[VendeController::class,'index'])->name('vende.index')->middleware('auth');
-Route::get('vende/create',[VendeController::class,'create'])->name('vende.create')->middleware('auth');
+Route::get('vende/create/{id}',[VendeController::class,'create'])->name('vende.create')->middleware('auth');
 Route::post('vende/register',[VendeController::class,'store'])->name('vende.store')->middleware('auth');
 Route::get('vende/{id}',[VendeController::class,'ventas'])->name('vende.ventas')->middleware('auth');
 
