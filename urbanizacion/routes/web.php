@@ -115,4 +115,4 @@ Route::get('reserva/index',[ReservaController::class,'index'])->name('reserva.in
 Route::get('reserva/create/{id}',[ReservaController::class,'create'])->name('reserva.create')->middleware('auth');
 Route::post('reserva/store',[ReservaController::class,'store'])->name('reserva.store')->middleware('auth');
 
-//post solo se ocupa para cuando creamos store o cuando actualizamos
+//post solo se ocupa para cuando creamos store o cuando actualizamos lalala 
