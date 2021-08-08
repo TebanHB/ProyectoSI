@@ -34,7 +34,7 @@
     </div>
     @endforeach
     @endif
-    @if($tipo=="Editar")
+    @if($tipo==    "Editar")
         <form  method="post" action="{{route('user.update',$users[0]->id)}}" enctype="multipart/form-data">
             @csrf
         @foreach($users as $user)
