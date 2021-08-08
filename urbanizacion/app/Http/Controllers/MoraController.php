@@ -49,7 +49,7 @@ class MoraController extends Controller
             'multa'=>request('multa'),
             'retraso_dia'=>request('retraso_dia'),
         ]);
-        NotaController::store(Auth::pago()->id,'Se agrego una nueva mora');
+        
         return redirect()->route('mora.index');
     }
 

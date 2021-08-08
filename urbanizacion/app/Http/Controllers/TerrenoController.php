@@ -61,7 +61,7 @@ class TerrenoController extends Controller
             'id_manzana'=>request('id_manzana'),
             'id_contrato'=>request('id_contrato'),
         ]);
-        NotaController::store(Auth::terreno()->id,'El administrador agrego un nuevo terreno');
+   
         return redirect()->route('terreno.terrenos');
     }
 
@@ -114,7 +114,7 @@ class TerrenoController extends Controller
             $terreno->id_manzana = $request->get('id_manzana');
             $terreno->id_contrato= $request->get('id_contrato');
             $terreno->save();
-            NotaController::store(Auth::terreno()->id,'El adminsitrador vendio un terreno');
+      
         return redirect()->route('terreno.index');
     }
 

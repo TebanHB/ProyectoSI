@@ -68,7 +68,7 @@ class ContratoController extends Controller
             'codigo_pago' => request('pago_id'),
             'id_user' => request('id_users'),
         ]);
-        NotaController::store(Auth::contrato()->id,'El administrador creo un Contrato');
+        
         return redirect()->route('manzana.index');
     }
 

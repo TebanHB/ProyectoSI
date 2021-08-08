@@ -50,7 +50,6 @@ class ReservaController extends Controller
             'id_lote'=>request('id_lote'),
             'horario_de_visita'=>request('horario_de_visita'),
         ]);
-        NotaController::store(Auth::reserva()->id,'Se agrego una nueva reserva de visita');
         return redirect()->route('reserva.index');
     }
 

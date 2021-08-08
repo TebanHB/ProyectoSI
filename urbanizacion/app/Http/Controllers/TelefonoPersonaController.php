@@ -53,7 +53,7 @@ class TelefonoPersonaController extends Controller
             'telefono'=>request('telefono'),
             'id_users'=>request('id_user'),
         ]);
-        NotaController::store(Auth::telefonoPersona()->id,'Se agrego un nuevo telefono');
+      
         return redirect()->route('telefonoPersona.index');
     }
 

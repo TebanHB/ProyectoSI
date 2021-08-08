@@ -121,7 +121,7 @@ class PagoController extends Controller
 
         ]);
         //refirigimos a donde nos de la gana
-        NotaController::store(Auth::pago()->id,'Se realizo un nuevo pago');
+     
         return redirect()->route('contrato.create', $pago->id);
     }
 
