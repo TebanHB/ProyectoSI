@@ -41,7 +41,7 @@
                   <td>   <a href="{{route('mora.create', $cuota->id)}}">Crear Mora</a></td>
 
                 </tr>
-                <td>   <a href="{{route('cuota.create', $cuota->id_credito)}}">Agregar cuota</a></td>
+                <input type ='button' class="btn btn-warning"  value = 'Agregar cuota' onclick="location.href = '{{ route('cuota.create',$cuota->id_credito)}}'"/>
             @endforeach
         </tbody>
     </table>

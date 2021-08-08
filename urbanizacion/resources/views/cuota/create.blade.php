@@ -16,7 +16,7 @@
             @csrf
 
             <input type="hidden" name="id_credito" value="{{$credito->id}}">
-       
+            <input type="hidden" name="id_mora" value=null>
             <label for="monto_cuota">Monto: </label>
             <input type="number" name='monto_cuota' id="monto_cuota">
             <label for="amortizacion">Amortizacion: </label>

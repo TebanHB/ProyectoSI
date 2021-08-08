@@ -118,6 +118,6 @@ Route::post('bitacora/register',[BitacoraController::class,'store'])->name('bita
 
 Route::get('reserva/index',[ReservaController::class,'index'])->name('reserva.index')->middleware('auth');
 Route::get('reserva/create/{id}',[ReservaController::class,'create'])->name('reserva.create')->middleware('auth');
-Route::post('reserva/register',[ReservaController::class,'store'])->name('reserva.store')->middleware('auth');
+Route::post('reserva/store',[ReservaController::class,'store'])->name('reserva.store')->middleware('auth');
 
 //post solo se ocupa para cuando creamos store o cuando actualizamos lalala

@@ -50,17 +50,15 @@ class CuotaController extends Controller
     
     {
         $credentials =   Request()->validate([ //validar los datos
-            'id_credito' => ['required'],
-         
             'amortizacion' => ['required'],
             'monto_cuota' => ['required'],
         ]);
 
         Cuota::create([
             'id_credito'=>request('id_credito'),
-            'id_mora'=>request('id_mora'),
+            'id_mora'=>request('null'),
             'amortizacion'=>request('amortizacion'),
-            'monto_cuota'=> bcrypt(request('monto_cuota')),
+            'monto_cuota'=> request('monto_cuota')
 
         ]);
         return redirect()->route('cuota.index');
