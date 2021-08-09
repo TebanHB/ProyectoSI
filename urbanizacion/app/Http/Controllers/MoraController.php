@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Mora;
-use App\Models\User;
+use App\Models\Cuota;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\http\Controllers\NotaController;
@@ -26,11 +27,11 @@ class MoraController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        $user = User::findOrFail(Auth::user()->id);
-        $moras = Mora::all();
-        return view('mora.create',compact('user'), compact('moras'));
+        $cuota = Cuota::findOrFail($id);
+       
+        return view('mora.create',compact('cuota'));
     }
 
     /**
@@ -39,18 +40,18 @@ class MoraController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$id)
     {
         $credentials =Request()->validate([
             'multa'=>['required'],
             'retraso_dia'=>['required'],
         ]);
-        Mora::create([
+        $mora = Mora::create([
             'multa'=>request('multa'),
             'retraso_dia'=>request('retraso_dia'),
         ]);
-        
-        return redirect()->route('mora.index');
+       
+        return redirect()->route('cuota.edit', [$id, $mora->id]);
     }
 
     /**

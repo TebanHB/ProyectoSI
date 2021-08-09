@@ -37,9 +37,12 @@
                   <td>{{($cuota->amortizacion == null)? "--": $cuota->amortizacion}}</td>
                   <td>{{($cuota->monto_cuota == null)? "--": $cuota->monto_cuota}}</td>
                   {{-- <td>{{$contrato->users->name}}</td>                 --}}
-                  <td><a href="{{route('cuota.moras', $cuota->id_mora)}}">Ver Mora</a></td>
-                  <td>   <a href="{{route('mora.create', $cuota->id)}}">Crear Mora</a></td>
-
+                  @if($cuota->id_mora != null)
+                  <td><a href="{{route('cuota.moras', $cuota->id ,$cuota->id_mora)}}">Ver Mora</a></td>
+                  @endif
+                  @if($cuota->id_mora == null)
+                  <td>   <a href="{{route('mora.create', $cuota->id)}}">Agregar Mora</a></td>
+                   @endif      
                 </tr>
                 <input type ='button' class="btn btn-warning"  value = 'Agregar cuota' onclick="location.href = '{{ route('cuota.create',$cuota->id_credito)}}'"/>
             @endforeach

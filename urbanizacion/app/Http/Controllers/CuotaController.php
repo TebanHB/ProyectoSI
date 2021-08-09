@@ -44,6 +44,7 @@ class CuotaController extends Controller
     }
     public function moras($id){
         $moras = Mora::where('id',$id)->get();
+        
         return view('mora.index',compact('moras'));
     }
     public function store(Request $request)
@@ -56,7 +57,7 @@ class CuotaController extends Controller
 
         Cuota::create([
             'id_credito'=>request('id_credito'),
-            'id_mora'=>request('null'),
+            'id_mora'=> NULL,
             'amortizacion'=>request('amortizacion'),
             'monto_cuota'=> request('monto_cuota')
 
@@ -80,9 +81,11 @@ class CuotaController extends Controller
      * @param  \App\Models\Cuota  $cuota
      * @return \Illuminate\Http\Response
      */
-    public function edit(Cuota $cuota)
+    public function edit($id, $id_mora)
     {
-        //
+        $mora= Mora::findOrFail($id_mora);
+        $cuota= Cuota::findOrFail($id);
+        return view('cuota.edit', compact('mora'), compact('cuota'));
     }
 
     /**
@@ -92,10 +95,23 @@ class CuotaController extends Controller
      * @param  \App\Models\Cuota  $cuota
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Cuota $cuota)
+    public function update(Request $request, $id)
     {
-        //
+        $credentials =   Request()->validate([ //validar los datos
+            'amortizacion' => ['required'],
+            'monto_cuota' => ['required'],
+        ]);
+
+        $cuota = Cuota::findOrFail($id);
+        $cuota->id_credito = $request->get('id_credito');
+        $cuota->id_mora = $request->get('id_mora');
+        $cuota->amortizacion = $request->get('amortizacion');
+        $cuota->monto_cuota = $request->get('monto_cuota');
+           
+            $cuota->save();
+            return redirect()->route('cuota.index');
     }
+
 
     /**
      * Remove the specified resource from storage.
