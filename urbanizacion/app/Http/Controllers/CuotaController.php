@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Cuota;
 use App\Models\Mora;
 use App\Models\Pago;
+use App\Models\Contrato;
 use Illuminate\Http\Request;
 
 class CuotaController extends Controller
@@ -31,7 +32,6 @@ class CuotaController extends Controller
         $credito= Pago::findOrFail($id);
         return view('cuota.create', compact('credito'));
     }
-
     /**
      * Store a newly created resource in storage.
      *

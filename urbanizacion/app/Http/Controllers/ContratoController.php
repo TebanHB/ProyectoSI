@@ -33,6 +33,8 @@ class ContratoController extends Controller
         $contratos->load('user');
         return view('contrato.index',compact('contratos'));
     }
+
+    
     /**
      * Show the form for creating a new resource.
      *

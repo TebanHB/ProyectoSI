@@ -8,10 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Cuota extends Model
 {
     protected $table='cuota';
-    protected $fillable=['id_credito','id_mora','amortizacion','monto_cuota'];
+    protected $fillable=['id_credito','id_mora','amortizacion','monto_cuota','fecha_pagada','fecha_programada'];
     use HasFactory;
-    public function credito(){
+    public function pago(){
         return $this->belongsTo(Pago::class,'id_credito');
+
+    }
+    public function mora(){
+        return $this->belongsTo(Mora::class,'id_mora');
 
     }
 

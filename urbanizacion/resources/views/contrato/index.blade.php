@@ -48,6 +48,7 @@
              @if($contrato->codigo_pago != null)
                @if ($contrato->pago->tipo =='credito')
                <td><a href="{{route('pago.creditopayment',$contrato->id)}}">Ver pago</a> </td>
+               <td><a href="{{route('pago.imprimir',$contrato->codigo_pago)}}">Ver Kardex</a> </td>
                @endif
                @if ($contrato->pago->tipo =='compromiso')
                <td><a href="{{route('pago.compromisopayment',$contrato->id)}}">Ver pago</a> </td>
@@ -55,6 +56,7 @@
                @if ($contrato->pago->tipo =='contado')
                <td><a href="{{route('pago.contadopayment',$contrato->id)}}">Ver pago</a> </td>
                @endif
+              
               @endif 
               @if($contrato->codigo_pago == null)
               <td><a href="{{route('pago.create',$contrato->id)}}">Agregar Pago</a> </td>

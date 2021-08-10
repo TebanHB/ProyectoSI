@@ -50,7 +50,8 @@ Route::get('pagos/compromiso/index',[PagoController::class, 'compromisoindex'])-
 Route::get('pagos/credito/create',[PagoController::class,'creditocreate'])->name('pago.credito.create')->middleware(['auth', 'admin']);
 Route::get('pagos/contado/create',[PagoController::class,'contadocreate'])->name('pago.contado.create')->middleware(['auth', 'admin']);
 Route::get('pagos/compromiso/create',[PagoController::class,'compromisocreate'])->name('pago.compromiso.create')->middleware(['auth', 'admin']);
-
+Route::get('pagos/imprimir/{id}',[PagoController::class,'imprimir'])->name('pago.imprimir')->middleware(['auth', 'admin']);
+Route::get('pagos/kardex/{id}',[PagoController::class,'kardex'])->name('pagos.kardex')->middleware('auth');
 
 Route::get('user/index',[UserController::class, 'index'])->name('user.index')->middleware(['auth', 'admin']);
 Route::get('user/create',[UserController::class,'create'])->name('user.create')->middleware(['auth', 'admin']);
@@ -91,6 +92,9 @@ Route::get('cuotas/{id}',[CuotaController::class,'cuotas'])->name('cuota.cuotas'
 Route::get('moras/{id}',[CuotaController::class,'moras'])->name('cuota.moras')->middleware('auth');
 Route::get('cuota/edit/{id}/{id_mora}',[CuotaController::class,'edit'])->name('cuota.edit')->middleware('auth');
 Route::post('cuota/update/{id}',[CuotaController::class,'update'])->name('cuota.update')->middleware('auth');
+
+Route::get('cuota/kardexpersonal/{id}',[CuotaController::class,'kardexpersonal'])->name('cuota.kardexpersonal')->middleware('auth');
+
 
 Route::get('nota/index',[NotaController::class,'index'])->name('nota.index')->middleware('auth');
 Route::get('nota/create',[NotaController::class,'create'])->name('nota.create')->middleware('auth');

@@ -8,6 +8,8 @@ use App\Models\Cuota;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\http\Controllers\NotaController;
+use Barryvdh\DomPDF\Facade as PDF;
+
 class PagoController extends Controller
 {
     /**
@@ -20,7 +22,20 @@ class PagoController extends Controller
         $pagos = Pago::all();
         return view('pagos.index', compact('pagos'));
     }
+    
+    public function imprimir($id){
+        $cuotas = Cuota::where('id_credito',$id)->get();
+        $pago = Pago::findOrFail($id);
+        $pdf = PDF::loadView('pagos.kardex', compact('cuotas'), compact('pago'));
+        return $pdf->stream('prueba.pdf');
+    }
 
+    public function kardex($id){
+        $cuotas = Cuota::where('id_credito',$id)->get();
+        $pago = Pago::findOrFail($id);
+        
+        return view('pagos.kardex',compact('cuotas'), compact('pago'));
+    }
     public function creditoindex() // es pa mostrar las instancias que tengamos de pago en este caso
     { 
         $pagos = Pago::all();
@@ -46,7 +61,6 @@ class PagoController extends Controller
     {
         $codigo = Contrato::select("codigo_pago")->where("id",$id)->get(); //sacando el codigo del pago de un contrato en especifico
         $pagos = Pago::findOrFail($codigo); 
-      
                return view('pagos.credito.index',compact('pagos'));
     }
     public function compromisopayment($id)
