@@ -23,12 +23,13 @@
             <thead>
 
             <th>Descripcion</th>
+            <th>Fecha</th>
             </thead>
             <tbody>
             @foreach ($notas as $nota)
                 <tr>
                     <td>{{($nota->descripcion == null)? "--": $nota->descripcion}}</td>
-
+                    <td>{{($nota->Fecha == null)? "--": $nota->Fecha}}</td>
                 </tr>
             @endforeach
             </tbody>

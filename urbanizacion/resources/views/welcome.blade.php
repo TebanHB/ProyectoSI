@@ -108,6 +108,17 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="columna columna-33">
+                                <div class="bloque-servicio">
+                                    <div class="bloque-img-servicio cuadrado-perfecto">
+                                        <img src="img/foto.jpg" >
+                                    </div>
+                                    <div class="bloque-contenido-servicio">
+                                        <h3>OFERTAS</h3>
+                                   
+                                    </div>
+                                </div>
+                            </div>
 
                             <div class="columna columna-33">
                                 <div class="bloque-servicio">
@@ -120,6 +131,7 @@
                                     </div>
                                 </div>
                             </div>
+                           
                         </div>
                     </div>
                 </section>

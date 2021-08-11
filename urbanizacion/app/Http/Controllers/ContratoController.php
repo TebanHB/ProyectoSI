@@ -33,8 +33,8 @@ class ContratoController extends Controller
         $contratos->load('user');
         return view('contrato.index',compact('contratos'));
     }
-    public function miscontratos(){
-        $id=Auth::user()->id;
+    public function miscontratos($id){
+       
         $user = User::findOrFail($id);
         $contratos = Contrato::where('id_user',$id)->get();
         $contratos->load('user');

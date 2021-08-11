@@ -74,7 +74,7 @@ Route::get('contrato/create/{id}',[ContratoController::class, 'create'])->name('
 Route::post('contrato/store',[ContratoController::class, 'store'])->name('contrato.store')->middleware('auth');
 Route::get('contrato/pendiente',[ContratoController::class,'pendiente'])->name('contrato.pendiente')->middleware('auth');
 Route::get('contrato/completado',[ContratoController::class,'completado'])->name('contrato.completado')->middleware('auth');
-Route::get('contrato/miscontratos',[ContratoController::class,'miscontratos'])->name('contrato.miscontratos')->middleware('auth');
+Route::get('contrato/miscontratos/{id}',[ContratoController::class,'miscontratos'])->name('contrato.miscontratos')->middleware('auth');
 
 Route::get('manzana/index',[ManzanaController::class,'index'])->name('manzana.index')->middleware('auth');
 Route::get('manzana/create',[ManzanaController::class, 'create'])->name('manzana.create')->middleware('auth');
@@ -116,7 +116,7 @@ Route::get('vende/index',[VendeController::class,'index'])->name('vende.index')-
 Route::get('vende/create/{id}',[VendeController::class,'create'])->name('vende.create')->middleware('auth');
 Route::post('vende/register',[VendeController::class,'store'])->name('vende.store')->middleware('auth');
 Route::get('vende/{id}',[VendeController::class,'ventas'])->name('vende.ventas')->middleware('auth');
-Route::get('vende/misventas',[VendeController::class,'misventas'])->name('vende.misventas')->middleware('auth');
+Route::get('vende/misventas/{id}',[VendeController::class,'misventas'])->name('vende.misventas')->middleware('auth');
 
 
 Route::get('bitacora/index/{id}',[BitacoraController::class,'index'])->name('bitacora.index')->middleware('auth');
@@ -125,7 +125,7 @@ Route::post('bitacora/register',[BitacoraController::class,'store'])->name('bita
 
 Route::get('reserva/index',[ReservaController::class,'index'])->name('reserva.index')->middleware('auth');
 Route::get('reserva/create/{id}',[ReservaController::class,'create'])->name('reserva.create')->middleware('auth');
-Route::get('reserva/misreservas',[ReservaController::class,'misreservas'])->name('reserva.misreservas')->middleware('auth');
+Route::get('reserva/misreservas/{id}',[ReservaController::class,'misreservas'])->name('reserva.misreservas')->middleware('auth');
 Route::post('reserva/store',[ReservaController::class,'store'])->name('reserva.store')->middleware('auth');
 
 //post solo se ocupa para cuando creamos store o cuando actualizamos lalala

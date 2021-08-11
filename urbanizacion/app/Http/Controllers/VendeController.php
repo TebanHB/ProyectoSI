@@ -20,8 +20,7 @@ class VendeController extends Controller
         $ventas->load('user');
         return view('vende.index',compact('ventas'));
     }
-    public function misventas(){
-        $id=Auth::user()->id;
+    public function misventas( $id){
         $user = User::findOrFail($id);
         $ventas = Vende::where('id_user',$id)->get();
         $ventas->load('user');

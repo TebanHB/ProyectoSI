@@ -45,7 +45,13 @@
 
 			<ul>
                 @if(Auth::user()->tipo_administrador==1)
-
+                    <li>
+                        <a href="{{route('bitacora.index',Auth::user()->id)}}">
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                            <span>Ver bitacora</span>
+                        </a>
+                    </li>
+                    <hr class="sidebar-divider">
                     <li>
                         <a href="{{route('user.index')}}">
                             <i class="fa fa-eye" aria-hidden="true"></i>
@@ -164,7 +170,7 @@
 
                     @if(Auth::user()->tipo_cliente==1)
                         <li>
-                            <a href="{{route('contrato.miscontratos')}}">
+                            <a href="{{route('contrato.miscontratos',Auth::user()->id)}}">
                                 <i class="fa fa-eye" aria-hidden="true"></i>
                                 <span>Ver mis contratos</span>
                             </a>
@@ -197,7 +203,7 @@
                     </li>
                     <hr class="sidebar-divider">
                     <li>
-                        <a href="{{route('vende.misventas')}}">
+                        <a href="{{route('vende.misventas', Auth::user()->id)}}">
                             <i class="fa fa-cog" aria-hidden="true"></i>
                             <span>Ver mis Ventas</span>
                         </a>
@@ -215,7 +221,7 @@
                 <!--    <h4>VISITA</h4> -->
                 @if(Auth::user()->tipo_visita==1)
                         <li>
-                            <a href="{{route('reserva.misreservas')}}">
+                            <a href="{{route('reserva.misreservas',Auth::user()->id)}}">
                                 <i class="fa fa-eye" aria-hidden="true"></i>
                                 <span>Ver mis visitas programadas</span>
                             </a>
