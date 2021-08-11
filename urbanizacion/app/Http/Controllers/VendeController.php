@@ -27,7 +27,6 @@ class VendeController extends Controller
         $ventas->load('user');
         return view('vende.index',compact('ventas'));
     }
-    
     /**
      * Show the form for creating a new resource.
      *
