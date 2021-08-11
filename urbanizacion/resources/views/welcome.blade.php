@@ -103,8 +103,8 @@
                                         <img src="img/terreno8.jpg" >
                                     </div>
                                     <div class="bloque-contenido-servicio">
-                                        <h3>Servicio 1</h3>
-                                        <p>Venta de terrenos</p>
+                                        <h3>Venta de terrenos</h3>
+                                   
                                     </div>
                                 </div>
                             </div>
@@ -115,8 +115,8 @@
                                         <img src="img/terreno2.jpg" >
                                     </div>
                                     <div class="bloque-contenido-servicio">
-                                        <h3>Servicio 2</h3>
-                                        <p>Servicios Basicos</p>
+                                        <h3>Servicios Basicos</h3>
+                                      
                                     </div>
                                 </div>
                             </div>

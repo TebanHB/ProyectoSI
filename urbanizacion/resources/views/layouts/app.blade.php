@@ -171,7 +171,7 @@
                         </li>
                         <hr class="sidebar-divider">
                         <li>
-                            <a href="{{route('reserva.create')}}">
+                            <a href="{{route('reserva.create', Auth::user()->id)}}">
                                 <i class="fa fa-eye" aria-hidden="true"></i>
                                 <span>Agendar visita</span>
                             </a>
@@ -197,7 +197,7 @@
                     </li>
                     <hr class="sidebar-divider">
                     <li>
-                        <a href="{{route('reserva.misventas')}}">
+                        <a href="{{route('vende.misventas')}}">
                             <i class="fa fa-cog" aria-hidden="true"></i>
                             <span>Ver mis Ventas</span>
                         </a>

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Vende;
 use App\Models\Terreno;
 use App\Models\User;
-
+use Illuminate\Support\Facades\Auth;
 class VendeController extends Controller
 {
     /**
@@ -20,13 +20,14 @@ class VendeController extends Controller
         $ventas->load('user');
         return view('vende.index',compact('ventas'));
     }
-    public function misventas($id){
+    public function misventas(){
+        $id=Auth::user()->id;
         $user = User::findOrFail($id);
         $ventas = Vende::where('id_user',$id)->get();
         $ventas->load('user');
         return view('vende.index',compact('ventas'));
     }
-
+    
     /**
      * Show the form for creating a new resource.
      *
