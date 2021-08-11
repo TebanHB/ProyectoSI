@@ -23,28 +23,24 @@ class PagoController extends Controller
         $pagos = Pago::all();
         return view('pagos.index', compact('pagos'));
     }
-    
+
     public function imprimir($id){
         $cuotas = Cuota::where('id_credito',$id)->get();
-        $user=User::findOrFail(Contrato::select('id_user')->where('codigo_pago',$id)->get())->first();
+      
         $pago = Pago::findOrFail($id);
-        $pdf = PDF::loadView('pagos.kardex', compact('cuotas'), compact('pago'))->with('user',$user);
+        $pdf = PDF::loadView('pagos.kardex', compact('cuotas'), compact('pago'));
         return $pdf->stream('prueba.pdf');
     }
-
     public function kardex($id){
         $cuotas = Cuota::where('id_credito',$id)->get();
-        $user=User::findOrFail(Contrato::select('id_user')->where('codigo_pago',$id)->get());
-        $pago = Pago::findOrFail($id);
-        dd($user);
-        return view('pagos.kardex',compact('cuotas'), compact('pago'))->with('user',$user);
+        $pago = Pago::findOrFail($id);  
+        return view('pagos.kardex',compact('cuotas'), compact('pago'));
     }
     public function creditoindex() // es pa mostrar las instancias que tengamos de pago en este caso
     { 
         $pagos = Pago::all();
         return view('pagos.credito.index', compact('pagos'));
     }
-
     public function contadoindex() // es pa mostrar las instancias que tengamos de pago en este caso
     {
         $pagos = Pago::all();

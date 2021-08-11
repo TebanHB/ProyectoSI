@@ -52,7 +52,7 @@
       
         <label for="name" >Nombre: </label>
         
-        <label name="nombre" id="nombre" > {{$user->name}}</label> 
+        <label name="nombre" id="nombre" > </label> 
      
         <br>  
         <label for="name" '>Código de Pago:</label>
