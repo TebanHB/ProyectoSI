@@ -50,9 +50,9 @@
 
     <div class = 'Datos del Usuario'>
       
-        <label for="name" '>Nombre:</label>
+        <label for="name" >Nombre: </label>
         
-        <label name="nombre" id="nombre" ></label> 
+        <label name="nombre" id="nombre" > {{$user->name}}</label> 
      
         <br>  
         <label for="name" '>Código de Pago:</label>

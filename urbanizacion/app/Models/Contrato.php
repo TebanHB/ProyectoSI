@@ -24,4 +24,7 @@ class Contrato extends Model
     public function terreno(){
         return $this->hasOne(Terreno::class,'id_contrato');
     }
+    public static function cuotainicial($monto){
+        return $monto*0.18;
+    }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Contrato;
 use App\Models\Pago;
 use App\Models\Cuota;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\http\Controllers\NotaController;
@@ -25,16 +26,18 @@ class PagoController extends Controller
     
     public function imprimir($id){
         $cuotas = Cuota::where('id_credito',$id)->get();
+        $user=User::findOrFail(Contrato::select('id_user')->where('codigo_pago',$id)->get())->first();
         $pago = Pago::findOrFail($id);
-        $pdf = PDF::loadView('pagos.kardex', compact('cuotas'), compact('pago'));
+        $pdf = PDF::loadView('pagos.kardex', compact('cuotas'), compact('pago'))->with('user',$user);
         return $pdf->stream('prueba.pdf');
     }
 
     public function kardex($id){
         $cuotas = Cuota::where('id_credito',$id)->get();
+        $user=User::findOrFail(Contrato::select('id_user')->where('codigo_pago',$id)->get());
         $pago = Pago::findOrFail($id);
-        
-        return view('pagos.kardex',compact('cuotas'), compact('pago'));
+        dd($user);
+        return view('pagos.kardex',compact('cuotas'), compact('pago'))->with('user',$user);
     }
     public function creditoindex() // es pa mostrar las instancias que tengamos de pago en este caso
     { 

@@ -141,13 +141,6 @@
                         </a>
                     </li>
 
-                    <li>
-                        <a href="{{ route('manzana.create') }}">
-                            <i class="fa fa-eye" aria-hidden="true"></i>
-                            <span>Agregar nueva manzana</span>
-                        </a>
-                    </li>
-
                     <hr class="sidebar-divider">
                     <li>
                         <a href="{{route('vende.index')}}">
@@ -171,21 +164,21 @@
 
                     @if(Auth::user()->tipo_cliente==1)
                         <li>
-                            <a href="#">
+                            <a href="{{route('contrato.miscontratos')}}">
                                 <i class="fa fa-eye" aria-hidden="true"></i>
                                 <span>Ver mis contratos</span>
                             </a>
                         </li>
                         <hr class="sidebar-divider">
                         <li>
-                            <a href="#">
+                            <a href="{{route('reserva.create')}}">
                                 <i class="fa fa-eye" aria-hidden="true"></i>
                                 <span>Agendar visita</span>
                             </a>
                         </li>
                         <hr class="sidebar-divider">
                         <li>
-                            <a href="#">
+                            <a href="{{route('reserva.misreservas')}}">
                                 <i class="fa fa-eye" aria-hidden="true"></i>
                                 <span>Ver mis visitas programadas</span>
                             </a>
@@ -204,7 +197,7 @@
                     </li>
                     <hr class="sidebar-divider">
                     <li>
-                        <a href="{{route('vende.index')}}">
+                        <a href="{{route('reserva.misventas')}}">
                             <i class="fa fa-cog" aria-hidden="true"></i>
                             <span>Ver mis Ventas</span>
                         </a>
@@ -220,11 +213,9 @@
                  @endif
 
                 <!--    <h4>VISITA</h4> -->
-
-
                 @if(Auth::user()->tipo_visita==1)
                         <li>
-                            <a href="{{route('reserva.index')}}">
+                            <a href="{{route('reserva.misreservas')}}">
                                 <i class="fa fa-eye" aria-hidden="true"></i>
                                 <span>Ver mis visitas programadas</span>
                             </a>

@@ -74,6 +74,7 @@ Route::get('contrato/create/{id}',[ContratoController::class, 'create'])->name('
 Route::post('contrato/store',[ContratoController::class, 'store'])->name('contrato.store')->middleware('auth');
 Route::get('contrato/pendiente',[ContratoController::class,'pendiente'])->name('contrato.pendiente')->middleware('auth');
 Route::get('contrato/completado',[ContratoController::class,'completado'])->name('contrato.completado')->middleware('auth');
+Route::get('contrato/miscontratos',[VendeController::class,'miscontratos'])->name('contrato.miscontratos')->middleware('auth');
 
 Route::get('manzana/index',[ManzanaController::class,'index'])->name('manzana.index')->middleware('auth');
 Route::get('manzana/create',[ManzanaController::class, 'create'])->name('manzana.create')->middleware('auth');
@@ -83,7 +84,6 @@ Route::post('manzana/register',[ManzanaController::class,'store'])->name('manzan
 Route::get('mora/index',[MoraController::class,'index'])->name('mora.index')->middleware('auth');
 Route::get('mora/create/{id}',[MoraController::class, 'create'])->name('mora.create')->middleware('auth');
 Route::post('mora/store/{id}',[MoraController::class,'store'])->name('mora.store')->middleware('auth');
-
 
 Route::get('cuota/index',[CuotaController::class,'index'])->name('cuota.index')->middleware('auth');
 Route::get('cuota/create/{id}',[CuotaController::class,'create'])->name('cuota.create')->middleware('auth');
@@ -105,7 +105,7 @@ Route::get('telefonoPersona/create/{id}',[TelefonoPersonaController::class,'crea
 Route::post('telefonoPersona/store',[TelefonoPersonaController::class,'store'])->name('telefonoPersona.store')->middleware('auth');
 Route::get('telefonoPersona/{id}',[TelefonoPersonaController::class,'telefonos'])->name('telefonoPersona.telefonos')->middleware('auth');
 
-Route::get('terreno/index',[TerrenoController::class,'index'])->name('terreno.index')->middleware('auth');
+Route::get('terreno/index',[TerrenoController::class,'index'])->name('iterreno.index')->middleware('auth');
 Route::get('terreno/create',[TerrenoController::class,'create'])->name('terreno.create')->middleware('auth');
 Route::post('terreno/register',[TerrenoController::class,'store'])->name('terreno.store')->middleware('auth');
 Route::get('terreno/{id}',[TerrenoController::class,'terrenos'])->name('terreno.terrenos')->middleware('auth');
@@ -116,6 +116,8 @@ Route::get('vende/index',[VendeController::class,'index'])->name('vende.index')-
 Route::get('vende/create/{id}',[VendeController::class,'create'])->name('vende.create')->middleware('auth');
 Route::post('vende/register',[VendeController::class,'store'])->name('vende.store')->middleware('auth');
 Route::get('vende/{id}',[VendeController::class,'ventas'])->name('vende.ventas')->middleware('auth');
+Route::get('vende/misventas/{id}',[VendeController::class,'misventas'])->name('vende.misventas')->middleware('auth');
+
 
 Route::get('bitacora/index/{id}',[BitacoraController::class,'index'])->name('bitacora.index')->middleware('auth');
 Route::get('bitacora/create',[BitacoraController::class,'create'])->name('bitacora.create')->middleware('auth');
@@ -123,6 +125,7 @@ Route::post('bitacora/register',[BitacoraController::class,'store'])->name('bita
 
 Route::get('reserva/index',[ReservaController::class,'index'])->name('reserva.index')->middleware('auth');
 Route::get('reserva/create/{id}',[ReservaController::class,'create'])->name('reserva.create')->middleware('auth');
+Route::get('reserva/misreservas',[ReservaController::class,'misreservas'])->name('reserva.misreservas')->middleware('auth');
 Route::post('reserva/store',[ReservaController::class,'store'])->name('reserva.store')->middleware('auth');
 
 //post solo se ocupa para cuando creamos store o cuando actualizamos lalala

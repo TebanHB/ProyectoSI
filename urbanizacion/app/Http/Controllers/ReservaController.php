@@ -33,7 +33,13 @@ class ReservaController extends Controller
         $terrenos =Terreno::where('estado_terreno','libre')->get();
         return view('reserva.create',compact('user'),compact('terrenos'));
     }
-
+    public function misreservas(){
+        $id=Auth::user()->id;
+        $user = User::findOrFail($id);
+        $reservas = Reserva::where('id_user',$id)->get();
+        $reservas->load('user');
+        return view('reserva.index',compact('reservas'));
+    }
     /**
      * Store a newly created resource in storage.
      *

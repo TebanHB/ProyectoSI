@@ -33,8 +33,13 @@ class ContratoController extends Controller
         $contratos->load('user');
         return view('contrato.index',compact('contratos'));
     }
-
-    
+    public function miscontratos(){
+        $id=Auth::user()->id;
+        $user = User::findOrFail($id);
+        $contratos = Contrato::where('id_user',$id)->get();
+        $contratos->load('user');
+        return view('contrato.index',compact('contratos'));
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -42,13 +47,13 @@ class ContratoController extends Controller
      */
     public function create($id)
     {
-        $users = User::all();
+        
+        $users = User::where('tipo_cliente',1)->get();
         $pago = Pago::findOrFail($id);
         $terrenos =Terreno::where('estado_terreno','libre')->get();
         //dd($user);
         return view('contrato.create', compact('users'), compact('pago'), compact('terrenos'));
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -64,7 +69,7 @@ class ContratoController extends Controller
         ]);
         $contrato =Contrato::create([
             
-            'monto' => request('monto'),
+            'monto' => Contrato::cuotainicial(request('monto')),
             'fecha_adjudicacion' => request('fecha_adjudicacion'),
             'estado' => request('estado'),
             'codigo_pago' => request('pago_id'),
